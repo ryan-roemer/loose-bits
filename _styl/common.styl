@@ -1,0 +1,22 @@
+/**
+ * Common functions and definitions.
+ */
+vendor(prop, args)
+  -webkit-{prop} args
+  -moz-{prop} args
+  {prop} args
+
+opacity(val)
+  ie_val = round(val * 100)
+  zoom: 1;
+  filter: unquote("alpha(opacity=" + ie_val + ")")
+  vendor('opacity', val)
+
+box-shadow-all(h-shadow, v-shadow, blur, color, ie-bgcolor=#fff)
+  box-shadow(h-shadow, v-shadow, blur, color)
+  .ie6 &, .ie7 &, .ie8 &
+    background-color: ie-bgcolor
+    zoom: 1
+    filter: unquote("progid:DXImageTransform.Microsoft.DropShadow(color='#ccc', offX=1, offY=1, positive=0)")
+    // Other approach: shadows.
+    //filter: unquote("progid:DXImageTransform.Microsoft.Shadow(color='" + color + "', direction=135)")

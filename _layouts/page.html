@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+<div class="page {{ page.div_class }}">
+  {% if page.title %}
+    <h2 class="title">{{ page.title }}</h2>
+  {% endif %}
+  {{ content }}
+</div>

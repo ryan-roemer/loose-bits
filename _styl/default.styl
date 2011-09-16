@@ -1,0 +1,370 @@
+/**
+ * Imports
+ */
+@import "./node_modules/nib/lib/nib"
+@import "common"
+
+/**
+ * Variables
+ */
+// Palette
+// Icons: Yellow: ffaa00, Blue: 1d7297, Turquoise: 068080
+
+// Page
+text-color = #222222
+page-width = 600px
+page-background = #cccccc
+link-color = #1d7297
+select-background = #999999
+select-color = #ffffff
+
+// Sections
+header-background = #000000
+header-color = #ffffff
+header-subtitle-color = #cccccc
+menu-background = #000000
+menu-color = #ffffff
+post-title-color = #222222
+heading-color = #555555
+text-line-height = 125%
+content-background = #ffffff
+content-padding = 30px
+content-width = page-width + (2 * content-padding)
+code-background = #222222
+code-color = #ffffff
+code-border = #cccccc
+
+/**
+ * Site-wide
+ */
+body
+  color: text-color
+  background-color: page-background
+  font-size: 14px
+
+a
+  &, &:active, &:visited, &:hover
+    color: link-color
+    text-decoration: none
+    font-weight: bold
+
+  &:hover
+    text-decoration: underline
+
+::-moz-selection,
+::selection
+  background: select-background
+  color: select-color
+
+p code
+  background-color: content-background
+
+pre
+  color: code-color
+  background-color: code-background
+  font-size: 13px
+  padding: 10px 15px
+  margin-left: 15px
+  margin-right: 15px
+  margin-bottom: 15px
+  border: 1px solid code-border
+  border-radius(3px)
+  box-shadow(2px, 5px, 5px, #999999)
+
+  .ie6 &, .ie7 &, .ie8 &
+    border: 2px solid #999999
+
+.highlight span
+  background-color: code-background !important
+
+/**
+ * Templates
+ */
+// Button Base
+a.button
+  display: inline-block
+  outline: none
+  cursor: pointer
+  text-align: center
+  text-decoration: none
+  font-size: 18px
+  text-shadow: 0 1px 1px rgba(0,0,0,.3)
+  border-radius(0.5em)
+  box-shadow(0, 1px, 2px, rgba(0,0,0,.2))
+  padding: .25em 1.5em .25em 1.5em
+  margin: 0px 2px
+  height: 24px
+
+  &:active
+    position: relative
+    top: 1px
+
+.text a.button
+  line-height: 28px
+
+// Icons
+.icon a
+  height: 24px
+  width: 24px
+  padding: .25em .75em .25em .75em
+  display: inline-block
+
+  img
+    //margin: -8px  // Glyph
+    margin: -13px  // Color
+
+// Button Colors
+// See: - http://webdesignerwall.com/tutorials/css3-gradient-buttons
+//      - http://www.webdesignerwall.com/demo/css-buttons.html
+div.menu a.button,
+a.grey
+  button-text-color = #E9E9E9
+  color: button-text-color
+  border: solid 1px #555555
+  background: #6e6e6e
+  background linear-gradient(top, #888888, #575757)
+
+  .ie6 &, .ie7 &, .ie8 &
+    border: 1px solid #aaaaaa
+
+  &:visited, &:hover
+    color: button-text-color
+
+  &:hover
+    background: #616161
+    background linear-gradient(top, #757575,  #4b4b4b)
+
+  &:active
+    color: #afafaf
+    background linear-gradient(top, #575757,  #888888)
+
+a.white
+  button-text-color = #303030
+  color: button-text-color
+  border: solid 1px #b7b7b7
+  background: #ffffff
+  background linear-gradient(top, #ffffff, #ededed)
+
+  .ie6 &, .ie7 &, .ie8 &
+    border: 1px solid button-text-color
+
+  &:visited, &:hover
+    color: button-text-color
+
+  &:hover
+    background: #ededed
+    background linear-gradient(top, #ffffff,  #dcdcdc)
+
+  &:active
+    color: #999999
+    background linear-gradient(top, #ededed,  #ffffff)
+
+// Fix -moz-box-shadow horizontal scroll bug.
+// http://stackoverflow.com/questions/2359578/
+// css-box-shadow-on-container-div-causes-scrollbars
+header-offset = 5px
+#header-wrapper
+  overflow: hidden
+  padding: header-offset 0px
+  margin: -(header-offset) 0px
+
+header
+  width: 100%
+  margin-left: auto
+  margin-right: auto
+  margin-bottom: 20px
+  padding-top: 1em
+  background-color: header-background
+  color: header-color
+  box-shadow(0px, header-offset, header-offset, #999999)
+
+  div.title,
+  div.menu
+    margin-left: auto
+    margin-right: auto
+    a, a:active, a:visited, a:hover
+      text-decoration: none
+
+  div.menu
+    width: page-width
+    padding-bottom: 6px
+    text-align: center
+    background: menu-background
+    color: menu-color
+    a, a:active, a:visited, a:hover
+      color: menu-color
+
+    .inner
+      display: inline-block
+      text-align: center
+
+    ul
+      margin: 0
+      margin-bottom: 10px
+      padding: 0
+      li
+        float: left
+        display: inline
+
+  div.title
+    width: page-width
+    margin-bottom: 10px
+    padding: 0.5em
+    a, a:active, a:visited, a:hover
+      color: header-color
+
+    h1,
+    p
+      margin: 0
+
+    h1
+      float: left
+      font-size: 3.2em
+      font-weight: 800
+      padding-right: 0.5em
+      margin-right: 0.5em
+      border-right: 1px solid header-color
+
+    p
+      font-size: 1.15em
+      font-weight: 350
+      color: header-subtitle-color
+
+#main
+  width: content-width
+  margin-left: auto
+  margin-right: auto
+
+  .inner
+    margin-top: 5px
+    margin-bottom: 30px
+    padding: 20px content-padding
+    border-radius(10px)
+    background: content-background
+    box-shadow(2px, 5px, 5px, #999999)
+
+    .ie6 &, .ie7 &, .ie8 &
+      border: 2px solid #999999
+
+#main,
+#post,
+div.page
+  h2,
+  h3,
+  h4
+    color: heading-color
+    text-shadow: 1px 1px 2px rgba(0,0,0,.2)
+
+  h2.title
+    margin-top: 0px
+    font-size: 2.0em
+    text-align: center
+    color: post-title-color
+
+    a, a:active, a:visited, a:hover
+      color: post-title-color
+      text-decoration: none
+
+#post-meta
+  display: block
+
+#date
+  float: left
+
+#tags
+  float: right
+  width: 250px
+  text-align: right
+
+#date,
+#tags span.section
+  font-style: italic
+
+.post
+  width: page-width
+  border-bottom: 3px solid page-background
+  margin-bottom: 15px
+
+  .more
+    text-align: right
+    font-style: italic
+    margin-bottom: 15px
+
+  p
+    text-indent: 25px
+    line-height: text-line-height
+
+  ul
+    li
+      line-height: text-line-height
+      padding-bottom: 5px
+
+#share
+  height: 20px
+  margin-bottom: 8px
+  width: page-width
+  float: left
+  display:inline
+
+  // Manually hack the inline width of G+1 button.
+  div#___plusone_0
+    padding-left: 10px !important
+    &[style]
+      width: 200px !important
+
+/**
+ * Pages
+ */
+div.page
+  h2.title
+    text-align: left
+
+  p
+    line-height: text-line-height
+
+div.about
+  height: 550px
+
+  img.about
+    border: none
+    float: right
+    position: relative
+    margin: 0px 5px 10px 15px
+    box-shadow(3px, 3px, 4px, #999999)
+
+    .ie6 &, .ie7 &, .ie8 &
+      border: 2px solid #999999
+
+  p
+    text-indent: 25px
+
+div.archived-post
+  first-col-width = 100px
+  margin-bottom: 10px
+
+  time,
+  div.item
+    display: inline
+    float: left
+    margin: 0
+    padding: 0
+    border: 0
+    font-size: 1.1em
+
+  time
+    width: first-col-width - 2
+    font-weight: bold
+
+  div.item
+    width: page-width - first-col-width - 2
+    p
+      margin: 5px 0px
+
+/**
+ * Print
+ */
+// Override boilerplate.
+@media print
+  a[href]:after,
+  abbr[title]:after
+    content: "" !important

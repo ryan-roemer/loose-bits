@@ -1,0 +1,114 @@
+{% capture icon_dir %}{{ site.baseurl }}media/img/socialis2/nobg/color/{% endcapture %}
+
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  {% if page.description %}{% assign desc = page.description %}
+  {% else %}{% assign desc = site.subtitle %}{% endif %}
+
+  {% if page.tags %}{% assign keywords = page.tags %}
+  {% else %}{% assign keywords = site.keywords %}{% endif %}
+
+  <title>{{ site.title }} - {{ page.title }}</title>
+	<meta name="description" content="{{ desc }}" />
+	<meta name="keywords" content="{{ keywords | join: ", " }}" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}media/css/boilerplate.min.css"  />
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}media/css/syntax/fruity.css"  />
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}media/css/default.css"  />
+
+  <link rel="alternate" type="application/atom+xml"
+        href="{{ site.baseurl }}atom.xml" title="{{ site.title }}" />
+
+  <base href="{{ site.baseurl }}" />
+
+  <!-- Google +1 -->
+  <html itemscope itemtype="http://schema.org/Blog">
+  <meta itemprop="name" content="{{ page.title }}">
+  <meta itemprop="description" content="{{ desc }}">
+
+  <!-- Facebook -->
+  <meta property="og:site_name" content="{{ site.title }}" />
+  <meta property="og:title" content="{{ page.title }}" />
+  <meta property="og:description" content="{{ desc }}" />
+
+  <!-- All JavaScript at the bottom, except for Modernizr / Respond. -->
+  <script src="{{ site.baseurl }}media/js/libs/modernizr-2.0.6.min.js"></script>
+</head>
+<body>
+  <!-- Content -->
+  <div id="container" class="container clearfix">
+    <!-- Header -->
+    <div id="header-wrapper">
+    <header>
+      <!-- Title -->
+      <div class="title clearfix">
+        <h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1>
+        <p>{{ site.subtitle }}</p>
+      </div>
+      <!-- Menu -->
+      <div class="menu clearfix">
+        <div class="inner">
+          <ul>
+            <li class="text"><a class="button"
+                   href="{{ site.baseurl }}">Home</a></li>
+            <li class="text"><a class="button"
+                   href="{{ site.baseurl }}archive.html">Archive</a></li>
+            <li class="text"><a class="button"
+                   href="{{ site.baseurl }}about.html">About</a></li>
+            <li class="icon">
+                <a class="button" href="http://twitter.com/#!/ryan_roemer">
+                  <img src="{{ icon_dir }}Twitter.png" />
+                </a>
+            <li class="icon">
+                <a class="button" href="http://www.linkedin.com/in/ryanroemer">
+                  <img src="{{ icon_dir }}LinkedIn.png" />
+                </a>
+            </li>
+            <li class="icon">
+                <a class="button" href="https://github.com/ryan-roemer">
+                  <img src="{{ icon_dir }}GitHub.png" />
+                </a>
+            </li>
+            <li class="icon">
+                <a class="button" href="{{ site.baseurl }}atom.xml">
+                  <img src="{{ icon_dir }}RSS.png" />
+                </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    </div>
+
+    <div id="main" role="main">
+      <div class="inner">
+        {{ content }}
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+    </footer>
+  </div>
+
+  <!-- JavaScript -->
+  <!-- Google Analytics -->
+  <script>
+    window._gaq = [['_setAccount','{{ site.analytics }}'],
+                   ['_trackPageview'],
+                   ['_trackPageLoadTime']];
+    Modernizr.load({ load: ('https:' == location.protocol ? '//ssl' : '//www')
+                            + '.google-analytics.com/ga.js' });
+  </script>
+</body>
+</html>
