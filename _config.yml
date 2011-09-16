@@ -17,7 +17,7 @@ keywords:     ['ryan roemer', 'python', 'javascript', 'node.js', 'nosql',
 
 source:       .
 destination:  ./_site
-exclude:      ["Rakefile", "node_modules", "_styl"]
+exclude:      ["404.md", "Rakefile", "node_modules", "_styl"]
 
 future:       true
 lsi:          false

@@ -1,10 +1,37 @@
+require 'jekyll'
+require 'jekyll/site'
+
 # Stylus
 STYLUS_BIN = "./node_modules/stylus/bin/stylus"
 STYLUS_COMPRESS = true
 STYLUS_INPUT_DIR = "./_styl"
 STYLUS_OUTPUT_DIR = "./media/css"
 
+# Patch Jekyll with single writing method.
+module Jekyll
+  class Site
+    def process_single(src)
+      self.reset
+      self.read_layouts
+      name = File.basename(src)
+      dir = File.dirname(src)
+      single = Jekyll::Page.new(self, self.source, dir, name)
+      single.render(self.layouts, site_payload)
+      # Write back to root (not _sites) directory.
+      single.write(self.source)
+    end
+  end
+end
+
+# Tasks
 namespace :build do
+  desc "Build 404 page to root directory."
+  task :not_found do
+    options = Jekyll.configuration({})
+    site = Jekyll::Site.new(options)
+    site.process_single("404.md")
+  end
+
   desc "Build Stylus CSS to media directory."
   task :css do
     mkdir_p STYLUS_OUTPUT_DIR
