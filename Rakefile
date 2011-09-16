@@ -24,15 +24,15 @@ module Jekyll
 end
 
 # Tasks
-namespace :build do
-  desc "Build 404 page to root directory."
+namespace :gen do
+  desc "Generate 404 page to root directory."
   task :not_found do
     options = Jekyll.configuration({})
     site = Jekyll::Site.new(options)
     site.process_single("404.md")
   end
 
-  desc "Build Stylus CSS to media directory."
+  desc "Build Stylus CSS to root media directory."
   task :css do
     mkdir_p STYLUS_OUTPUT_DIR
     compress = STYLUS_COMPRESS ? " --compress " : " ";
@@ -48,18 +48,24 @@ namespace :build do
        "#{STYLUS_INPUT_DIR}/syntax"
   end
 
+  desc "Build all generated, source files."
+  task :all => [:not_found, :css, :css_syntax] do
+  end
+end
+
+namespace :build do
   desc "Build CSS to dev. media directory."
-  task :css_dev => :css do
+  task :css_dev => "gen:css" do
     sh "cp -r ./media _site/media"
   end
 
   desc "Build prod. documents to sites directory."
-  task :docs => :css do
+  task :docs => "gen:css" do
     sh "jekyll"
   end
 
   desc "Build dev. documents to sites directory."
-  task :docs_dev => :css do
+  task :docs_dev => ["gen:not_found", "gen:css"] do
     sh "jekyll --base-url '/'"
   end
 
