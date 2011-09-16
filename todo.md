@@ -3,8 +3,6 @@
 
 ## Current
 
-* FeedBurner: For my atom.xml.
-
 ## Verify
 
 * RSS feed.
