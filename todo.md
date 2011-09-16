@@ -3,9 +3,7 @@
 
 ## Current
 
-* Publish to GitHub.
-* Do CNAME.
-* FeedBurner: For my atom.xml (do this after launch?)
+* FeedBurner: For my atom.xml.
 
 ## Verify
 
