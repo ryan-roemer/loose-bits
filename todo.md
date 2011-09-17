@@ -5,7 +5,6 @@
 
 ## Verify
 
-* RSS feed.
 * Tweet article button.
 * Google Analytics.
 * Disqus comments.

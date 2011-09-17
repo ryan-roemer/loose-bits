@@ -8,7 +8,7 @@ baseurl:      http://loose-bits.com/
 liveurl:      http://loose-bits.com
 analytics:    UA-16721875-2
 disqus:       loose-bits
-github:       http://github.com/ryan-roemer/loose-bits.com/
+github:       http://github.com/ryan-roemer/loose-bits/
 title:        Loose Bits
 subtitle:     Thoughts on distributed systems, cloud computing, and the
               intersection of law and technology.
@@ -17,7 +17,7 @@ keywords:     ['ryan roemer', 'python', 'javascript', 'node.js', 'nosql',
 
 source:       .
 destination:  ./_site
-exclude:      ["Rakefile", "node_modules", "_styl"]
+exclude:      ["404.md", "Rakefile", "node_modules", "_styl"]
 
 future:       true
 lsi:          false
