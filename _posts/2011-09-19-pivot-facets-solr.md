@@ -30,13 +30,13 @@ experimentation and a good amount of hackery, I was able to come up with a
 Pivot facets were added to Solr in [SOLR-792][jira792]. A good introductory
 [article][solrpl_pivot] is available on the TODO blog. To see the basic
 operation in action, let's just use the "example" setup that comes with
-the Solr 4.0 distribution (located at "solr_path/solr/example").
+the Solr 4.0 distribution (located at "solr_4.0_path/solr/example").
 
 Let's start the Solr process:
 
 {% highlight bash %}
 # Start Solr as non-daemon
-$ cd solr_path/solr/example
+$ cd solr_4.0_path/solr/example
 $ java -jar start.jar
 {% endhighlight %}
 
@@ -170,11 +170,30 @@ that we will use to cobble together a "faux" pivot query are:
 Note that either facet fields or facet queries can be used with this technique
 -- I'll only show fields, but everything applies equally to queries.
 
+### Setup
+
 At this point, you should take a Solr 1.4.1 distribution and set it up exactly
 as we did above for Solr 4.0 and upload our simple 10-document CSV file to
 the running server. For simplicity here (and to keep my head on straight),
 I ended up running my Solr 1.4.1 server on port 8984, so that I could also
-keep the Solr 4.0 server running on port 8983.
+keep the Solr 4.0 server running on port 8983. Here's what I did:
+
+{% highlight bash %}
+# Start Solr as non-daemon
+$ cd solr_1.4.1_path/solr/example
+$ java -Djetty.port=8984 -jar start.jar
+
+# (Copy sample_books.csv)
+# Upload to Solr.
+$ curl http://localhost:8984/solr/update/csv \
+  --data-binary @sample_books.csv \
+  -H 'Content-type:text/plain; charset=utf-8'
+
+# Commit the upload.
+$ curl http://localhost:8984/solr/update \
+   --data-binary '<commit/>' \
+   -H 'Content-type:application/xml'
+{% endhighlight %}
 
 From here on, it is assumed you now have a populated Solr 1.4.1 server running
 on port 8984 (switch addresses / ports as appropriate for your actual setup).
@@ -184,6 +203,10 @@ on port 8984 (switch addresses / ports as appropriate for your actual setup).
 The starting point for our pivot facets is excluding certain query restrictions
 for facets. A [basic example][ex_facets] is provided for tagging and excluding
 facets on the Solr wiki.
+
+
+
+
 
 
 
