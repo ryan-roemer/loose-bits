@@ -155,7 +155,20 @@ doesn't have the ``facet.pivot`` query option?
 
 ## Pivot Faceting in Solr 1.4.1
 
+Solr 1.4.1 has much more limited facet support than 4.0.  The building blocks
+that we will use to cobble together a "faux" pivot query are:
 
+* **``facet.field``**: The normal facet field option.
+* **``facet.query``**: The normal facet query option.
+* **``fq``**: Basic field queries (for restrictions).
+* **Local Params**: We use a couple of Solr [local parameters][local_params]
+  * **``tag``**: Tags a ``fq`` with an arbitrary name.
+  * **``key``**: Tags a facet field an arbitrary name (instead of field name).
+  * **``ex``**: Excludes tagged ``fq``'s from being operative on a given facet
+    field/query.
+
+Note that either facet fields or facet queries can be used with this technique
+-- I'll only show fields, but everything applies equally to queries.
 
 
 [solr]: http://lucene.apache.org/solr/
@@ -164,7 +177,7 @@ doesn't have the ``facet.pivot`` query option?
 [solr4]: http://wiki.apache.org/solr/Solr4.0
 [jira792]: https://issues.apache.org/jira/browse/SOLR-792#referrer=solr.pl
 [solrpl_pivot]: http://solr.pl/en/2010/10/25/hierarchical-faceting-pivot-facets-in-trunk/
-
+[local_params]: http://wiki.apache.org/solr/LocalParams
 
 
 
