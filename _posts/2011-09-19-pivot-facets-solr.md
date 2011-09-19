@@ -170,6 +170,22 @@ that we will use to cobble together a "faux" pivot query are:
 Note that either facet fields or facet queries can be used with this technique
 -- I'll only show fields, but everything applies equally to queries.
 
+At this point, you should take a Solr 1.4.1 distribution and set it up exactly
+as we did above for Solr 4.0 and upload our simple 10-document CSV file to
+the running server. For simplicity here (and to keep my head on straight),
+I ended up running my Solr 1.4.1 server on port 8984, so that I could also
+keep the Solr 4.0 server running on port 8983.
+
+From here on, it is assumed you now have a populated Solr 1.4.1 server running
+on port 8984 (switch addresses / ports as appropriate for your actual setup).
+
+### Excluding Restrictions from Facets
+
+The starting point for our pivot facets is excluding certain query restrictions
+for facets. A [basic example][ex_facets] is provided for tagging and excluding
+facets on the Solr wiki.
+
+
 
 [solr]: http://lucene.apache.org/solr/
 [solr_facet]: http://wiki.apache.org/solr/SolrFacetingOverview
@@ -178,6 +194,7 @@ Note that either facet fields or facet queries can be used with this technique
 [jira792]: https://issues.apache.org/jira/browse/SOLR-792#referrer=solr.pl
 [solrpl_pivot]: http://solr.pl/en/2010/10/25/hierarchical-faceting-pivot-facets-in-trunk/
 [local_params]: http://wiki.apache.org/solr/LocalParams
+[ex_facets]: http://wiki.apache.org/solr/SimpleFacetParameters#Multi-Select_Faceting_and_LocalParams
 
 
 
