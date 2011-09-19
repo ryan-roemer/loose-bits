@@ -204,6 +204,46 @@ The starting point for our pivot facets is excluding certain query restrictions
 for facets. A [basic example][ex_facets] is provided for tagging and excluding
 facets on the Solr wiki.
 
+Let's do a simple facet query on prices with a restriction of
+``genre_s:scifi``:
+
+{% highlight bash %}
+# Restricted facet query.
+$ http://localhost:8984/solr/select?
+  indent=on
+  &wt=json
+  &q=*%3A*
+  &rows=0
+  &fq=genre_s:scifi
+  &facet=true
+  &facet.sort=index
+  &facet.field=price_f
+{% endhighlight %}
+
+Looking to our results in ``facet_fields``, we see that we only have 2 hits
+(``numFound``), and the facet counts also add up to 2 (which represent our 2
+SciFi books).
+
+{% highlight javascript %}
+{
+  /* ... */,
+  "response":{"numFound":2, /* ... */},
+  "facet_counts":{
+    /* ... */,
+    "price_f":[
+      "5.99",0,
+      "6.99",1,
+      "7.95",0,
+      "7.99",1]},
+    /* ... */,
+}
+{% endhighlight %}
+
+
+
+
+**TODO HERE**: Do a basic exclude fq example, then move on to next section --
+the actual faux pivot queries.
 
 
 
@@ -222,13 +262,6 @@ facets on the Solr wiki.
 
 
 <!-- more start -->
-
-## TODO -- Other Cites
-
-
-
-
-
 
 ## TODO
 
