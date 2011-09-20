@@ -41,7 +41,7 @@ components and full technique for simulated pivot facets in Solr 1.4.1.
 ## Pivot Faceting in Solr 4.0
 
 Pivot facets were added to Solr in [SOLR-792][jira792]. A good introductory
-[article][solrpl_pivot] is available on the TODO blog. To see the basic
+[article][solrpl_pivot] is available on the Solr.pl blog. To see the basic
 operation in action, let's just use the "example" setup that comes with
 the Solr 4.0 distribution (located at "solr_4.0_path/solr/example").
 
