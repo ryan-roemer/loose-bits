@@ -25,7 +25,7 @@ axes -- typically in our case "field/query by year" for a time series.
 However, we use Solr 1.4.1 and are unlikely to migrate to Solr 4.0 in the
 meantime. Our existing approach was to simply query for the top "n" fields for
 a first query, then perform a second-level facet query by year for *each* field
-result. So, for the top 20 results, we would perform 1 + 20 queries -
+result. So, for the top 20 results, we would perform 1 + 20 queries --
 clearly not optimal, when we're trying to get this done in the context of a
 blocking HTTP request in our underlying web application.
 
@@ -41,7 +41,7 @@ components and full technique for simulated pivot facets in Solr 1.4.1.
 ## Pivot Faceting in Solr 4.0
 
 Pivot facets were added to Solr in [SOLR-792][jira792]. A good introductory
-[article][solrpl_pivot] is available on the Solr.pl blog. To see the basic
+[article][solrpl_pivot] is available on the Solr.pl site. To see the basic
 operation in action, let's just use the "example" setup that comes with
 the Solr 4.0 distribution (located at "solr_4.0_path/solr/example").
 
@@ -94,8 +94,8 @@ $ curl http://localhost:8983/solr/update/csv \
 
 # Commit the upload.
 $ curl http://localhost:8983/solr/update \
-   --data-binary '<commit/>' \
-   -H 'Content-type:application/xml'
+  --data-binary '<commit/>' \
+  -H 'Content-type:application/xml'
 {% endhighlight %}
 
 You should now be able to query the 10 sample documents at:
@@ -211,8 +211,8 @@ $ curl http://localhost:8984/solr/update/csv \
 
 # Commit the upload.
 $ curl http://localhost:8984/solr/update \
-   --data-binary '<commit/>' \
-   -H 'Content-type:application/xml'
+  --data-binary '<commit/>' \
+  -H 'Content-type:application/xml'
 {% endhighlight %}
 
 From here on, it is assumed you now have a populated Solr 1.4.1 server running
@@ -483,9 +483,15 @@ for the final assembled decision tree result.
 
 As a final performance note, the faux pivot facet approach doesn't really
 lighten the Solr server load, it just collapses what would otherwise be
-multiple queries into one query. So, all in all, if reducing the number of
-round trips between a web application and Solr for single search is the goal,
-and you need pivot facets in a pre-4.0 Solr, this may well be the ticket.
+multiple queries into one query.
+
+## Conclusion
+
+Reflecting on the above method, pivot facets are possible in Solr 1.4.1 at a
+cost of *n* separate queries, where *n* is the number of levels in the decision
+tree. So, if reducing the number of round trips between a web application
+and Solr is the goal, and you need pivot facets in a pre-4.0 Solr, this may
+well be the ticket.
 
 [distributed]: http://wiki.apache.org/solr/DistributedSearch
 [ex_facets]: http://wiki.apache.org/solr/SimpleFacetParameters#Multi-Select_Faceting_and_LocalParams
