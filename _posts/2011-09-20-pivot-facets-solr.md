@@ -24,8 +24,8 @@ Decision trees come up a lot, and at work, we need results along multiple
 axes -- typically in our case "field/query by year" for a time series.
 However, we use Solr 1.4.1 and are unlikely to migrate to Solr 4.0 in the
 meantime. Our existing approach was to simply query for the top "n" fields for
-a first query, then for *each* field result, perform a second-level facet query
-by year. So, for the top 20 results, we would perform 1 + 20 queries -
+a first query, then perform a second-level facet query by year for *each* field
+result. So, for the top 20 results, we would perform 1 + 20 queries -
 clearly not optimal, when we're trying to get this done in the context of a
 blocking HTTP request in our underlying web application.
 
@@ -35,7 +35,7 @@ I began researching the somewhat more obscure facet features present in Solr
 hackery, I was able to come up with a "faux" pivot facet scheme that
 mostly approximates true pivot faceting using Solr 1.4.1.
 
-We'll start by running some real pivot facets in Solr 4.0, then look at the
+We'll start by examining some real pivot facets in Solr 4.0, then look at the
 components and full technique for simulated pivot facets in Solr 1.4.1.
 
 ## Pivot Faceting in Solr 4.0
@@ -55,11 +55,18 @@ $ cd solr_4.0_path/solr/example
 $ java -jar start.jar
 {% endhighlight %}
 
-Next, we want to upload a series of documents. We'll use the provided example
-script "post.sh" and create a simple CSV file for the script. The format
-is: first line is field names, other lines are data. I've taken the sample
-"exampledocs/books.csv" file and changed some schema names. Write this out
-to a custom file.
+Next, we want to upload a series of documents. We'll take the provided
+"exampledocs/books.csv" file, tweak it slightly and update via a CSV handler.
+The CSV format is: first line is field names, other lines are data. Note that
+I have changed some field names in the original sample "exampledocs/books.csv"
+file. The following should be written out to a new file, which I am calling
+"sample_books.csv".
+
+Note that we use ``_s`` fields for simplicity, forcing string fields for
+what would ordinarily be text fields -- Solr facets only return results
+on *indexed*, not *stored* terms, and string fields are identical for both.
+In a real deployment, you would use ``copyField`` directives to copy ``text``
+fields to ``string`` fields for faceting.
 
 {% highlight bash %}
 # Create CSV file.
@@ -75,7 +82,11 @@ id,cat_s,name_s,price_f,inStock_b,author_s,series_s,sequence_i,genre_s
 0380014300,book,Nine Princes In Amber,6.99,true,Roger Zelazny,the Chronicles of Amber,1,fantasy
 0805080481,book,The Book of Three,5.99,true,Lloyd Alexander,The Chronicles of Prydain,1,fantasy
 080508049X,book,The Black Cauldron,5.99,true,Lloyd Alexander,The Chronicles of Prydain,2,fantasy
+{% endhighlight %}
 
+We'll upload this file to Solr using curl:
+
+{% highlight bash %}
 # Upload to Solr.
 $ curl http://localhost:8983/solr/update/csv \
   --data-binary @sample_books.csv \
@@ -86,12 +97,6 @@ $ curl http://localhost:8983/solr/update \
    --data-binary '<commit/>' \
    -H 'Content-type:application/xml'
 {% endhighlight %}
-
-Note that we use ``_s`` fields for simplicity, forcing string fields for
-what would ordinarily be text fields -- Solr facets only return results
-on *indexed*, not *stored* terms, and string fields are identical for both.
-In a real deployment, you would use ``copyField`` directives to copy ``text``
-fields to ``string`` fields for faceting.
 
 You should now be able to query the 10 sample documents at:
 ``http://localhost:8983/solr/admin/form.jsp``.
@@ -176,14 +181,14 @@ that we will use to cobble together a "faux" pivot query are:
 * **``facet.field``**: The normal facet field option.
 * **``facet.query``**: The normal facet query option.
 * **``fq``**: Basic field queries (for restrictions).
-* **Local Params**: We use a couple of Solr [local parameters][local_params]
+* **Local Params**: We use a couple of Solr [local parameters][local_params].
   * **``tag``**: Tags a ``fq`` with an arbitrary name.
   * **``key``**: Tags a facet field an arbitrary name (instead of field name).
   * **``ex``**: Excludes tagged ``fq``'s from being operative on a given facet
     field/query.
 
 Note that either facet fields or facet queries can be used with this technique
-- I'll only show fields, but everything applies equally to queries.
+-- I'll only show fields, but everything applies equally to queries.
 
 ### Setup
 
@@ -259,7 +264,7 @@ query with full restrictions for the returned records, but get more information
 for facets. In this case, Solr allows tagging of ``fq``'s, and keys / excludes
 on facets to conditionally remove ``fq``'s from a *given facet only*.
 
-So, let's tag our ``fq`` as "SCIFI_FQ" and exclude it from out facet counts
+So, let's tag our ``fq`` as "SCIFI_FQ" and exclude it from our facet counts
 with ``ex``, and then rename the facet results to "PRICE_KEY" using the
 ``key`` option:
 
@@ -419,7 +424,7 @@ Which gives us the "leaves" of the decision tree with our result keys:
 {% endhighlight %}
 
 Looking at our original Solr 4.0 pivot query, we can cobble together our
-two Solr 1.4.1 queries to get the equivalent results. In the end, both produce
+two Solr 1.4.1 queries to get an equivalent result. In the end, both produce
 the following decision tree for price by genre:
 
 * **5.99**: 2
@@ -449,15 +454,15 @@ the same results with two standard Solr 1.4.1 facet field queries. But, the
 faux pivot facet technique really shines for a "foo by bar"-type query where
 there are large numbers of first ("foo") level facet results. Say, the first
 level has 10 results, this would mean 11 queries (one for the top 10 "foo"'s,
-then one each for the top second-level "bar"'s for each "foo"). The faux pivot
+then one *each* for the 10 second-level "bar"'s for each "foo"). The faux pivot
 facet technique cuts this down to 2 queries total.
 
-Although our examples here only use facet fields, the technique works equally
-well for [facet queries][facet_query]. And it works when using
-[distributed search][distributed].
+The method is generally applicable too. Although our examples here only use
+facet fields, the technique equally works for [facet queries][facet_query].
+And [distributed search][distributed] supports the approach as well.
 
-Additionally, the technique can be applied to further decision tree levels.
-In the Solr 4.0 world, this simply means adding another field
+Looking further, the technique can be applied to additional decision tree
+levels. In the Solr 4.0 world, this simply means adding another field
 like ``facet.pivot=price_f,genre_s,inStock_b`` to get further breakdowns for
 the "in stock" boolean field. For Solr 1.4.1, we would do a third query,
 with permutations of our previous tagged ``fq``'s, as well as second-level
@@ -467,20 +472,20 @@ certainly wouldn't be pretty and would result in a beastly query, but
 shows that the technique only adds 1 more actual Solr query for each
 additional level in the faux decision tree.
 
-Speaking of query complexity, it is fair to point out that this type of
-query hackery really should be done programmatically to ensure correctness,
-and definitely not via the manual queries I provided above using curl.
-It's tough keeping track of just the 4 first-level pivots in our example above,
-let alone a larger first level group, or more than 2 levels deep of pivots.
-Another benefit is that you can collapse your tag / key names to integer
-or other simple keys, and then have your program match things up later for
-the final assembled decision tree result.
+However, on the topic of query complexity, it is fair to point out that this
+type of query hackery really should be done programmatically to ensure
+correctness, and definitely not via the manual queries I provided above using
+curl. It's tough keeping track of just the 4 first-level pivots in our example
+above, let alone a larger first level group, or more than 2 levels deep of
+pivots. Another benefit is that you can collapse your tag / key names to
+integer or other simple keys, and then have your program match things up later
+for the final assembled decision tree result.
 
 As a final performance note, the faux pivot facet approach doesn't really
 lighten the Solr server load, it just collapses what would otherwise be
-multiple queries into one query. Thus, if reducing the number of round trips
-between a web application and Solr for single search is the goal, and you
-need pivot facets in a pre-4.0 Solr, this may well be the ticket.
+multiple queries into one query. So, all in all, if reducing the number of
+round trips between a web application and Solr for single search is the goal,
+and you need pivot facets in a pre-4.0 Solr, this may well be the ticket.
 
 [distributed]: http://wiki.apache.org/solr/DistributedSearch
 [ex_facets]: http://wiki.apache.org/solr/SimpleFacetParameters#Multi-Select_Faceting_and_LocalParams
