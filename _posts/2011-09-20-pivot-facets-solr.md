@@ -4,7 +4,7 @@ title: Pivot Faceting (Decision Trees) in Solr 1.4.
 description: Pivot faceting, a feature introduced in Solr 4.0, can be
   approximated in Solr 1.4 using a few non-standard facet field/query
   features (and a little bit of hackery).
-date: 2011-09-19 16:00:00 UTC
+date: 2011-09-20 16:00:00 UTC
 tags: ['search', 'solr', 'facet', 'pivot', 'hacks']
 ---
 
