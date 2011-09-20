@@ -315,7 +315,7 @@ The first query is a very basic facet field query:
 
 {% highlight bash %}
 # First level facet field query.
-$ curl http://localhost:8983/solr/select --data indent=on\
+$ curl http://localhost:8984/solr/select --data indent=on\
 \&wt=json\
 \&q=*%3A*\
 \&rows=0\
@@ -374,7 +374,7 @@ Let's put everything into our second-level query now:
 
 {% highlight bash %}
 # Second level pivot query.
-$ curl http://localhost:8983/solr/select --data \
+$ curl http://localhost:8984/solr/select --data \
 indent=on\
 \&wt=json\
 \&q=*%3A*\
@@ -472,7 +472,7 @@ queries total.
   * Distributed Solr
 
 6. Do description and check other top matter.
-
+7. Find all remaining TODO's.
 
 
 
