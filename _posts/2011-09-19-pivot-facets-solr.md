@@ -86,18 +86,18 @@ on genre counts grouped by price:
 
 {% highlight bash %}
 # Pivot query:
-$ http://localhost:8983/solr/select?
-  indent=on
-  &wt=json
-  &q=*%3A*
-  &rows=0
-  &facet=true
-  &facet.sort=index
-  &facet.pivot=price_f,genre_s
+$ curl http://localhost:8983/solr/select --data indent=on\
+\&wt=json\
+\&q=*%3A*\
+\&rows=0\
+\&facet=true\
+\&facet.mincount=1\
+\&facet.sort=index\
+\&facet.pivot=price_f,genre_s
 {% endhighlight %}
 
-(Note that I've added line breaks to show the parameters more clearly -- you
-may have to remove these for the actual ``curl`` command).
+(Note that I've added line breaks and escapes to show the parameters more
+clearly).
 
 This gives us decision tree results for the ``facet_pivot`` field:
 
@@ -209,15 +209,16 @@ Let's do a simple facet query on prices with a restriction of
 
 {% highlight bash %}
 # Restricted facet query.
-$ http://localhost:8984/solr/select?
-  indent=on
-  &wt=json
-  &q=*%3A*
-  &rows=0
-  &fq=genre_s:scifi
-  &facet=true
-  &facet.sort=index
-  &facet.field=price_f
+$ curl http://localhost:8984/solr/select --data \
+\indent=on\
+\&wt=json\
+\&q=*%3A*\
+\&rows=0\
+\&fq=genre_s:scifi\
+\&facet=true\
+\&facet.mincount=1\
+\&facet.sort=index\
+\&facet.field=price_f
 {% endhighlight %}
 
 Looking to our results in ``facet_fields``, we see that we only have 2 hits
@@ -230,14 +231,64 @@ SciFi books).
   "response":{"numFound":2, /* ... */},
   "facet_counts":{
     /* ... */,
-    "price_f":[
-      "5.99",0,
-      "6.99",1,
-      "7.95",0,
-      "7.99",1]},
+    "facet_fields":{
+      "price_f":[
+        "6.99",1,
+        "7.99",1]},
     /* ... */,
 }
 {% endhighlight %}
+
+For situations like a drill down, Solr developers often want to run a basic
+query with full restrictions for the returned records, but get more information
+for facets. In this case, Solr allows tagging of ``fq``'s, and keys / excludes
+on facets to conditionally remove ``fq``'s from a *given facet only*.
+
+So, let's tag our ``fq`` as "SCIFI_FQ" and exclude it from out facet counts
+with ``ex``, and then rename the facet results to "PRICE_KEY" using the
+``key`` option:
+
+{% highlight bash %}
+# Tag fq and exclude only from the field facet.
+$ curl http://localhost:8984/solr/select --data \
+\indent=on\
+\&wt=json\
+\&q=*%3A*\
+\&rows=0\
+\&fq={\!tag=SCIFI_FQ}genre_s:scifi\
+\&facet=true\
+\&facet.mincount=1\
+\&facet.sort=index\
+\&facet.field={\!key=PRICE_KEY\ ex=SCIFI_FQ}price_f
+{% endhighlight %}
+
+Note that I have to escape the exclamation points and other characters for a
+command line example here. Now, let's look at the results:
+
+{% highlight javascript %}
+{
+  /* ... */,
+  "response":{"numFound":2, /* ... */},
+ "facet_counts":{
+    /* ... */,
+    "facet_fields":{
+      "PRICE_KEY":[
+        "5.99",2,
+        "6.99",3,
+        "7.95",1,
+        "7.99",4]},
+    /* ... */,
+}
+{% endhighlight %}
+
+We can first see that the exclusion of the tagged "SCIFI_FQ" field query did
+not affect the overall ``numFound``, which is still 2.  However, for the
+facet field we applied the exclusion to, we now have facet results for records
+in the whole set (which is the effective query after the exclusion). Finally,
+our facet field has been renamed "PRICE_KEY" instead of the field name
+("price_f").
+
+
 
 
 
