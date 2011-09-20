@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Pivot Faceting (Decision Trees) in Solr 1.4.
-description: TODO
+description: Pivot faceting, a feature introduced in Solr 4.0, can be
+  approximated in Solr 1.4 using a few non-standard facet field/query
+  features (and a little bit of hackery).
 date: 2011-09-19 16:00:00 UTC
 tags: ['search', 'solr', 'facet', 'pivot', 'hacks']
 ---
@@ -446,43 +448,49 @@ Our "price by genre" example is a bit simplistic in that we can mostly get
 the same results with two standard Solr 1.4.1 facet field queries. But, the
 faux pivot facet technique really shines for a "foo by bar"-type query where
 there are large numbers of first ("foo") level facet results. Say, the first
-level has 10 results -- in the standard way with Solr 1.4.1, this would mean 11
-queries (one for the top 10 "foo"'s, then one each for the top second-level
-"bar"'s for each "foo"). The faux pivot facet technique cuts this down to 2
-queries total.
+level has 10 results, this would mean 11 queries (one for the top 10 "foo"'s,
+then one each for the top second-level "bar"'s for each "foo"). The faux pivot
+facet technique cuts this down to 2 queries total.
 
+Although our examples here only use facet fields, the technique works equally
+well for [facet queries][facet_query]. And it works when using
+[distributed search][distributed].
 
+Additionally, the technique can be applied to further decision tree levels.
+In the Solr 4.0 world, this simply means adding another field
+like ``facet.pivot=price_f,genre_s,inStock_b`` to get further breakdowns for
+the "in stock" boolean field. For Solr 1.4.1, we would do a third query,
+with permutations of our previous tagged ``fq``'s, as well as second-level
+``fq``'s. Then, we would have third-level keyed facet fields like:
+"6.99_fantasy_INSTOCK", "6.99_scifi_INSTOCK", etc. At this level, it
+certainly wouldn't be pretty and would result in a beastly query, but
+shows that the technique only adds 1 more actual Solr query for each
+additional level in the faux decision tree.
 
+Speaking of query complexity, it is fair to point out that this type of
+query hackery really should be done programmatically to ensure correctness,
+and definitely not via the manual queries I provided above using curl.
+It's tough keeping track of just the 4 first-level pivots in our example above,
+let alone a larger first level group, or more than 2 levels deep of pivots.
+Another benefit is that you can collapse your tag / key names to integer
+or other simple keys, and then have your program match things up later for
+the final assembled decision tree result.
 
+As a final performance note, the faux pivot facet approach doesn't really
+lighten the Solr server load, it just collapses what would otherwise be
+multiple queries into one query. Thus, if reducing the number of round trips
+between a web application and Solr for single search is the goal, and you
+need pivot facets in a pre-4.0 Solr, this may well be the ticket.
 
-**TODO HERE**:
-
-1. The above example doesn't buy us a whole lot that we could do in two more
-   basic facet field 1.4.1 queries, but the method is generally applicable
-   which helps a lot for n * m situations where n and m are large.
-2. Want to programatically implement this, because (1) you won't know how
-   many results you have, and (2) it gets complicated very quickly.
-3. Performance: Hits Solr with a lot more separate fq's than separate queries,
-   so not necessarily lightening the load on Solr. The main point here is to
-   reduce the number of queries.
-4. 3+ level pivot faceting. Discuss this.
-5. Works for:
-
-  * Facet queries
-  * Distributed Solr
-
-6. Do description and check other top matter.
-7. Find all remaining TODO's.
-
-
-
-[solr]: http://lucene.apache.org/solr/
-[solr_facet]: http://wiki.apache.org/solr/SolrFacetingOverview
+[distributed]: http://wiki.apache.org/solr/DistributedSearch
+[ex_facets]: http://wiki.apache.org/solr/SimpleFacetParameters#Multi-Select_Faceting_and_LocalParams
+[facet_query]: http://wiki.apache.org/solr/SimpleFacetParameters#facet.query_:_Arbitrary_Query_Faceting
+[jira792]: https://issues.apache.org/jira/browse/SOLR-792#referrer=solr.pl
+[local_params]: http://wiki.apache.org/solr/LocalParams
 [pivot_facet]: http://wiki.apache.org/solr/SimpleFacetParameters#Pivot_.28ie_Decision_Tree.29_Faceting
 [solr4]: http://wiki.apache.org/solr/Solr4.0
-[jira792]: https://issues.apache.org/jira/browse/SOLR-792#referrer=solr.pl
 [solrpl_pivot]: http://solr.pl/en/2010/10/25/hierarchical-faceting-pivot-facets-in-trunk/
-[local_params]: http://wiki.apache.org/solr/LocalParams
-[ex_facets]: http://wiki.apache.org/solr/SimpleFacetParameters#Multi-Select_Faceting_and_LocalParams
+[solr]: http://lucene.apache.org/solr/
+[solr_facet]: http://wiki.apache.org/solr/SolrFacetingOverview
 
 <!-- more end -->

@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-{% for post in site.posts limit:4 %}
+{% for post in site.posts limit:5 %}
   <div class="post">
     {% include post_header.html %}
     <div class="excerpt">
