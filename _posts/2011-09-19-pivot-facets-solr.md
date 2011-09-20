@@ -3,7 +3,7 @@ layout: post
 title: Pivot Faceting (Decision Trees) in Solr 1.4.
 description: TODO
 date: 2011-09-19 16:00:00 UTC
-tags: ['search', 'solr', 'hacks']
+tags: ['search', 'solr', 'facet', 'pivot', 'hacks']
 ---
 
 ## Solr Pivot Facets
@@ -20,10 +20,21 @@ enable facet queries to return "counts for field 'foo' for each different field
 
 Decision trees come up a lot, and at work, we need results along multiple
 axes -- typically in our case "field/query by year" for a time series. However,
-we use Solr 1.4.1 and are unlikely to migrate to Solr 4.0 in the meantime,
-while at the same time really wanting pivot facets. After some research,
-experimentation and a good amount of hackery, I was able to come up with a
-"faux" pivot facet scheme that approximates true facet pivoting in Solr 1.4.1.
+we use Solr 1.4.1 and are unlikely to migrate to Solr 4.0 in the meantime.
+Our existing approach was to simply query for the top "n" fields for a first
+query, then for *each* field result, perform a second-level facet query by
+year. So, for the top 20 results, we would perform 1 + 20 queries -- clearly
+not optimal, when we're trying to get this done in the context of a blocking
+HTTP request in our underlying web application.
+
+Hoping to get *something* better than our 1 + *n* separate queries approach,
+I began researching the somewhat more obscure facet features present in Solr
+1.4.1. And after some investigation, experimentation and a good amount of
+hackery, I was able to come up with a "faux" pivot facet scheme that
+mostly approximates true pivot faceting using Solr 1.4.1.
+
+We'll start by running some real pivot facets in Solr 4.0, then look at the
+components and full technique for simulated pivot facets in Solr 1.4.1.
 
 ## Pivot Faceting in Solr 4.0
 
@@ -31,6 +42,8 @@ Pivot facets were added to Solr in [SOLR-792][jira792]. A good introductory
 [article][solrpl_pivot] is available on the TODO blog. To see the basic
 operation in action, let's just use the "example" setup that comes with
 the Solr 4.0 distribution (located at "solr_4.0_path/solr/example").
+
+<!-- more start -->
 
 Let's start the Solr process:
 
@@ -425,8 +438,19 @@ the following decision tree for price by genre:
   * **fantasy**: 3
   * **scifi**: 1
 
+Victory!
 
 ## Discussion and Practical Implications
+
+Our "price by genre" example is a bit simplistic in that we can mostly get
+the same results with two standard Solr 1.4.1 facet field queries. But, the
+faux pivot facet technique really shines for a "foo by bar"-type query where
+there are large numbers of first ("foo") level facet results. Say, the first
+level has 10 results -- in the standard way with Solr 1.4.1, this would mean 11
+queries (one for the top 10 "foo"'s, then one each for the top second-level
+"bar"'s for each "foo"). The faux pivot facet technique cuts this down to 2
+queries total.
+
 
 
 
@@ -441,8 +465,13 @@ the following decision tree for price by genre:
 3. Performance: Hits Solr with a lot more separate fq's than separate queries,
    so not necessarily lightening the load on Solr. The main point here is to
    reduce the number of queries.
+4. 3+ level pivot faceting. Discuss this.
+5. Works for:
 
+  * Facet queries
+  * Distributed Solr
 
+6. Do description and check other top matter.
 
 
 
@@ -455,28 +484,5 @@ the following decision tree for price by genre:
 [solrpl_pivot]: http://solr.pl/en/2010/10/25/hierarchical-faceting-pivot-facets-in-trunk/
 [local_params]: http://wiki.apache.org/solr/LocalParams
 [ex_facets]: http://wiki.apache.org/solr/SimpleFacetParameters#Multi-Select_Faceting_and_LocalParams
-
-
-
-<!-- more start -->
-
-## TODO
-
-* Description
-
-* 3+ level pivot trees.
-
-* Example Schema
-
-  * company
-  * product
-  * year
-  * category
-
-* Works for:
-
-  * Facet queries
-  * Distributed Solr
-
 
 <!-- more end -->
