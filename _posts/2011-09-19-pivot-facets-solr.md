@@ -21,13 +21,13 @@ enable facet queries to return "counts for field 'foo' for each different field
 'bar'" -- a multi-level facet across separate Solr fields.
 
 Decision trees come up a lot, and at work, we need results along multiple
-axes -- typically in our case "field/query by year" for a time series. However,
-we use Solr 1.4.1 and are unlikely to migrate to Solr 4.0 in the meantime.
-Our existing approach was to simply query for the top "n" fields for a first
-query, then for *each* field result, perform a second-level facet query by
-year. So, for the top 20 results, we would perform 1 + 20 queries -- clearly
-not optimal, when we're trying to get this done in the context of a blocking
-HTTP request in our underlying web application.
+axes -- typically in our case "field/query by year" for a time series.
+However, we use Solr 1.4.1 and are unlikely to migrate to Solr 4.0 in the
+meantime. Our existing approach was to simply query for the top "n" fields for
+a first query, then for *each* field result, perform a second-level facet query
+by year. So, for the top 20 results, we would perform 1 + 20 queries -
+clearly not optimal, when we're trying to get this done in the context of a
+blocking HTTP request in our underlying web application.
 
 Hoping to get *something* better than our 1 + *n* separate queries approach,
 I began researching the somewhat more obscure facet features present in Solr
@@ -88,8 +88,8 @@ $ curl http://localhost:8983/solr/update \
 {% endhighlight %}
 
 Note that we use ``_s`` fields for simplicity, forcing string fields for
-what would ordinarily be text fields -- Solr facets only return results on
-*indexed*, not *stored* terms, and string fields are identical for both.
+what would ordinarily be text fields -- Solr facets only return results
+on *indexed*, not *stored* terms, and string fields are identical for both.
 In a real deployment, you would use ``copyField`` directives to copy ``text``
 fields to ``string`` fields for faceting.
 
@@ -165,8 +165,8 @@ This gives us decision tree results for the ``facet_pivot`` field:
 {% endhighlight %}
 
 Nice intuitive results, for a fairly straightforward facet query. However,
-now to the bigger question -- can we approximate this in Solr 1.4.1, which
-doesn't have the ``facet.pivot`` query option?
+now to the bigger question -- can we approximate this in Solr 1.4.1,
+which doesn't have the ``facet.pivot`` query option?
 
 ## Pivot Faceting in Solr 1.4.1
 
@@ -183,7 +183,7 @@ that we will use to cobble together a "faux" pivot query are:
     field/query.
 
 Note that either facet fields or facet queries can be used with this technique
--- I'll only show fields, but everything applies equally to queries.
+- I'll only show fields, but everything applies equally to queries.
 
 ### Setup
 
