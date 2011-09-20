@@ -35,7 +35,7 @@ the Solr 4.0 distribution (located at "solr_4.0_path/solr/example").
 Let's start the Solr process:
 
 {% highlight bash %}
-# Start Solr as non-daemon
+# Start Solr as non-daemon.
 $ cd solr_4.0_path/solr/example
 $ java -jar start.jar
 {% endhighlight %}
@@ -82,10 +82,10 @@ You should now be able to query the 10 sample documents at:
 ``http://localhost:8983/solr/admin/form.jsp``.
 
 Now that we have some documents to work with, let's do a simple pivot query
-on genre counts grouped by price:
+on price by genre:
 
 {% highlight bash %}
-# Pivot query:
+# Pivot query.
 $ curl http://localhost:8983/solr/select --data indent=on\
 \&wt=json\
 \&q=*%3A*\
@@ -179,7 +179,7 @@ I ended up running my Solr 1.4.1 server on port 8984, so that I could also
 keep the Solr 4.0 server running on port 8983. Here's what I did:
 
 {% highlight bash %}
-# Start Solr as non-daemon
+# Start Solr as non-daemon.
 $ cd solr_1.4.1_path/solr/example
 $ java -Djetty.port=8984 -jar start.jar
 
@@ -288,13 +288,159 @@ in the whole set (which is the effective query after the exclusion). Finally,
 our facet field has been renamed "PRICE_KEY" instead of the field name
 ("price_f").
 
+### Constructing a Pivot Query
+
+With the basic tag/key/exclude technique in mind, let's now return to our
+original goal -- create a pivot query on price by genre using Solr 1.4.1.
+We will do this by performing two queries:
+
+1. Perform a facet query for the top price results ordered by index.
+2. Create ``fq`` tagged exclusions for each facet result, then create multiple
+   keyed facets on genre to give us each of our decision tree "leaf" results.
+
+The first query is a very basic facet field query:
+
+{% highlight bash %}
+# First level facet field query.
+$ curl http://localhost:8983/solr/select --data indent=on\
+\&wt=json\
+\&q=*%3A*\
+\&rows=0\
+\&facet=true\
+\&facet.mincount=1\
+\&facet.sort=index\
+\&facet.field=price_f
+{% endhighlight %}
+
+Which gives us four individual facet results: "5.99", "6.99", "7.95", "7.99".
+
+{% highlight javascript %}
+{
+  /* ... */,
+  "response":{"numFound":10, /* ... */},
+ "facet_counts":{
+    /* ... */,
+    "facet_fields":{
+      "price_f":[
+        "5.99",2,
+        "6.99",3,
+        "7.95",1,
+        "7.99",4]},
+    /* ... */,
+}
+{% endhighlight %}
+
+We take each of those results and create specific ``fq`` tagged restrictions:
+
+{% highlight text %}
+fq={!tag=FQ5.99}price_f:5.99
+fq={!tag=FQ6.99}price_f:6.99
+fq={!tag=FQ7.95}price_f:7.95
+fq={!tag=FQ7.99}price_f:7.99
+{% endhighlight %}
+
+Each excludes one of the components we'll want facet results for our next
+level field (genre) on. To then get the pivot facet result for each of our
+four facets, we will exclude all the ``fq``'s above **except** the matching
+one for the facet. Translating into facet parameters, this is:
+
+{% highlight text %}
+facet.field={!key=5.99_GENRE ex=FQ6.99,FQ7.95,FQ7.99}genre_s
+facet.field={!key=6.99_GENRE ex=FQ5.99,FQ7.95,FQ7.99}genre_s
+facet.field={!key=7.95_GENRE ex=FQ5.99,FQ6.99,FQ7.99}genre_s
+facet.field={!key=7.99_GENRE ex=FQ5.99,FQ6.99,FQ7.95}genre_s
+{% endhighlight %}
+
+The key is that we can specify *multiple* exclusions using a comma. Thus,
+looking to the facet key "5.99_GENRE", we exclude all the ``fq`` restrictions
+*except* "FQ5.99", which means that the facet results for that facet field
+key will be the facet counts for "``fq=price_f:5.99``" only. It's kind of a
+twisted-double-negative logic, but it all works out.
+
+Let's put everything into our second-level query now:
+
+{% highlight bash %}
+# Second level pivot query.
+$ curl http://localhost:8983/solr/select --data \
+indent=on\
+\&wt=json\
+\&q=*%3A*\
+\&rows=0\
+\&facet=true\
+\&facet.mincount=1\
+\&facet.sort=index\
+\&fq={\!tag=FQ5.99}price_f:5.99\
+\&fq={\!tag=FQ6.99}price_f:6.99\
+\&fq={\!tag=FQ7.95}price_f:7.95\
+\&fq={\!tag=FQ7.99}price_f:7.99\
+\&facet.field={\!key=5.99_GENRE\ ex=FQ6.99\,FQ7.95\,FQ7.99}genre_s\
+\&facet.field={\!key=6.99_GENRE\ ex=FQ5.99\,FQ7.95\,FQ7.99}genre_s\
+\&facet.field={\!key=7.95_GENRE\ ex=FQ5.99\,FQ6.99\,FQ7.99}genre_s\
+\&facet.field={\!key=7.99_GENRE\ ex=FQ5.99\,FQ6.99\,FQ7.95}genre_s
+{% endhighlight %}
+
+Which gives us the "leaves" of the decision tree with our result keys:
+"5.99_GENRE", "6.99_GENRE", "7.95_GENRE", and "7.99_GENRE".
+
+{% highlight javascript %}
+{
+  /* ... */,
+  "response":{"numFound":10, /* ... */},
+ "facet_counts":{
+    /* ... */,
+    "facet_fields":{
+      "5.99_GENRE":[
+        "fantasy",2],
+      "6.99_GENRE":[
+        "fantasy",2,
+        "scifi",1],
+      "7.95_GENRE":[
+        "fantasy",1],
+      "7.99_GENRE":[
+        "fantasy",3,
+        "scifi",1]},
+    /* ... */,
+}
+{% endhighlight %}
+
+Looking at our original Solr 4.0 pivot query, we can cobble together our
+two Solr 1.4.1 queries to get the equivalent results. In the end, both produce
+the following decision tree for price by genre:
+
+* 5.99: 2
+
+  * fantasy: 2
+
+* 6.99: 3
+
+  * fantasy: 2
+  * scifi: 1
+
+* 7.95: 1
+
+  * fantasy: 1
+
+* 7.99: 4
+
+  * fantasy: 3
+  * scifi: 1
+
+
+## Discussion and Practical Implications
 
 
 
 
+**TODO HERE**:
 
-**TODO HERE**: Do a basic exclude fq example, then move on to next section --
-the actual faux pivot queries.
+1. The above example doesn't buy us a whole lot that we could do in two more
+   basic facet field 1.4.1 queries, but the method is generally applicable
+   which helps a lot for n * m situations where n and m are large.
+2. Want to programatically implement this, because (1) you won't know how
+   many results you have, and (2) it gets complicated very quickly.
+3. Performance: Hits Solr with a lot more separate fq's than separate queries,
+   so not necessarily lightening the load on Solr. The main point here is to
+   reduce the number of queries.
 
 
 
