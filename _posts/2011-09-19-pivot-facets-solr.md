@@ -407,23 +407,23 @@ Looking at our original Solr 4.0 pivot query, we can cobble together our
 two Solr 1.4.1 queries to get the equivalent results. In the end, both produce
 the following decision tree for price by genre:
 
-* 5.99: 2
+* **5.99**: 2
 
-  * fantasy: 2
+  * **fantasy**: 2
 
-* 6.99: 3
+* **6.99**: 3
 
-  * fantasy: 2
-  * scifi: 1
+  * **fantasy**: 2
+  * **scifi**: 1
 
-* 7.95: 1
+* **7.95**: 1
 
-  * fantasy: 1
+  * **fantasy**: 1
 
-* 7.99: 4
+* **7.99**: 4
 
-  * fantasy: 3
-  * scifi: 1
+  * **fantasy**: 3
+  * **scifi**: 1
 
 
 ## Discussion and Practical Implications
