@@ -3,7 +3,9 @@ layout: post
 title: Sunny.js, a Cloud Library for Node.js
 description: Sunny.js is a cloud datastore client for Node.js. Sunny provides
   an efficient, event-based common interface to various cloud stores (AWS S3,
-  Google Storage) to enable cloud-agnostic programming.
+  Google Storage) for fast, cloud-agnostic programming. It includes Node.js
+  niceties such as a Read/WriteStream implementation, while providing cloud
+  features like arbitrary metadata / request headers and SSL support.
 date: 2011-10-06 16:00:00 UTC
 tags: ['sunny', 'node.js', 'cloud', 's3', 'aws', 'google storage']
 ---
