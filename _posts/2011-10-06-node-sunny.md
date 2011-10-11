@@ -17,15 +17,34 @@ development. Node's asynchronous design and great HTTP/REST support provide
 the building blocks for architecting non-blocking and scalable applications
 in the cloud.
 
-There are a lot of great Node cloud clients out there for
-Amazon Web Services [S3][s3]: [knox][knox], [node-sissy][node-sissy],
+There are a lot of great Node cloud clients out there for cloud datastores.
+Amazon Web Services [S3][s3] has: [knox][knox], [node-sissy][node-sissy],
 [node-s3][node-s3], [Node.js-Amazon-S3][Node.js-Amazon-S3],
-as well as Rackspace [Cloud Files][cf]: [node-cloudfiles][node-cloudfiles].
+And, Rackspace [Cloud Files][cf] has: [node-cloudfiles][node-cloudfiles].
 
+After reviewing these libraries, I found a few features variously lacking that
+I would like in an ideal cloud datastore client:
 
+* Able to create / delete containers (buckets).
+* "One-shot" requests wherever possible.
+* Configurable request headers, cloud options and metadata.
+* SSL support.
+* Event-based interface.
+
+Additionally, it would be nice to have a library that worked across multiple
+clouds like [jclouds][jclouds] for Java and [Libcloud][libcloud] for Python.
+
+With these goals in mind, I put together a basic multi-cloud datastore client
+called [Sunny.js][sunny_www]. Sunny initially supports Amazon [S3][s3] and
+[Google Storage for Developers][gsfd] (the [version 1][gs_v1] "legacy"
+interface).
+
+Here are some basic resources to get started with Sunny, which we'll dive into
+a little deeper in the subsequent sections of this post:
 
 * [Sunny.js Documentation][sunny_www]: Guides and API documentation.
 * [Sunny.js GitHub Page][sunny_gh]: Source repository and issue tracker.
+* [Sunny.js NPM Page][sunny_npm]: NPM page and history.
 
 <!-- more start -->
 
@@ -41,6 +60,8 @@ as well as Rackspace [Cloud Files][cf]: [node-cloudfiles][node-cloudfiles].
 
 ## Stream Interface
 
+## Sunny.js Development
+
 ## Conclusion / Future
 
 [node]: http://nodejs.org
@@ -49,8 +70,11 @@ as well as Rackspace [Cloud Files][cf]: [node-cloudfiles][node-cloudfiles].
 [node-s3]: https://github.com/grippy/node-s3
 [Node.js-Amazon-S3]: https://github.com/nuxusr/Node.js---Amazon-S3
 [node-cloudfiles]: https://github.com/nodejitsu/node-cloudfiles
+[jclouds]: http://www.jclouds.org/
+[libcloud]: http://libcloud.apache.org/
 [s3]: http://aws.amazon.com/s3/
-[gsfh]: http://code.google.com/apis/storage/
+[gsfd]: http://code.google.com/apis/storage/
+[gs_v1]: http://code.google.com/apis/storage/docs/reference/v1/apiversion1.html
 [cf]: http://www.rackspacecloud.com/cloud_hosting_products/files/
 [os]: http://openstack.org/projects/storage/
 [sunny_www]: http://sunnyjs.org
