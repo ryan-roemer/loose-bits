@@ -4,11 +4,15 @@ layout: default
 {% assign post = page %}
 
 <!-- Post -->
+<div class="inner">
 <div id="post" class="post">
   {% include post_header.html %}
   {{ content }}
 </div>
+</div>
 
+<!-- Sharing -->
+<div class="inner">
 <div id="share" class="clearfix">
   <!-- Twitter -->
   <a href="http://twitter.com/share" class="twitter-share-button"
@@ -82,3 +86,5 @@ layout: default
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>

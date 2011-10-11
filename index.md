@@ -4,6 +4,7 @@ title: Home
 ---
 
 {% for post in site.posts limit:5 %}
+<div class="inner">
   <div class="post">
     {% include post_header.html %}
     <div class="excerpt">
@@ -13,4 +14,5 @@ title: Home
       Read <a href="{{ post.url }}">more</a>...
     </div>
   </div>
+</div>
 {% endfor %}

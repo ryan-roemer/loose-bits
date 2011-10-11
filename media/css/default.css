@@ -45,7 +45,7 @@ header div.title p{font-size:1.15em;font-weight:350;color:#ccc}
 #date{float:left}
 #tags{float:right;width:250px;text-align:right}
 #date,#tags span.section{font-style:italic}
-.post{width:600px;border-bottom:3px solid #ccc;margin-bottom:15px;}
+.post{width:600px;margin-bottom:15px;}
 .post .more{text-align:right;font-style:italic;margin-bottom:15px}
 .post p{text-indent:25px;line-height:125%}
 .post ul li{line-height:125%;padding-bottom:5px;}
