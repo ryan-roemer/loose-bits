@@ -50,6 +50,19 @@ a little deeper in the subsequent sections of this post:
 
 ## Installation
 
+Sunny can be installed directly from [npm][sunny_npm]:
+
+{% highlight bash %}
+$ npm install sunny
+{% endhighlight %}
+
+or from the [GitHub][sunny_gh] repository:
+
+{% highlight bash %}
+$ git clone git@github.com:ryan-roemer/node-sunny.git
+$ npm install ./node-sunny
+{% endhighlight %}
+
 ## Cloud Operations
 
 ### Getting Started
