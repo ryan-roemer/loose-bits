@@ -35,9 +35,9 @@ Additionally, it would be nice to have a library that worked across multiple
 clouds like [jclouds][jclouds] for Java and [Libcloud][libcloud] for Python.
 
 With these goals in mind, I put together a basic multi-cloud datastore client
-called [Sunny.js][sunny_www]. Sunny initially supports Amazon [S3][s3] and
-[Google Storage for Developers][gsfd] (the [version 1][gs_v1] "legacy"
-interface).
+called [Sunny.js][sunny_www]. Sunny initially supports
+[Amazon Web Service][aws]'s [Simple Storage Service][s3] (S3) and
+[Google Storage for Developers][gsfd] ([version 1][gs_v1]).
 
 Here are some basic resources to get started with Sunny, which we'll dive into
 a little deeper in the subsequent sections of this post:
@@ -85,6 +85,7 @@ $ npm install ./node-sunny
 [node-cloudfiles]: https://github.com/nodejitsu/node-cloudfiles
 [jclouds]: http://www.jclouds.org/
 [libcloud]: http://libcloud.apache.org/
+[aws]: http://aws.amazon.com/
 [s3]: http://aws.amazon.com/s3/
 [gsfd]: http://code.google.com/apis/storage/
 [gs_v1]: http://code.google.com/apis/storage/docs/reference/v1/apiversion1.html
