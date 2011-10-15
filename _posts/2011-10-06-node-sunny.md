@@ -79,20 +79,96 @@ var sunny = require("sunny"),
 
 ## Cloud Operations
 
+Now that we have our cloud connection object (``conn``), we can perform all of
+our cloud operations on containers and blobs. For those used to Amazon Web
+Services parlance, a Sunny container is equivalent to an S3 "bucket", and a
+Sunny blob is an S3 "key".
+
+Sunny cloud operations are asynchronous and event-based. The cloud methods
+return either a request or a stream object, that is then used to set
+listeners and callbacks on, before calling ``end()`` and starting the
+underlying real cloud network operation.
+
+### Requests
+
+Sunny request objects are not true Node request objects, but approximate
+a subset of a Node HTTP request object events. The most common request events
+are:
+
+* **"error"**: The underlying real cloud operation failed.
+* **"end"**: The operation finished and we have results.
+* **"data"**: A GET request returned a data chunk.
+
+Let's perform a basic asynchronous operation to get a container named
+"sunny" from our cloud store.
+
+{% highlight javascript %}
+var request = conn.getContainer("sunnyjs", { validate: true });
+request.on('error', function (err) {
+  console.log("We received error: %s", err);
+});
+request.on('end', function (results, meta) {
+  var container = results.container;
+  console.log("Retrieved container \"%s\".", container.name);
+});
+request.end();
+{% endhighlight %}
+
+which gives us the output:
+
+{% highlight text %}
+Retrieved container "sunnyjs".
+{% endhighlight %}
+
+Breaking the code down, we call ``getContainer`` with the container name
+and the option ``validate: true``. The validate option means we actually
+perform a cloud request to check the container exists before continuing.
+This is a good check to start with before launching in to other code. But,
+Sunny allows the programmer to choose to not validate, and wait for the first
+blob request to actually perform any network operation, which is faster.
+
+The ``getContainer`` method returns a ``request`` object, which we then set
+our listeners on for "error" and "end" (when we have results). Finally, the
+call to ``request.end()`` initiates the actual network operation.
+
+Our "end" callback takes a ``results`` parameter which contains a
+``container`` method for further use with blob methods, and a ``meta`` object
+with information from the actual cloud call (metadata, HTTP headers, etc.)
+See the [getContainer][sunny_getContainer] documentation for more options,
+results and uses.
+
+The other request-based Sunny methods work in a similar fashion, and include
+the following:
+
+* **Connection**: Get a list of containers. Get/create/delete a single
+  container.
+* **Container**: Get/create/delete a single container. Get a list of blobs.
+  Head/delete a single blob.
+* **Blob**: Head/delete a single blob.
+
+See the [API][sunny_api] for full method details.
+
+### Streams
+
 * TODO: Two types: Depending on operations.
 
   * Requests: Not really an HTTP request, but some same events / behavior.
   * Streams: Full read/write streams.
 
-* TODO: Basic use.
+* TODO: GetBlob operation (maybe start with PutBlob).
+
+* TODO: What can we do with streams? Answer: sunny-proxy
+
+API:
+
+    getBlob(name, options): Create blob object and GET data.
+    getBlobToFile(name, filePath, options): Create blob object and GET data to file.
+    putBlob(name, options): Create blob object and PUT data.
+    putBlobFromFile(name, filePath, options): Create blob object and PUT data from file.
 
 ## Error Handling
 
 * TODO: Testing isNotFound(), etc. Abstracts away error codes.
-
-## Stream Interface
-
-* TODO: What can we do with streams? Answer: sunny-proxy
 
 ## Conclusion / Future
 
@@ -115,9 +191,11 @@ var sunny = require("sunny"),
 [cf]: http://www.rackspacecloud.com/cloud_hosting_products/files/
 [os]: http://openstack.org/projects/storage/
 [sunny_www]: http://sunnyjs.org
-[sunny_conn]: http://sunnyjs.org/api/symbols/base.Connection.html
 [sunny_guide]: http://sunnyjs.org/guide.html
 [sunny_gh]: http://github.com/ryan-roemer/node-sunny
 [sunny_npm]: http://search.npmjs.org/#/sunny
+[sunny_api]: http://sunnyjs.org/api/index.html
+[sunny_conn]: http://sunnyjs.org/api/symbols/base.Connection.html
+[sunny_getContainer]: http://sunnyjs.org/api/symbols/base.Connection.html#getContainer
 
 <!-- more end -->
