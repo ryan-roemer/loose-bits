@@ -50,14 +50,32 @@ a little deeper in the subsequent sections of this post:
 
 ## Getting Started
 
-Sunny can be installed directly from [npm][sunny_npm]:
+First, install sunny from [npm][sunny_npm]:
 
 {% highlight bash %}
 $ npm install sunny
 {% endhighlight %}
 
+Once Sunny is installed, we need to set up some configuration information for
+our Node program. We can provide cloud account and option information to
+Sunny either via the process environment or a JavaScript object / file.
+For simplicity, we'll just export some environment variables (see the
+[user guide][sunny_guide] for more on configuration and using files).
 
-* TODO: Configuration. FromEnv() link to FromConfig().
+{% highlight bash %}
+$ export SUNNY_PROVIDER=("aws"|"google")
+$ export SUNNY_ACCOUNT="ACCOUNT_NAME"
+$ export SUNNY_SECRET_KEY="ACCOUNT_SECRET_KEY"
+$ export SUNNY_SSL=("true"|"false")
+{% endhighlight %}
+
+From here, we can create our Node program, and get a live cloud datastore
+[connection][sunny_conn] as follows:
+
+{% highlight javascript %}
+var sunny = require("sunny"),
+  conn = sunny.Configuration.fromEnv().connection;
+{% endhighlight %}
 
 ## Cloud Operations
 
@@ -97,6 +115,8 @@ $ npm install sunny
 [cf]: http://www.rackspacecloud.com/cloud_hosting_products/files/
 [os]: http://openstack.org/projects/storage/
 [sunny_www]: http://sunnyjs.org
+[sunny_conn]: http://sunnyjs.org/api/symbols/base.Connection.html
+[sunny_guide]: http://sunnyjs.org/guide.html
 [sunny_gh]: http://github.com/ryan-roemer/node-sunny
 [sunny_npm]: http://search.npmjs.org/#/sunny
 
