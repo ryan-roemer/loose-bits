@@ -48,7 +48,7 @@ a little deeper in the subsequent sections of this post:
 
 <!-- more start -->
 
-## Installation
+## Getting Started
 
 Sunny can be installed directly from [npm][sunny_npm]:
 
@@ -56,26 +56,31 @@ Sunny can be installed directly from [npm][sunny_npm]:
 $ npm install sunny
 {% endhighlight %}
 
-or from the [GitHub][sunny_gh] repository:
 
-{% highlight bash %}
-$ git clone git@github.com:ryan-roemer/node-sunny.git
-$ npm install ./node-sunny
-{% endhighlight %}
+* TODO: Configuration. FromEnv() link to FromConfig().
 
 ## Cloud Operations
 
-### Getting Started
+* TODO: Two types: Depending on operations.
 
-### Other Operations
+  * Requests: Not really an HTTP request, but some same events / behavior.
+  * Streams: Full read/write streams.
+
+* TODO: Basic use.
 
 ## Error Handling
 
+* TODO: Testing isNotFound(), etc. Abstracts away error codes.
+
 ## Stream Interface
 
-## Sunny.js Development
+* TODO: What can we do with streams? Answer: sunny-proxy
 
 ## Conclusion / Future
+
+* TODO: More cloud providers.
+* TODO: Development help is welcome.
+
 
 [node]: http://nodejs.org
 [knox]: https://github.com/LearnBoost/knox
