@@ -134,7 +134,7 @@ call to ``request.end()`` initiates the actual network operation.
 Our "end" callback takes a ``results`` parameter which contains a
 ``container`` method for further use with blob methods, and a ``meta`` object
 with information from the actual cloud call (metadata, HTTP headers, etc.)
-See the [getContainer][sunny_getContainer] documentation for more options,
+See the [``getContainer``][sunny_getContainer] documentation for more options,
 results and uses.
 
 The other request-based Sunny methods work in a similar fashion, and include
@@ -143,20 +143,24 @@ the following:
 * **Connection**: Get a list of containers. Get/create/delete a single
   container.
 * **Container**: Get/create/delete a single container. Get a list of blobs.
-  Head/delete a single blob.
-* **Blob**: Head/delete a single blob.
+  Head/delete a single blob. Get/put blob to/from a file.
+* **Blob**: Head/delete a single blob. Get/put blob to/from a file.
 
 See the [API][sunny_api] for full method details.
 
 ### Streams
 
-* TODO: Two types: Depending on operations.
+Sunny returns stream objects for data-based cloud operations (PUT or GET),
+which are real implementations of Node [streams][node_streams]. A GET blob
+method returns a [Readable Stream][node_rs] object, and a PUT blob method
+returns a [Writable Stream][node_ws] object.
 
-  * Requests: Not really an HTTP request, but some same events / behavior.
-  * Streams: Full read/write streams.
+
+
+
 
 * TODO: GetBlob operation (maybe start with PutBlob).
-
+* TODO: Mention ``pipe()``'s and why they're nice.
 * TODO: What can we do with streams? Answer: sunny-proxy
 
 API:
@@ -176,26 +180,29 @@ API:
 * TODO: Development help is welcome.
 
 
-[node]: http://nodejs.org
-[knox]: https://github.com/LearnBoost/knox
-[node-sissy]: https://github.com/tricknik/node-sissy
-[node-s3]: https://github.com/grippy/node-s3
-[Node.js-Amazon-S3]: https://github.com/nuxusr/Node.js---Amazon-S3
-[node-cloudfiles]: https://github.com/nodejitsu/node-cloudfiles
-[jclouds]: http://www.jclouds.org/
-[libcloud]: http://libcloud.apache.org/
 [aws]: http://aws.amazon.com/
-[s3]: http://aws.amazon.com/s3/
+[cf]: http://www.rackspacecloud.com/cloud_hosting_products/files/
 [gsfd]: http://code.google.com/apis/storage/
 [gs_v1]: http://code.google.com/apis/storage/docs/reference/v1/apiversion1.html
-[cf]: http://www.rackspacecloud.com/cloud_hosting_products/files/
+[jclouds]: http://www.jclouds.org/
+[knox]: https://github.com/LearnBoost/knox
+[libcloud]: http://libcloud.apache.org/
+[node-cloudfiles]: https://github.com/nodejitsu/node-cloudfiles
+[node-s3]: https://github.com/grippy/node-s3
+[node-sissy]: https://github.com/tricknik/node-sissy
+[Node.js-Amazon-S3]: https://github.com/nuxusr/Node.js---Amazon-S3
+[node]: http://nodejs.org
+[node_rs]: http://nodejs.org/docs/v0.4.9/api/streams.html#readable_Stream
+[node_streams]: http://nodejs.org/docs/v0.4.9/api/streams.html
+[node_ws]: http://nodejs.org/docs/v0.4.9/api/streams.html#writable_Stream
 [os]: http://openstack.org/projects/storage/
-[sunny_www]: http://sunnyjs.org
-[sunny_guide]: http://sunnyjs.org/guide.html
-[sunny_gh]: http://github.com/ryan-roemer/node-sunny
-[sunny_npm]: http://search.npmjs.org/#/sunny
+[s3]: http://aws.amazon.com/s3/
 [sunny_api]: http://sunnyjs.org/api/index.html
 [sunny_conn]: http://sunnyjs.org/api/symbols/base.Connection.html
 [sunny_getContainer]: http://sunnyjs.org/api/symbols/base.Connection.html#getContainer
+[sunny_gh]: http://github.com/ryan-roemer/node-sunny
+[sunny_guide]: http://sunnyjs.org/guide.html
+[sunny_npm]: http://search.npmjs.org/#/sunny
+[sunny_www]: http://sunnyjs.org
 
 <!-- more end -->
