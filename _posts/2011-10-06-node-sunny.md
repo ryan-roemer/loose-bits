@@ -240,12 +240,66 @@ Node streams available for use with Sunny get / put ``pipe()`` calls include:
 * File reads and writes -- [``fs.ReadStream``][fs_rs],
   [``fs.WriteStream``][fs_ws]
 
+## Cloud Headers and Metadata
+
+Sunny abstracts common cloud provider header and metadata. For example,
+AWS S3 has a metadata header prefix of "x-amz-meta-", while Google Storage
+has an analogous one of "x-goog-meta-".
+
+Sunny cloud operations return a ``meta`` object that looks like:
+
+{% highlight javascript %}
+{
+  headers: {
+    /* HTTP headers. */
+  },
+  cloudHeaders: {
+    /* Cloud-specific HTTP headers (e.g., "x-amz-"). */
+  },
+  metadata: {
+    /* Metadata headers (e.g., "x-amz-meta-"). */
+  }
+}
+{% endhighlight %}
+
+with cloud-specific prefixes stripped out.  Moreover, you can *set* cloud
+headers in the same manner by passing any of the fields above ("headers",
+"cloudHeaders", "metadata") in the ``options`` object of a cloud request.
+In this manner, Sunny makes it easy to utilize metadata operations as part
+of your application, while remaining agnostic to your actual cloud provider.
+See the Sunny [user guide][sunny_guide] for more information.
+
 ## Error Handling
 
+For programmatic ease, and to better abstract across cloud providers, Sunny
+wraps cloud-based errors with a custom class, that adds in some additional
+useful attributes. The ``CloudError`` class has the following members:
 
+* **``message``**: The error message (usually in XML). (from ``Error``).
+* **``statusCode``**: HTTP status code, if any.
 
+and error type methods:
 
-* TODO: Testing isNotFound(), etc. Abstracts away error codes.
+* **[``isNotFound``][isNotFound]**: Container / blob does not exist.
+* **[``isInvalidName``][isInvalidName]**: Invalid name requested for
+  container / blob.
+* **[``isNotEmpty``][isNotEmpty]**: Container cannot be deleted if blobs
+  still exist within it.
+* **[``isAlreadyOwnedByYou``][isAlreadyOwnedByYou]**: Creating a container
+  that is already owned by you.
+* **[``isNotOwner``][isNotOwner]**: AWS and Google Storage have a global
+  namespace, so if someone else owns the container name requested, your
+  operations will fail.
+
+Ultimately, Sunny "error" event listeners will get ``CloudError`` objects
+instead of raw ``Error`` objects on cloud method errors, which can be used to
+more easily programmatically react (especially since Sunny correctly handles
+different error codes and XML from cloud providers that correspond to the same
+type of error).
+
+## Async.js
+
+* TODO: Include this section???
 
 ## Conclusion / Future
 
@@ -260,6 +314,11 @@ Node streams available for use with Sunny get / put ``pipe()`` calls include:
 [gsfd]: http://code.google.com/apis/storage/
 [gh_blob]: https://github.com/ryan-roemer/node-sunny/blob/master/lib/base/blob/blob.js
 [gs_v1]: http://code.google.com/apis/storage/docs/reference/v1/apiversion1.html
+[isAlreadyOwnedByYou]: ./api/symbols/errors.CloudError.html#isAlreadyOwnedByYou
+[isInvalidName]: http://sunnyjs.org/api/symbols/errors.CloudError.html#isInvalidName
+[isNotEmpty]: http://sunnyjs.org/api/symbols/errors.CloudError.html#isNotEmpty
+[isNotFound]: http://sunnyjs.org/api/symbols/errors.CloudError.html#isNotFound
+[isNotOwner]: http://sunnyjs.org/api/symbols/errors.CloudError.html#isNotOwner
 [jclouds]: http://www.jclouds.org/
 [knox]: https://github.com/LearnBoost/knox
 [libcloud]: http://libcloud.apache.org/
