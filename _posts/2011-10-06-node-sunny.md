@@ -25,11 +25,13 @@ And, Rackspace [Cloud Files][cf] has: [node-cloudfiles][node-cloudfiles].
 After reviewing these libraries, I found a few features variously lacking that
 I would like in an ideal cloud datastore client:
 
-* Able to create / delete containers (buckets).
+* Event-based interface.
 * "One-shot" requests wherever possible.
+* Able to create / delete arbitrary containers (buckets).
 * Configurable request headers, cloud options and metadata.
 * SSL support.
-* Event-based interface.
+* A really well-documented [API][sunny_api] and [user guide][sunny_guide].
+  (At least I think so!)
 
 Additionally, it would be nice to have a library that worked across multiple
 clouds like [jclouds][jclouds] for Java and [Libcloud][libcloud] for Python.
@@ -439,14 +441,33 @@ async.series is done!
 
 Our code now appears in a serialized, contained order that matches the
 conceptual execution of the actual cloud operations, instead of a lot of
-callback nesting. For more on developing with Async.js, please see the
-excellent Async.js [Readme / tutorial][async_readme]. It is an investment well
-worth your time.
+callback nesting.
 
-## Conclusion / Future
+For more on developing with Async.js, please see the excellent Async.js
+[Readme / tutorial][async_readme]. It is an investment well worth your time.
+Sunny internally uses Async.js extensively for unit tests. Explore the source
+[tests][sunny_tests] directory for a lot of good use cases (parallel and
+serial).
 
-* TODO: More cloud providers.
-* TODO: Development help is welcome.
+## It's a Sunny Future
+
+That wraps up our introduction to Sunny.js. Hopefully the library provides a
+useful interface for your cloud programming needs.
+
+The project is still very much in an early development state. See the Sunny
+["to do" list][sunny_todo] to get a better idea of what features and fixes are
+coming down the pipeline. The big ticket items I would really like to see
+added are:
+
+* More cloud providers, notable Rackspace [Cloud Files][cf] and OpenStack
+  [Storage][os].
+* A basic retry function wrapper to handle expected, occasional cloud
+  operation failures and throttling.
+* Advanced cloud operation support for ACL's, policies, etc.
+
+Help, bug reports, and pull requests for the project are most welcome.
+Please review the [developer's guide][sunny_dev], and contact me with any
+questions or comments.
 
 [async_js]: https://github.com/caolan/async
 [async_readme]: https://github.com/caolan/async/blob/master/README.md
@@ -454,8 +475,8 @@ worth your time.
 [cf]: http://www.rackspacecloud.com/cloud_hosting_products/files/
 [fs_rs]: http://nodejs.org/docs/v0.4.9/api/fs.html#fs.ReadStream
 [fs_ws]: http://nodejs.org/docs/v0.4.9/api/fs.html#fs.WriteStream
-[gsfd]: http://code.google.com/apis/storage/
 [gh_blob]: https://github.com/ryan-roemer/node-sunny/blob/master/lib/base/blob/blob.js
+[gsfd]: http://code.google.com/apis/storage/
 [gs_v1]: http://code.google.com/apis/storage/docs/reference/v1/apiversion1.html
 [isAlreadyOwnedByYou]: ./api/symbols/errors.CloudError.html#isAlreadyOwnedByYou
 [isInvalidName]: http://sunnyjs.org/api/symbols/errors.CloudError.html#isInvalidName
@@ -477,12 +498,14 @@ worth your time.
 [s3]: http://aws.amazon.com/s3/
 [sunny_api]: http://sunnyjs.org/api/index.html
 [sunny_conn]: http://sunnyjs.org/api/symbols/base.Connection.html
+[sunny_dev]: http://sunnyjs.org/development.html
 [sunny_getContainer]: http://sunnyjs.org/api/symbols/base.Connection.html#getContainer
 [sunny_gh]: http://github.com/ryan-roemer/node-sunny
-[sunny_dev]: http://sunnyjs.org/development.html
 [sunny_guide]: http://sunnyjs.org/guide.html
 [sunny_npm]: http://search.npmjs.org/#/sunny
 [sunny_proxy]: https://github.com/ryan-roemer/sunny-proxy
+[sunny_tests]: https://github.com/ryan-roemer/node-sunny/tree/master/test/live
+[sunny_todo]: https://github.com/ryan-roemer/node-sunny/blob/master/TODO.md
 [sunny_www]: http://sunnyjs.org
 
 <!-- more end -->
