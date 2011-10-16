@@ -306,14 +306,150 @@ type of error).
 
 ## Putting it all Together, with a Little Help from Async.js
 
-* TODO: Include this section???
+Now that we've seen how to create a Sunny connection, get a container and
+perform operations on blobs within the container, let's put all of our code
+together in a single script.  (Note: I've collapsed the error handling to a
+single utility function).
+
+{% highlight javascript %}
+var sunny = require("sunny"),
+  conn = sunny.Configuration.fromEnv().connection,
+  errFn = function (err) { console.log(err); };
+
+// Op 1: GET container.
+var request = conn.getContainer("sunnyjs", { validate: true });
+request.on('error', errFn);
+request.on('end', function (results, meta) {
+  var container = results.container;
+  console.log("Retrieved container \"%s\".", container.name);
+
+  // Op 2: PUT blob.
+  var writeStream = container.putBlob("my-blob.txt");
+  writeStream.on('error', errFn);
+  writeStream.on('end', function (results, meta) {
+    var blob = results.blob;
+    console.log("Put blob \"%s\".", blob.name);
+
+    // Op 3: GET blob.
+    var readStream = container.getBlob("my-blob.txt");
+    readStream.on('error', errFn);
+    readStream.on('data', function (chunk) {
+      console.log("Data chunk: \"%s\"", chunk);
+    });
+    readStream.on('end', function (results, meta) {
+      var blob = results.blob;
+      console.log("Get blob \"%s\".", blob.name);
+    });
+    readStream.end();
+  });
+  writeStream.write("My data string.");
+  writeStream.end();
+});
+request.end();
+{% endhighlight %}
+
+Not too shabby! However, you'll note that we have three serial cloud operations,
+each of which have to complete before the next starts, so we end up repeatedly
+nesting callbacks in "end" event listeners. Even with a mere three operations,
+the nesting makes the code hard to understand at first blush, and an
+indentation nightmare. Wouldn't it be better if we could code our operations
+to match the general outline of what we're trying to do? That is:
+
+1. Get a container.
+2. Once we have a container, put data to a blob.
+3. Once we have put data to the blob, get the data back.
+
+Fortunately, there are many asynchronous helper libraries for Node to help in
+just this situation. I like [Async.js][async_js], which from the project
+page "provides around 20 functions that include the usual 'functional' suspects
+(map, reduce, filter, forEach...) as well as some common patterns for
+asynchronous control flow (parallel, series, waterfall...)."
+
+In our simple three-cloud operation script, we just need ``async.series`` to
+serialize our operations for easier control flow. I am skipping over a lot
+of details about using Async.js, such as callbacks at the end of functions or
+errors, and passing state across serialized functions, but you can probably
+intuit most of how things are working here:
+
+{% highlight javascript %}
+var async = require("async"),
+  sunny = require("sunny"),
+  conn = sunny.Configuration.fromEnv().connection,
+  container,
+  blob;
+
+async.series([
+  // Op 1: GET container.
+  function (callback) {
+    var request = conn.getContainer("sunnyjs", { validate: true });
+    request.on('error', callback);
+    request.on('end', function (results, meta) {
+      container = results.container;
+      console.log("Retrieved container \"%s\".", container.name);
+      callback(null);  // Signal function "done" to async.series.
+    });
+    request.end();
+  },
+
+  // Op 2: PUT blob.
+  function (callback) {
+    var writeStream = container.putBlob("my-blob.txt");
+    writeStream.on('error', callback);
+    writeStream.on('end', function (results, meta) {
+      blob = results.blob;
+      console.log("Put blob \"%s\".", blob.name);
+      callback(null);  // Signal function "done" to async.series.
+    });
+    writeStream.write("My data string.");
+    writeStream.end();
+  },
+
+  // Op 3: GET blob.
+  function (callback) {
+    var readStream = container.getBlob("my-blob.txt");
+    readStream.on('error', callback);
+    readStream.on('data', function (chunk) {
+      console.log("Data chunk: \"%s\"", chunk);
+    });
+    readStream.on('end', function (results, meta) {
+      blob = results.blob;
+      console.log("Get blob \"%s\".", blob.name);
+      callback(null);  // Signal function "done" to async.series.
+    });
+    readStream.end();
+  }
+], function (err, result) {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log("async.series is done!");
+  }
+});
+{% endhighlight %}
+
+which gives us our expected output:
+
+{% highlight text %}
+Retrieved container "sunnyjs".
+Put blob "my-blob.txt".
+Data chunk: "My data string."
+Get blob "my-blob.txt".
+async.series is done!
+{% endhighlight %}
+
+Our code now appears in a serialized, contained order that matches the
+conceptual execution of the actual cloud operations, instead of a lot of
+callback nesting. For more on developing with Async.js, please see the
+excellent Async.js [Readme / tutorial][async_readme]. It is an investment well
+worth your time.
 
 ## Conclusion / Future
 
 * TODO: More cloud providers.
 * TODO: Development help is welcome.
 
-
+[async_js]: https://github.com/caolan/async
+[async_readme]: https://github.com/caolan/async/blob/master/README.md
 [aws]: http://aws.amazon.com/
 [cf]: http://www.rackspacecloud.com/cloud_hosting_products/files/
 [fs_rs]: http://nodejs.org/docs/v0.4.9/api/fs.html#fs.ReadStream
