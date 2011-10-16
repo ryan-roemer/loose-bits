@@ -155,22 +155,95 @@ which are real implementations of Node [streams][node_streams]. A GET blob
 method returns a [Readable Stream][node_rs] object, and a PUT blob method
 returns a [Writable Stream][node_ws] object.
 
+Let's take the ``container`` object we received from our successful
+``getContainer`` request above, and perform a PUT blob operation with a simple
+string. (Note: programmatically, this would be within the "end" callback of
+the get container request). Data can be written with any number of ``write()``
+calls and a single ``end()`` call (which starts the data transfer and ignores
+all subsequent writes).
 
+{% highlight javascript %}
+var writeStream = container.putBlob("my-blob.txt", {
+});
+writeStream.on('error', function (err) {
+  console.log("We received error: %s", err);
+});
+writeStream.on('end', function (results, meta) {
+  var blob = results.blob;
+  console.log("Put blob \"%s\".", blob.name);
+});
+writeStream.write("My data string.");
+writeStream.end();
+{% endhighlight %}
 
+which produces:
 
+{% highlight text %}
+Put blob "my-blob.txt".
+{% endhighlight %}
 
-* TODO: GetBlob operation (maybe start with PutBlob).
-* TODO: Mention ``pipe()``'s and why they're nice.
-* TODO: What can we do with streams? Answer: sunny-proxy
+Now, in a later operation (say, within the ``putBlob`` "end" callback, after
+we know the blob was written), we can retrieve the data:
 
-API:
+{% highlight javascript %}
+var readStream = container.getBlob("my-blob.txt");
+readStream.on('error', function (err) {
+  console.log("We received error: %s", err);
+});
+readStream.on('data', function (chunk) {
+  console.log("Data chunk: \"%s\"", chunk);
+});
+readStream.on('end', function (results, meta) {
+  var blob = results.blob;
+  console.log("Get blob \"%s\".", blob.name);
+});
+readStream.end();
+{% endhighlight %}
 
-    getBlob(name, options): Create blob object and GET data.
-    getBlobToFile(name, filePath, options): Create blob object and GET data to file.
-    putBlob(name, options): Create blob object and PUT data.
-    putBlobFromFile(name, filePath, options): Create blob object and PUT data from file.
+which gives us:
+
+{% highlight text %}
+Data chunk: "My data string."
+Get blob "my-blob.txt".
+{% endhighlight %}
+
+Note that we're getting the data in raw chunks from the "data" event, which
+is somewhat tedious to cobble together (as strings if encoded or ``Buffer``
+objects otherwise). Given that we have full read / write stream implementations,
+Sunny really shines with the availability of ``pipe()``'ing data. Essentially,
+you can simply connect a Sunny read / write stream to another read / write
+stream, call ``pipe()`` and let Node and Sunny take care of the rest.
+
+For example, Sunny provides helper methods for getting / putting blobs to and
+from files. Looking at the source code, the real gist of, for example, getting
+a blob to a local file is the following:
+
+{% highlight javascript %}
+var getStream = container.getBlob("name", /* ... */);
+var writeStream = fs.createWriteStream(filePath, /* ... */);
+
+// Start the pipe and call 'end()'.
+getStream.pipe(writeStream);
+getStream.end()
+{% endhighlight %}
+
+There's a little more to it, but it is mostly this easy. Take a look at the
+[source code][gh_blob] for the blob convenience methods ``putFromFile`` and
+``getToFile`` to see a full implementation that binds together file and cloud
+streams.
+
+Node streams available for use with Sunny get / put ``pipe()`` calls include:
+
+* HTTP/HTTPS requests and responses. See my [sunny-proxy][sunny_proxy] project
+  for a simple web server that proxies web requests to cloud blobs using Sunny
+  blob get streams piped to HTTP responses.
+* File reads and writes -- [``fs.ReadStream``][fs_rs],
+  [``fs.WriteStream``][fs_ws]
 
 ## Error Handling
+
+
+
 
 * TODO: Testing isNotFound(), etc. Abstracts away error codes.
 
@@ -182,7 +255,10 @@ API:
 
 [aws]: http://aws.amazon.com/
 [cf]: http://www.rackspacecloud.com/cloud_hosting_products/files/
+[fs_rs]: http://nodejs.org/docs/v0.4.9/api/fs.html#fs.ReadStream
+[fs_ws]: http://nodejs.org/docs/v0.4.9/api/fs.html#fs.WriteStream
 [gsfd]: http://code.google.com/apis/storage/
+[gh_blob]: https://github.com/ryan-roemer/node-sunny/blob/master/lib/base/blob/blob.js
 [gs_v1]: http://code.google.com/apis/storage/docs/reference/v1/apiversion1.html
 [jclouds]: http://www.jclouds.org/
 [knox]: https://github.com/LearnBoost/knox
@@ -203,6 +279,7 @@ API:
 [sunny_gh]: http://github.com/ryan-roemer/node-sunny
 [sunny_guide]: http://sunnyjs.org/guide.html
 [sunny_npm]: http://search.npmjs.org/#/sunny
+[sunny_proxy]: https://github.com/ryan-roemer/sunny-proxy
 [sunny_www]: http://sunnyjs.org
 
 <!-- more end -->
