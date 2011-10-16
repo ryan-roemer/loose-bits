@@ -43,6 +43,13 @@ Here are some basic resources to get started with Sunny, which we'll dive into
 a little deeper in the subsequent sections of this post:
 
 * [Sunny.js Documentation][sunny_www]: Guides and API documentation.
+
+  * [User Guide][sunny_guide]: Guide for programmers using Sunny in your
+    applications and library.
+  * [Developer's Guide][sunny_dev]: Guide for developing, extending, and
+    hacking on the Sunny.js source code.
+  * [API][sunny_api]: Full API.
+
 * [Sunny.js GitHub Page][sunny_gh]: Source repository and issue tracker.
 * [Sunny.js NPM Page][sunny_npm]: NPM page and history.
 
@@ -297,7 +304,7 @@ more easily programmatically react (especially since Sunny correctly handles
 different error codes and XML from cloud providers that correspond to the same
 type of error).
 
-## Async.js
+## Putting it all Together, with a Little Help from Async.js
 
 * TODO: Include this section???
 
@@ -336,6 +343,7 @@ type of error).
 [sunny_conn]: http://sunnyjs.org/api/symbols/base.Connection.html
 [sunny_getContainer]: http://sunnyjs.org/api/symbols/base.Connection.html#getContainer
 [sunny_gh]: http://github.com/ryan-roemer/node-sunny
+[sunny_dev]: http://sunnyjs.org/development.html
 [sunny_guide]: http://sunnyjs.org/guide.html
 [sunny_npm]: http://search.npmjs.org/#/sunny
 [sunny_proxy]: https://github.com/ryan-roemer/sunny-proxy
