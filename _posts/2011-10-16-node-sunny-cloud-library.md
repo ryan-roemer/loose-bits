@@ -30,8 +30,6 @@ I would like in an ideal cloud datastore client:
 * Able to create / delete arbitrary containers (buckets).
 * Configurable request headers, cloud options and metadata.
 * SSL support.
-* A really well-documented [API][sunny_api] and [user guide][sunny_guide].
-  (At least I think so!)
 
 Additionally, it would be nice to have a library that worked across multiple
 clouds like [jclouds][jclouds] for Java and [Libcloud][libcloud] for Python.
@@ -39,7 +37,12 @@ clouds like [jclouds][jclouds] for Java and [Libcloud][libcloud] for Python.
 With these goals in mind, I put together a basic multi-cloud datastore client
 called [Sunny.js][sunny_www]. Sunny initially supports
 [Amazon Web Service][aws]'s [Simple Storage Service][s3] (S3) and
-[Google Storage for Developers][gsfd] ([version 1][gs_v1]).
+[Google Storage for Developers][gsfd] ([version 1][gs_v1]). Sunny hits all the
+points above, and also has:
+
+* A really well-documented [API][sunny_api] and [user guide][sunny_guide].
+  (At least I think so!)
+* Full unit tests for all cloud operations and providers.
 
 Here are some basic resources to get started with Sunny, which we'll dive into
 a little deeper in the subsequent sections of this post:
