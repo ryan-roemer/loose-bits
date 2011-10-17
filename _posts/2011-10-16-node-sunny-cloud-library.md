@@ -19,8 +19,8 @@ in the cloud.
 
 There are a lot of great Node cloud clients out there for cloud datastores.
 Amazon Web Services [S3][s3] has: [knox][knox], [node-sissy][node-sissy],
-[node-s3][node-s3], [Node.js-Amazon-S3][Node.js-Amazon-S3],
-And, Rackspace [Cloud Files][cf] has: [node-cloudfiles][node-cloudfiles].
+[node-s3][node-s3], [Node.js-Amazon-S3][Node.js-Amazon-S3], 
+and Rackspace [Cloud Files][cf] has: [node-cloudfiles][node-cloudfiles].
 
 After reviewing these libraries, I found a few features variously lacking that
 I would like in an ideal cloud datastore client:
@@ -175,8 +175,7 @@ calls and a single ``end()`` call (which starts the data transfer and ignores
 all subsequent writes).
 
 {% highlight javascript %}
-var writeStream = container.putBlob("my-blob.txt", {
-});
+var writeStream = container.putBlob("my-blob.txt");
 writeStream.on('error', function (err) {
   console.log("We received error: %s", err);
 });
