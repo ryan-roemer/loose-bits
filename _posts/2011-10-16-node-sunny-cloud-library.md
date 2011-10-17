@@ -452,7 +452,7 @@ Sunny internally uses Async.js extensively for unit tests. Explore the source
 [tests][sunny_tests] directory for a lot of good use cases (parallel and
 serial).
 
-## It's a Sunny Future
+## Have Fun in the Sun
 
 That wraps up our introduction to Sunny.js. Hopefully the library provides a
 useful interface for your cloud programming needs.
