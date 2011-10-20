@@ -5,7 +5,8 @@ description: My presentation on the Sunny.js cloud library for the DC Node.js
  October meetup. Also includes a simple web proxy server (backed by a cloud
  datastore) for gluing together cloud and HTTP web requests.
 date: 2011-10-20 16:00:00 UTC
-tags: ['sunny', 'node.js', 'cloud', 'amazon', 'aws', 's3', 'google storage']
+tags: ['sunny', 'node.js', 'heroku', 'cloud', 'amazon', 'aws', 's3',
+       'google storage']
 ---
 {% capture sunny_prezi %}http://prezi.com/tlaj11poclwg/sunnyjs/{% endcapture %}
 
