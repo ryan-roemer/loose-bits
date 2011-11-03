@@ -55,7 +55,7 @@ points:
 * **Syntax Highlighting**: Jekyll uses [Pygments](http://pygments.org/) for
   source code highlighting, which is mostly pre-processed, and not an
   after-the-fact JavaScript processing step (which had previously been slowing
-  down by Blogger site).
+  down my Blogger site).
 * **GitHub Support**: GitHub's default document generator is Jekyll, and
   (separately) has full website support with CNAMEs. This provides an easy
   means of both site storage / versioning as well as the actual serving.
