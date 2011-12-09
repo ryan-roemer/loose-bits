@@ -77,6 +77,13 @@ html_theme = 'bootstrap'
 html_short_title = 'Demo'
 {% endhighlight %}
 
+Rebuild your Sphinx documentation, and you should now have the Bootstrap theme
+up and running! See the [readme][sbt_readme] for more information on
+customizing and hacking on the theme.
+
+## Brief Tour
+
+TODO: HERE
 
 
 
@@ -86,6 +93,7 @@ html_short_title = 'Demo'
 [sbt_gh]: https://github.com/ryan-roemer/sphinx-bootstrap-theme
 [sbt_demo]: http://ryan-roemer.github.com/sphinx-bootstrap-theme
 [sbt_downloads]: https://github.com/ryan-roemer/sphinx-bootstrap-theme/downloads
+[sbt_readme]: https://github.com/ryan-roemer/sphinx-bootstrap-theme/blob/master/README.rst
 [sbt_zip]: https://github.com/downloads/ryan-roemer/sphinx-bootstrap-theme/bootstrap.zip
 
 <!-- more end -->
