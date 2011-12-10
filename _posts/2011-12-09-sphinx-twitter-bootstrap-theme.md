@@ -29,7 +29,7 @@ Fortunately, Sphinx supports custom theme plugins, so I spent a couple of days
 hacking, and created a [Sphinx Bootstrap Theme][sbt_gh], which is now
 available on GitHub.
 
-To show all of the coolness of bootstrap and Sphinx, I've put up a simple
+To show all of the coolness of Bootstrap and Sphinx, I've put up a simple
 [demo][sbt_demo], which provides a skeleton Sphinx site with the project
 [README][sbt_demo_readme] file rendered as content. Here is a screenshot:
 
@@ -42,8 +42,10 @@ To show all of the coolness of bootstrap and Sphinx, I've put up a simple
 ## Installation
 
 Sphinx themes can be installed either as a directory of files or a zip file.
-To start, set up the themes directory, which typically is something like
-"_themes" located in your Sphinx source directory.
+For simplicity's sake, we'll go with a pre-packaged zip file installation here.
+
+First, set up a themes directory, which typically is something like
+"_themes" located in your Sphinx source directory:
 
 {% highlight bash %}
 $ cd /path/to/source
@@ -84,7 +86,7 @@ customizing and hacking on the theme.
 ## Brief Tour
 
 The Bootstrap Sphinx theme basically rolls up the site-wide / page-level
-table of contents, page navigation and search form into the main navigation
+table of contents, page navigation, and search form into the main navigation
 top bar.
 
 ### Site Navigation
@@ -97,7 +99,7 @@ directive.
 [img_sbt_nav_site_th]: {{ img_dir }}/sbt_nav_site_thumb.png
 [img_sbt_nav_site]: {{ img_dir }}/sbt_nav_site.png
 
-For both the site and page navigation dropdowns, the bootstrap theme uses
+For both the site and page navigation dropdowns, the Bootstrap theme uses
 JavaScript hackery to unpack the internal list structure and convert it to
 an ordered flat list with hierarchy displayed using extra left padding
 corresponding to levels. The natural levels of table of content displayed
@@ -123,7 +125,7 @@ client-side search that Sphinx provides. Here we search for the term
 [img_sbt_nav_search_th]: {{ img_dir }}/sbt_nav_search_thumb.png
 [img_sbt_nav_search]: {{ img_dir }}/sbt_nav_search.png
 
-... which gives us the following page matches.
+... which gives us the following page matches:
 
 [![Search Results][img_sbt_search_th]][img_sbt_search]
 [img_sbt_search_th]: {{ img_dir }}/sbt_search_thumb.png
