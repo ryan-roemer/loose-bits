@@ -67,7 +67,7 @@ should be the most up-to-date version, but getting the directory from source
 will remain the authoritative current version.
 
 Finally, add the themes directory path and theme name to your source Sphinx
-"conf.py file:
+"conf.py" file:
 
 {% highlight python %}
 # Activate the theme.
