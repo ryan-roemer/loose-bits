@@ -3,8 +3,7 @@ layout: post
 title: Twitter Bootstrap Theme for Sphinx
 description: The "spinx-bootstrap-theme" plugin brings the awesomeness of the
   Twitter Bootstrap CSS/JS framework to the Sphinx documentation tool as an
-  easy-to-install plugin. Sphinx document navigation is rolled up into menu
-  bar dropdown lists.
+  easy-to-install plugin.
 date: 2011-12-09 16:00:00 UTC
 tags: ['python', 'sphinx', 'theme', 'twitter', 'bootstrap', 'github']
 ---
