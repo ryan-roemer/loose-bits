@@ -85,6 +85,26 @@ customizing and hacking on the theme.
 
 TODO: HERE
 
+* Site nav.
+* Page nav.
+* Search
+
+[![Site Navigation][img_sbt_nav_site_th]][img_sbt_nav_site]
+[img_sbt_nav_site_th]: {{ img_dir }}/sbt_nav_site_thumb.png
+[img_sbt_nav_site]: {{ img_dir }}/sbt_nav_site.png
+
+[![Page Navigation][img_sbt_nav_page_th]][img_sbt_nav_page]
+[img_sbt_nav_page_th]: {{ img_dir }}/sbt_nav_page_thumb.png
+[img_sbt_nav_page]: {{ img_dir }}/sbt_nav_page.png
+
+[![Search Navigation][img_sbt_nav_search_th]][img_sbt_nav_search]
+[img_sbt_nav_search_th]: {{ img_dir }}/sbt_nav_search_thumb.png
+[img_sbt_nav_search]: {{ img_dir }}/sbt_nav_search.png
+
+[![Search Results][img_sbt_search_th]][img_sbt_search]
+[img_sbt_search_th]: {{ img_dir }}/sbt_search_thumb.png
+[img_sbt_search]: {{ img_dir }}/sbt_search.png
+
 
 
 [bootstrap]: http://twitter.github.com/bootstrap/
