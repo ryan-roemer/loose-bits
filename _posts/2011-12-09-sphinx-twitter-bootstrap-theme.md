@@ -83,37 +83,69 @@ customizing and hacking on the theme.
 
 ## Brief Tour
 
-TODO: HERE
+The Bootstrap Sphinx theme basically rolls up the site-wide / page-level
+table of contents, page navigation and search form into the main navigation
+top bar.
 
-* Site nav.
-* Page nav.
-* Search
+### Site Navigation
+
+The first dropdown tab is the "Site" button (expanded and highlighted below).
+Internally this wraps up the ``globaltoc`` template using the ``toctree``
+directive.
 
 [![Site Navigation][img_sbt_nav_site_th]][img_sbt_nav_site]
 [img_sbt_nav_site_th]: {{ img_dir }}/sbt_nav_site_thumb.png
 [img_sbt_nav_site]: {{ img_dir }}/sbt_nav_site.png
 
+For both the site and page navigation dropdowns, the bootstrap theme uses
+JavaScript hackery to unpack the internal list structure and convert it to
+an ordered flat list with hierarchy displayed using extra left padding
+corresponding to levels. The natural levels of table of content displayed
+normally by Sphinx should be preserved in the dropdown menus.
+
+### Page Navigation
+
+The second dropdown tab is the "Page" navigation for table of contents link
+within a single page. This wraps the ``localtoc`` template using the ``toc``
+directive.
+
 [![Page Navigation][img_sbt_nav_page_th]][img_sbt_nav_page]
 [img_sbt_nav_page_th]: {{ img_dir }}/sbt_nav_page_thumb.png
 [img_sbt_nav_page]: {{ img_dir }}/sbt_nav_page.png
+
+### Search
+
+The right "Search" box in the navigation top bar connects to the built-in,
+client-side search that Sphinx provides. Here we search for the term
+"bootstrap":
 
 [![Search Navigation][img_sbt_nav_search_th]][img_sbt_nav_search]
 [img_sbt_nav_search_th]: {{ img_dir }}/sbt_nav_search_thumb.png
 [img_sbt_nav_search]: {{ img_dir }}/sbt_nav_search.png
 
+... which gives us the following page matches.
+
 [![Search Results][img_sbt_search_th]][img_sbt_search]
 [img_sbt_search_th]: {{ img_dir }}/sbt_search_thumb.png
 [img_sbt_search]: {{ img_dir }}/sbt_search.png
 
+### Final Thoughts
 
+The Bootstrap Theme provides an easy means for Twitter Bootstrap integration
+for my current Sphinx sites. But, as I've just put together the theme this
+week, it is probably still rough around the edges. Any
+[issue reports][sbt_issues], [pull requests][sbt_pull], and feedback are most
+welcome.
 
 [bootstrap]: http://twitter.github.com/bootstrap/
-[sphinx]: http://sphinx.pocoo.org/
 [python]: http://python.org/
-[sbt_gh]: https://github.com/ryan-roemer/sphinx-bootstrap-theme
 [sbt_demo]: http://ryan-roemer.github.com/sphinx-bootstrap-theme
 [sbt_downloads]: https://github.com/ryan-roemer/sphinx-bootstrap-theme/downloads
+[sbt_gh]: https://github.com/ryan-roemer/sphinx-bootstrap-theme
+[sbt_issues]: https://github.com/ryan-roemer/sphinx-bootstrap-theme/issues
+[sbt_pull]: https://github.com/ryan-roemer/sphinx-bootstrap-theme/pulls
 [sbt_readme]: https://github.com/ryan-roemer/sphinx-bootstrap-theme/blob/master/README.rst
 [sbt_zip]: https://github.com/downloads/ryan-roemer/sphinx-bootstrap-theme/bootstrap.zip
+[sphinx]: http://sphinx.pocoo.org/
 
 <!-- more end -->
