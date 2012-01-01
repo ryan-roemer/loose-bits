@@ -7,15 +7,18 @@ title: Ryan Roemer
 <img class="about" src="{{ site.baseurl }}media/img/portrait/forest.jpg" />
 
 I am a software engineer interested in big data, cloud computing, and the
-collision of law and technology.
+collision of law and technology. I am presently the Director of Engineering at
+[SpanishDict](http://spanishdict.com), the world's largest Spanish learning
+website, where I manage the software development and systems
+architecture, as well as all of our technical operations.
 
 Recounting things roughly in chronological order, I was a programmer at a small
-San Diego startup during the dot-com boom and meltdown. The bust sent me off to
-law school, after which I became a patent attorney with a large international
-law firm, splitting my time between patent prosecution and litigation.
-I eventually realized that my software clients were having more fun creating
-new systems and products than I was writing about their work, so I decided to
-go back to graduate school in Computer Science.
+San Diego startup during the late 1990's dot-com boom and meltdown. The bust
+sent me off to law school, after which I became a patent attorney with a large
+international law firm, splitting my time between patent prosecution and
+litigation. I eventually realized that my software clients were having more fun
+creating new systems and products than I was writing about their work, so I
+decided to go back to graduate school in Computer Science.
 
 After receiving my masters at [UCSD](http://cse.ucsd.edu), I joined the
 [Windows Azure](http://www.microsoft.com/windowsazure/) team at Microsoft as a
@@ -23,17 +26,13 @@ software engineer in the Cloud Computing storage group, working with really
 large-scale distributed systems. I then merged both my patent law and
 computer science backgrounds as a senior engineer at
 [IP Street](http://www.ipstreet.com/), working on intellectual property data
-mining.
+mining before finally heading off to SpanishDict.
 
-I am presently the Director of Engineering at
-[SpanishDict](http://spanishdict.com), the world's largest Spanish learning
-website. At SpanishDict, I manage the software development and systems
-architecture, as well as all of our technical operations.
-
-Other places on the web you can find me are: [Twitter](https://twitter.com/#!/ryan_roemer),
+Other places you can find me  on the web are:
+[Twitter](https://twitter.com/#!/ryan_roemer),
 [LinkedIn](http://www.linkedin.com/in/ryanroemer),
 [Stack Overflow](http://stackoverflow.com/users/741892/ryan-roemer),
-and [my research site](ryanroemer.com).
+and [my research site](http://ryanroemer.com).
 Some of my open source projects on [GitHub](https://github.com/ryan-roemer) include:
 
 {% comment %}
