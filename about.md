@@ -42,7 +42,7 @@ Some of my open source projects on [GitHub](https://github.com/ryan-roemer) incl
   [theme](http://sphinx.pocoo.org/theming.html).
 {% endcomment %}
 
-* [Sunny.js (node-sunny)](http://sunnyjs.org): A [Node.js](http://nodejs.org/)
+* [Sunny.js](http://sunnyjs.org): A [Node.js](http://nodejs.org/)
   multi-cloud datastore client (with support for
   [Amazon Web Services](http://aws.amazon.com/)
   [Simple Storage Service](http://aws.amazon.com/s3/) (S3) and
