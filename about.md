@@ -20,9 +20,35 @@ go back to graduate school in Computer Science.
 After receiving my masters at [UCSD](http://cse.ucsd.edu), I joined the
 [Windows Azure](http://www.microsoft.com/windowsazure/) team at Microsoft as a
 software engineer in the Cloud Computing storage group, working with really
-large-scale distributed systems. 
+large-scale distributed systems. I then merged both my patent law and
+computer science backgrounds as a senior engineer at
+[IP Street](http://www.ipstreet.com/), working on intellectual property data
+mining.
 
-I am presently a senior engineer at [IP Street](http://www.ipstreet.com/),
-a Seattle-based startup, working with intellectual property data analysis.
-So after a couple of different graduate programs and careers, I am now actually
-using both my engineering and law degrees...
+I am presently the Director of Engineering at
+[SpanishDict](http://spanishdict.com), the world's largest Spanish learning
+website. At SpanishDict, I manage the software development and systems
+architecture, as well as all of our technical operations.
+
+Other places on the web you can find me are: [Twitter](https://twitter.com/#!/ryan_roemer),
+[LinkedIn](http://www.linkedin.com/in/ryanroemer),
+[Stack Overflow](http://stackoverflow.com/users/741892/ryan-roemer),
+and [my research site](ryanroemer.com).
+Some of my open source projects on [GitHub](https://github.com/ryan-roemer) include:
+
+{% comment %}
+* [Sphinx Bootstrap Theme](http://ryan-roemer.github.com/sphinx-bootstrap-theme/):
+  Integrates the Twitter [Bootstrap](http://twitter.github.com/bootstrap/)
+  CSS / JavaScript framework as a [Sphinx](http://sphinx.pocoo.org/)
+  [theme](http://sphinx.pocoo.org/theming.html).
+{% endcomment %}
+
+* [Sunny.js (node-sunny)](http://sunnyjs.org): A [Node.js](http://nodejs.org/)
+  multi-cloud datastore client (with support for
+  [Amazon Web Services](http://aws.amazon.com/)
+  [Simple Storage Service](http://aws.amazon.com/s3/) (S3) and
+  [Google Storage for Developers](http://code.google.com/apis/storage/)).
+* [Django Cloud Browser](http://ryan-roemer.github.com/django-cloud-browser/):
+  A [Django](http://www.djangoproject.com/) application for browsing and
+  navigating cloud-based datastores (including Amazon Web Services S3 and
+  [Rackspace Cloud Files](http://www.rackspace.com/cloud/)).
