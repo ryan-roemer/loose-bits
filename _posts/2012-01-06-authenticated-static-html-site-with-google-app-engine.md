@@ -33,7 +33,7 @@ web site!
 
 <!-- more start -->
 
-## Create an App Engine Application
+## Create an Authenticated App Engine Application
 
 The first step is to create an App Engine web application. You'll need to
 [sign up][gae_sign_up] for an App Engine account, [download][gae_download]
@@ -68,6 +68,15 @@ as we're basically going to follow these steps. Go to the
 
 From there you can click "Create Application", and the application should be
 created. Make sure to keep your application identifier handy.
+
+## Configure and Upload Static Web Site
+
+<!--
+TODO HERE
+App: foobardelete123456
+Orig (https://github.com/darktable): https://gist.github.com/873098
+Mine: https://gist.github.com/1570659
+-->
 
 
 
