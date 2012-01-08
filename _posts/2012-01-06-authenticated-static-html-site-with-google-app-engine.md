@@ -37,7 +37,9 @@ web site!
 The first step is to create an App Engine web application. You'll need to
 [sign up][gae_sign_up] for an App Engine account, [download][gae_download]
 the App Engine Python SDK (make sure you get the **Python** one!), and you
-should read the "[getting started][gae_intro]" documentation.
+should read the "[getting started][gae_intro]" documentation. Also, if given
+the option to "install command symlinks", make sure you choose to do this
+(which will give us an ``appcfg.py`` executable in our path for use later).
 
 Once you are all set up on App Engine, we can create the actual application.
 The important thing to point out here is that you must select the
@@ -67,6 +69,15 @@ as we're basically going to follow these steps. Go to the
 
 From there you can click "Create Application", and the application should be
 created. Make sure to keep your application identifier handy.
+
+For authentication within a Google Apps domain, there are further instructions
+in the App Engine [authentication][gae_auth] article that we need to follow.
+Summarizing, you also need to open a web browser to:
+"http://www.google.com/a/YOUR DOMAIN" and click on the "Dashboard" tab. Go to
+"Service settings" and click on the "Add more services" link. In the
+"Other services" section, there will be a place to add an App Engine service.
+Type in your application identifier code here and click "Add it now". This
+will hook up your specific Google Apps Domain with the App Engine service.
 
 ## Configure and Upload Static Web Site
 
@@ -318,8 +329,8 @@ handlers:
   login: required
 {% endhighlight %}
 
-You can also view the [gist][gae_gist] at its GitHub gist page, as well as a
-basic Readme file.
+You can also view the [gist][gist_cfg] at its GitHub gist page, as well as
+a basic Readme file.
 
 Download the file to "my_site/app.yaml" and update the
 ``application: you-app-name-here`` directive with your specific application
@@ -333,12 +344,37 @@ authentication works first before uploading potentially sensitive information,
 I would recommend creating a test HTML page that just contains the content
 "It worked!" or something, and adding that as "my_site/static/index.html".
 
-So at this point, we should have a project layout that looks like:
+Now, we should have a project layout that looks like:
 
     my_site/
       app.yaml
       static/
         index.html
+
+At this point we can upload the full site to our static server using
+[appcfg.py][gae_appcfg]. Make sure that we have ``appcfg.py`` available:
+
+{% highlight bash %}
+$ which appcfg.py
+/usr/local/bin/appcfg.py
+{% endhighlight %}
+
+If you don't get an executable path back, then review the
+"[getting started][gae_intro]" documents for installation of the App Engine
+runtime.
+
+Assuming we do have ``appcfg.py`` available, change directory in your shell
+to the directory containing "my_site" and upload the static site:
+
+{% highlight bash %}
+$ appcfg.py update my_site
+{% endhighlight %}
+
+You will have to enter your Google credentials here. After the upload
+finishes, you should be able to open a web browser to:
+"<your application identifier>.appspot.com"
+
+
 
 
 
@@ -362,6 +398,7 @@ App: foobardelete123456
 
 [gae]: http://code.google.com/appengine/
 [gae_auth]: http://code.google.com/appengine/articles/auth.html
+[gae_appcfg]: http://code.google.com/appengine/docs/python/tools/uploadinganapp.html
 [gae_create]: http://appengine.google.com/start/createapp
 [gae_sign_up]: https://appengine.google.com/
 [gae_download]: http://code.google.com/appengine/downloads.html
@@ -370,6 +407,6 @@ App: foobardelete123456
 [post2]: http://www.instantfundas.com/2011/02/how-to-host-static-websites-on-google.html
 [dt_gist]: https://gist.github.com/873098
 [dt_git]: https://github.com/darktable
-[gae_gist]: https://gist.github.com/1570659
+[gist_cfg]: https://gist.github.com/1570659
 
 <!-- more end -->
