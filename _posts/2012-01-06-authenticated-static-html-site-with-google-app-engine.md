@@ -372,34 +372,18 @@ $ appcfg.py update my_site
 
 You will have to enter your Google credentials here. After the upload
 finishes, you should be able to open a web browser to:
-"<your application identifier>.appspot.com". If you are authenticated to your
-Google Apps domain, you should see the "It worked!" test page. If not, you
+"&lt;your application identifier&gt;.appspot.com". If you are authenticated to
+your Google Apps domain, you should see the "It worked!" test page. If not, you
 should be prompted to login to your Google Apps domain. A good way to test
 the authentication works is to open a new Google Chrome Incognito window. It
 should always force a new Google Apps login if you have configured things
 properly. If the authentication doesn't work quite right, review the
 App Engine [authentication][gae_auth] page.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{% comment %}
-TODO HERE
-App: foobardelete123456
-
-{% endcomment %}
+Assuming authentication does work correctly, then you can now remove the
+test "index.html" file and upload your real site content to the
+"my_site/static" directory. Every time you change the content, make sure
+to re-upload the project with ``appcfg.py`` and enjoy your static web site!
 
 [gae]: http://code.google.com/appengine/
 [gae_auth]: http://code.google.com/appengine/articles/auth.html
