@@ -8,17 +8,17 @@ description: Google App Engine provides an easy framework for hosting a static
 date: 2012-01-08 14:00:00 UTC
 tags: ['app engine', 'google apps', 'static', 'html', 'python']
 ---
-## Static HTML Web Site hosting with Google App Engine
+## Static HTML Web Site Hosting with Google App Engine
 
 [Google App Engine][gae] is a platform-as-a-service (PAAS) product that
-provides scalable cloud-hosted web applications using Google's massive
+provides scalable, cloud-hosted web applications using Google's massive
 engineering infrastructure. While App Engine is primarily used by web
 developers (e.g., programming in Python or Java), it provides three features
 which make it uniquely helpful for static site hosting:
 
 * Arbitrary static file handling.
 * Extensible authentication support.
-* Very inexpensive (most likely free) for hosting a purely static web site.
+* Very inexpensive (most likely free) for hosting static content.
 
 In this post, we'll walk through uploading a static HTML site to App Engine,
 and configuring it such that it requires users to log in to via a Google Apps
@@ -104,13 +104,14 @@ There are [various][post1] [other][post2] posts out there discussing
 configurations for static web sites on App Engine, but the best configuration
 that I found was a [gist][dt_gist] by Git user "[darktable][dt_git]".
 However, this configuration didn't including authentication, so I forked the
-gist and added authentication attributes to produce our final "app.yaml"
-file:
+gist and added authentication attributes to produce our final
+[app.yaml][gist_app] file which you should download to "my_site/app.yaml".
+You can also view a basic [Readme][gist_readme] file and other information at
+the GitHub [gist][gist_cfg] page.
+
+Here's a snippet of the "app.yaml" file that you'll need to slightly modify.
 
 {% highlight yaml %}
-# App configuration for static site with auth.
-#
-# Originally from: https://gist.github.com/873098
 application: you-app-name-here
 version: 1
 runtime: python
@@ -126,204 +127,7 @@ handlers:
   expiration: "0m"
   login: required
 
-- url: /(.*\.atom)
-  mime_type: application/atom+xml
-  static_files: static/\1
-  upload: static/(.*\.atom)
-  expiration: "1h"
-  login: required
-
-- url: /(.*\.crx)
-  mime_type: application/x-chrome-extension
-  static_files: static/\1
-  upload: static/(.*\.crx)
-  login: required
-
-- url: /(.*\.css)
-  mime_type: text/css
-  static_files: static/\1
-  upload: static/(.*\.css)
-  login: required
-
-- url: /(.*\.eot)
-  mime_type: application/vnd.ms-fontobject
-  static_files: static/\1
-  upload: static/(.*\.eot)
-  login: required
-
-- url: /(.*\.htc)
-  mime_type: text/x-component
-  static_files: static/\1
-  upload: static/(.*\.htc)
-  login: required
-
-- url: /(.*\.html)
-  mime_type: text/html
-  static_files: static/\1
-  upload: static/(.*\.html)
-  expiration: "1h"
-  login: required
-
-- url: /(.*\.ico)
-  mime_type: image/x-icon
-  static_files: static/\1
-  upload: static/(.*\.ico)
-  expiration: "7d"
-  login: required
-
-- url: /(.*\.js)
-  mime_type: text/javascript
-  static_files: static/\1
-  upload: static/(.*\.js)
-  login: required
-
-- url: /(.*\.json)
-  mime_type: application/json
-  static_files: static/\1
-  upload: static/(.*\.json)
-  expiration: "1h"
-  login: required
-
-- url: /(.*\.m4v)
-  mime_type: video/m4v
-  static_files: static/\1
-  upload: static/(.*\.m4v)
-  login: required
-
-- url: /(.*\.mp4)
-  mime_type: video/mp4
-  static_files: static/\1
-  upload: static/(.*\.mp4)
-  login: required
-
-- url: /(.*\.(ogg|oga))
-  mime_type: audio/ogg
-  static_files: static/\1
-  upload: static/(.*\.(ogg|oga))
-  login: required
-
-- url: /(.*\.ogv)
-  mime_type: video/ogg
-  static_files: static/\1
-  upload: static/(.*\.ogv)
-  login: required
-
-- url: /(.*\.otf)
-  mime_type: font/opentype
-  static_files: static/\1
-  upload: static/(.*\.otf)
-  login: required
-
-- url: /(.*\.rss)
-  mime_type: application/rss+xml
-  static_files: static/\1
-  upload: static/(.*\.rss)
-  expiration: "1h"
-  login: required
-
-- url: /(.*\.safariextz)
-  mime_type: application/octet-stream
-  static_files: static/\1
-  upload: static/(.*\.safariextz)
-  login: required
-
-- url: /(.*\.(svg|svgz))
-  mime_type: images/svg+xml
-  static_files: static/\1
-  upload: static/(.*\.(svg|svgz))
-  login: required
-
-- url: /(.*\.swf)
-  mime_type: application/x-shockwave-flash
-  static_files: static/\1
-  upload: static/(.*\.swf)
-  login: required
-
-- url: /(.*\.ttf)
-  mime_type: font/truetype
-  static_files: static/\1
-  upload: static/(.*\.ttf)
-  login: required
-
-- url: /(.*\.txt)
-  mime_type: text/plain
-  static_files: static/\1
-  upload: static/(.*\.txt)
-  login: required
-
-- url: /(.*\.unity3d)
-  mime_type: application/vnd.unity
-  static_files: static/\1
-  upload: static/(.*\.unity3d)
-  login: required
-
-- url: /(.*\.webm)
-  mime_type: video/webm
-  static_files: static/\1
-  upload: static/(.*\.webm)
-  login: required
-
-- url: /(.*\.webp)
-  mime_type: image/webp
-  static_files: static/\1
-  upload: static/(.*\.webp)
-  login: required
-
-- url: /(.*\.woff)
-  mime_type: application/x-font-woff
-  static_files: static/\1
-  upload: static/(.*\.woff)
-  login: required
-
-- url: /(.*\.xml)
-  mime_type: application/xml
-  static_files: static/\1
-  upload: static/(.*\.xml)
-  expiration: "1h"
-  login: required
-
-- url: /(.*\.xpi)
-  mime_type: application/x-xpinstall
-  static_files: static/\1
-  upload: static/(.*\.xpi)
-  login: required
-
-# image files
-- url: /(.*\.(bmp|gif|ico|jpeg|jpg|png))
-  static_files: static/\1
-  upload: static/(.*\.(bmp|gif|ico|jpeg|jpg|png))
-  login: required
-
-# audio files
-- url: /(.*\.(mid|midi|mp3|wav))
-  static_files: static/\1
-  upload: static/(.*\.(mid|midi|mp3|wav))
-  login: required
-
-# windows files
-- url: /(.*\.(doc|exe|ppt|rtf|xls))
-  static_files: static/\1
-  upload: static/(.*\.(doc|exe|ppt|rtf|xls))
-  login: required
-
-# compressed files
-- url: /(.*\.(bz2|gz|rar|tar|tgz|zip))
-  static_files: static/\1
-  upload: static/(.*\.(bz2|gz|rar|tar|tgz|zip))
-  login: required
-
-# index files
-- url: /(.+)/
-  static_files: static/\1/index.html
-  upload: static/(.+)/index.html
-  expiration: "15m"
-  login: required
-
-- url: /(.+)
-  static_files: static/\1/index.html
-  upload: static/(.+)/index.html
-  expiration: "15m"
-  login: required
+# ... OTHER CONTENT SNIPPED ...
 
 # site root
 - url: /
@@ -333,12 +137,9 @@ handlers:
   login: required
 {% endhighlight %}
 
-You can also view / download the file at its GitHub [gist][gist_cfg] page, as
-well as a basic [Readme][gist_readme] file.
-
-Download the file to "my_site/app.yaml" and update the
-``application: you-app-name-here`` directive with your specific application
-identifier you chose in the application creation section above.
+After downloading to "my_site/app.yaml", update the
+``application: you-app-name-here`` directive with your specific App Engine
+application identifier you chose in the application creation section above.
 
 ### Static Content
 
@@ -401,6 +202,7 @@ to re-upload the project with ``appcfg.py`` and enjoy your static web site!
 [dt_gist]: https://gist.github.com/873098
 [dt_git]: https://github.com/darktable
 [gist_cfg]: https://gist.github.com/1570659
+[gist_app]: https://gist.github.com/1570659#app.yaml
 [gist_readme]: https://gist.github.com/1570659#file_readme.markdown
 
 <!-- more end -->
