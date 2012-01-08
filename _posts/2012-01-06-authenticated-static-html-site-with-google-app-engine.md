@@ -2,7 +2,7 @@
 layout: post
 title: Hosting an Authenticated, Static HTML Web Site on Google App Engine
 description: Google App Engine provides an easy framework for hosting a static
-  site and providing extensible user authentication based on Google Apps, or
+  site and providing extensible user authentication based on Google Apps or
   OpenID accounts. This makes App Engine a great (and inexpensive) resource for
   quickly hosting static HTML content limited to an appropriate user domain.
 date: 2012-01-06 14:00:00 UTC
@@ -71,12 +71,41 @@ created. Make sure to keep your application identifier handy.
 
 ## Configure and Upload Static Web Site
 
-<!--
+The next step is to gather your static web site files, add an application
+configuration, and upload all the content to the App Engine application.
+Let's assume we have a directory that we're going to fill with all of this
+called "my_site". As an aside, you are best off keeping this directory under a
+source control management system (e.g., git), so that you can monitor, track
+and revert changes to all of your files.
+
+### Configuration
+
+We need an application configuration file call "app.yaml" in the root directory
+of our project directory. This file controls various aspects of the
+application, including how the application routes URLs to handlers. We'll
+use a configuration that handles all static file types (including HTML), and
+just simply serves them.
+
+There are [various][post1] [other][post2] posts out there discussing
+configurations for static web sites on App Engine, but the best configuration
+that I found was a [gist][dt_gist] by Git user "[darktable][dt_git]".
+However, this configuration didn't including authentication, so I forked the
+gist and added authentication attributes to produce our final "app.yaml"
+file:
+
+<script src="http://gist.github.com/1570659.js"></script>
+
+
+
+
+
+{% comment %}
 TODO HERE
 App: foobardelete123456
-Orig (https://github.com/darktable): https://gist.github.com/873098
+Orig (): 
 Mine: https://gist.github.com/1570659
--->
+
+{% endcomment %}
 
 
 
@@ -87,5 +116,9 @@ Mine: https://gist.github.com/1570659
 [gae_sign_up]: https://appengine.google.com/
 [gae_download]: http://code.google.com/appengine/downloads.html
 [gae_intro]: http://code.google.com/appengine/docs/python/gettingstarted/
+[post1]: http://blog.engelke.com/2008/07/30/google-appengine-for-web-hosting/
+[post2]: http://www.instantfundas.com/2011/02/how-to-host-static-websites-on-google.html
+[dt_gist]: https://gist.github.com/873098
+[dt_git]: https://github.com/darktable
 
 <!-- more end -->
