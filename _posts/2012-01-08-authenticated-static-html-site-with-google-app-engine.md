@@ -13,7 +13,7 @@ tags: ['app engine', 'google apps', 'static', 'html', 'python']
 [Google App Engine][gae] is a platform-as-a-service (PAAS) product that
 provides scalable, cloud-hosted web applications using Google's massive
 engineering infrastructure. While App Engine is primarily used by web
-developers (e.g., programming in Python or Java), it provides three features
+developers (e.g., programming in Python or Java), it offers three features
 which make it uniquely helpful for static site hosting:
 
 * Arbitrary static file handling.
@@ -26,13 +26,13 @@ domain account before viewing any content. This is a common situation for
 organizations already using Google Apps to manage email, documents, etc.
 that want to host a web site without having extra configuration hassles.
 App Engine essentially takes care of all the authentication / user management,
-and you just have to upload a static web site!
+and you just have to upload the static web site.
 
 The assumption throughout the rest of this post is that you already have a
 domain name managed by Google Apps (e.g., "example.com"). We will create
-an App Engine application  restrict it to users of the specific Google Apps
-domain, requiring a login of a user "@example.com". Finally, we'll upload the
-static site and verify that the authentication works as expected.
+an App Engine application and then restrict it to users of the specific Google
+Apps domain, requiring a login of a user "@example.com". Finally, we'll upload
+the static site and verify that authentication works as expected.
 
 <!-- more start -->
 
@@ -68,15 +68,15 @@ as we're basically going to follow these steps. Go to the
   domain:", or (3) "(Experimental) Open to all users with an OpenID Provider".
   Click the button for "Restricted to the following Google Apps domain:" and
   enter your Google Apps-managed domain (e.g., "example.com"). I should point
-  out again, you *already* need to have a Google Apps for the domain name you
-  are entering.
+  out again, you *already* need to have Google Apps set up for the domain name
+  you are entering.
 
-From there you can click "Create Application", and the application should be
+From there you can click "Create Application" and the application should be
 created. Make sure to keep your application identifier handy.
 
-For authentication within a Google Apps domain, there are further instructions
-in the App Engine [authentication][gae_auth] article that we need to follow.
-Summarizing, you also need to open a web browser to:
+To enable Google Apps domain authentication for the new application, we need
+to follow the instructions in the App Engine [authentication][gae_auth] article.
+Basically, you need to open a web browser to:
 "http://www.google.com/a/YOUR DOMAIN" and click on the "Dashboard" tab. Go to
 "Service settings" and click on the "Add more services" link. In the
 "Other services" section, there will be a place to add an App Engine service.
@@ -87,14 +87,14 @@ will hook up your specific Google Apps Domain with the App Engine service.
 
 The next step is to gather your static web site files, add an application
 configuration, and upload all the content to the App Engine application.
-Let's assume we have a directory that we're going to fill with all of this
-called "my_site". As an aside, you are best off keeping this directory under a
-source control management system (e.g., git), so that you can monitor, track
-and revert changes to all of your files.
+We will place all of our application content in a directory called "my_site"
+(or something else of your choosing).  You are best off keeping this directory
+under a source control management system (e.g., git), so that you can monitor,
+track and revert changes to all of your files.
 
 ### Configuration
 
-We need an application configuration file call "app.yaml" in the root directory
+We need an application configuration file call "app.yaml" in the root
 of our project directory. This file controls various aspects of the
 application, including how the application routes URLs to handlers. We'll
 use a configuration that handles all static file types (including HTML), and
@@ -102,7 +102,7 @@ just simply serves them.
 
 There are [various][post1] [other][post2] posts out there discussing
 configurations for static web sites on App Engine, but the best configuration
-that I found was a [gist][dt_gist] by Git user "[darktable][dt_git]".
+that I found was a [gist][dt_gist] by GitHub user "[darktable][dt_git]".
 However, this configuration didn't including authentication, so I forked the
 gist and added authentication attributes to produce our final
 [app.yaml][gist_app] file that you should download to "my_site/app.yaml".
@@ -164,9 +164,8 @@ $ which appcfg.py
 /usr/local/bin/appcfg.py
 {% endhighlight %}
 
-If you don't get an executable path back, then review the
-"[getting started][gae_intro]" documents for installation of the App Engine
-runtime.
+If you don't get an executable path back, then review the App Engine
+"[getting started][gae_intro]" documents for installation of the runtime.
 
 Assuming we do have ``appcfg.py`` available, change directory in your shell
 to the directory containing "my_site" and upload the static site:
