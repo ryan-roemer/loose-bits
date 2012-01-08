@@ -60,7 +60,7 @@ as we're basically going to follow these steps. Go to the
   some alternates handy. This will result in a domain name of
   "internal-docs.appspot.com" (or whatever your identifier is) for your
   finished website.
-* **Application Title**: An free text description of your website. Feel free to
+* **Application Title**: A free text description of your website. Feel free to
   put anything in that provides a simple title for your site.
 * **Authentication Options (Advanced)**: You'll need to click the "edit" link
   which then gives us three options for authentication: (1) "Open to all Google
@@ -147,7 +147,7 @@ Now that we have a configuration file, create a folder named "my_site/static"
 which will house actual static web site. As we want to check that the
 authentication works first before uploading potentially sensitive information,
 I would recommend creating a test HTML page that just contains the content
-"It worked!" or something, and adding that as "my_site/static/index.html".
+"It worked!" and adding that as "my_site/static/index.html".
 
 Now, we should have a project layout that looks like:
 
@@ -204,7 +204,7 @@ to re-upload the project with ``appcfg.py`` and enjoy your static web site!
 [dt_gist]: https://gist.github.com/873098
 [dt_git]: https://github.com/darktable
 [gist_cfg]: https://gist.github.com/1570659
-[gist_app]: https://gist.github.com/1570659#file_app.yaml
+[gist_app]: https://raw.github.com/gist/1570659/app.yaml
 [gist_readme]: https://gist.github.com/1570659#file_readme.markdown
 
 <!-- more end -->
