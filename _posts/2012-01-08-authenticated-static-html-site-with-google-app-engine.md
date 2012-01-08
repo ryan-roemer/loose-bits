@@ -24,7 +24,7 @@ In this post, we'll walk through uploading a static HTML site to App Engine,
 and configuring it such that it requires users to log in to via a Google Apps
 domain account before viewing any content. This is a common situation for
 organizations already using Google Apps to manage email, documents, etc.
-already that want to host a web site without having extra configuration hassles.
+that want to host a web site without having extra configuration hassles.
 App Engine essentially takes care of all the authentication / user management,
 and you just have to upload a static web site!
 
@@ -105,7 +105,7 @@ configurations for static web sites on App Engine, but the best configuration
 that I found was a [gist][dt_gist] by Git user "[darktable][dt_git]".
 However, this configuration didn't including authentication, so I forked the
 gist and added authentication attributes to produce our final
-[app.yaml][gist_app] file which you should download to "my_site/app.yaml".
+[app.yaml][gist_app] file that you should download to "my_site/app.yaml".
 You can also view a basic [Readme][gist_readme] file and other information at
 the GitHub [gist][gist_cfg] page.
 
