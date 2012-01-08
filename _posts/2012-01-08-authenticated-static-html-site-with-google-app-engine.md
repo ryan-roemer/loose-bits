@@ -5,7 +5,7 @@ description: Google App Engine provides an easy framework for hosting a static
   site and providing extensible user authentication based on Google Apps or
   OpenID accounts. This makes App Engine a great (and inexpensive) resource for
   quickly hosting static HTML content limited to an appropriate user domain.
-date: 2012-01-06 14:00:00 UTC
+date: 2012-01-08 14:00:00 UTC
 tags: ['app engine', 'google apps', 'static', 'html', 'python']
 ---
 ## Static HTML Web Site hosting with Google App Engine
