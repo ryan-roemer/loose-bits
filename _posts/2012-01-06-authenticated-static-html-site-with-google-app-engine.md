@@ -321,6 +321,27 @@ handlers:
 You can also view the [gist][gae_gist] at its GitHub gist page, as well as a
 basic Readme file.
 
+Download the file to "my_site/app.yaml" and update the
+``application: you-app-name-here`` directive with your specific application
+identifier you chose in the application creation section above.
+
+### Static Content
+
+Now that we have a configuration file, create folder called "my_site/static"
+which will house all of your static web site. As we want to check that the
+authentication works first before uploading potentially sensitive information,
+I would recommend creating a test HTML page that just contains the content
+"It worked!" or something, and adding that as "my_site/static/index.html".
+
+So at this point, we should have a project layout that looks like:
+
+    my_site/
+      app.yaml
+      static/
+        index.html
+
+
+
 
 
 
