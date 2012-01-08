@@ -8,7 +8,6 @@ description: Google App Engine provides an easy framework for hosting a static
 date: 2012-01-06 14:00:00 UTC
 tags: ['app engine', 'google apps', 'static', 'html', 'python', 'sphinx']
 ---
-
 ## Static HTML Web Site hosting with Google App Engine
 
 [Google App Engine][gae] is a platform-as-a-service (PAAS) product that
@@ -93,19 +92,252 @@ However, this configuration didn't including authentication, so I forked the
 gist and added authentication attributes to produce our final "app.yaml"
 file:
 
-<script src="https://gist.github.com/1570659.js?file=app.yaml"></script>
+{% highlight yaml %}
+# App configuration for static site with auth.
+#
+# Originally from: https://gist.github.com/873098
+application: you-app-name-here
+version: 1
+runtime: python
+api_version: 1
+
+default_expiration: "30d"
+
+handlers:
+- url: /(.*\.(appcache|manifest))
+  mime_type: text/cache-manifest
+  static_files: static/\1
+  upload: static/(.*\.(appcache|manifest))
+  expiration: "0m"
+  login: required
+
+- url: /(.*\.atom)
+  mime_type: application/atom+xml
+  static_files: static/\1
+  upload: static/(.*\.atom)
+  expiration: "1h"
+  login: required
+
+- url: /(.*\.crx)
+  mime_type: application/x-chrome-extension
+  static_files: static/\1
+  upload: static/(.*\.crx)
+  login: required
+
+- url: /(.*\.css)
+  mime_type: text/css
+  static_files: static/\1
+  upload: static/(.*\.css)
+  login: required
+
+- url: /(.*\.eot)
+  mime_type: application/vnd.ms-fontobject
+  static_files: static/\1
+  upload: static/(.*\.eot)
+  login: required
+
+- url: /(.*\.htc)
+  mime_type: text/x-component
+  static_files: static/\1
+  upload: static/(.*\.htc)
+  login: required
+
+- url: /(.*\.html)
+  mime_type: text/html
+  static_files: static/\1
+  upload: static/(.*\.html)
+  expiration: "1h"
+  login: required
+
+- url: /(.*\.ico)
+  mime_type: image/x-icon
+  static_files: static/\1
+  upload: static/(.*\.ico)
+  expiration: "7d"
+  login: required
+
+- url: /(.*\.js)
+  mime_type: text/javascript
+  static_files: static/\1
+  upload: static/(.*\.js)
+  login: required
+
+- url: /(.*\.json)
+  mime_type: application/json
+  static_files: static/\1
+  upload: static/(.*\.json)
+  expiration: "1h"
+  login: required
+
+- url: /(.*\.m4v)
+  mime_type: video/m4v
+  static_files: static/\1
+  upload: static/(.*\.m4v)
+  login: required
+
+- url: /(.*\.mp4)
+  mime_type: video/mp4
+  static_files: static/\1
+  upload: static/(.*\.mp4)
+  login: required
+
+- url: /(.*\.(ogg|oga))
+  mime_type: audio/ogg
+  static_files: static/\1
+  upload: static/(.*\.(ogg|oga))
+  login: required
+
+- url: /(.*\.ogv)
+  mime_type: video/ogg
+  static_files: static/\1
+  upload: static/(.*\.ogv)
+  login: required
+
+- url: /(.*\.otf)
+  mime_type: font/opentype
+  static_files: static/\1
+  upload: static/(.*\.otf)
+  login: required
+
+- url: /(.*\.rss)
+  mime_type: application/rss+xml
+  static_files: static/\1
+  upload: static/(.*\.rss)
+  expiration: "1h"
+  login: required
+
+- url: /(.*\.safariextz)
+  mime_type: application/octet-stream
+  static_files: static/\1
+  upload: static/(.*\.safariextz)
+  login: required
+
+- url: /(.*\.(svg|svgz))
+  mime_type: images/svg+xml
+  static_files: static/\1
+  upload: static/(.*\.(svg|svgz))
+  login: required
+
+- url: /(.*\.swf)
+  mime_type: application/x-shockwave-flash
+  static_files: static/\1
+  upload: static/(.*\.swf)
+  login: required
+
+- url: /(.*\.ttf)
+  mime_type: font/truetype
+  static_files: static/\1
+  upload: static/(.*\.ttf)
+  login: required
+
+- url: /(.*\.txt)
+  mime_type: text/plain
+  static_files: static/\1
+  upload: static/(.*\.txt)
+  login: required
+
+- url: /(.*\.unity3d)
+  mime_type: application/vnd.unity
+  static_files: static/\1
+  upload: static/(.*\.unity3d)
+  login: required
+
+- url: /(.*\.webm)
+  mime_type: video/webm
+  static_files: static/\1
+  upload: static/(.*\.webm)
+  login: required
+
+- url: /(.*\.webp)
+  mime_type: image/webp
+  static_files: static/\1
+  upload: static/(.*\.webp)
+  login: required
+
+- url: /(.*\.woff)
+  mime_type: application/x-font-woff
+  static_files: static/\1
+  upload: static/(.*\.woff)
+  login: required
+
+- url: /(.*\.xml)
+  mime_type: application/xml
+  static_files: static/\1
+  upload: static/(.*\.xml)
+  expiration: "1h"
+  login: required
+
+- url: /(.*\.xpi)
+  mime_type: application/x-xpinstall
+  static_files: static/\1
+  upload: static/(.*\.xpi)
+  login: required
+
+# image files
+- url: /(.*\.(bmp|gif|ico|jpeg|jpg|png))
+  static_files: static/\1
+  upload: static/(.*\.(bmp|gif|ico|jpeg|jpg|png))
+  login: required
+
+# audio files
+- url: /(.*\.(mid|midi|mp3|wav))
+  static_files: static/\1
+  upload: static/(.*\.(mid|midi|mp3|wav))
+  login: required
+
+# windows files
+- url: /(.*\.(doc|exe|ppt|rtf|xls))
+  static_files: static/\1
+  upload: static/(.*\.(doc|exe|ppt|rtf|xls))
+  login: required
+
+# compressed files
+- url: /(.*\.(bz2|gz|rar|tar|tgz|zip))
+  static_files: static/\1
+  upload: static/(.*\.(bz2|gz|rar|tar|tgz|zip))
+  login: required
+
+# index files
+- url: /(.+)/
+  static_files: static/\1/index.html
+  upload: static/(.+)/index.html
+  expiration: "15m"
+  login: required
+
+- url: /(.+)
+  static_files: static/\1/index.html
+  upload: static/(.+)/index.html
+  expiration: "15m"
+  login: required
+
+# site root
+- url: /
+  static_files: static/index.html
+  upload: static/index.html
+  expiration: "15m"
+  login: required
+{% endhighlight %}
+
+You can also view the [gist][gae_gist] at its GitHub gist page, as well as a
+basic Readme file.
+
+
+
+
+
+
+
+
+
+
+
 
 
 {% comment %}
 TODO HERE
 App: foobardelete123456
-Orig (): 
-Mine: https://gist.github.com/1570659
 
 {% endcomment %}
-
-
-
 
 [gae]: http://code.google.com/appengine/
 [gae_auth]: http://code.google.com/appengine/articles/auth.html
@@ -117,5 +349,6 @@ Mine: https://gist.github.com/1570659
 [post2]: http://www.instantfundas.com/2011/02/how-to-host-static-websites-on-google.html
 [dt_gist]: https://gist.github.com/873098
 [dt_git]: https://github.com/darktable
+[gae_gist]: https://gist.github.com/1570659
 
 <!-- more end -->
