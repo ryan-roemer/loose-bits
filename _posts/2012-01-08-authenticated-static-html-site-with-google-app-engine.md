@@ -138,13 +138,13 @@ handlers:
 {% endhighlight %}
 
 After downloading to "my_site/app.yaml", update the
-``application: you-app-name-here`` directive with your specific App Engine
+``application: you-app-name-here`` directive with the specific App Engine
 application identifier you chose in the application creation section above.
 
 ### Static Content
 
-Now that we have a configuration file, create folder called "my_site/static"
-which will house all of your static web site. As we want to check that the
+Now that we have a configuration file, create a folder named "my_site/static"
+which will house actual static web site. As we want to check that the
 authentication works first before uploading potentially sensitive information,
 I would recommend creating a test HTML page that just contains the content
 "It worked!" or something, and adding that as "my_site/static/index.html".
@@ -164,11 +164,13 @@ $ which appcfg.py
 /usr/local/bin/appcfg.py
 {% endhighlight %}
 
-If you don't get an executable path back, then review the App Engine
+If you don't get an executable path back (any path is fine as long as
+*something* is returned by the ``which`` command), then review the App Engine
 "[getting started][gae_intro]" documents for installation of the runtime.
 
-Assuming we do have ``appcfg.py`` available, change directory in your shell
-to the directory containing "my_site" and upload the static site:
+Assuming we do have ``appcfg.py`` available, change directory in your terminal
+to the directory containing the "my_site" project folder and upload the static
+site with the following command:
 
 {% highlight bash %}
 $ appcfg.py update my_site
@@ -182,7 +184,8 @@ should be prompted to login to your Google Apps domain. A good way to test
 the authentication works is to open a new Google Chrome Incognito window. It
 should always force a new Google Apps login if you have configured things
 properly. If the authentication doesn't work quite right, review the
-App Engine [authentication][gae_auth] page.
+App Engine [authentication][gae_auth] page for tips and pointers, or leave a
+comment below on this post.
 
 Assuming authentication does work correctly, then you can now remove the
 test "index.html" file and upload your real site content to the
@@ -201,7 +204,7 @@ to re-upload the project with ``appcfg.py`` and enjoy your static web site!
 [dt_gist]: https://gist.github.com/873098
 [dt_git]: https://github.com/darktable
 [gist_cfg]: https://gist.github.com/1570659
-[gist_app]: https://gist.github.com/1570659#app.yaml
+[gist_app]: https://gist.github.com/1570659#file_app.yaml
 [gist_readme]: https://gist.github.com/1570659#file_readme.markdown
 
 <!-- more end -->
