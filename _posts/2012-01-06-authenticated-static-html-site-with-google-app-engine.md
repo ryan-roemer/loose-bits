@@ -1,34 +1,38 @@
 ---
 layout: post
-title: Hosting an Authenticated, Static HTML Web Site on Google App Engine
+title: Authenticated, Static Web Sites on Google App Engine
 description: Google App Engine provides an easy framework for hosting a static
   site and providing extensible user authentication based on Google Apps or
   OpenID accounts. This makes App Engine a great (and inexpensive) resource for
   quickly hosting static HTML content limited to an appropriate user domain.
 date: 2012-01-06 14:00:00 UTC
-tags: ['app engine', 'google apps', 'static', 'html', 'python', 'sphinx']
+tags: ['app engine', 'google apps', 'static', 'html', 'python']
 ---
 ## Static HTML Web Site hosting with Google App Engine
 
 [Google App Engine][gae] is a platform-as-a-service (PAAS) product that
 provides scalable cloud-hosted web applications using Google's massive
 engineering infrastructure. While App Engine is primarily used by web
-developers (e.g., programming in Python or Java), it provides two features
+developers (e.g., programming in Python or Java), it provides three features
 which make it uniquely helpful for static site hosting:
 
 * Arbitrary static file handling.
 * Extensible authentication support.
+* Very inexpensive (most likely free) for hosting a purely static web site.
 
-In this post, we'll walk through uploading a static HTML site to App Engine
-that requires users to log in before viewing any content. The assumption is
-that you already have a domain name managed by Google Apps (e.g.,
-"example.com"). We will then create a website and restrict it to users of the
-specific Google Apps domain, requiring a login of a user "@example.com".
-This is a common situation for organizations already using Google Apps to
-manage email, documents, etc. already that want to host a web site without
-having extra configuration hassles. App Engine essentially takes care of all
-the authentication / user management, and you just have to upload a static
-web site!
+In this post, we'll walk through uploading a static HTML site to App Engine,
+and configuring it such that it requires users to log in to via a Google Apps
+domain account before viewing any content. This is a common situation for
+organizations already using Google Apps to manage email, documents, etc.
+already that want to host a web site without having extra configuration hassles.
+App Engine essentially takes care of all the authentication / user management,
+and you just have to upload a static web site!
+
+The assumption throughout the rest of this post is that you already have a
+domain name managed by Google Apps (e.g., "example.com"). We will create
+an App Engine application  restrict it to users of the specific Google Apps
+domain, requiring a login of a user "@example.com". Finally, we'll upload the
+static site and verify that the authentication works as expected.
 
 <!-- more start -->
 
