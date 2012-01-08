@@ -30,8 +30,8 @@ and you just have to upload the static web site.
 
 The assumption throughout the rest of this post is that you already have a
 domain name managed by Google Apps (e.g., "example.com"). We will create
-an App Engine application and then restrict it to users of the specific Google
-Apps domain, requiring a login of a user "@example.com". Finally, we'll upload
+an App Engine application and restrict it to users of the specific Google
+Apps domain, requiring a login of a user "@example.com". Then we'll upload
 the static site and verify that authentication works as expected.
 
 <!-- more start -->
@@ -45,7 +45,7 @@ should read the "[getting started][gae_intro]" documentation. Also, if given
 the option to "install command symlinks", make sure you choose to do this
 (which will give us an ``appcfg.py`` executable in our path for use later).
 
-Once you are all set up on App Engine, we can create the actual application.
+Once App Engine is setup and installed, we can create the actual application.
 The important thing to point out here is that you must select the
 authentication method you want for your web site **at** creation time, as it
 cannot be changed later. (Although, you can create a *new* application with
@@ -68,8 +68,8 @@ as we're basically going to follow these steps. Go to the
   domain:", or (3) "(Experimental) Open to all users with an OpenID Provider".
   Click the button for "Restricted to the following Google Apps domain:" and
   enter your Google Apps-managed domain (e.g., "example.com"). I should point
-  out again, you *already* need to have Google Apps set up for the domain name
-  you are entering.
+  out again that you *already* should have Google Apps set up for the domain
+  name you are entering.
 
 From there you can click "Create Application" and the application should be
 created. Make sure to keep your application identifier handy.
@@ -109,7 +109,7 @@ gist and added authentication attributes to produce our final
 You can also view a basic [Readme][gist_readme] file and other information at
 the GitHub [gist][gist_cfg] page.
 
-Here's a snippet of the "app.yaml" file that you'll need to slightly modify.
+Here's a snippet of the "app.yaml" file that you'll need to slightly modify:
 
 {% highlight yaml %}
 application: you-app-name-here
