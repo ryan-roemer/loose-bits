@@ -93,10 +93,7 @@ However, this configuration didn't including authentication, so I forked the
 gist and added authentication attributes to produce our final "app.yaml"
 file:
 
-<script src="http://gist.github.com/1570659.js"></script>
-
-
-
+<script src="https://gist.github.com/1570659.js?file=app.yaml"></script>
 
 
 {% comment %}

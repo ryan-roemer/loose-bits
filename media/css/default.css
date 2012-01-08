@@ -3,7 +3,7 @@ a,a:active,a:visited,a:hover{color:#1d7297;text-decoration:none;font-weight:bold
 a:hover{text-decoration:underline}
 ::-moz-selection,::selection{background:#999;color:#fff}
 p code{background-color:#fff}
-pre,.gist .gist-file .gist-data{color:#fff;background-color:#222;font-size:13px}
+pre,.gist .gist-file .gist-data{color:#fff;background-color:#222 !important;font-size:13px}
 pre{padding:10px 15px;margin-left:15px;margin-right:15px;margin-bottom:15px;border:1px solid #ccc;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;-webkit-box-shadow:2px 5px 5px #999;-moz-box-shadow:2px 5px 5px #999;box-shadow:2px 5px 5px #999;}
 .ie6 pre,.ie7 pre,.ie8 pre{border:2px solid #999}
 .highlight span{background-color:#222 !important}
