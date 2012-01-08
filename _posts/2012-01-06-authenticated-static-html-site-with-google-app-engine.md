@@ -329,8 +329,8 @@ handlers:
   login: required
 {% endhighlight %}
 
-You can also view the [gist][gist_cfg] at its GitHub gist page, as well as
-a basic Readme file.
+You can also view / download the file at its GitHub [gist][gist_cfg] page, as
+well as a basic [Readme][gist_readme] file.
 
 Download the file to "my_site/app.yaml" and update the
 ``application: you-app-name-here`` directive with your specific application
@@ -397,5 +397,6 @@ to re-upload the project with ``appcfg.py`` and enjoy your static web site!
 [dt_gist]: https://gist.github.com/873098
 [dt_git]: https://github.com/darktable
 [gist_cfg]: https://gist.github.com/1570659
+[gist_readme]: https://gist.github.com/1570659#file_readme.markdown
 
 <!-- more end -->
