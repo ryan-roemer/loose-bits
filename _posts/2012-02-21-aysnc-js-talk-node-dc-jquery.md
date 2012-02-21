@@ -39,4 +39,4 @@ comments!
 [dcjq]: http://www.meetup.com/DC-jQuery-Users-Group/events/51798912/
 [pres]: http://ryan-roemer.github.com/nodedc-async-talk/#/title
 [impress]: http://bartaz.github.com/impress.js
-[presi]: http://prezi.com/
+[prezi]: http://prezi.com/
