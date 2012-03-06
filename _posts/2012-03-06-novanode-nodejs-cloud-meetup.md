@@ -54,6 +54,8 @@ deploy and then scale easily in the cloud. I'll discuss best practices and
 what opportunities and pitfalls lie ahead when taking your Node.js applications
 to the cloud.
 
+Hope to see you at the meetup!
+
 [nodejitsu]: http://nodejitsu.com/
 [heroku]: http://www.heroku.com/
 [aws]: http://aws.amazon.com/
