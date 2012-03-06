@@ -52,6 +52,9 @@ header div.title p{font-size:1.15em;font-weight:350;color:#ccc}
 .post p{text-indent:25px;line-height:125%}
 .post ul li{line-height:125%;padding-bottom:5px;}
 .post ul li p{text-indent:0;margin:0;padding:0}
+div.image{width:600px;}
+div.image img{border:none;display:block;margin-right:auto;margin-left:auto;-webkit-box-shadow:3px 3px 4px #999;-moz-box-shadow:3px 3px 4px #999;box-shadow:3px 3px 4px #999;}
+.ie6 div.image img,.ie7 div.image img,.ie8 div.image img{border:2px solid #999}
 #share{height:20px;margin-bottom:8px;width:600px;float:left;display:inline;}
 #share div#___plusone_0{padding-left:10px !important;}
 #share div#___plusone_0[style]{width:200px !important}
