@@ -36,11 +36,29 @@ Our talks are:
 
 ## Getting Started with Node.js in the Cloud
 
-My talk will center around basic Node.js application development and
-deployment to the cloud.
+Node.js provides a solid platform for scalable and responsive web applications.
+Development in Node.js further has a lower learning curve compared to many
+highly-concurrent / asynchronous frameworks as it uses JavaScript, which is
+very familiar territory for web developers.
 
+The cloud complements Node.js by providing the means to deploy applications
+rapidly and scale up with no upfront investment costs. The "big" cloud
+providers such as [Amazon Web Services][aws] and [Rackspace][rs] easily support
+an infrastructures for hosting Node.js applications. Moreover, there has
+been a burst of Platform-as-a-Service contenders that provide even easier
+Node.js application hosting, including: [Heroku][heroku],
+[NodeJitsu][nodejitsu] and even Microsoft's [Azure][azure] platform.
 
+In my talk, I'll walk through a basic Node.js application that we develop,
+deploy and then scale easily in the cloud. I'll discuss best practices and
+what opportunities and pitfalls lie ahead when taking your Node.js applications
+to the cloud.
 
+[nodejitsu]: http://nodejitsu.com/
+[heroku]: http://www.heroku.com/
+[aws]: http://aws.amazon.com/
+[rs]: http://www.rackspace.com/cloud/
+[azure]: http://www.windowsazure.com/en-us/develop/nodejs/
 [sd]: http://spanishdict.com/
 [nodejs]: http://nodejs.org/
 [meetup_event]: http://www.meetup.com/Nova-Node/events/52749282/
