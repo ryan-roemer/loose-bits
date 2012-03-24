@@ -6,6 +6,7 @@
 * Facebook: Get like button to work (with inline).
   (Give a quick shot on this, then to "later" pile).
 * AddThis: Consider for facebook, google+, email, print
+* Date: `date -u +"%Y-%m-%d %H:%M:%S UTC"`
 
 ## Later
 
