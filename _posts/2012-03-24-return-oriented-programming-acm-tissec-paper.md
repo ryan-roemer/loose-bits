@@ -76,7 +76,7 @@ in the time since we submitted our draft, and the state of the art in
 return-oriented programming has advanced *significantly* past that described
 in our paper. Since our original research, the attack has found its way into
 [voting machines][vote], [routers][routers], [mobile devices][ios] and other
-places. It is fascinating (and scary) to see the ways in which this attack
+places. It is fascinating (and scary) to see the ways in which the
 technique has now entered the mainstream, but I'm at least happy to have (in
 a small way) helped expose the problem to software vendors early to give
 them a chance to build up defenses against return-oriented programming.
