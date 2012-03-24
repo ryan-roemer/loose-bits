@@ -15,7 +15,7 @@ tags: ['return oriented programming', 'security', 'exploits',
 [Return-oriented programming][rop] is a software exploit technique to take
 over a program by diverting control flow without injecting any code. At UCSD,
 I did most of my graduate research around this specific attack, working with
-[Erik Buchanan][erik], [Hovav Shacham][hovav] and [Stefan Savage][stefan].
+[Erik Buchanan][erik], [Hovav Shacham][hovav], and [Stefan Savage][stefan].
 Now three years later, the ACM Transactions of Information and System Security
 (TISSEC) journal has published our full article,
 "[Return-Oriented Programming: Systems, Languages, and Applications][pub]"
