@@ -1,0 +1,17 @@
+{
+  "name": "loose-bits",
+  "description": "Loose Bits.",
+  "version": "0.0.1",
+  "author": "Ryan Roemer <ryan@loose-bits.com>",
+  "url": "https://github.com/ryan-roemer/loose-bits",
+  "main": "server",
+  "engines": {
+    "node": ">=0.6.8"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "stylus": "0.28.2",
+    "nib": "0.7.0"
+  }
+}
