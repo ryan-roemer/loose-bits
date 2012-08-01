@@ -21,7 +21,7 @@ Streams are an abstract interface for data objects in Node.js which can be
 readable and/or writable. Some examples of implementing classes in the Node.js
 core library include HTTP, HTTPS, file I/O, and stdout.
 
-For a brief, pseudo-code example, say we create a download client to retrieve
+For a brief example, say we create a download client to retrieve
 a web page and write it to a file, our code (ignoring error-handling) could
 look something like this:
 
@@ -45,9 +45,16 @@ output of one stream to the input of the next. Our code above is extremely
 terse, and more importantly, we don't have to do any data buffering or storage,
 instead relying on the implemented streams to do it themselves.
 
+## The Stream Interfaces
 
 - Reqs for read
 - Reqs for write
+
+
+## A Custom Stream Example
+
+- Upper Stream.
+- Conclusion and parting thoughts.
 
 [streams]: http://nodejs.org/api/stream.html
 [nodejs]: http://nodejs.org
