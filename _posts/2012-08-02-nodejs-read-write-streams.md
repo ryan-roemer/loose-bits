@@ -14,22 +14,23 @@ tags: ['node.js', 'javascript', 'streams', 'data']
 
 [Node.js][nodejs] provides an extensible and fast platform for web servers,
 proxies and middle-tier services. Comon Node.js applications often involve
-some form of transform data from one format (e.g., a database or cloud
+some data transformation from one data format (e.g., a database or cloud
 store) to another (e.g., an HTML or JSON page).
 
-Everyone is familiar with the callback-style of hooking together various
+Most folks are familiar with the callback-style of hooking together various
 JavaScript data components in a Node.js program. However, an often overlooked
 and very powerful data binding abstraction for Node.js is the
 [stream][streams] class.
 
 Streams are an abstract interface for data objects in Node.js which can be
-readable and/or writable. They can be hooked from one to another, in
+readable and/or writable. They can be hooked from one to another in
 a similar style to Unix pipes -- in fact, the stream operation we'll mostly
-focus on here is the not-coincidentally-named `pipe()`. Some of the advantages
-of streams over callback-style bindings include:
+focus on here is the not-coincidentally-named `pipe()`. Some potential
+advantages of streams over other binding styles include:
 
 * Often much less code for the actual binding (can just push into a `pipe()`).
-* Streams can handle pausing / resuming of data flows.
+* Streams can handle pausing / resuming of data flows. Implementing classes,
+  however, have to implement this logic internally if supported.
 * Don't have to set specific callbacks or listeners for intermediate data
   events -- just `pipe()` the stream and forget it.
 * Can avoid buffering by processing data and re-emitting it directly to another
@@ -53,16 +54,15 @@ require('http').get("http://www.google.com/", function(response) {
 });
 {% endhighlight %}
 
-Notice that we didn't set any explicity "on `data`" listeners or buffer any of
+Notice that we didn't set any explicit "`data`" listeners or buffer any of
 the data, even if it came in as chunks. We simply `pipe()`'ed it with our
 two stream objects: `response` and `outStream`.  The output of `response` is
 hooked to the input of `outStream` and we're done.
 
 More importantly (as we'll get to below), we can add many more `pipe()` calls
-to do other transformations / data-slinging inline to our single call here.
-And, the example code above is quite terse, and more importantly, we don't have
-to do any data buffering or storage, instead relying on the implemented streams
-to do it themselves.
+to do other transformations / data-slinging inline to our chained call.
+Ultimately, it just takes a little bit of glue code to hook together data flows
+in a terse and efficient manner with streams.
 
 ## The Stream Interfaces
 
@@ -70,8 +70,8 @@ So how do we do this for our own classes and objects?
 
 <!-- more start -->
 
-The Node.js [streams][streams] documentation gives the full rundown of
-implementing streams, but we'll go for an abbreviated version here to get
+The Node.js [streams][streams] documentation offers the full rundown of how to
+implement the interfaces, but we'll give an abbreviated version here to get
 going.
 
 ### Readable Streams
@@ -86,14 +86,14 @@ pausing and resuming a stream, as well as resource management and cleanup.
 
 [Writable Streams][write_stream] must implement the `write()` method to
 accept new data chunks into the stream and the `end()` method to instruct the
-stream to close up. The implementing constructor should also set
+stream that the data is finished. The implementing constructor should also set
 `this.writable = true`.
 
 ### Putting it Together
 
 Let's take a look at a simple example of a custom-implemented readable and
-writable stream that simply passes through data -- data written is simply
-emitted straight out.
+writable stream that simply passes through data -- data input is simply
+emitted unchanged as output.
 
 {% highlight javascript %}
 // Set both readable and writable in constructor.
