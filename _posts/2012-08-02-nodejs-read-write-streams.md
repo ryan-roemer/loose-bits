@@ -152,10 +152,61 @@ So that's the basics. Let's look at creating something a tad more useful.
 
 ## A Custom Stream Example
 
-**TODO HERE**
+Here is a custom stream class that takes a data source (in string or `Buffer`
+format) and converts the string data into upper case letters. Not ultimately
+that useful or extensible, but it's definitely a data transformation that can
+illustrate the ease of creation and use of a custom stream.
 
-- Upper Stream.
-- Conclusion and parting thoughts.
+We mostly take our simple passthrough stream above and add a custom
+`_transform` helper method to transform the data in either a `write()` or
+`end()` call, then re-emit the upper-cased data in a `data` event.
+
+{% highlight javascript %}
+/**
+ * A simple upper-case stream converter.
+ */
+var UpperCaseStream = function () {
+  this.readable = true;
+  this.writable = true;
+};
+
+require("util").inherits(UpperCaseStream, require("stream"));
+
+/**
+ * Handle various params and upper-case string data.
+ *
+ * Signature can be in format of:
+ *  - string, [encoding]
+ *  - buffer
+ *
+ * Our example implementation hacks the data into a simpler
+ # (string) form -- real implementations would need more.
+ */
+UpperCaseStream.prototype._transform = function (data) {
+  // Here, we'll just shortcut to a string.
+  data = data ? data.toString() : "";
+
+  // Upper-case the string and emit data event with transformed data.
+  this.emit("data", data.toUpperCase());
+};
+
+/**
+ * Stream write (override).
+ */
+UpperCaseStream.prototype.write = function () {
+  this._transform.apply(this, arguments);
+};
+
+/**
+ * Stream end (override).
+ */
+UpperCaseStream.prototype.end = function () {
+  this._transform.apply(this, arguments);
+  this.emit("end");
+};
+{% endhighlight %}
+
+
 
 
 ## Conclusion
