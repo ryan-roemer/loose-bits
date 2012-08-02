@@ -71,7 +71,7 @@ So how do we do this for our own classes and objects?
 
 The Node.js [streams][streams] documentation offers the full rundown of how to
 implement the interfaces, but we'll give an abbreviated version here to get
-going. All of the examples we'll discussed are available as a GitHub
+going. All of the code examples discussed in here are available as a GitHub
 [gist][gist].
 
 ### Readable Streams
