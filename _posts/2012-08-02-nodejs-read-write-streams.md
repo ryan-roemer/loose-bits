@@ -13,7 +13,7 @@ tags: ['node.js', 'javascript', 'streams', 'data']
 ## Node.js Streams
 
 [Node.js][nodejs] provides an extensible and fast platform for web servers,
-proxies and middle-tier services. Comon Node.js applications often involve
+proxies and middle-tier services. Common Node.js applications often involve
 some data transformation from one data format (e.g., a database or cloud
 store) to another (e.g., an HTML or JSON page).
 
@@ -158,7 +158,7 @@ response
 
 So that's the basics. Let's look at creating something a tad more useful.
 
-## Let's Upper-case some Data!
+## Let's Upper-case Some Data!
 
 The `UpperCaseStream` class is takes a data source (in string or `Buffer`
 format) and converts string data into upper case letters. Not ultimately
