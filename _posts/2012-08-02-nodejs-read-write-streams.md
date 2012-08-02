@@ -13,8 +13,8 @@ tags: ['node.js', 'javascript', 'streams', 'data']
 ## Node.js Streams
 
 [Node.js][nodejs] provides an extensible and fast platform for web servers,
-proxies and middle-tier services. Common Node.js applications often involve
-some data transformation from one data format (e.g., a database or cloud
+proxies, and middle-tier services. Common Node.js applications often involve
+some transformation from one data format (e.g., a database or cloud
 store) to another (e.g., an HTML or JSON page).
 
 Most folks are familiar with the callback-style of hooking together various
@@ -26,7 +26,7 @@ Streams are an abstract interface for data objects in Node.js which can be
 readable and/or writable. They can be hooked from one to another in
 a similar style to Unix pipes -- in fact, the stream operation we'll mostly
 focus on here is the not-coincidentally-named `pipe()`. Some potential
-advantages of streams over other binding styles include:
+advantages of stream pipes over other binding styles include:
 
 * Often much less code for the actual binding (can just push into a `pipe()`).
 * Streams can handle pausing / resuming of data flows. Implementing classes,
