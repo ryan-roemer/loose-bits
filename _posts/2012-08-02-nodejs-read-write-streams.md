@@ -22,8 +22,9 @@ JavaScript data components in a Node.js program, but one of the most powerful
 abstractions for data slinging are Node.js [streams][streams].
 
 Streams are an abstract interface for data objects in Node.js which can be
-readable and/or writable. Some examples of implementing classes in the Node.js
-core library include HTTP, HTTPS, file I/O, and stdout. Some of the advantages
+readable and/or writable. And, they can be hooked from one to another, in
+a similar style to Unix pipes -- in fact, the streamoperation we'll mostly
+focus on here is the not-coincidentally-named `pipe()`. Some of the advantages
 of streams over callback-style bindings include:
 
 * Often much less code for the actual binding (can just push into a `pipe()`).
@@ -32,7 +33,7 @@ of streams over callback-style bindings include:
   data requires having **all** of it first, in which case you can't avoid
   buffering).
 * Works well with a lot of the Node.js core library that already implements
-  streams.
+  streams, including HTTP, HTTPS, and file and process I/O.
 
 For a brief example, say we create a download client to retrieve
 a web page and write it to a file, our code (ignoring error-handling) could
@@ -65,6 +66,8 @@ streams to do it themselves.
 
 So how do we do this for our own classes and objects?
 
+<!-- more start -->
+
 The Node.js [streams][streams] documentation gives the full rundown of
 implementing streams, but we'll go for an abbreviated version here to get
 going.
@@ -72,6 +75,8 @@ going.
 ### Readable Streams
 
 
+
+- TODO HERE -- Ogden -- Need return true also???
 
 
 - Reqs for read
@@ -84,13 +89,22 @@ going.
 - Conclusion and parting thoughts.
 
 
-- Other reading
-  - "Why Node.js Streams are Awesome" http://blog.dump.ly/post/19819897856/why-node-js-streams-are-awesome
-  - "How to Use stream.pipe" http://docs.jit.su/articles/advanced/streams/how-to-use-stream-pipe
-  - "Streams, Pipes and Mega Pipes" http://felixge.s3.amazonaws.com/11/nodejs-streams.pdf
-  - "Node Streams: How do they work?" http://maxogden.com/node-streams
+## Conclusion
 
-- TODO HERE -- Ogden -- Need return true also???
+Streams provide a great means of binding together lots of data in a sane and
+manageable way. Beyond the core library documents, there are a lot of great
+stream introductions for further reference:
+
+- ["Why Node.js Streams are Awesome"][art_awesome]
+- ["How to Use stream.pipe"][art_howto]
+- ["Streams, Pipes and Mega Pipes"][art_mega]
+- ["Node Streams: How do they work?"][art_how]
 
 [streams]: http://nodejs.org/api/stream.html
 [nodejs]: http://nodejs.org
+[art_awesome]:http://blog.dump.ly/post/19819897856/why-node-js-streams-are-awesome
+[art_howto]:http://docs.jit.su/articles/advanced/streams/how-to-use-stream-pipe
+[art_mega]:http://felixge.s3.amazonaws.com/11/nodejs-streams.pdf
+[art_how]:http://maxogden.com/node-streams
+
+<!-- more end -->
