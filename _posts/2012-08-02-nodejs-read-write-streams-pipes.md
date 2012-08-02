@@ -38,9 +38,8 @@ advantages of stream pipes over other binding styles include:
 * Compatible with the many Node.js core modules that already implement
   streams, including HTTP, HTTPS, and file and process I/O.
 
-For a brief example, say we create a download client to retrieve
-a web page and write it to a file, our code (ignoring error-handling) could
-look something like this:
+For a brief example, we can create a download client to retrieve
+a web page and write it to a file as follows (ignoring error handling):
 
 {% highlight javascript %}
 // Get Google's home page.
@@ -233,7 +232,7 @@ The resulting output file is now uppercased! All in all, not that amazing,
 but considering the ease of our implementation, other (more useful)
 read/write stream applications could include:
 
-* CXML to JSON conversion.
+* XML to JSON conversion.
 * Unzipping zipped data.
 * Image resizing.
 * ... any other transformations you'd like to use with your existing streams.
