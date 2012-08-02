@@ -125,11 +125,10 @@ output.
 // Download the same page again, but with the NOP stream
 // in the middle.
 require('http').get("http://www.google.com/", function(response) {
-  var outStream = require('fs').createWriteStream("out.txt"),
-    nopStream = new NopStream();
+  var outStream = require('fs').createWriteStream("out.txt");
 
   response
-    .pipe(nopStream)
+    .pipe(new NopStream())
     .pipe(outStream);
 });
 {% endhighlight %}
@@ -141,11 +140,10 @@ practical sense to the following):
 {% highlight javascript %}
 response
   // Wow, that's a lot of nop's!
-  .pipe(nopStream)
-  .pipe(nopStream)
-  .pipe(nopStream)
-  .pipe(nopStream)
-
+  .pipe(new NopStream())
+  .pipe(new NopStream())
+  .pipe(new NopStream())
+  .pipe(new NopStream())
   // OK, finally write out to file.
   .pipe(outStream);
 {% endhighlight %}
