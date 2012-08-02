@@ -133,6 +133,9 @@ require('http').get("http://www.google.com/", function(response) {
 });
 {% endhighlight %}
 
+Checking the output file ("out.txt"), we can see the download results are the
+same as our original example.
+
 And in fact, we could even reuse the passthrough stream multiple times to
 illustrate repeated `pipe()` data flows (although there's absolutely no
 practical sense to the following):
@@ -206,8 +209,29 @@ UpperCaseStream.prototype.end = function () {
 };
 {% endhighlight %}
 
+To test things out, we can take an input file ("input.txt"), read it in,
+upper case all text, then write it out to "out.text" using three streams.
 
+{% highlight javascript %}
+var fs = require("fs"),
+  input = fs.createReadStream("input.txt"),
+  output = fs.createWriteStream("out.txt"),
+  upperCase = new UpperCaseStream();
 
+// Open our read input, uppercase it, then write out.
+input
+  .pipe(upperCase)
+  .pipe(output);
+{% endhighlight %}
+
+The resulting output file is now uppercased! All in all, not that amazing,
+but considering the ease of our implementation, other (more useful)
+read/write stream applications could include:
+
+* CXML to JSON conversion.
+* Unzipping zipped data.
+* Image resizing.
+* ... any other transformations you'd like to use with your existing streams.
 
 ## Conclusion
 
@@ -215,10 +239,10 @@ Streams provide a great means of binding together lots of data in a sane and
 manageable way. Beyond the core library documents, there are a lot of great
 stream introductions for further reference:
 
-- ["Why Node.js Streams are Awesome"][art_awesome]
-- ["How to Use stream.pipe"][art_howto]
-- ["Streams, Pipes and Mega Pipes"][art_mega]
-- ["Node Streams: How do they work?"][art_how]
+* ["Why Node.js Streams are Awesome"][art_awesome]
+* ["How to Use stream.pipe"][art_howto]
+* ["Streams, Pipes and Mega Pipes"][art_mega]
+* ["Node Streams: How do they work?"][art_how]
 
 [streams]: http://nodejs.org/api/stream.html
 [nodejs]: http://nodejs.org
