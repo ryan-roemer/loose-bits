@@ -1,8 +1,12 @@
 ---
 layout: post
-title:  Node.js Readable/Writable Streams
-description: TODO
-date: 2012-08-01 00:00:00 UTC
+title:  Better Data Slinging with Node.js Readable/Writable Streams
+description: Node.js streams offer efficient and programmer-friendly means
+  of binding together data inputs and outputs. Writing your own readable
+  and/or writable streams can provide an enormous amount of flexibility and
+  power over normal callback-style data wrangling, and all without too much
+  extra programming effort.
+date: 2012-08-02 12:00:00 UTC
 tags: ['node.js', 'javascript', 'streams']
 ---
 
