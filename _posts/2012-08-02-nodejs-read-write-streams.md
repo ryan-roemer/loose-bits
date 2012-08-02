@@ -29,9 +29,8 @@ of streams over callback-style bindings include:
 
 * Often much less code for the actual binding (can just push into a `pipe()`).
 * Streams can handle pausing / resuming of data flows.
-* Can immediately process data and re-emit it to another stream (unless the
-  data requires having **all** of it first, in which case you can't avoid
-  buffering).
+* Can avoid buffering by processing data and re-emitting it directly to another
+  stream (unless all of the data is required before transformations).
 * Works well with a lot of the Node.js core library that already implements
   streams, including HTTP, HTTPS, and file and process I/O.
 
