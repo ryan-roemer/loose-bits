@@ -121,8 +121,40 @@ We can now take the web scraping example from above and add the passthrough
 stream in the middle with the same effect -- we still get a file written to
 output.
 
+{% highlight javascript %}
+// Download the same page again, but with the NOP stream
+// in the middle.
+require('http').get("http://www.google.com/", function(response) {
+  var outStream = require('fs').createWriteStream("out.txt"),
+    nopStream = new NopStream();
+
+  response
+    .pipe(nopStream)
+    .pipe(outStream);
+});
+{% endhighlight %}
+
+And in fact, we could even reuse the passthrough stream multiple times to
+illustrate repeated `pipe()` data flows (although there's absolutely no
+practical sense to the following):
+
+{% highlight javascript %}
+response
+  // Wow, that's a lot of nop's!
+  .pipe(nopStream)
+  .pipe(nopStream)
+  .pipe(nopStream)
+  .pipe(nopStream)
+
+  // OK, finally write out to file.
+  .pipe(outStream);
+{% endhighlight %}
+
+So that's the basics. Let's look at creating something a tad more useful.
 
 ## A Custom Stream Example
+
+**TODO HERE**
 
 - Upper Stream.
 - Conclusion and parting thoughts.
