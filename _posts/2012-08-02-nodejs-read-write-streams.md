@@ -6,8 +6,8 @@ description: Node.js streams offer efficient and programmer-friendly means
   and/or writable streams can provide an enormous amount of flexibility and
   power over normal callback-style data wrangling, and all without too much
   extra programming effort.
-date: 2012-08-02 12:00:00 UTC
-tags: ['node.js', 'javascript', 'streams']
+date: 2012-08-02 14:00:00 UTC
+tags: ['node.js', 'javascript', 'streams', 'data']
 ---
 
 ## Node.js Streams
