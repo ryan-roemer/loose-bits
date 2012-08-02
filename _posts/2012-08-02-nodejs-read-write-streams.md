@@ -158,10 +158,10 @@ response
 
 So that's the basics. Let's look at creating something a tad more useful.
 
-## A Custom Stream Example
+## Let's Upper-case some Data!
 
-Here is a custom stream class that takes a data source (in string or `Buffer`
-format) and converts the string data into upper case letters. Not ultimately
+The `UpperCaseStream` class is takes a data source (in string or `Buffer`
+format) and converts string data into upper case letters. Not ultimately
 that useful or extensible, but it's definitely a data transformation that can
 illustrate the ease of creation and use of a custom stream.
 
@@ -249,13 +249,13 @@ stream introductions for further reference:
 * ["Streams, Pipes and Mega Pipes"][art_mega]
 * ["Node Streams: How do they work?"][art_how]
 
-[streams]: http://nodejs.org/api/stream.html
-[nodejs]: http://nodejs.org
 [art_awesome]:http://blog.dump.ly/post/19819897856/why-node-js-streams-are-awesome
+[art_how]:http://maxogden.com/node-streams
 [art_howto]:http://docs.jit.su/articles/advanced/streams/how-to-use-stream-pipe
 [art_mega]:http://felixge.s3.amazonaws.com/11/nodejs-streams.pdf
-[art_how]:http://maxogden.com/node-streams
+[nodejs]: http://nodejs.org
 [read_stream]: http://nodejs.org/api/stream.html#stream_readable_stream
+[streams]: http://nodejs.org/api/stream.html
 [write_stream]: http://nodejs.org/api/stream.html#stream_writable_stream
 
 <!-- more end -->
