@@ -19,7 +19,16 @@ abstractions for data slinging are Node.js [streams][streams].
 
 Streams are an abstract interface for data objects in Node.js which can be
 readable and/or writable. Some examples of implementing classes in the Node.js
-core library include HTTP, HTTPS, file I/O, and stdout.
+core library include HTTP, HTTPS, file I/O, and stdout. Some of the advantages
+of streams over callback-style bindings include:
+
+* Often much less code for the actual binding (can just push into a `pipe()`).
+* Streams can handle pausing / resuming of data flows.
+* Can immediately process data and re-emit it to another stream (unless the
+  data requires having **all** of it first, in which case you can't avoid
+  buffering).
+* Works well with a lot of the Node.js core library that already implements
+  streams.
 
 For a brief example, say we create a download client to retrieve
 a web page and write it to a file, our code (ignoring error-handling) could
@@ -40,16 +49,24 @@ http.get("http://www.google.com/", function(response) {
 });
 {% endhighlight %}
 
-The real beauty of streams come from the use of `pipe()`, which hooks the data
-output of one stream to the input of the next. Our code above is extremely
-terse, and more importantly, we don't have to do any data buffering or storage,
-instead relying on the implemented streams to do it themselves.
+We essentially have two stream objects: `response` and `outStream`. We hook
+the output of `response` to the input of `outStream` with `pipe()`. More
+importantly (as we'll get to below), we can add many more `pipe()` calls to
+do other transformations / data-slinging inline to our single call here.
+And, the example code above is quite terse, and more importantly, we don't
+have to do any data buffering or storage, instead relying on the implemented
+streams to do it themselves.
 
 ## The Stream Interfaces
+
+So how do we do this for our own classes and objects?
 
 The Node.js [streams][streams] documentation gives the full rundown of
 implementing streams, but we'll go for an abbreviated version here to get
 going.
+
+### Readable Streams
+
 
 
 
