@@ -47,6 +47,12 @@ instead relying on the implemented streams to do it themselves.
 
 ## The Stream Interfaces
 
+The Node.js [streams][streams] documentation gives the full rundown of
+implementing streams, but we'll go for an abbreviated version here to get
+going.
+
+
+
 - Reqs for read
 - Reqs for write
 
@@ -55,6 +61,12 @@ instead relying on the implemented streams to do it themselves.
 
 - Upper Stream.
 - Conclusion and parting thoughts.
+
+
+- Other reading
+  - "Why Node.js Streams are Awesome" http://blog.dump.ly/post/19819897856/why-node-js-streams-are-awesome
+  - "How to Use stream.pipe" http://docs.jit.su/articles/advanced/streams/how-to-use-stream-pipe
+  - "Streams, Pipes and Mega Pipes" http://felixge.s3.amazonaws.com/11/nodejs-streams.pdf
 
 [streams]: http://nodejs.org/api/stream.html
 [nodejs]: http://nodejs.org
