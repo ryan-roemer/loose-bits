@@ -19,11 +19,11 @@ another (e.g., an HTML or JSON page).
 
 Everyone is familiar with the callback-style of hooking together various
 JavaScript data components in a Node.js program, but one of the most powerful
-abstractions for data slinging are Node.js [streams][streams].
+data binding abstractions for Node.js are [streams][streams].
 
 Streams are an abstract interface for data objects in Node.js which can be
 readable and/or writable. And, they can be hooked from one to another, in
-a similar style to Unix pipes -- in fact, the streamoperation we'll mostly
+a similar style to Unix pipes -- in fact, the stream operation we'll mostly
 focus on here is the not-coincidentally-named `pipe()`. Some of the advantages
 of streams over callback-style bindings include:
 
@@ -40,11 +40,8 @@ a web page and write it to a file, our code (ignoring error-handling) could
 look something like this:
 
 {% highlight javascript %}
-// Download a web page to a local file.
-var http = require('http');
-
 // Get Google's home page.
-http.get("http://www.google.com/", function(response) {
+require('http').get("http://www.google.com/", function(response) {
   // The callback provides the response readable stream.
   // Then, we open our output text stream.
   var outStream = require('fs').createWriteStream("out.txt");
@@ -74,13 +71,55 @@ going.
 
 ### Readable Streams
 
+[Readable Streams][read_stream] must emit "`data`" events whenever they have
+data to be read and "`end`" when the data stream is finished. The implementing
+constructor should also set `this.readable = true`. The interface
+additionally provides a lot more implementer flexibility for things like
+pausing and resuming a stream, as well as resource management and cleanup.
 
+### Writable Streams
 
-- TODO HERE -- Ogden -- Need return true also???
+[Writable Streams][write_stream] must implement the `write()` method to
+accept new data chunks into the stream and the `end()` method to instruct the
+stream to close up. The implementing constructor should also set
+`this.writable = true`.
 
+### Putting it Together
 
-- Reqs for read
-- Reqs for write
+Let's take a look at a simple example of a custom-implemented readable and
+writable stream that simply passes through data -- data written is simply
+emitted straight out.
+
+{% highlight javascript %}
+// Set both readable and writable in constructor.
+var NopStream = function () {
+  this.readable = true;
+  this.writable = true;
+};
+
+// Inherit from base stream class.
+require('util').inherits(NopStream, require('stream'));
+
+// Extract args to `write` and emit as `data` event.
+NopStream.prototype.write = function () {
+  args = Array.prototype.slice.call(arguments, 0);
+  this.emit.apply(this, ['data'].concat(args))
+};
+
+// Extract args to `end` and emit as `end` event.
+NopStream.prototype.end = function () {
+  args = Array.prototype.slice.call(arguments, 0);
+  this.emit.apply(this, ['end'].concat(args))
+};
+{% endhighlight %}
+
+This is essentially the bare minimum for a readable and writable stream class.
+Not too much work! And for more complicated streams, we can simply augment
+`write`/`data` and `end`/`end` to do whatever data transformations we want.
+
+We can now take the web scraping example from above and add the passthrough
+stream in the middle with the same effect -- we still get a file written to
+output.
 
 
 ## A Custom Stream Example
@@ -106,5 +145,7 @@ stream introductions for further reference:
 [art_howto]:http://docs.jit.su/articles/advanced/streams/how-to-use-stream-pipe
 [art_mega]:http://felixge.s3.amazonaws.com/11/nodejs-streams.pdf
 [art_how]:http://maxogden.com/node-streams
+[read_stream]: http://nodejs.org/api/stream.html#stream_readable_stream
+[write_stream]: http://nodejs.org/api/stream.html#stream_writable_stream
 
 <!-- more end -->
