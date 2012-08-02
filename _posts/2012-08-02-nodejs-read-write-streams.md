@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Better Data Slinging with Node.js Readable/Writable Streams
+title:  Better Data Slinging with Node.js Readable/Writable Streams and Pipes
 description: Node.js streams offer efficient and programmer-friendly means
   of binding together data inputs and outputs. Writing your own readable
   and/or writable streams can provide an enormous amount of flexibility and
@@ -13,13 +13,13 @@ tags: ['node.js', 'javascript', 'streams', 'data']
 ## Node.js Streams
 
 [Node.js][nodejs] provides an extensible and fast platform for web servers,
-proxies, and middle-tier services. Common Node.js applications often involve
+proxies, and middle-tier services. Node.js applications often utilize
 some transformation from one data format (e.g., a database or cloud
 store) to another (e.g., an HTML or JSON page).
 
 Most folks are familiar with the callback-style of hooking together various
 JavaScript data components in a Node.js program. However, an often overlooked
-and very powerful data binding abstraction for Node.js is the
+and very powerful data binding abstraction for Node.js is found in the
 [stream][streams] class.
 
 Streams are an abstract interface for data objects in Node.js which can be
@@ -28,14 +28,14 @@ a similar style to Unix pipes -- in fact, the stream operation we'll mostly
 focus on here is the not-coincidentally-named `pipe()`. Some potential
 advantages of stream pipes over other binding styles include:
 
-* Often much less code for the actual binding (can just push into a `pipe()`).
+* Often much less code for the actual binding (can just call `pipe()`).
 * Streams can handle pausing / resuming of data flows. Implementing classes,
   however, have to implement this logic internally if supported.
 * Don't have to set specific callbacks or listeners for intermediate data
   events -- just `pipe()` the stream and forget it.
-* Can avoid buffering by processing data and re-emitting it directly to another
+* Avoiding buffering by processing data and re-emitting it directly to another
   stream (unless *all* of the data is required in one chunk).
-* Works well with many Node.js core modules that already implement
+* Compatible with the many Node.js core modules that already implement
   streams, including HTTP, HTTPS, and file and process I/O.
 
 For a brief example, say we create a download client to retrieve
