@@ -12,14 +12,14 @@ tags: ['node.js', 'javascript', 'streams']
 
 ## Node.js Streams
 
-[Node.js][nodejs] provides a solid, efficient runtime for web servers,
+[Node.js][nodejs] provides a solid, efficient platform for web servers,
 proxies and middle-tier services, among other things. Common use cases include
 binding and transforming data in one form (e.g., a database or cloud store) to
 another (e.g., an HTML or JSON page).
 
 Everyone is familiar with the callback-style of hooking together various
 JavaScript data components in a Node.js program, but one of the most powerful
-data binding abstractions for Node.js are [streams][streams].
+data binding abstraction for Node.js is the [stream][streams] class.
 
 Streams are an abstract interface for data objects in Node.js which can be
 readable and/or writable. And, they can be hooked from one to another, in
@@ -117,7 +117,7 @@ This is essentially the bare minimum for a readable and writable stream class.
 Not too much work! And for more complicated streams, we can simply augment
 `write`/`data` and `end`/`end` to do whatever data transformations we want.
 
-We can now take the web scraping example from above and add the passthrough
+We can now take the web scraping example from above and add the pass-through
 stream in the middle with the same effect -- we still get a file written to
 output.
 
@@ -136,7 +136,7 @@ require('http').get("http://www.google.com/", function(response) {
 Checking the output file ("out.txt"), we can see the download results are the
 same as our original example.
 
-And in fact, we could even reuse the passthrough stream multiple times to
+And in fact, we could even reuse the pass-through stream multiple times to
 illustrate repeated `pipe()` data flows (although there's absolutely no
 practical sense to the following):
 
@@ -160,7 +160,7 @@ format) and converts the string data into upper case letters. Not ultimately
 that useful or extensible, but it's definitely a data transformation that can
 illustrate the ease of creation and use of a custom stream.
 
-We mostly take our simple passthrough stream above and add a custom
+We mostly take our simple pass-through stream above and add a custom
 `_transform` helper method to transform the data in either a `write()` or
 `end()` call, then re-emit the upper-cased data in a `data` event.
 
@@ -210,7 +210,7 @@ UpperCaseStream.prototype.end = function () {
 {% endhighlight %}
 
 To test things out, we can take an input file ("input.txt"), read it in,
-upper case all text, then write it out to "out.text" using three streams.
+upper case all text, then write it out to "out.txt" using three streams.
 
 {% highlight javascript %}
 var fs = require("fs"),
