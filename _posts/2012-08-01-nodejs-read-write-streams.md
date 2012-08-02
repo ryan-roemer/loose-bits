@@ -67,6 +67,9 @@ going.
   - "Why Node.js Streams are Awesome" http://blog.dump.ly/post/19819897856/why-node-js-streams-are-awesome
   - "How to Use stream.pipe" http://docs.jit.su/articles/advanced/streams/how-to-use-stream-pipe
   - "Streams, Pipes and Mega Pipes" http://felixge.s3.amazonaws.com/11/nodejs-streams.pdf
+  - "Node Streams: How do they work?" http://maxogden.com/node-streams
+
+- TODO HERE -- Ogden -- Need return true also???
 
 [streams]: http://nodejs.org/api/stream.html
 [nodejs]: http://nodejs.org
