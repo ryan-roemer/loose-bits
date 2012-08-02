@@ -12,26 +12,29 @@ tags: ['node.js', 'javascript', 'streams', 'data']
 
 ## Node.js Streams
 
-[Node.js][nodejs] provides a solid, efficient platform for web servers,
-proxies and middle-tier services, among other things. Common use cases include
-binding and transforming data in one form (e.g., a database or cloud store) to
-another (e.g., an HTML or JSON page).
+[Node.js][nodejs] provides an extensible and fast platform for web servers,
+proxies and middle-tier services. Comon Node.js applications often involve
+some form of transform data from one format (e.g., a database or cloud
+store) to another (e.g., an HTML or JSON page).
 
 Everyone is familiar with the callback-style of hooking together various
-JavaScript data components in a Node.js program, but one of the most powerful
-data binding abstraction for Node.js is the [stream][streams] class.
+JavaScript data components in a Node.js program. However, an often overlooked
+and very powerful data binding abstraction for Node.js is the
+[stream][streams] class.
 
 Streams are an abstract interface for data objects in Node.js which can be
-readable and/or writable. And, they can be hooked from one to another, in
+readable and/or writable. They can be hooked from one to another, in
 a similar style to Unix pipes -- in fact, the stream operation we'll mostly
 focus on here is the not-coincidentally-named `pipe()`. Some of the advantages
 of streams over callback-style bindings include:
 
 * Often much less code for the actual binding (can just push into a `pipe()`).
 * Streams can handle pausing / resuming of data flows.
+* Don't have to set specific callbacks or listeners for intermediate data
+  events -- just `pipe()` the stream and forget it.
 * Can avoid buffering by processing data and re-emitting it directly to another
-  stream (unless all of the data is required before transformations).
-* Works well with a lot of the Node.js core library that already implements
+  stream (unless *all* of the data is required in one chunk).
+* Works well with many Node.js core modules that already implement
   streams, including HTTP, HTTPS, and file and process I/O.
 
 For a brief example, say we create a download client to retrieve
@@ -50,13 +53,16 @@ require('http').get("http://www.google.com/", function(response) {
 });
 {% endhighlight %}
 
-We essentially have two stream objects: `response` and `outStream`. We hook
-the output of `response` to the input of `outStream` with `pipe()`. More
-importantly (as we'll get to below), we can add many more `pipe()` calls to
-do other transformations / data-slinging inline to our single call here.
-And, the example code above is quite terse, and more importantly, we don't
-have to do any data buffering or storage, instead relying on the implemented
-streams to do it themselves.
+Notice that we didn't set any explicity "on `data`" listeners or buffer any of
+the data, even if it came in as chunks. We simply `pipe()`'ed it with our
+two stream objects: `response` and `outStream`.  The output of `response` is
+hooked to the input of `outStream` and we're done.
+
+More importantly (as we'll get to below), we can add many more `pipe()` calls
+to do other transformations / data-slinging inline to our single call here.
+And, the example code above is quite terse, and more importantly, we don't have
+to do any data buffering or storage, instead relying on the implemented streams
+to do it themselves.
 
 ## The Stream Interfaces
 
