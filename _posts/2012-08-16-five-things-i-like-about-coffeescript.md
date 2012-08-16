@@ -23,11 +23,11 @@ I gave a short survey talk at the August 15, 2012 [Node.DC][node_dc] meetup,
 [![CoffeeScript Talk][img_talk]][cs_talk]
 [img_talk]: {{ img_dir }}/nodedc-coffeescript.png
 
-The talk's [source][cs_source] is available live on GitHub, and uses the
+The talk's [source][cs_source] is available on GitHub, and uses the
 awesome [deck.js][deck] presentation framework with the
-[CodeMirror plugin][deck_cm], so that the code samples are editable. I
-further hacked up the CodeMirror plugin to make both the JavaScript and
-the CoffeeScript code examples editable and runnable from most browsers.
+[CodeMirror plugin][deck_cm] to enable editable and runnable code samples. I
+further hacked up the CodeMirror plugin to additionally make the CoffeeScript
+code examples executable (CodeMirror only does JavaScript by default).
 
 <!-- more start -->
 
