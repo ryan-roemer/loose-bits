@@ -5,7 +5,8 @@ description: Async.js is a control flow library for Node.js and the browser.
   I gave the following presentation to the Feb. 20, 2012 joint meetup for
   Node.DC and DC jQuery.
 date: 2012-02-21 20:54:38 UTC
-tags: ['node.js', 'async.js', 'javascript', 'control flow', 'concurrency']
+tags: ['node.js', 'async.js', 'javascript', 'control flow', 'concurrency',
+       'meetup']
 ---
 {% capture img_dir %}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
 

@@ -6,7 +6,7 @@ description: My presentation on the Sunny.js cloud library for the DC Node.js
  datastore) for gluing together cloud and HTTP web requests.
 date: 2011-10-20 16:00:00 UTC
 tags: ['sunny', 'node.js', 'heroku', 'cloud', 'amazon', 'aws', 's3',
-       'google storage']
+       'google storage', 'meetup']
 ---
 {% capture sunny_prezi %}http://prezi.com/tlaj11poclwg/sunnyjs/{% endcapture %}
 
