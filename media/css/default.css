@@ -24,7 +24,7 @@ a.white:visited,a.white:hover{color:#303030}
 a.white:hover{background:#ededed;background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #dcdcdc));background:-webkit-linear-gradient(top, #fff 0%, #dcdcdc 100%);background:-moz-linear-gradient(top, #fff 0%, #dcdcdc 100%);background:-o-linear-gradient(top, #fff 0%, #dcdcdc 100%);background:-ms-linear-gradient(top, #fff 0%, #dcdcdc 100%);background:linear-gradient(top, #fff 0%, #dcdcdc 100%)}
 a.white:active{color:#999;background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #ededed), color-stop(1, #fff));background:-webkit-linear-gradient(top, #ededed 0%, #fff 100%);background:-moz-linear-gradient(top, #ededed 0%, #fff 100%);background:-o-linear-gradient(top, #ededed 0%, #fff 100%);background:-ms-linear-gradient(top, #ededed 0%, #fff 100%);background:linear-gradient(top, #ededed 0%, #fff 100%)}
 #header-wrapper{overflow:hidden;padding:5px 0;margin:-5px 0}
-header{width:100%;margin-left:auto;margin-right:auto;margin-bottom:20px;padding-top:1em;background-color:#000;color:#fff;-webkit-box-shadow:0 5px 5px #999;-moz-box-shadow:0 5px 5px #999;box-shadow:0 5px 5px #999;}
+header{width:100%;margin-bottom:20px;padding-top:1em;background-color:#000;color:#fff;-webkit-box-shadow:0 5px 5px #999;-moz-box-shadow:0 5px 5px #999;box-shadow:0 5px 5px #999;}
 header div.title{margin-left:auto;margin-right:auto;margin-bottom:10px;padding:.5em;}
 header div.title a,header div.title a:active,header div.title a:visited,header div.title a:hover{color:#fff}
 header div.title h1,header div.title p{margin:0}
