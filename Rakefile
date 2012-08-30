@@ -1,11 +1,18 @@
 require 'jekyll'
 require 'jekyll/site'
 
-# Stylus
+# Stylus  - TODO REMOVE
 STYLUS_BIN = "./node_modules/stylus/bin/stylus"
 STYLUS_COMPRESS = true
 STYLUS_INPUT_DIR = "./_styl"
 STYLUS_OUTPUT_DIR = "./media/css"
+
+# Less
+LESS_BIN = "./node_modules/.bin/lessc"
+LESS_COMPRESS = true
+LESS_INPUT = "./_less/default.less"
+LESS_OUTPUT_DIR = "./media/css"
+LESS_OUTPUT = "#{LESS_OUTPUT_DIR}/default.css"
 
 # Patch Jekyll with single writing method.
 module Jekyll
@@ -32,8 +39,16 @@ namespace :gen do
     site.process_single("404.md")
   end
 
-  desc "Build Stylus CSS to root media directory."
-  task :css do
+  desc "Build Less CSS to root media directory."
+  task :less do
+    mkdir_p LESS_OUTPUT_DIR
+    compress = LESS_COMPRESS ? " -x " : " ";
+    sh "#{LESS_BIN} #{compress} #{LESS_INPUT} "\
+       "#{LESS_OUTPUT}"
+  end
+
+  desc "Build Stylus CSS to root media directory." # TODO REMOVE
+  task :styl do
     mkdir_p STYLUS_OUTPUT_DIR
     compress = STYLUS_COMPRESS ? " --compress " : " ";
     sh "#{STYLUS_BIN} --out #{STYLUS_OUTPUT_DIR} #{compress} "\
