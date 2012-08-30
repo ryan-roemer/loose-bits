@@ -12,7 +12,6 @@
 
 // Page
 text-color = #222222
-page-width = 600px
 page-background = #cccccc
 link-color = #1d7297
 select-background = #999999
@@ -29,7 +28,6 @@ heading-color = #555555
 text-line-height = 125%
 content-background = #ffffff
 content-padding = 30px
-content-width = page-width + (2 * content-padding)
 code-background = #222222
 code-color = #ffffff
 code-border = #cccccc
@@ -40,7 +38,6 @@ code-border = #cccccc
 body
   color: text-color
   background-color: page-background
-  font-size: 14px
 
 a
   &, &:active, &:visited, &:hover
@@ -184,36 +181,9 @@ header
   color: header-color
   box-shadow(0px, header-offset, header-offset, #999999)
 
-  div.title,
-  div.menu
+  div.title
     margin-left: auto
     margin-right: auto
-    a, a:active, a:visited, a:hover
-      text-decoration: none
-
-  div.menu
-    width: page-width
-    padding-bottom: 6px
-    text-align: center
-    background: menu-background
-    color: menu-color
-    a, a:active, a:visited, a:hover
-      color: menu-color
-
-    .inner
-      display: inline-block
-      text-align: center
-
-    ul
-      margin: 0
-      margin-bottom: 10px
-      padding: 0
-      li
-        float: left
-        display: inline
-
-  div.title
-    width: page-width
     margin-bottom: 10px
     padding: 0.5em
     a, a:active, a:visited, a:hover
@@ -237,15 +207,11 @@ header
       color: header-subtitle-color
 
 #main
-  width: content-width
-  margin-left: auto
-  margin-right: auto
-
   .inner
     margin-top: 5px
     margin-bottom: 30px
-    padding: 20px content-padding
     border-radius(10px)
+    padding: 20px content-padding
     background: content-background
     box-shadow(2px, 5px, 5px, #999999)
 
@@ -287,7 +253,6 @@ div.page
   font-style: italic
 
 .post
-  width: page-width
   margin-bottom: 15px
 
   .more
@@ -309,8 +274,6 @@ div.page
         padding: 0
 
 div.image
-  width: page-width
-
   img
     border: none
     display: block
@@ -324,7 +287,6 @@ div.image
 #share
   height: 20px
   margin-bottom: 8px
-  width: page-width
   float: left
   display:inline
 

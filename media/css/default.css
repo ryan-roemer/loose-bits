@@ -1,4 +1,4 @@
-body{color:#222;background-color:#ccc;font-size:14px}
+body{color:#222;background-color:#ccc}
 a,a:active,a:visited,a:hover{color:#1d7297;text-decoration:none;font-weight:bold}
 a:hover{text-decoration:underline}
 ::-moz-selection,::selection{background:#999;color:#fff}
@@ -25,20 +25,12 @@ a.white:hover{background:#ededed;background:-webkit-gradient(linear, left top, l
 a.white:active{color:#999;background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #ededed), color-stop(1, #fff));background:-webkit-linear-gradient(top, #ededed 0%, #fff 100%);background:-moz-linear-gradient(top, #ededed 0%, #fff 100%);background:-o-linear-gradient(top, #ededed 0%, #fff 100%);background:-ms-linear-gradient(top, #ededed 0%, #fff 100%);background:linear-gradient(top, #ededed 0%, #fff 100%)}
 #header-wrapper{overflow:hidden;padding:5px 0;margin:-5px 0}
 header{width:100%;margin-left:auto;margin-right:auto;margin-bottom:20px;padding-top:1em;background-color:#000;color:#fff;-webkit-box-shadow:0 5px 5px #999;-moz-box-shadow:0 5px 5px #999;box-shadow:0 5px 5px #999;}
-header div.title,header div.menu{margin-left:auto;margin-right:auto;}
-header div.title a,header div.menu a,header div.title a:active,header div.menu a:active,header div.title a:visited,header div.menu a:visited,header div.title a:hover,header div.menu a:hover{text-decoration:none}
-header div.menu{width:600px;padding-bottom:6px;text-align:center;background:#000;color:#fff;}
-header div.menu a,header div.menu a:active,header div.menu a:visited,header div.menu a:hover{color:#fff}
-header div.menu .inner{display:inline-block;text-align:center}
-header div.menu ul{margin:0;margin-bottom:10px;padding:0;}
-header div.menu ul li{float:left;display:inline}
-header div.title{width:600px;margin-bottom:10px;padding:.5em;}
+header div.title{margin-left:auto;margin-right:auto;margin-bottom:10px;padding:.5em;}
 header div.title a,header div.title a:active,header div.title a:visited,header div.title a:hover{color:#fff}
 header div.title h1,header div.title p{margin:0}
 header div.title h1{float:left;font-size:3.2em;font-weight:800;padding-right:.5em;margin-right:.5em;border-right:1px solid #fff}
 header div.title p{font-size:1.15em;font-weight:350;color:#ccc}
-#main{width:660px;margin-left:auto;margin-right:auto;}
-#main .inner{margin-top:5px;margin-bottom:30px;padding:20px 30px;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;background:#fff;-webkit-box-shadow:2px 5px 5px #999;-moz-box-shadow:2px 5px 5px #999;box-shadow:2px 5px 5px #999;}
+#main .inner{margin-top:5px;margin-bottom:30px;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;padding:20px 30px;background:#fff;-webkit-box-shadow:2px 5px 5px #999;-moz-box-shadow:2px 5px 5px #999;box-shadow:2px 5px 5px #999;}
 .ie6 #main .inner,.ie7 #main .inner,.ie8 #main .inner{border:2px solid #999}
 #main h2,#post h2,div.page h2,#main h3,#post h3,div.page h3,#main h4,#post h4,div.page h4{color:#555;text-shadow:1px 1px 2px rgba(0,0,0,0.2)}
 #main h2.title,#post h2.title,div.page h2.title{margin-top:0;font-size:2em;text-align:center;color:#222;}
@@ -47,15 +39,14 @@ header div.title p{font-size:1.15em;font-weight:350;color:#ccc}
 #date{float:left}
 #tags{float:right;width:250px;text-align:right}
 #date,#tags span.section{font-style:italic}
-.post{width:600px;margin-bottom:15px;}
+.post{margin-bottom:15px;}
 .post .more{text-align:right;font-style:italic;margin-bottom:15px}
 .post p{text-indent:25px;line-height:125%}
 .post ul li{line-height:125%;padding-bottom:5px;}
 .post ul li p{text-indent:0;margin:0;padding:0}
-div.image{width:600px;}
 div.image img{border:none;display:block;margin-right:auto;margin-left:auto;-webkit-box-shadow:3px 3px 4px #999;-moz-box-shadow:3px 3px 4px #999;box-shadow:3px 3px 4px #999;}
 .ie6 div.image img,.ie7 div.image img,.ie8 div.image img{border:2px solid #999}
-#share{height:20px;margin-bottom:8px;width:600px;float:left;display:inline;}
+#share{height:20px;margin-bottom:8px;float:left;display:inline;}
 #share div#___plusone_0{padding-left:10px !important;}
 #share div#___plusone_0[style]{width:200px !important}
 div.page h2.title{text-align:left}
@@ -66,7 +57,7 @@ div.about p{text-indent:25px}
 div.archived-post{margin-bottom:10px;}
 div.archived-post time,div.archived-post div.item{display:inline;float:left;margin:0;padding:0;border:0;font-size:1.1em}
 div.archived-post time{width:98px;font-weight:bold}
-div.archived-post div.item{width:498px;}
+div.archived-post div.item{width:page-width -2;}
 div.archived-post div.item p{margin:5px 0}
 @media print{a[href]:after,abbr[title]:after{content:"" !important}
 }
