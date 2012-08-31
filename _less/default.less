@@ -1,5 +1,6 @@
 // Variables
 @header-color: #ffffff;
+@header-subtitle-color: #cccccc;
 @header-background: #1B1B1B;
 
 // Classes
@@ -15,7 +16,6 @@ header {
     margin-right: auto;
     margin-bottom: 10px;
     padding: 0.5em;
-    border: 1px solid yellow;
     color: @header-color;
 
     h1 {
@@ -32,7 +32,8 @@ header {
       margin: 0px;
       font-size: 1.15em;
       font-weight: 350;
-      color: red;
+      text-align: left;
+      color: @header-subtitle-color;
     }
 
     a, a:active, a:visited, a:hover {
