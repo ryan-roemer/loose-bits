@@ -47,72 +47,70 @@
   <script src="{{ site.baseurl }}media/js/vendor/modernizr-2.0.6.min.js"></script>
 </head>
 <body>
-  <!-- Content -->
-  <div id="container" class="container">
-    <!-- Header -->
-    <div id="header-wrapper">
-    <header>
-      <!-- Title -->
-      <div class="title hidden-phone">
-        <h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1>
-        <p>{{ site.subtitle }}</p>
-      </div>
-
-      <!-- Navbar -->
-      <div class="navbar navbar-inverse">
-        <div class="navbar-inner">
-          <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-
-          <a class="brand visible-phone" href="{{ site.baseurl }}">Loose Bits</a>
-          <a class="brand hidden-phone" href="{{ site.baseurl }}">Home</a>
-
-          <div class="nav-collapse">
-            <ul class="nav">
-              <li><a href="{{ site.baseurl }}archive.html">Archive</a></li>
-              <li><a href="{{ site.baseurl }}about.html">About</a></li>
-              <!-- TODO
-              <li class="icon">
-                  <a class="button" href="http://twitter.com/#!/ryan_roemer">
-                    <img src="{{ icon_dir }}Twitter.png" {{ icon_dims }} />
-                  </a>
-              <li class="icon">
-                  <a class="button" href="http://www.linkedin.com/in/ryanroemer">
-                    <img src="{{ icon_dir }}LinkedIn.png" {{ icon_dims }} />
-                  </a>
-              </li>
-              <li class="icon">
-                  <a class="button" href="https://github.com/ryan-roemer">
-                    <img src="{{ icon_dir }}GH.png" {{ icon_dims }}  />
-                  </a>
-              </li>
-              <li class="icon">
-                  <a class="button" href="http://feeds.feedburner.com/LooseBits">
-                    <img src="{{ icon_dir }}RSS.png" {{ icon_dims }} />
-                  </a>
-              </li>
-            -->
-            </ul>
-          </div>
-        </div>
-      </div>
-    </header>
+  <!-- Header -->
+  <header>
+    <!-- Title -->
+    <div class="title hidden-phone">
+      <h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1>
+      <p>{{ site.subtitle }}</p>
     </div>
 
+    <!-- Navbar -->
+    <div class="navbar navbar-inverse">
+      <div class="navbar-inner">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+
+        <a class="brand visible-phone" href="{{ site.baseurl }}">Loose Bits</a>
+        <a class="brand hidden-phone" href="{{ site.baseurl }}">Home</a>
+
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li><a href="{{ site.baseurl }}archive.html">Archive</a></li>
+            <li><a href="{{ site.baseurl }}about.html">About</a></li>
+            <!-- TODO
+            <li class="icon">
+                <a class="button" href="http://twitter.com/#!/ryan_roemer">
+                  <img src="{{ icon_dir }}Twitter.png" {{ icon_dims }} />
+                </a>
+            <li class="icon">
+                <a class="button" href="http://www.linkedin.com/in/ryanroemer">
+                  <img src="{{ icon_dir }}LinkedIn.png" {{ icon_dims }} />
+                </a>
+            </li>
+            <li class="icon">
+                <a class="button" href="https://github.com/ryan-roemer">
+                  <img src="{{ icon_dir }}GH.png" {{ icon_dims }}  />
+                </a>
+            </li>
+            <li class="icon">
+                <a class="button" href="http://feeds.feedburner.com/LooseBits">
+                  <img src="{{ icon_dir }}RSS.png" {{ icon_dims }} />
+                </a>
+            </li>
+          -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <div id="container" class="container">
     <div id="main" role="main" class="row">
       <div class="span8 offset2">
         {{ content }}
       </div>
     </div>
-
-    <!-- Footer -->
-    <footer>
-    </footer>
   </div>
+
+  <!-- Footer -->
+  <footer>
+  </footer>
 
   <!-- JavaScript -->
   <script src="{{ site.baseurl }}media/js/vendor/bootstrap-2.1.0.min.js"></script>
