@@ -1,4 +1,5 @@
-header{background-color:#1b1b1b;}header div.title{color:#ffffff;}header div.title h1{margin:0px;}
+header{background-color:#1b1b1b;}header .navbar{border:1px solid green;}
+header div.title{border:1px solid yellow;color:#ffffff;}header div.title h1{margin:0px;}
 header div.title a,header div.title a:active,header div.title a:visited,header div.title a:hover{color:#ffffff;}
 #main .inner{border:1px solid red;}
-@media (min-width:980px){.navbar,div.title{width:980px;} .pull-center{text-align:center;} .pull-center .nav{float:none;display:inline-block;*display:inline;*zoom:1;height:32px;}}
+@media (min-width:980px){.header-container{margin-right:auto;margin-left:auto;width:800px;} .pull-center{text-align:center;} .pull-center .nav{float:none;display:inline-block;*display:inline;*zoom:1;height:32px;}}

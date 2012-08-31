@@ -6,7 +6,12 @@
 header {
   background-color: @header-background;
 
+  .navbar {
+    border: 1px solid green;
+  }
+
   div.title {
+    border: 1px solid yellow;
     h1 {
       margin: 0px;
     }
@@ -25,9 +30,10 @@ header {
 
 // Center NavBar on Desktop
 @media (min-width: 980px) {
-  .navbar,
-  div.title {
-    width: 980px;
+  .header-container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 800px;
   }
   .pull-center {
     text-align: center;
