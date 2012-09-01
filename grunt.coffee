@@ -47,9 +47,9 @@ module.exports = (grunt) ->
     utils.spawn "jekyll", ["--base-url", "/"], @async()
 
   grunt.registerTask "dev:server", "Build dev. website", ->
-    utils.exec "mkdir -p _site " \
-               "cd _site && " \
-               "python -m SimpleHTTPServer 4000", @async()
+    utils.exec "mkdir -p _site &&
+                cd _site &&
+                python -m SimpleHTTPServer 4000", @async()
 
   #############################################################################
   # Aliases.
