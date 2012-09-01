@@ -2,15 +2,13 @@
 @header-width: 600px;
 @header-color: #ffffff;
 @header-subtitle-color: #cccccc;
-@header-background: #1B1B1B;
+@header-background: #000000;
 
 // Classes
 header {
   background-color: @header-background;
 
   .navbar {
-    border: 1px solid green;
-
     .brand {
       font-size: 1.5em;
       font-weight: bold;
@@ -19,18 +17,6 @@ header {
 
     a.brand, a.brand:visited {
       color: @header-color;
-    }
-
-    .nav {
-      li {
-        border: 1px solid white;
-      }
-      img {
-        margin-top: -8px;
-        margin-left: -8px;
-        margin-right: -4px;
-        padding: none;
-      }
     }
   }
 

@@ -3,6 +3,8 @@
 
 ## Current
 
+* Font Awesome: Switch to this for icons.
+
 * Facebook: Get like button to work (with inline).
   (Give a quick shot on this, then to "later" pile).
 * AddThis: Consider for facebook, google+, email, print

@@ -1,7 +1,5 @@
-header{background-color:#1b1b1b;}header .navbar{border:1px solid green;}header .navbar .brand{font-size:1.5em;font-weight:bold;}
+header{background-color:#000000;}header .navbar .brand{font-size:1.5em;font-weight:bold;}
 header .navbar a.brand,header .navbar a.brand:visited{color:#ffffff;}
-header .navbar .nav li{border:1px solid white;}
-header .navbar .nav img{margin-top:-8px;margin-left:-8px;margin-right:-4px;padding:none;}
 header div.title{margin-left:auto;margin-right:auto;margin-bottom:10px;padding:0.5em;color:#ffffff;}header div.title h1{margin:0px;float:left;font-size:3.5em;font-weight:600;padding-top:0.2em;padding-bottom:0.2em;padding-right:0.5em;margin-right:0.5em;border-right:1px solid #ffffff;}
 header div.title p{margin:0px;font-size:1.05em;font-weight:350;text-align:left;color:#cccccc;}
 header div.title a,header div.title a:active,header div.title a:visited,header div.title a:hover{color:#ffffff;text-decoration:none;}
