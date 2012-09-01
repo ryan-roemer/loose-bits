@@ -14,6 +14,13 @@ module.exports = (grunt) ->
     pkg: '<json:package.json>'
 
     less:
+      bootstrap:
+        src:  [
+          "_less/bootstrap.less"
+        ]
+        dest: "media/css/vendor/bootstrap.css"
+        options:
+          compress: true
       site:
         src:  [
           "_less/default.less"
@@ -35,6 +42,7 @@ module.exports = (grunt) ->
         tasks: "build:404"
       site:
         files: [
+          "<config:bootstrap.site.src>"
           "<config:less.site.src>"
           "_includes/**"
           "_layouts/**"
