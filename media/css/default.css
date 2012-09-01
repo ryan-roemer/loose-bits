@@ -1,6 +1,7 @@
-header{background-color:#1b1b1b;}header .navbar{border:1px solid green;}header .navbar .brand{font-size:1.5em;font-weight:bold;}header .navbar .brand a,header .navbar .brand a:active,header .navbar .brand a:visited,header .navbar .brand a:hover{color:#ffffff;}
-header div.title{margin-left:auto;margin-right:auto;margin-bottom:10px;padding:0.5em;color:#ffffff;}header div.title h1{margin:0px;float:left;font-size:3.2em;font-weight:800;padding-right:0.5em;margin-right:0.5em;border-right:1px solid #ffffff;}
-header div.title p{margin:0px;font-size:1.15em;font-weight:350;text-align:left;color:#cccccc;}
-header div.title a,header div.title a:active,header div.title a:visited,header div.title a:hover{color:#ffffff;}
+header{background-color:#1b1b1b;}header .navbar{border:1px solid green;}header .navbar .brand{font-size:1.5em;font-weight:bold;}
+header .navbar a.brand,header .navbar a.brand:visited{color:#ffffff;}
+header div.title{margin-left:auto;margin-right:auto;margin-bottom:10px;padding:0.5em;color:#ffffff;}header div.title h1{margin:0px;float:left;font-size:3.5em;font-weight:600;padding-top:0.2em;padding-bottom:0.2em;padding-right:0.5em;margin-right:0.5em;border-right:1px solid #ffffff;}
+header div.title p{margin:0px;font-size:1.05em;font-weight:350;text-align:left;color:#cccccc;}
+header div.title a,header div.title a:active,header div.title a:visited,header div.title a:hover{color:#ffffff;text-decoration:none;}
 #main .inner{border:1px solid red;}
-@media (min-width:980px){.header-container{margin-right:auto;margin-left:auto;width:800px;} .pull-center{text-align:center;} .pull-center .nav{float:none;display:inline-block;*display:inline;*zoom:1;height:32px;}}
+@media (min-width:768px){.header-container{margin-right:auto;margin-left:auto;width:600px;} .pull-center{text-align:center;} .pull-center .nav{float:none;display:inline-block;*display:inline;*zoom:1;height:32px;}}

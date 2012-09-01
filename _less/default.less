@@ -1,4 +1,5 @@
 // Variables
+@header-width: 600px;
 @header-color: #ffffff;
 @header-subtitle-color: #cccccc;
 @header-background: #1B1B1B;
@@ -9,12 +10,15 @@ header {
 
   .navbar {
     border: 1px solid green;
+
     .brand {
       font-size: 1.5em;
       font-weight: bold;
-      a, a:active, a:visited, a:hover {
-        color: @header-color;
-      }
+
+    }
+
+    a.brand, a.brand:visited {
+      color: @header-color;
     }
   }
 
@@ -28,8 +32,10 @@ header {
     h1 {
       margin: 0px;
       float: left;
-      font-size: 3.2em;
-      font-weight: 800;
+      font-size: 3.5em;
+      font-weight: 600;
+      padding-top: 0.2em;
+      padding-bottom: 0.2em;
       padding-right: 0.5em;
       margin-right: 0.5em;
       border-right: 1px solid @header-color;
@@ -37,7 +43,7 @@ header {
 
     p {
       margin: 0px;
-      font-size: 1.15em;
+      font-size: 1.05em;
       font-weight: 350;
       text-align: left;
       color: @header-subtitle-color;
@@ -45,6 +51,7 @@ header {
 
     a, a:active, a:visited, a:hover {
       color: @header-color;
+      text-decoration: none;
     }
   }
 }
@@ -55,12 +62,12 @@ header {
   }
 }
 
-// Center NavBar on Desktop
-@media (min-width: 980px) {
+// Center NavBar on Tablet+.
+@media (min-width: 768px) {
   .header-container {
     margin-right: auto;
     margin-left: auto;
-    width: 800px;
+    width: @header-width;
   }
   .pull-center {
     text-align: center;
