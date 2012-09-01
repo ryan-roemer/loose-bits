@@ -23,8 +23,19 @@ module.exports = (grunt) ->
           compress: true
 
     watch:
+      less:
+        files: [
+          "<config:less.site.src>"
+        ]
+        tasks: "less"
+      404:
+        files: [
+          "404.md"
+        ]
+        tasks: "build:404"
       site:
         files: [
+          "<config:less.site.src>"
           "_includes/**"
           "_layouts/**"
           "_posts/**"
@@ -33,18 +44,13 @@ module.exports = (grunt) ->
           "*.xml"
           "*.yml"
         ]
-        tasks: "build:site"
-      less:
-        files: [
-          "<config:less.site.src>"
-        ]
-        tasks: "less"
+        tasks: "dev:site"
 
-      # TODO 404
-      # TODO less
+  grunt.registerTask "build:404", "Build 404 page", ->
+    utils.exec "rake gen:not_found", @async()
 
-  grunt.registerTask "build:site", "Build dev. website", ->
-    utils.spawn "jekyll", ["--base-url", "/"], @async()
+  grunt.registerTask "dev:site", "Build dev. website", ->
+    utils.spawn "jekyll", ["--base-url", "/", "--limit", "3"], @async()
 
   grunt.registerTask "dev:server", "Build dev. website", ->
     utils.exec "mkdir -p _site &&
@@ -54,6 +60,10 @@ module.exports = (grunt) ->
   #############################################################################
   # Aliases.
   #############################################################################
+  grunt.registerTask "build-all",
+                     "Build all source files.",
+                     "build:404 less"
+
   grunt.registerTask "watch-all",
-                     "Watch and build all source files.",
-                     "build:site less watch"
+                     "Watch and build all source/dev files.",
+                     "build-all dev:site watch"
