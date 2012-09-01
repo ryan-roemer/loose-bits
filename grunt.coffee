@@ -42,7 +42,7 @@ module.exports = (grunt) ->
         tasks: "build:404"
       site:
         files: [
-          "<config:bootstrap.site.src>"
+          "<config:less.bootstrap.src>"
           "<config:less.site.src>"
           "_includes/**"
           "_layouts/**"
