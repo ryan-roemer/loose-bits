@@ -14,21 +14,42 @@ module.exports = (grunt) ->
     pkg: '<json:package.json>'
 
     less:
-      app:
-        src:  ["_less/default.less"]
+      site:
+        src:  [
+          "_less/default.less"
+        ]
         dest: "media/css/default.css"
         options:
           compress: true
 
     watch:
-      coffee:
+      site:
         files: [
-          "**/*.md"
+          "_includes/**"
+          "_layouts/**"
+          "_posts/**"
+          "media/**"
+          "*.md"
+          "*.xml"
+          "*.yml"
         ]
         tasks: "build:site"
+      less:
+        files: [
+          "<config:less.site.src>"
+        ]
+        tasks: "less"
 
-  grunt.registerTask "build:site", "Build website", ->
-    utils.spawn "jekyll", [], @async()
+      # TODO 404
+      # TODO less
+
+  grunt.registerTask "build:site", "Build dev. website", ->
+    utils.spawn "jekyll", ["--base-url", "/"], @async()
+
+  grunt.registerTask "dev:server", "Build dev. website", ->
+    utils.exec "mkdir -p _site " \
+               "cd _site && " \
+               "python -m SimpleHTTPServer 4000", @async()
 
   #############################################################################
   # Aliases.
