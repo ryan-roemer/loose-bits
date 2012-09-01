@@ -15,8 +15,6 @@
     "grunt-less": "0.1.6",
     "cakepop": "0.1.0",
     "coffee-script": "1.3.3",
-    "less": "1.3.0",
-    "stylus": "0.28.2",
-    "nib": "0.7.0"
+    "less": "1.3.0"
   }
 }
