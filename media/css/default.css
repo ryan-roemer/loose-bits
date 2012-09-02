@@ -1,7 +1,18 @@
+.clearfix{*zoom:1;}.clearfix:before,.clearfix:after{display:table;content:"";line-height:0;}
+.clearfix:after{clear:both;}
+.hide-text{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0;}
+.input-block-level{display:block;width:100%;min-height:30px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+body{color:#222222;background-color:#cccccc;}
 header{background-color:#000000;}header .navbar .brand{font-size:1.5em;font-weight:bold;}
 header .navbar a.brand,header .navbar a.brand:visited{color:#ffffff;}
 header div.title{margin-left:auto;margin-right:auto;margin-bottom:10px;padding:0.5em;color:#ffffff;}header div.title h1{margin:0px;float:left;font-size:3.5em;font-weight:600;padding-top:0.2em;padding-bottom:0.2em;padding-right:0.5em;margin-right:0.5em;border-right:1px solid #ffffff;}
 header div.title p{margin:0px;font-size:1.05em;font-weight:350;text-align:left;color:#cccccc;}
 header div.title a,header div.title a:active,header div.title a:visited,header div.title a:hover{color:#ffffff;text-decoration:none;}
-#main .inner{border:1px solid red;}
-@media (min-width:768px){.header-container{margin-right:auto;margin-left:auto;width:600px;} .pull-center{text-align:center;} .pull-center .nav{float:none;display:inline-block;*display:inline;*zoom:1;height:32px;}}
+@media (min-width:768px){.header-container{margin-right:auto;margin-left:auto;width:600px;} .pull-center{text-align:center;} .pull-center .nav{float:none;display:inline-block;*display:inline;*zoom:1;height:32px;}}#main h2,#post h2,div.page h2,#main h3,#post h3,div.page h3,#main h4,#post h4,div.page h4{color:#555555;text-shadow:1px 1px 2px rgba(0, 0, 0, 0.2);}
+#main h2.title,#post h2.title,div.page h2.title{margin-top:0px;font-size:2.0em;text-align:center;color:#222222;}#main h2.title a,#post h2.title a,div.page h2.title a,#main h2.title a:active,#post h2.title a:active,div.page h2.title a:active,#main h2.title a:visited,#post h2.title a:visited,div.page h2.title a:visited,#main h2.title a:hover,#post h2.title a:hover,div.page h2.title a:hover{color:#222222;text-decoration:none;}
+#main .inner{margin-top:5px;margin-bottom:30px;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;padding:20px 30px;background:#ffffff;-webkit-box-shadow:inset 3 5px 5px rgba(0, 0, 0, 0.075);-moz-box-shadow:inset 3 5px 5px rgba(0, 0, 0, 0.075);box-shadow:inset 3 5px 5px rgba(0, 0, 0, 0.075);}.ie6 #main .inner,.ie7 #main .inner,.ie8 #main .inner{border:2px solid #999999;}
+p code{background-color:#ffffff;}
+pre{padding:10px 15px;margin-left:15px;margin-right:15px;margin-bottom:15px;}
+pre,.gist .gist-file .gist-data{color:#ffffff;background-color:#222222 !important;font-size:13px;}
+pre,.gist .gist-file{border:1px solid #cccccc;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;-webkit-box-shadow:inset 3 5px 5px rgba(0, 0, 0, 0.075);-moz-box-shadow:inset 3 5px 5px rgba(0, 0, 0, 0.075);box-shadow:inset 3 5px 5px rgba(0, 0, 0, 0.075);}.ie6 pre,.ie6 .gist .gist-file,.ie7 pre,.ie7 .gist .gist-file,.ie8 pre,.ie8 .gist .gist-file{border:2px solid #999999;}
+.highlight span{background-color:#222222 !important;}

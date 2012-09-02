@@ -1,10 +1,36 @@
+// ----------------------------------------------------------------------------
+// Imports
+// ----------------------------------------------------------------------------
+@import "vendor/bootstrap-2.1.0/mixins.less";
+
+// ----------------------------------------------------------------------------
 // Variables
+// ----------------------------------------------------------------------------
 @header-width: 600px;
 @header-color: #ffffff;
 @header-subtitle-color: #cccccc;
 @header-background: #000000;
 
+@text-color: #222222;
+@page-background: #cccccc;
+
+@post-title-color: #222222;
+@heading-color: #555555;
+
+@content-background: #ffffff;
+@content-padding: 30px;
+@code-background: #222222;
+@code-color: #ffffff;
+@code-border: #cccccc;
+
+// ----------------------------------------------------------------------------
 // Classes
+// ----------------------------------------------------------------------------
+body {
+  color: @text-color;
+  background-color: @page-background;
+}
+
 header {
   background-color: @header-background;
 
@@ -54,12 +80,9 @@ header {
   }
 }
 
-#main {
-  .inner {
-    border: 1px solid red;
-  }
-}
-
+// ----------------------------------------------------------------------------
+// Nav bar.
+// ----------------------------------------------------------------------------
 // Center NavBar on Tablet+.
 @media (min-width: 768px) {
   .header-container {
@@ -78,32 +101,81 @@ header {
   }
 }
 
-  // width: 100%
-  // margin-bottom: 20px
-  // padding-top: 1em
-  // background-color: header-background
-  // color: header-color
-  // box-shadow(0px, header-offset, header-offset, #999999)
+// ----------------------------------------------------------------------------
+// Page
+// ----------------------------------------------------------------------------
+#main,
+#post,
+div.page {
+  h2,
+  h3,
+  h4 {
+    color: @heading-color;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.2);
+  }
 
-  // div.title
-  //   margin-left: auto
-  //   margin-right: auto
-  //   margin-bottom: 10px
-  //   padding: 0.5em
+  h2.title {
+    margin-top: 0px;
+    font-size: 2.0em;
+    text-align: center;
+    color: @post-title-color;
 
-  //   h1,
-  //   p
-  //     margin: 0
+    a, a:active, a:visited, a:hover {
+      color: @post-title-color;
+      text-decoration: none;
+    }
+  }
+}
 
-  //   h1
-  //     float: left
-  //     font-size: 3.2em
-  //     font-weight: 800
-  //     padding-right: 0.5em
-  //     margin-right: 0.5em
-  //     border-right: 1px solid header-color
+#main {
+  .inner {
+    margin-top: 5px;
+    margin-bottom: 30px;
+    .border-radius(10px);
+    padding: 20px @content-padding;
+    background: @content-background;
+    .box-shadow(inset 3 5px 5px rgba(0,0,0,.075));
 
-  //   p
-  //     font-size: 1.15em
-  //     font-weight: 350
-  //     color: header-subtitle-color
+    .ie6 &, .ie7 &, .ie8 & {
+      border: 2px solid #999999;
+    }
+  }
+}
+
+// ----------------------------------------------------------------------------
+// Code
+// ----------------------------------------------------------------------------
+p {
+  code {
+    background-color: @content-background;
+  }
+}
+
+pre {
+  padding: 10px 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+pre,
+.gist .gist-file .gist-data {
+  color: @code-color;
+  background-color: @code-background !important;
+  font-size: 13px;
+}
+
+pre,
+.gist .gist-file {
+  border: 1px solid @code-border;
+  .border-radius(3px);
+  .box-shadow(inset 3 5px 5px rgba(0,0,0,.075));
+
+  .ie6 &, .ie7 &, .ie8 & {
+    border: 2px solid #999999;
+  }
+}
+
+.highlight span {
+   background-color: @code-background !important;
+}
