@@ -3,7 +3,6 @@
 
 ## Current
 
-* Font Awesome: Switch to this for icons.
 
 * Facebook: Get like button to work (with inline).
   (Give a quick shot on this, then to "later" pile).
@@ -29,6 +28,3 @@
 
   * Twitter feed.
   * Tag cloud.
-
-* Notes:
-  - Icons: http://xeloader.deviantart.com/art/Socialis-2-Freebie-213292616
