@@ -2,6 +2,7 @@
 // Imports
 // ----------------------------------------------------------------------------
 @import "vendor/bootstrap-2.1.0/mixins.less";
+@import "bootstrap-variables.less";
 
 // ----------------------------------------------------------------------------
 // Variables
@@ -105,7 +106,15 @@ header {
   height: auto !important;
   overflow: visible !important;
 }
-
+.nav-collapse {
+  .nav > li > a,
+  .dropdown-menu a {
+    color: @navbarInverseLinkColor;
+    &:hover {
+      color: @navbarInverseLinkColorHover;
+    }
+  }
+}
 // ----------------------------------------------------------------------------
 // Page
 // ----------------------------------------------------------------------------

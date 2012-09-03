@@ -1,3 +1,24 @@
+@import "vendor/bootstrap-2.1.0/variables.less";
+
 // Navbar
 // -------------------------
 @navbarCollapseWidth:             766px;
+
+// Inverted navbar
+@navbarInverseBackground:                #111111;
+@navbarInverseBackgroundHighlight:       #222222;
+@navbarInverseBorder:                    #252525;
+
+@navbarHeight:                    40px;
+@navbarBackground:                darken(@navbarInverseBackgroundHighlight, 5%);
+@navbarBackground:                darken(@navbarInverseBackgroundHighlight, 5%);
+@navbarBorder:                    darken(@navbarBackground, 12%);
+
+@navbarInverseText:                      #aaaaaa;
+@navbarInverseLinkColor:                 #aaaaaa;
+@navbarInverseLinkColorHover:            @white;
+@navbarInverseLinkColorActive:           @navbarInverseLinkColorHover;
+@navbarInverseLinkBackgroundHover:       transparent;
+@navbarInverseLinkBackgroundActive:      @navbarInverseBackground;
+
+@navbarInverseBrandColor:                @navbarInverseLinkColor;

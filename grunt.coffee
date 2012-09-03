@@ -17,6 +17,7 @@ module.exports = (grunt) ->
       bootstrap:
         src:  [
           "_less/bootstrap.less"
+          "_less/bootstrap-variables.less"
         ]
         dest: "media/css/vendor/bootstrap.css"
         options:
