@@ -63,6 +63,9 @@ module.exports = (grunt) ->
   grunt.registerTask "dev:site", "Build dev. website", ->
     utils.spawn "jekyll", ["--base-url", "/", "--limit", "3"], @async()
 
+  grunt.registerTask "dev:full", "Build full dev. website", ->
+    utils.spawn "jekyll", ["--base-url", "/"], @async()
+
   grunt.registerTask "dev:server", "Build dev. website", ->
     utils.exec "mkdir -p _site &&
                 cd _site &&
