@@ -17,7 +17,6 @@ module.exports = (grunt) ->
       bootstrap:
         src:  [
           "_less/bootstrap.less"
-          "_less/bootstrap-variables.less"
         ]
         dest: "media/css/vendor/bootstrap.css"
         options:
@@ -33,9 +32,12 @@ module.exports = (grunt) ->
     watch:
       less:
         files: [
+          "<config:less.bootstrap.src>"
           "<config:less.site.src>"
+          "_less/vendor/**"
+          "_less/bootstrap-variables.less"
         ]
-        tasks: "less"
+        tasks: "less dev:site"
       404:
         files: [
           "404.md"
