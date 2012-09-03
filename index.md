@@ -10,7 +10,7 @@ title: Home
     <div class="excerpt">
       {{ post.content | replace: '--', 'DOUBLE_DASH' | replace: '<!DOUBLE_DASH', '<!--'  | replace: 'DOUBLE_DASH>', '-->' | replace:'DOUBLE_DASH','&endash;&endash;' | replace:'more start -->','' | replace:'<!-- more end','' }}
     </div>
-    <div class="more">
+    <div class="more pull-right">
       Read <a href="{{ post.url }}">more</a>...
     </div>
   </div>

@@ -156,6 +156,36 @@ div.page {
   }
 }
 
+#date,
+#tags span.section {
+  font-style: italic;
+}
+
+#tags {
+  text-align: right;
+  width: 250px;
+}
+
+.post {
+  margin-bottom: 25px;
+
+  .more {
+    font-style: italic;
+  }
+}
+
+img.bordered {
+  border: none;
+  float: right;
+  position: relative;
+  margin: 0px 5px 10px 15px;
+  .box-shadow(3px 3px 4px #999999);
+
+  .ie6 &, .ie7 &, .ie8 & {
+    border: 2px solid #999999;
+  }
+}
+
 article {
   p {
     img {

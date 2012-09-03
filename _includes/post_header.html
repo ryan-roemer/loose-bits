@@ -1,7 +1,7 @@
 <h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
 <div id="post-meta" class="clearfix">
-  <div id="date">{{ post.date | date:"%A, %B %d, %Y" }}</div>
-  <div id="tags">
+  <div id="date" class="pull-left">{{ post.date | date:"%A, %B %d, %Y" }}</div>
+  <div id="tags" class="pull-right">
     <span class="section">tags</span>:
     {% assign goog = "http://www.google.com/search?q=" %}
     {% for tag in post.tags %}
