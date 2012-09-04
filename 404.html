@@ -54,11 +54,11 @@
       <div class="navbar navbar-inverse">
         <div class="navbar-inner">
           <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-          </a>
+          </button>
 
           <a class="brand visible-phone" href="http://loose-bits.com/">Loose Bits</a>
 
@@ -132,6 +132,24 @@
   <!-- JavaScript -->
   <script src="http://loose-bits.com/media/js/vendor/jquery-1.8.1.min.js"></script>
   <script src="http://loose-bits.com/media/js/vendor/bootstrap-2.1.0.min.js"></script>
+  <script>
+    var _navClicked = false;
+    $(function () {
+      $('.btn.btn-navbar').live('click', function () {
+        // First time doesn't open correctly. Manually do this.
+        // See: https://github.com/twitter/bootstrap/issues/3184
+        if (!_navClicked) {
+          _navClicked = true;
+          $('.nav-collapse').open();
+          return;
+        }
+        $('.nav-collapse').toggle();
+      });
+      $('.nav-collapse a[data-toggle]').click(function () {
+        $('.nav-collapse').css('height', '100%');
+      });
+    });
+  </script>
   <!-- Google Analytics -->
   <script>
     var _gaq = [['_setAccount', 'UA-16721875-2'],
