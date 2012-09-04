@@ -19,8 +19,10 @@ of talks lined up for our [inaugural meetup event][meetup_event] on March 20,
 2012 at 6:30 pm. We're hosting things at [SpanishDict][sd]'s offices in
 Arlington, VA near the Clarendon metro stop.
 
-<div class="image">
-  <a href="{{ nova_node }}"><img alt="Nova Node"
+<div class="pull-center">
+  <a href="{{ nova_node }}"><img
+    class="bordered"
+    alt="Nova Node"
     src="{{ img_dir }}/nova_node.png" /></a>
 </div>
 
