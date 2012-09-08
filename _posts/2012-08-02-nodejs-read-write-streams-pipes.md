@@ -160,7 +160,7 @@ So that's the basics. Let's look at creating something a tad more useful.
 
 ## Let's Upper-case Some Data!
 
-The `UpperCaseStream` class is takes a data source (in string or `Buffer`
+The `UpperCaseStream` class takes a data source (in string or `Buffer`
 format) and converts string data into upper case letters. Not ultimately
 that useful or extensible, but it's definitely a data transformation that can
 illustrate the ease of creation and use of a custom stream.
