@@ -37,35 +37,35 @@ bite the bullet and integrate Bootstrap.
 
 I downloaded the [full bootstrap build][build] from source, so that I could
 customize parts of the framework and only add in what I needed. As this blog
-is hosted as an open source project on [GitHub][github], you can actually
-view / download all of the work at my [loose-bits][lb_repo].
+is hosted as an open source project on [GitHub][github], all of my source code,
+including my custom compilation scripts, is available for checkout or
+downloading at my [Loose Bits repository][lb_repo].
 
 <!-- more start -->
 
-While I did customize some colors and variables for Bootstrap and did spend
+While I did customize some colors and variables for Bootstrap and spent
 some time insert Bootstrap-compatible CSS classes in my HTML layout, I have
 to say the overall experience was quite easy, and I'm pleased with the
-final results.
+final website.
 
-You can view the different layout effects for different viewports simply by
-resizing your browser window (assuming you are on a desktop). But, the gist
-of the big changes are that in desktop view, here is the main header and an
-article title:
+The different layout effects for different viewports can be viewed simply by
+resizing a browser window on a desktop computer. In desktop view, I've retooled
+the main header and navigation bar to look like:
 
 <div class="pull-center">
   <img class="bordered" src="{{ img_dir }}/desktop.png" />
   <p />
 </div>
 
-I've used the basic "inverse" (dark) theme and use the fantastic
-[Font Awesome][font_awesome] icons for each navigation bar menu item.
+My layout uses the basic "inverse" (dark) Bootstrap theme and integrates the
+fantastic [Font Awesome][font_awesome] icons for each navigation bar menu item.
 
 ## Loose Bits on Mobile!
 
-Getting on to the "mobile" aspect, if you resize the page, then the menu will
-adjust the look and feel and change into a mobile mode. So, resizing the window
-down to mobile phone size (or if you are already viewing the site on a mobile
-phone), we get:
+Moving on to the mobile experience, the header and full navigation bars are
+replaced by a title-only heading with a clickable navigation menu button.
+Resizing a browser window down to mobile phone size (or if already on a mobile
+device), we get:
 
 <div class="pull-center">
   <img class="bordered" src="{{ img_dir }}/mobile.png" />
@@ -90,8 +90,6 @@ kinks that I'm working out (mostly in JavaScript land - like buttons
 disappearing), and you do sacrifice some browser compatibility. Ultimately, for
 anyone looking at the fastest path to reliable and intuitive responsive web
 site, I would definitely recommend looking at Twitter Bootstrap.
-
-
 
 [bootstrap]: http://twitter.github.com/bootstrap/
 [build]: https://github.com/twitter/bootstrap
