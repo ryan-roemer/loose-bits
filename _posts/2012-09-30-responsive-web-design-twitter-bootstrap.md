@@ -12,7 +12,7 @@ tags: ['css', 'javascript', 'web', 'mobile', 'bootstrap']
 
 ## Bootstrap
 
-Twitter's [Bootstrap][bootstrap] libraries is one of the most popular front-end
+Twitter's [Bootstrap][bootstrap] library is one of the most popular front-end
 frameworks, with an amazing adoption rate by various web sites, from small
 to large.  Bootstrap provides:
 
@@ -33,7 +33,7 @@ with the overall user experience.
 Loose Bits (this blog) previously had a non-responsive design -- the main
 heading bar was far too wide when viewed on a mobile phone (like my iPhone).
 I had been itching to make this site mobile-friendly, and finally decided to
-bite the bullet and intergrate Bootstrap.
+bite the bullet and integrate Bootstrap.
 
 I downloaded the [full bootstrap build][build] from source, so that I could
 customize parts of the framework and only add in what I needed. As this blog
