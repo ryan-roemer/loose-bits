@@ -6,7 +6,7 @@ description: Bootstrap is a front-end web framework for fast, intuitive and
   from an ad-hoc collection of frameworks and utilities, and now has a unified,
   responsive experience on web, tablet and mobile platforms.
 date: 2012-09-30 18:37:07 UTC
-tags: ['css', 'javascript', 'web', 'mobile', 'design', bootstrap']
+tags: ['css', 'javascript', 'web', 'mobile', 'design', 'bootstrap']
 ---
 {% capture img_dir %}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
 
@@ -30,7 +30,7 @@ with the overall user experience.
 
 ## Moving Loose Bits to Bootstrap
 
-Loose Bits (this blog) previously had a non-responsive design -- the main
+Loose Bits (this blog) previously had a non-responsive design - the main
 heading bar was far too wide when viewed on a mobile phone (like my iPhone).
 I had been itching to make this site mobile-friendly, and finally decided to
 bite the bullet and integrate Bootstrap.
