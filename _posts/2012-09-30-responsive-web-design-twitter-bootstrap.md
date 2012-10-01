@@ -6,7 +6,7 @@ description: Bootstrap is a front-end web framework for fast, intuitive and
   from an ad-hoc collection of frameworks and utilities, and now has a unified,
   responsive experience on web, tablet and mobile platforms.
 date: 2012-09-30 18:37:07 UTC
-tags: ['css', 'javascript', 'web', 'mobile', 'bootstrap']
+tags: ['css', 'javascript', 'web', 'mobile', 'design', bootstrap']
 ---
 {% capture img_dir %}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
 
@@ -81,15 +81,18 @@ reduced real estate in a mobile view:
   <p />
 </div>
 
-The rest of the site has a few other adjustments in mobile view mode. Overall,
-Bootstrap, mostly just works in the different views and I'm pretty happy with
-the end result.
+The rest of the website has a few other adjustments in mobile view mode, nearly
+all of which auto-magically happen without any further tweaks to Bootstrap
+configuration or JavaScript hacking.
 
-However, like any web framework under active development, there are still a few
-kinks that I'm working out (mostly in JavaScript land - like buttons
-disappearing), and you do sacrifice some browser compatibility. Ultimately, for
-anyone looking at the fastest path to reliable and intuitive responsive web
-site, I would definitely recommend looking at Twitter Bootstrap.
+At the end of the day, I'm pretty happy with the Bootstrap development
+experience and the end result for my website.
+Like any web framework under active development, there are still a few
+gotcha's - like some losss of browser compatibility and weird JavaScript
+bugs (e.g., my navigation buttons sometimes disappear).
+But, ultimately, for anyone searching for the fastest path to a reliable and
+intuitive responsive web site, I would definitely recommend looking at Twitter
+Bootstrap.
 
 [bootstrap]: http://twitter.github.com/bootstrap/
 [build]: https://github.com/twitter/bootstrap
