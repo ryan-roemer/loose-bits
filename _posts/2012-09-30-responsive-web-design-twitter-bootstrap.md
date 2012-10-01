@@ -37,18 +37,18 @@ bite the bullet and integrate Bootstrap.
 
 I downloaded the [full bootstrap build][build] from source, so that I could
 customize parts of the framework and only add in what I needed. As this blog
-is hosted as an open source project on [GitHub][github], all of my source code,
-including my custom compilation scripts, is available for checkout or
-downloading at my [Loose Bits repository][lb_repo].
+is hosted as an open source project on [GitHub][github], the source code
+and build system is available for checkout or download at my
+[Loose Bits repository][lb_repo].
 
 <!-- more start -->
 
 While I did customize some colors and variables for Bootstrap and spent
-some time insert Bootstrap-compatible CSS classes in my HTML layout, I have
-to say the overall experience was quite easy, and I'm pleased with the
-final website.
+some time inserting Bootstrap-compatible CSS classes in my HTML layout, I have
+to say the overall experience was quite easy, required minimal changes, and
+I am pleased with the final website.
 
-The different layout effects for different viewports can be viewed simply by
+The different layout effects for various viewports can be viewed simply by
 resizing a browser window on a desktop computer. In desktop view, I've retooled
 the main header and navigation bar to look like:
 
