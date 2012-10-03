@@ -88,7 +88,7 @@ configuration or JavaScript hacking.
 At the end of the day, I'm pretty happy with the Bootstrap development
 experience and the end result for my website.
 Like any web framework under active development, there are still a few
-gotcha's - like some losss of browser compatibility and weird JavaScript
+gotcha's - like some loss of browser compatibility and weird JavaScript
 bugs (e.g., my navigation buttons sometimes disappear).
 But, ultimately, for anyone searching for the fastest path to a reliable and
 intuitive responsive web site, I would definitely recommend looking at Twitter
