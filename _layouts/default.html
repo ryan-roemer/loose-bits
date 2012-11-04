@@ -113,20 +113,37 @@
 
   <!-- JavaScript -->
   <script src="{{ site.baseurl }}media/js/vendor/jquery-1.8.1.min.js"></script>
-  <script src="{{ site.baseurl }}media/js/vendor/bootstrap-2.1.0.min.js"></script>
+  <script src="{{ site.baseurl }}media/js/vendor/bootstrap-2.2.1.min.js"></script>
   <script>
     var _navClicked = false;
     $(function () {
+      var defaultWidth = 700,
+        lastWidth = defaultWidth;
+      $(window).resize(function() {
+        var newWidth = $(window).width();
+
+        // Crossed threshold getting larger.
+        if (lastWidth < newWidth &&
+            lastWidth < defaultWidth &&
+            defaultWidth < newWidth) {
+          console.log("TODO HERE", "transitioned to default", lastWidth, newWidth);
+        }
+
+        lastWidth = newWidth;
+      });
+
+      // Fix collapse to properly open / close.
       $('.btn.btn-navbar').live('click', function () {
         // First time doesn't open correctly. Manually do this.
         // See: https://github.com/twitter/bootstrap/issues/3184
         if (!_navClicked) {
           _navClicked = true;
-          $('.nav-collapse').open();
+          $('.nav-collapse').show().collapse('show');
           return;
         }
         $('.nav-collapse').toggle();
       });
+
       $('.nav-collapse a[data-toggle]').click(function () {
         $('.nav-collapse').css('height', '100%');
       });
