@@ -133,10 +133,12 @@
   <script src="http://loose-bits.com/media/js/vendor/jquery-1.8.1.min.js"></script>
   <script src="http://loose-bits.com/media/js/vendor/bootstrap-2.2.1.min.js"></script>
   <script>
-    var _navClicked = false;
     $(function () {
-      var defaultWidth = 700,
+      var _navClicked = false;\,
+        defaultWidth = 700,
         lastWidth = defaultWidth;
+
+      // Handle open/close responsive to default bug.
       $(window).resize(function() {
         var newWidth = $(window).width();
 
@@ -154,12 +156,15 @@
             .css("height", "auto")
             .show();
 
-        } else if (newWidth < newWidth &&
+        } else if (newWidth < lastWidth &&
             newWidth < defaultWidth &&
             defaultWidth < lastWidth) {
           // Crossed threshold getting smaller.
           $('.nav-collapse').hide().collapse('hide');
         }
+
+        // Have to also reset the first click bug. Sheesh.
+        _navClicked = false;
 
         lastWidth = newWidth;
       });
