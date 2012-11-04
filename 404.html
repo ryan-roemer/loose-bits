@@ -140,11 +140,25 @@
       $(window).resize(function() {
         var newWidth = $(window).width();
 
-        // Crossed threshold getting larger.
         if (lastWidth < newWidth &&
             lastWidth < defaultWidth &&
             defaultWidth < newWidth) {
-          console.log("TODO HERE", "transitioned to default", lastWidth, newWidth);
+          // Crossed threshold getting larger.
+          // Manually reset to starting point.
+          $('.btn.btn-navbar')
+            .removeClass("collapsed");
+
+          $('.nav-collapse')
+            .removeClass("collapse")
+            .removeClass("in")
+            .css("height", "auto")
+            .show();
+
+        } else if (newWidth < newWidth &&
+            newWidth < defaultWidth &&
+            defaultWidth < lastWidth) {
+          // Crossed threshold getting smaller.
+          $('.nav-collapse').hide().collapse('hide');
         }
 
         lastWidth = newWidth;
@@ -156,7 +170,7 @@
         // See: https://github.com/twitter/bootstrap/issues/3184
         if (!_navClicked) {
           _navClicked = true;
-          $('.nav-collapse').show().collapse('show');
+          $('.nav-collapse').collapse('show');
           return;
         }
         $('.nav-collapse').toggle();
