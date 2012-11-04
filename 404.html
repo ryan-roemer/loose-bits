@@ -134,7 +134,7 @@
   <script src="http://loose-bits.com/media/js/vendor/bootstrap-2.2.1.min.js"></script>
   <script>
     $(function () {
-      var _navClicked = false;\,
+      var _navClicked = false,
         defaultWidth = 700,
         lastWidth = defaultWidth;
 
@@ -156,15 +156,15 @@
             .css("height", "auto")
             .show();
 
+          _navClicked = false;
+
         } else if (newWidth < lastWidth &&
             newWidth < defaultWidth &&
             defaultWidth < lastWidth) {
           // Crossed threshold getting smaller.
-          $('.nav-collapse').hide().collapse('hide');
-        }
-
-        // Have to also reset the first click bug. Sheesh.
-        _navClicked = false;
+          $('.nav-collapse').hide();
+          _navClicked = false;
+       }
 
         lastWidth = newWidth;
       });
@@ -175,7 +175,7 @@
         // See: https://github.com/twitter/bootstrap/issues/3184
         if (!_navClicked) {
           _navClicked = true;
-          $('.nav-collapse').collapse('show');
+          $('.nav-collapse').show();
           return;
         }
         $('.nav-collapse').toggle();
