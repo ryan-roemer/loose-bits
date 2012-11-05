@@ -112,9 +112,9 @@ build "[layout.jade][ds_layout]" and "[index.jade][ds_index]" into the
     $ npm run-script watch
 
 Authoring is pretty easy. To add themes, extensions, or extra scripts, edit
-"layout.jade". For slides, edit "index.jade" and add `section.slide`
-elements following the boilerplate as a guide. Make sure to take a look at
-the following possibilities:
+"[layout.jade][ds_layout]". For slides, edit "[index.jade][ds_index]" and
+add `section.slide` elements following the boilerplate as a guide. Make sure to
+take a look at the following possibilities:
 
 **Executable JavaScript**:
 
