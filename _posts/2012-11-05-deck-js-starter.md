@@ -15,6 +15,13 @@ tags: ['css', 'javascript', 'web', 'deck.js', 'design']
 
 TODO - Outline
 
+* Starter
+
+  * Simple workflow
+  * Easy templating with Jade, Markdown
+  * Executable JS, CS
+  * Extensible presentation platform.
+
 * Deck.js introduction.
 
   * Demo
@@ -25,6 +32,8 @@ TODO - Outline
 
 * Samples: NovaNode Cloud, Node.DC CoffeeScript used a precursor to this
   framework.
+
+  * Publish to GitHub and host there (static site).
 
 * New screenshot of DS demo screen (with link).
 
