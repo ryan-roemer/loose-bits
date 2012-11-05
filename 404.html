@@ -145,6 +145,7 @@
         if (lastWidth < newWidth &&
             lastWidth < defaultWidth &&
             defaultWidth < newWidth) {
+
           // Crossed threshold getting larger.
           // Manually reset to starting point.
           $('.btn.btn-navbar')
@@ -159,8 +160,9 @@
           _navClicked = false;
 
         } else if (newWidth < lastWidth &&
-            newWidth < defaultWidth &&
-            defaultWidth < lastWidth) {
+                   newWidth < defaultWidth &&
+                   defaultWidth < lastWidth) {
+
           // Crossed threshold getting smaller.
           $('.nav-collapse').hide();
           _navClicked = false;
