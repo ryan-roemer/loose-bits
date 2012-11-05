@@ -216,17 +216,22 @@ p {
 }
 
 pre {
-  padding: 10px 15px;
-  margin-left: 15px;
-  margin-right: 15px;
-  margin-bottom: 15px;
+  padding: 7px;
+  border: 1px solid @code-border;
+  background-color: #f9f9f9;
+  display: block;
+  position: relative
+  overflow: auto !important;
 }
 
-pre,
+pre code,
 .gist .gist-file .gist-data {
+  font-family: Monaco, monospace;
+  padding: 20px 15px;
   color: @code-color;
   background-color: @code-background !important;
-  font-size: 13px;
+  display: block;
+  overflow: auto !important;
 }
 
 pre,
@@ -239,6 +244,7 @@ pre,
     border: 2px solid #aaaaaa;
   }
 }
+
 
 .highlight span {
    background-color: @code-background !important;

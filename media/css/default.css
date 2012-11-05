@@ -20,7 +20,7 @@ header div.title a,header div.title a:active,header div.title a:visited,header d
 img.bordered{border:none;position:relative;margin:5px;-webkit-box-shadow:3px 3px 4px #999999;-moz-box-shadow:3px 3px 4px #999999;box-shadow:3px 3px 4px #999999;}.ie6 img.bordered,.ie7 img.bordered,.ie8 img.bordered{border:2px solid #999999;}
 article p img,.excerpt p img{border:none;display:block;margin-right:auto;margin-left:auto;text-align:center;}
 p code{background-color:#ffffff;}
-pre{padding:10px 15px;margin-left:15px;margin-right:15px;margin-bottom:15px;}
-pre,.gist .gist-file .gist-data{color:#ffffff;background-color:#222222 !important;font-size:13px;}
+pre{padding:7px;border:1px solid #cccccc;background-color:#f9f9f9;display:block;position:relative overflow: auto !important;}
+pre code,.gist .gist-file .gist-data{font-family:Monaco, monospace;padding:20px 15px;color:#ffffff;background-color:#222222 !important;display:block;overflow:auto !important;}
 pre,.gist .gist-file{border:1px solid #cccccc;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;-webkit-box-shadow:2px 5px 5px #aaaaaa;-moz-box-shadow:2px 5px 5px #aaaaaa;box-shadow:2px 5px 5px #aaaaaa;}.ie6 pre,.ie6 .gist .gist-file,.ie7 pre,.ie7 .gist .gist-file,.ie8 pre,.ie8 .gist .gist-file{border:2px solid #aaaaaa;}
 .highlight span{background-color:#222222 !important;}
