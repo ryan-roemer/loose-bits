@@ -106,8 +106,8 @@ packages.
     $ npm install
 
 Once you are ready to author, start the "watch" task that will automatically
-build "layout.jade" and "index.jade" into the "index.html" static page. You
-can then preview your slide deck at "index.html":
+build "[layout.jade][ds_layout]" and "[index.jade][ds_index]" into the
+"index.html" static page. You can then preview your slide deck at "index.html":
 
     $ npm run-script watch
 
@@ -149,6 +149,8 @@ feedback or enhancements are most welcome.
 [ds_demo_js]: http://ryan-roemer.github.com/deck.js-starter/#js
 [ds_demo_cs]: http://ryan-roemer.github.com/deck.js-starter/#cs
 [ds_readme]: https://github.com/ryan-roemer/deck.js-starter/blob/master/README.md
+[ds_index]: https://github.com/ryan-roemer/deck.js-starter/blob/master/index.jade
+[ds_layout]: https://github.com/ryan-roemer/deck.js-starter/blob/master/layout.jade
 [jade]: http://jade-lang.com
 [md]: http://daringfireball.net/projects/markdown/
 
