@@ -79,7 +79,7 @@ My talk to the Nova Node meetup on using Node.js in the cloud.
 [![Node.js cloud presentation][img_pres]][cloud_talk]
 [img_pres]: {{ img_base }}/2012/03/24/nodejs-cloud.png
 
-### Getting Started with Node.js in the Cloud
+### 5 Things I Like About CoffeeScript
 
 A simple CoffeeScript survey I presented at the Node.DC meetup.
 
