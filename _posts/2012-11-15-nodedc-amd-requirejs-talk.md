@@ -44,7 +44,7 @@ create a shared JavaScript library and then expose it via the frontend (as
 straight JavaScript) and the backend (as a REST service).
 
 The talk and the source give a good overview and run-through of how to implement
-simple shared code, but give a better sense of the final result, here is a
+simple shared code, but to give a better sense of the final result, here is a
 RequireJS-compliant code module (for shuffling elements in a string) that has
 an [underscore][underscore] dependency, and works in both the browser
 and as a standard module in Node.js:
