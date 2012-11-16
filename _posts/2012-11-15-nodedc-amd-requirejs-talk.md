@@ -86,6 +86,7 @@ application development.
 
 [amd]: https://github.com/amdjs/amdjs-api/wiki/AMD
 [cjs]: http://www.commonjs.org/
+[requirejs]: http://requirejs.org/
 [amd_talk]: http://ryan-roemer.github.com/nodedc-requirejs-talk/
 [amd_source]: https://github.com/ryan-roemer/nodedc-requirejs-talk/
 [amd_demo]: https://github.com/ryan-roemer/nodedc-requirejs-talk/tree/master/demo
