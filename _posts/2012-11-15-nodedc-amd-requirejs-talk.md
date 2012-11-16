@@ -4,7 +4,7 @@ title:  Shared JavaScript Code with AMD/RequireJS
 description: The advent of JavaScript on the backend (with Node.js) has made
   full stack JavaScript applications increasingly popular. RequireJS is
   dependency management framework that simplifies frontend asset management,
-  as well as provides hooks for shared frontend (browser) and backend
+  and provides hooks for shared frontend (browser) and backend
   (Node.js) code. In my presentation to the November 11, 2012 Node.DC meetup,
   I introduce how to develop shared JavaScript libraries with
   AMD/RequireJS.
@@ -15,19 +15,17 @@ tags: ['node.js', 'amd', 'requirejs', 'javascript', 'meetup']
 
 ## AMD/RequireJS
 
-The [Asynchronous Module Definition][amd] (*AMD*) guidelines provide a
-definition framework for predictable loading of JavaScript modules and
-dependencies. AMD is an extension of (and possible transport for) the
-[CommonJS][cjs] specification.
+The [Asynchronous Module Definition][amd] (*AMD*) provides a framework for
+predictable loading of JavaScript modules and dependencies. AMD is an extension
+of (and possible transport for) the [CommonJS][cjs] specification.
 
 The [RequireJS][requirejs] library implements AMD with loading, bundling and
-other functionality, so that frontend JavaScript now has sensible imports
-(with `define` and `require`), instead of script includes into the global
-namespace. Interestingly, as [Node.js][nodejs] implements CommonJS-style
-`require`'s, there are also support modules to bring Node.js code under AMD
-as well.
+other functionality. It brings sensible imports (with `define` and `require`)
+to frontend JavaScript, instead of the usual array of script includes into the
+global namespace. Interestingly, as [Node.js][nodejs] implements CommonJS-style
+`require`'s, there are also support modules to bring Node.js code under AMD.
 
-Take both of things together, and we have the real potential for shared
+Take both of things together and we have the real potential for shared
 JavaScript code across the browser and server. As we use this exact approach
 at work for our new Backbone.js frontend / Express Node.js backend web
 application, I created a short talk that I presented at the  November 11, 2012
@@ -41,14 +39,14 @@ application, I created a short talk that I presented at the  November 11, 2012
 ## Source Code and Demo
 
 The [source][amd_source] for the presentation is available on GitHub. The
-repository further includes all of the [demonstration code][demo] I used to
+repository further includes all of the [demonstration code][amd_demo] I used to
 create a shared JavaScript library and then expose it via the frontend (as
 straight JavaScript) and the backend (as a REST service).
 
 The talk and the source give a good overview and run-through of how to implement
 simple shared code, but give a better sense of the final result, here is a
 RequireJS-compliant code module (for shuffling elements in a string) that has
-an [underscore][underscore] dependency, as works in both browser JavaScript
+an [underscore][underscore] dependency, and works in both the browser
 and as a standard module in Node.js:
 
 {% highlight javascript %}
@@ -78,8 +76,8 @@ define(function(require) {
 {% endhighlight %}
 
 We add some boilerplate at the top of the library for Node.js, then use
-the `define` function to get a `require` import function that both the browser
-and Node.js can use, and we're off!
+the `define` function to make a `require` import function available to both the
+browser and Node.js, and we're off and code sharing!
 
 AMD, RequireJS, and shared code are topics that have a lot more depth,
 features, and challenges. Hopefully this provides the start to a journey into
