@@ -36,19 +36,63 @@ application, I created a short talk that I presented at the  November 11, 2012
 [![AMD/RequireJS Talk][img_talk]][amd_talk]
 [img_talk]: {{ img_dir }}/nodedc-requirejs.png
 
-The [source][amd_source] for the presentation is available on GitHub. The
-repository further includes all of the demonstation code I used to create
-a shared JavaScript library and then expose it via the frontend (as straight
-JavaScript) and the backend (as a REST service).
-
 <!-- more start -->
 
+## Source Code and Demo
+
+The [source][amd_source] for the presentation is available on GitHub. The
+repository further includes all of the [demonstation code][demo] I used to
+create a shared JavaScript library and then expose it via the frontend (as
+straight JavaScript) and the backend (as a REST service).
+
+The talk and the source give a good overview and runthrough of how to implement
+simple shared code, but give a better sense of the final result, here is a
+RequireJS-compliant code module (for shuffling elements in a string) that has
+an [underscore][underscore] dependency, as works in both browser JavaScript
+and as a standard module in Node.js:
+
+{% highlight javascript %}
+// Node.js hook boilerplate.
+// This adds the `define` function to Node.
+if (typeof define !== 'function') {
+  var define = require('amdefine')(module);
+}
+
+// Define wrapper gives us `require`
+define(function(require) {
+  // Looks like a normal `require` for Node.js.
+  // Note: Both browser and Node.js should use
+  // the **same** version of libraries.
+  var _ = require('underscore');
+
+  // Slice a string into a list of items
+  // and return the shuffled values.
+  var shuffle = function (val) {
+    val = val || "";
+    return _.shuffle(val.split(/[\s,]+/));
+  };
+
+  // Export our shuffle function by returning.
+  return shuffle;
+});
+{% endhighlight %}
+
+We add some boilerplate at the top of the library for Node.js, then use
+the `define` function to get a `require` import function that both the browser
+and Node.js can use, and we're off!
+
+AMD, RequireJS, and shared code are topics that have a lot more depth,
+features, and challenges. Hopefully this provides the start to a journey into
+better JavaScript dependency management and more extensible fullstack web
+application development.
 
 [amd]: https://github.com/amdjs/amdjs-api/wiki/AMD
 [cjs]: http://www.commonjs.org/
 [amd_talk]: http://ryan-roemer.github.com/nodedc-requirejs-talk/
 [amd_source]: https://github.com/ryan-roemer/nodedc-requirejs-talk/
+[amd_demo]: https://github.com/ryan-roemer/nodedc-requirejs-talk/tree/master/demo
 [node_dc]: http://www.meetup.com/node-dc/events/89233812/
 [nodejs]: http://nodejs.org
+[underscore]: http://underscorejs.org/
 
 <!-- more end -->
