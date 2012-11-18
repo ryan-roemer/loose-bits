@@ -14,6 +14,22 @@ tags: ['python', 'sphinx', 'theme', 'twitter', 'bootstrap', 'github']
 ## Sphinx Bootstrap Theme Updates!
 
 
+## TODO
+
+* Content
+
+  * Bootstrap 2.2.1 upgrade.
+  * PyPI
+  * Responsive
+  * New theme options
+  * How to install / upgrade.
+
+* Images:
+
+  * Demos: SBST, CB
+  * Responsive
+  * Drop down menus in nav.
+  * Logo (?)
 
 <!-- more start -->
 

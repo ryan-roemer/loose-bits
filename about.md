@@ -35,19 +35,16 @@ Other places you can find me  on the web are:
 and [my research site](http://ryanroemer.com).
 Some of my open source projects on [GitHub](https://github.com/ryan-roemer) include:
 
-{% comment %}
-* [Sphinx Bootstrap Theme](http://ryan-roemer.github.com/sphinx-bootstrap-theme/):
-  Integrates the Twitter [Bootstrap](http://twitter.github.com/bootstrap/)
-  CSS / JavaScript framework as a [Sphinx](http://sphinx.pocoo.org/)
-  [theme](http://sphinx.pocoo.org/theming.html).
-{% endcomment %}
-
-* [Sunny.js](http://sunnyjs.org): A [Node.js](http://nodejs.org/)
+* **[Sunny.js](http://sunnyjs.org)**: A [Node.js](http://nodejs.org/)
   multi-cloud datastore client (with support for
   [Amazon Web Services](http://aws.amazon.com/)
   [Simple Storage Service](http://aws.amazon.com/s3/) (S3) and
   [Google Storage for Developers](http://code.google.com/apis/storage/)).
-* [Django Cloud Browser](http://ryan-roemer.github.com/django-cloud-browser/):
+* **[Django Cloud Browser](http://ryan-roemer.github.com/django-cloud-browser/)**:
   A [Django](http://www.djangoproject.com/) application for browsing and
   navigating cloud-based datastores (including Amazon Web Services S3 and
   [Rackspace Cloud Files](http://www.rackspace.com/cloud/)).
+* **[Sphinx Bootstrap Theme](http://ryan-roemer.github.com/sphinx-bootstrap-theme/)**:
+  Integrates the Twitter [Bootstrap](http://twitter.github.com/bootstrap/)
+  CSS / JavaScript framework as a [Sphinx](http://sphinx.pocoo.org/)
+  [theme](http://sphinx.pocoo.org/theming.html).
