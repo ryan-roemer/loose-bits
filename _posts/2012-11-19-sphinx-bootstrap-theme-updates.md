@@ -31,6 +31,34 @@ tags: ['python', 'sphinx', 'theme', 'twitter', 'bootstrap', 'github']
   * Drop down menus in nav.
   * Logo (?)
 
+## Images
+
+[![Sphinx Bootstrap Theme Desktop View][img_sbt_desk]][img_sbt_desk]
+[img_sbt_desk]: {{ img_dir }}/sbt_desk.png
+
+[![Django Cloud Browser][img_sbt_cb]][img_sbt_cb]
+[img_sbt_cb]: {{ img_dir }}/sbt_cb.png
+
+[![Navbar Menu Dropdowns][img_sbt_nav_dropdown_hl]][img_sbt_nav_dropdown_hl]
+[img_sbt_nav_dropdown]: {{ img_dir }}/sbt_nav_dropdown.png
+[img_sbt_nav_dropdown_hl]: {{ img_dir }}/sbt_nav_dropdown_hl.png
+
+[![Mobile Phone View][img_sbt_ios_th]][img_sbt_ios]
+[img_sbt_ios_th]: {{ img_dir }}/sbt_ios_th.png
+[img_sbt_ios]: {{ img_dir }}/sbt_ios.png
+
+[![Mobile Phone Navbar][img_sbt_ios_nav_th]][img_sbt_ios_nav]
+[img_sbt_ios_nav_th]: {{ img_dir }}/sbt_ios_nav_th.png
+[img_sbt_ios_nav]: {{ img_dir }}/sbt_ios_nav.png
+
+[![Mobile Phone Navbar Menu][img_sbt_ios_nav_dropdown_hl_th]][img_sbt_ios_nav_dropdown_hl]
+[img_sbt_ios_nav_dropdown_th]: {{ img_dir }}/sbt_ios_nav_dropdown_th.png
+[img_sbt_ios_nav_dropdown]: {{ img_dir }}/sbt_ios_nav_dropdown.png
+[img_sbt_ios_nav_dropdown_hl_th]: {{ img_dir }}/sbt_ios_nav_dropdown_hl_th.png
+[img_sbt_ios_nav_dropdown_hl]: {{ img_dir }}/sbt_ios_nav_dropdown_hl.png
+
+
+
 <!-- more start -->
 
 [bootstrap]: http://twitter.github.com/bootstrap/
