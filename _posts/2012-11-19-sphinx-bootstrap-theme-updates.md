@@ -31,6 +31,8 @@ Improvements now available in version v0.1.0 include:
 
 * Upgraded the Bootstrap libraries to version 2.2.1.
 * Added several new theme options to control UI appearance and behavior.
+* Navigation bar menus now have hierarchical sub-menus for a more intuitive
+  experience.
 * Reworked the underlying layout code to support fully responsive design,
   allowing any site to look great and actually be usable on mobile devices
   like an iPhone or iPad.
@@ -40,25 +42,27 @@ Improvements now available in version v0.1.0 include:
 
 So let's see how everything looks and works with the new v0.1.0 theme.
 
+## New Theme Options
 
-## TODO
+* Cloud Browser
+* Basic Demo Site
 
-* Content
+## Navigation Menu Dropdowns
 
-  * Bootstrap 2.2.1 upgrade.
-  * PyPI
-  * Responsive
-  * New theme options
-  * How to install / upgrade.
+* Nav Dropdown
 
-* Images:
+## Mobile UI Support
 
-  * Demos: SBST, CB
-  * Responsive
-  * Drop down menus in nav.
-  * Logo (?)
+* Mobile Page
+* Mobile Nav
+* Mobile drop downs.
 
-## Images
+## Installation
+
+* Existing zip file
+* New PyPI.
+
+## Images - TODO
 
 [![Sphinx Bootstrap Theme Desktop View][img_sbt_desk]][img_sbt_desk]
 [img_sbt_desk]: {{ img_dir }}/sbt_desk.png
