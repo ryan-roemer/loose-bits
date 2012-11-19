@@ -50,7 +50,7 @@ configuration file.
 ### Bootstrap Theme Demo Site
 
 Let's start with the Bootstrap theme's own
-[demonstration website][sbt_demo_readme]:
+[demonstration website][sbt_demo_readme].
 
 [![Sphinx Bootstrap Theme Desktop View][img_sbt_desk]][img_sbt_desk]
 [img_sbt_desk]: {{ img_dir }}/sbt_desk.png
@@ -84,7 +84,7 @@ of the page during any scrolling.
 [Django Cloud Browser][cb_gh] is a reusable [Django][django] for browsing
 and downloading files stored in various cloud datastores (like Amazon Web
 Services S3, Rackspace Cloud Files, etc.). The [API documentation][cb_site]
-uses the Bootstrap theme with (mostly) the default options:
+uses the Bootstrap theme with (mostly) the default options.
 
 [![Django Cloud Browser][img_sbt_cb]][img_sbt_cb]
 [img_sbt_cb]: {{ img_dir }}/sbt_cb.png
@@ -94,7 +94,9 @@ the documentation source code link to the bottom of each page.
 
 ## Navigation Menu Dropdowns
 
-* Nav Dropdown
+The navigation bar menus are now hierarchically arranged into dropdowns and
+sub-menus for easier navigation that looks a lot better than the previous
+theme incarnations (which just used hacked-up CSS whitespace padding).
 
 [![Navbar Menu Dropdowns][img_sbt_nav_dropdown_hl]][img_sbt_nav_dropdown_hl]
 [img_sbt_nav_dropdown]: {{ img_dir }}/sbt_nav_dropdown.png
@@ -102,17 +104,28 @@ the documentation source code link to the bottom of each page.
 
 ## Mobile UI Support
 
-* Mobile Page
-* Mobile Nav
-* Mobile drop downs.
+One of the most popular aspects of the Bootstrap library is its great support
+for [responsive mobile features][bootstrap_resp]. The responsive features are
+now integrated into the Sphinx Bootstrap Theme.
+
+The Bootstrap theme now renders a collapsed, clickable navigation bar in
+smaller viewports (like a mobile phone and some table orientations). Viewing
+the theme demo site in a iPhone gives us a slightly more terse UI.
 
 [![Mobile Phone View][img_sbt_ios_th]][img_sbt_ios]
 [img_sbt_ios_th]: {{ img_dir }}/sbt_ios_th.png
 [img_sbt_ios]: {{ img_dir }}/sbt_ios.png
 
-[![Mobile Phone Navbar][img_sbt_ios_nav_th]][img_sbt_ios_nav]
+Clicking on the dropdown button gives us a basic first-level navigation menu.
+
+[![Mobile Phone Navbar][img_sbt_ios_nav_hl_th]][img_sbt_ios_hl_nav]
 [img_sbt_ios_nav_th]: {{ img_dir }}/sbt_ios_nav_th.png
 [img_sbt_ios_nav]: {{ img_dir }}/sbt_ios_nav.png
+[img_sbt_ios_nav_hl_th]: {{ img_dir }}/sbt_ios_nav_hl_th.png
+[img_sbt_ios_nav_hl]: {{ img_dir }}/sbt_ios_hl_nav.png
+
+And we can further click through sub-menus to navigate to the desired section
+or page in the site.
 
 [![Mobile Phone Navbar Menu][img_sbt_ios_nav_dropdown_hl_th]][img_sbt_ios_nav_dropdown_hl]
 [img_sbt_ios_nav_dropdown_th]: {{ img_dir }}/sbt_ios_nav_dropdown_th.png
@@ -120,7 +133,12 @@ the documentation source code link to the bottom of each page.
 [img_sbt_ios_nav_dropdown_hl_th]: {{ img_dir }}/sbt_ios_nav_dropdown_hl_th.png
 [img_sbt_ios_nav_dropdown_hl]: {{ img_dir }}/sbt_ios_nav_dropdown_hl.png
 
+With these and other responsive Bootstrap features, the Sphinx Bootstrap Theme
+now gives your API documentation or website real usability for mobile devices.
+
 ## Installation
+
+
 
 * Existing zip file
 * New PyPI.
@@ -128,6 +146,7 @@ the documentation source code link to the bottom of each page.
 
 
 [bootstrap]: http://twitter.github.com/bootstrap/
+[bootstrap_resp]: http://twitter.github.com/bootstrap/scaffolding.html#responsive
 [python]: http://python.org/
 [django]: https://www.djangoproject.com/
 [sphinx]: http://sphinx.pocoo.org/
