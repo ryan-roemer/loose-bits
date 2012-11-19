@@ -47,32 +47,27 @@ So let's see how everything looks and works with the new v0.1.0 theme.
 * Cloud Browser
 * Basic Demo Site
 
-## Navigation Menu Dropdowns
-
-* Nav Dropdown
-
-## Mobile UI Support
-
-* Mobile Page
-* Mobile Nav
-* Mobile drop downs.
-
-## Installation
-
-* Existing zip file
-* New PyPI.
-
-## Images - TODO
-
 [![Sphinx Bootstrap Theme Desktop View][img_sbt_desk]][img_sbt_desk]
 [img_sbt_desk]: {{ img_dir }}/sbt_desk.png
 
 [![Django Cloud Browser][img_sbt_cb]][img_sbt_cb]
 [img_sbt_cb]: {{ img_dir }}/sbt_cb.png
 
+<!-- more start -->
+
+## Navigation Menu Dropdowns
+
+* Nav Dropdown
+
 [![Navbar Menu Dropdowns][img_sbt_nav_dropdown_hl]][img_sbt_nav_dropdown_hl]
 [img_sbt_nav_dropdown]: {{ img_dir }}/sbt_nav_dropdown.png
 [img_sbt_nav_dropdown_hl]: {{ img_dir }}/sbt_nav_dropdown_hl.png
+
+## Mobile UI Support
+
+* Mobile Page
+* Mobile Nav
+* Mobile drop downs.
 
 [![Mobile Phone View][img_sbt_ios_th]][img_sbt_ios]
 [img_sbt_ios_th]: {{ img_dir }}/sbt_ios_th.png
@@ -88,9 +83,10 @@ So let's see how everything looks and works with the new v0.1.0 theme.
 [img_sbt_ios_nav_dropdown_hl_th]: {{ img_dir }}/sbt_ios_nav_dropdown_hl_th.png
 [img_sbt_ios_nav_dropdown_hl]: {{ img_dir }}/sbt_ios_nav_dropdown_hl.png
 
+## Installation
 
-
-<!-- more start -->
+* Existing zip file
+* New PyPI.
 
 [bootstrap]: http://twitter.github.com/bootstrap/
 [python]: http://python.org/
