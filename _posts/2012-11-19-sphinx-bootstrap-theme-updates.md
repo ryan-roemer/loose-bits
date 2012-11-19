@@ -42,18 +42,55 @@ Improvements now available in version v0.1.0 include:
 
 So let's see how everything looks and works with the new v0.1.0 theme.
 
-## New Theme Options
+## Theme Options
 
-* Cloud Browser
-* Basic Demo Site
+The theme as several new options that you can set in the "conf.py"
+configuration file.
+
+### Bootstrap Theme Demo Site
+
+Let's start with the Bootstrap theme's own
+[demonstration website][sbt_demo_readme]:
 
 [![Sphinx Bootstrap Theme Desktop View][img_sbt_desk]][img_sbt_desk]
 [img_sbt_desk]: {{ img_dir }}/sbt_desk.png
 
+<!-- more start -->
+
+The demo site has the following theme option settings in
+"[conf.py][sbt_demo_cfg]":
+
+{% highlight python %}
+html_theme_options = {
+    # HTML navbar class (Default: "navbar") to attach to <div> element.
+    # For black navbar, do "navbar navbar-inverse"
+    'navbar_class': "navbar navbar-inverse",
+
+    # Fix navigation bar to top of page?
+    # Values: "true" (default) or "false"
+    'navbar_fixed_top': "true",
+
+    # Location of link to source.
+    # Options are "nav" (default), "footer" or anything else to exclude.
+    'source_link_position': "nav",
+}
+{% endhighlight %}
+
+Notably, this gives us a dark black navigation bar that is fixed to the top
+of the page during any scrolling.
+
+### Django Cloud Browser
+
+[Django Cloud Browser][cb_gh] is a reusable [Django][django] for browsing
+and downloading files stored in various cloud datastores (like Amazon Web
+Services S3, Rackspace Cloud Files, etc.). The [API documentation][cb_site]
+uses the Bootstrap theme with (mostly) the default options:
+
 [![Django Cloud Browser][img_sbt_cb]][img_sbt_cb]
 [img_sbt_cb]: {{ img_dir }}/sbt_cb.png
 
-<!-- more start -->
+The only real tweak is setting `'source_link_position': "footer"` to move
+the documentation source code link to the bottom of each page.
 
 ## Navigation Menu Dropdowns
 
@@ -88,10 +125,18 @@ So let's see how everything looks and works with the new v0.1.0 theme.
 * Existing zip file
 * New PyPI.
 
+
+
 [bootstrap]: http://twitter.github.com/bootstrap/
 [python]: http://python.org/
+[django]: https://www.djangoproject.com/
+[sphinx]: http://sphinx.pocoo.org/
+[twitter]: https://twitter.com/
+[cb_gh]: http://ryan-roemer.github.com/django-cloud-browser/
+[cb_site]: https://github.com/ryan-roemer/django-cloud-browser/
 [sbt_lb_post]: http://loose-bits.com/2011/12/09/sphinx-twitter-bootstrap-theme.html
 [sbt_demo]: http://ryan-roemer.github.com/sphinx-bootstrap-theme
+[sbt_demo_cfg]: https://github.com/ryan-roemer/sphinx-bootstrap-theme/blob/master/demo/source/conf.py
 [sbt_demo_readme]: http://ryan-roemer.github.com/sphinx-bootstrap-theme/README.html
 [sbt_downloads]: https://github.com/ryan-roemer/sphinx-bootstrap-theme/downloads
 [sbt_gh]: https://github.com/ryan-roemer/sphinx-bootstrap-theme
@@ -100,7 +145,5 @@ So let's see how everything looks and works with the new v0.1.0 theme.
 [sbt_readme]: https://github.com/ryan-roemer/sphinx-bootstrap-theme/blob/master/README.rst
 [sbt_pypi]: http://pypi.python.org/pypi/sphinx-bootstrap-theme
 [sbt_zip]: https://github.com/downloads/ryan-roemer/sphinx-bootstrap-theme/bootstrap.zip
-[sphinx]: http://sphinx.pocoo.org/
-[twitter]: https://twitter.com/
 
 <!-- more end -->
