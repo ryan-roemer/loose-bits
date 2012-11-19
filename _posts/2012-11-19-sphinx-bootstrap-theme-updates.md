@@ -18,7 +18,7 @@ bring together two of my favorite open source technologies - Sphinx and Twitter
 Bootstrap. [Sphinx][sphinx] is a widely-used [Python][python]-based authoring
 tool for creating static websites and API documentation. [Twitter][twitter]
 [Bootstrap][bootstrap] is a frontend JavaScript / CSS framework that offers a
-consistent UI experience, typography, grid systems, navigation / button / etc.
+consistent UI experience, typography, grid systems, navigation / button / other
 components, and responsive features for mobile design.
 
 Since its introduction, I now use Sphinx with the Bootstrap Theme
@@ -35,15 +35,14 @@ Improvements now available in version 0.1.0 include:
   experience.
 * Reworked the underlying layout code to support fully responsive design,
   allowing any site to look great on mobile devices like an iPhone or iPad.
-* Created a PyPI package entry to permit installation via
-  `pip install sphinx_bootstrap_theme` (in addition to the traditional method
-  of downloading a theme zip file).
+* Created a PyPI package to permit installation via
+  `pip install sphinx_bootstrap_theme`.
 
 So let's see how everything looks and works with the new v0.1.0 theme.
 
 ## Theme Options
 
-The theme as several new options that you can set in the "conf.py"
+The theme has several new options that you can set in the "conf.py"
 configuration file.
 
 ### Bootstrap Theme Demo Site
@@ -96,7 +95,7 @@ of each page.
 
 The navigation bar menus are now hierarchically arranged into dropdowns and
 sub-menus for easier navigation. This looks a lot better than the previous
-theme incarnations (which just used hacked-up CSS whitespace padding).
+versions (which just used hacked-up CSS whitespace padding).
 
 [![Navbar Menu Dropdowns][img_sbt_nav_dropdown_hl]][img_sbt_nav_dropdown_hl]
 [img_sbt_nav_dropdown]: {{ img_dir }}/sbt_nav_dropdown.png
@@ -143,21 +142,21 @@ The Bootstrap Theme supports installation via [download][sbt_downloads] as
 detailed in my [previous blog post][sbt_lb_post_install] and now adds full
 [PyPI][sbt_pypi] installation support as a Python package.
 
-To get the theme package from PyPI, use `pip` to install it:
+To get the theme from PyPI, use `pip` to install it:
 
 {% highlight bash %}
 $ pip install sphinx_bootstrap_theme
 {% endhighlight %}
 
-Then, in your Sphinx "conf.py" configuration file, import the theme module
+In your Sphinx "conf.py" configuration file, import the theme module
 at the top:
 
 {% highlight python %}
 import sphinx_bootstrap_theme
 {% endhighlight %}
 
-We then use the module to get values for `html_theme_path` when we configure
-the HTML theme later in "conf.py":
+Then, configure the HTML theme values in "conf.py", using the module to get
+values for `html_theme_path`:
 
 {% highlight python %}
 # Activate the theme.
@@ -182,8 +181,8 @@ feedback ([issue reports][sbt_issues], [pull requests][sbt_pull], etc.).
 [django]: https://www.djangoproject.com/
 [sphinx]: http://sphinx.pocoo.org/
 [twitter]: https://twitter.com/
-[cb_gh]: http://ryan-roemer.github.com/django-cloud-browser/
-[cb_site]: https://github.com/ryan-roemer/django-cloud-browser/
+[cb_gh]: https://github.com/ryan-roemer/django-cloud-browser/
+[cb_site]: http://ryan-roemer.github.com/django-cloud-browser/
 [sbt_lb_post]: http://loose-bits.com/2011/12/09/sphinx-twitter-bootstrap-theme.html
 [sbt_lb_post_install]: http://loose-bits.com/2011/12/09/sphinx-twitter-bootstrap-theme.html#installation
 [sbt_demo]: http://ryan-roemer.github.com/sphinx-bootstrap-theme
