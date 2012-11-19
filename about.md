@@ -8,9 +8,9 @@ title: Ryan Roemer
 
 I am a software engineer interested in big data, cloud computing, and the
 collision of law and technology. I am presently the Director of Engineering at
-[SpanishDict](http://spanishdict.com), the world's largest Spanish learning
-website, where I manage the software development and systems
-architecture, as well as all of our technical operations.
+Curiosity Media, which hosts [SpanishDict](http://spanishdict.com), the world's
+largest Spanish learning website. As director, I manage the software development
+and systems architecture, as well as all of our technical operations.
 
 Recounting things roughly in chronological order, I was a programmer at a small
 San Diego startup during the late 1990's dot-com boom and meltdown. The bust
@@ -26,10 +26,10 @@ software engineer in the Cloud Computing storage group, working with really
 large-scale distributed systems. I then merged both my patent law and
 computer science backgrounds as a senior engineer at
 [IP Street](http://www.ipstreet.com/), working on intellectual property data
-mining before finally heading off to SpanishDict.
+mining before finally finding my way to Curiosity Media.
 
 Other places you can find me  on the web are:
-[Twitter](https://twitter.com/#!/ryan_roemer),
+[Twitter](https://twitter.com/ryan_roemer),
 [LinkedIn](http://www.linkedin.com/in/ryanroemer),
 [Stack Overflow](http://stackoverflow.com/users/741892/ryan-roemer),
 and [my research site](http://ryanroemer.com).
