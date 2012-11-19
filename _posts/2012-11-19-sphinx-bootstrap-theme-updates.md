@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Sphinx Bootstrap Theme Updates - Mobile, Dropdowns, and More
-description: The "spinx-bootstrap-theme" plugin enables Twitter
-  Bootstrap integration with Sphinx documentation. Version 0.1.0 adds an array
-  of new features including responsive (mobile-friendly) design, better
-  dropdown navigation menu support, deployment from the PyPI repository and
+description: The "spinx-bootstrap-theme" plugin integrates Twitter
+  Bootstrap with the Sphinx documentation tool. Version 0.1.0 adds new features
+  including responsive (mobile-friendly) design, better dropdown navigation
+  menu support, deployment from the PyPI repository and
   an upgrade to Twitter Bootstrap v2.2.1.
 date: 2012-11-19 11:30:00 UTC
 tags: ['python', 'sphinx', 'theme', 'twitter', 'bootstrap', 'mobile']
@@ -22,7 +22,7 @@ consistent UI experience, typography, grid systems, navigation / button / etc.
 components, and responsive options for mobile design.
 
 Since its introduction, I have regularly used Sphinx with the Bootstrap theme to
-document my open source Python projects and we use theme for all internal
+document my open source Python projects and we use the theme for all internal
 technical documentation at work. Now coming up on the project's anniversary, it
 seemed appropriate to add some tweaks and enhancements to increase the usability
 and extensibility of the theme.
