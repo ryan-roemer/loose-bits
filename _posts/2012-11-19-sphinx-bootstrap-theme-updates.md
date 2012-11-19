@@ -13,32 +13,31 @@ tags: ['python', 'sphinx', 'theme', 'twitter', 'bootstrap', 'mobile']
 
 ## Sphinx Bootstrap Theme Updates!
 
-Almost a year ago, I created the [Sphinx Bootstrap Theme][sbt_gh] project that
-brings together two of my favorite open source technologies - Sphinx and Twitter
-bootstrap. [Sphinx][sphinx] is a widely-used [Python][python]-based authoring
+Almost a year ago, I created the [Sphinx Bootstrap Theme][sbt_gh] project to
+bring together two of my favorite open source technologies - Sphinx and Twitter
+Bootstrap. [Sphinx][sphinx] is a widely-used [Python][python]-based authoring
 tool for creating static websites and API documentation. [Twitter][twitter]
 [Bootstrap][bootstrap] is a frontend JavaScript / CSS framework that offers a
 consistent UI experience, typography, grid systems, navigation / button / etc.
-components, and responsive options for mobile design.
+components, and responsive features for mobile design.
 
-Since its introduction, I have regularly used Sphinx with the Bootstrap Theme to
-document my open source Python projects and we use the theme for all internal
-technical documentation at work. Now coming up on the project's anniversary, it
+Since its introduction, I now use Sphinx with the Bootstrap Theme
+for my open source Python projects and we use the theme for all internal
+technical documentation at work. Coming up on the project's anniversary, it
 seemed appropriate to add some tweaks and enhancements to increase the usability
 and extensibility of the theme.
 
-Improvements now available in version v0.1.0 include:
+Improvements now available in version 0.1.0 include:
 
 * Upgraded the Bootstrap libraries to version 2.2.1.
-* Added several new theme options to control UI appearance and behavior.
+* Added new theme options to control UI appearance and behavior.
 * Navigation bar menus now have hierarchical sub-menus for a more intuitive
   experience.
 * Reworked the underlying layout code to support fully responsive design,
-  allowing any site to look great and actually be usable on mobile devices
-  like an iPhone or iPad.
-* Created a PyPI package entry to permit installation via a simple
-  `pip install sphinx_bootstrap_theme` in addition to the traditional method
-  of downloading a theme zip file.
+  allowing any site to look great on mobile devices like an iPhone or iPad.
+* Created a PyPI package entry to permit installation via
+  `pip install sphinx_bootstrap_theme` (in addition to the traditional method
+  of downloading a theme zip file).
 
 So let's see how everything looks and works with the new v0.1.0 theme.
 
@@ -62,7 +61,7 @@ The demo site has the following theme option settings in
 
 {% highlight python %}
 html_theme_options = {
-    # HTML navbar class (Default: "navbar") to attach to <div> element.
+    # HTML navbar class (Default: "navbar") to attach to <div>.
     # For black navbar, do "navbar navbar-inverse"
     'navbar_class': "navbar navbar-inverse",
 
@@ -71,31 +70,32 @@ html_theme_options = {
     'navbar_fixed_top': "true",
 
     # Location of link to source.
-    # Options are "nav" (default), "footer" or anything else to exclude.
+    # Options are "nav" (default), "footer".
     'source_link_position': "nav",
 }
 {% endhighlight %}
 
-Notably, this gives us a dark black navigation bar that is fixed to the top
+Notably, this gives us a dark navigation bar that is fixed to the top
 of the page during any scrolling.
 
 ### Django Cloud Browser
 
-[Django Cloud Browser][cb_gh] is a reusable [Django][django] for browsing
-and downloading files stored in various cloud datastores (like Amazon Web
-Services S3, Rackspace Cloud Files, etc.). The [API documentation][cb_site]
+[Django Cloud Browser][cb_gh] is a reusable [Django][django] application for
+browsing and downloading files stored in various cloud datastores (e.g., Amazon
+Web Services S3, Rackspace Cloud Files). The [API documentation][cb_site]
 uses the Bootstrap Theme with (mostly) the default options.
 
 [![Django Cloud Browser][img_sbt_cb]][img_sbt_cb]
 [img_sbt_cb]: {{ img_dir }}/sbt_cb.png
 
 The only real tweak is setting `'source_link_position': "footer"` to move
-the documentation source code link to the bottom of each page.
+the documentation source code link down from the navigation bar to the bottom
+of each page.
 
 ## Navigation Menu Dropdowns
 
 The navigation bar menus are now hierarchically arranged into dropdowns and
-sub-menus for easier navigation that looks a lot better than the previous
+sub-menus for easier navigation. This looks a lot better than the previous
 theme incarnations (which just used hacked-up CSS whitespace padding).
 
 [![Navbar Menu Dropdowns][img_sbt_nav_dropdown_hl]][img_sbt_nav_dropdown_hl]
@@ -105,18 +105,19 @@ theme incarnations (which just used hacked-up CSS whitespace padding).
 ## Mobile UI Support
 
 One of the most popular aspects of the Bootstrap library is its great support
-for [responsive mobile features][bootstrap_resp]. The responsive features are
-now integrated into the Sphinx Bootstrap Theme.
+for [responsive mobile design][bootstrap_resp]. These responsive features are
+integrated into version 0.1.0 of the theme.
 
 The Bootstrap Theme now renders a collapsed, clickable navigation bar in
-smaller viewports (like a mobile phone and some table orientations). Viewing
-the theme demo site in a iPhone gives us a slightly more terse UI.
+smaller viewports (like a mobile phone and some tablet orientations). Viewing
+the theme demo site in an iPhone gives us a slightly more terse UI.
 
 [![Mobile Phone View][img_sbt_ios_th]][img_sbt_ios]
 [img_sbt_ios_th]: {{ img_dir }}/sbt_ios_th.png
 [img_sbt_ios]: {{ img_dir }}/sbt_ios.png
 
-Clicking on the dropdown button gives us a basic first-level navigation menu.
+Clicking on the right navigation bar button gives us a basic first-level
+dropdown menu.
 
 [![Mobile Phone Navbar][img_sbt_ios_nav_hl_th]][img_sbt_ios_hl_nav]
 [img_sbt_ios_nav_th]: {{ img_dir }}/sbt_ios_nav_th.png
@@ -125,7 +126,7 @@ Clicking on the dropdown button gives us a basic first-level navigation menu.
 [img_sbt_ios_nav_hl]: {{ img_dir }}/sbt_ios_hl_nav.png
 
 And we can further click through sub-menus to navigate to the desired section
-or page in the site.
+or page of a website.
 
 [![Mobile Phone Navbar Menu][img_sbt_ios_nav_dropdown_hl_th]][img_sbt_ios_nav_dropdown_hl]
 [img_sbt_ios_nav_dropdown_th]: {{ img_dir }}/sbt_ios_nav_dropdown_th.png
@@ -155,8 +156,8 @@ at the top:
 import sphinx_bootstrap_theme
 {% endhighlight %}
 
-This enables us to use the module for the HTML theme configuration later
-in "conf.py":
+We then use the module to get values for `html_theme_path` when we configure
+the HTML theme later in "conf.py":
 
 {% highlight python %}
 # Activate the theme.
@@ -169,8 +170,8 @@ documentation building.
 
 ## Conclusion
 
-The Bootstrap Theme brings Twitter Bootstrap to Sphinx sites and, with version
-0.1.0, adds even more useful Bootstrap features and options. So try it out,
+The Bootstrap Theme brings Twitter Bootstrap to Sphinx sites and with version
+0.1.0 adds even more useful Bootstrap features and options. So try it out,
 see if Bootstrap is right for your Sphinx website, and please pass on any
 feedback ([issue reports][sbt_issues], [pull requests][sbt_pull], etc.).
 
