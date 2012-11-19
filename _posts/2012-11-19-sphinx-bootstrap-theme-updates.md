@@ -21,7 +21,7 @@ tool for creating static websites and API documentation. [Twitter][twitter]
 consistent UI experience, typography, grid systems, navigation / button / etc.
 components, and responsive options for mobile design.
 
-Since its introduction, I have regularly used Sphinx with the Bootstrap theme to
+Since its introduction, I have regularly used Sphinx with the Bootstrap Theme to
 document my open source Python projects and we use the theme for all internal
 technical documentation at work. Now coming up on the project's anniversary, it
 seemed appropriate to add some tweaks and enhancements to increase the usability
@@ -49,7 +49,7 @@ configuration file.
 
 ### Bootstrap Theme Demo Site
 
-Let's start with the Bootstrap theme's own
+Let's start with the Bootstrap Theme's own
 [demonstration website][sbt_demo_readme].
 
 [![Sphinx Bootstrap Theme Desktop View][img_sbt_desk]][img_sbt_desk]
@@ -84,7 +84,7 @@ of the page during any scrolling.
 [Django Cloud Browser][cb_gh] is a reusable [Django][django] for browsing
 and downloading files stored in various cloud datastores (like Amazon Web
 Services S3, Rackspace Cloud Files, etc.). The [API documentation][cb_site]
-uses the Bootstrap theme with (mostly) the default options.
+uses the Bootstrap Theme with (mostly) the default options.
 
 [![Django Cloud Browser][img_sbt_cb]][img_sbt_cb]
 [img_sbt_cb]: {{ img_dir }}/sbt_cb.png
@@ -108,7 +108,7 @@ One of the most popular aspects of the Bootstrap library is its great support
 for [responsive mobile features][bootstrap_resp]. The responsive features are
 now integrated into the Sphinx Bootstrap Theme.
 
-The Bootstrap theme now renders a collapsed, clickable navigation bar in
+The Bootstrap Theme now renders a collapsed, clickable navigation bar in
 smaller viewports (like a mobile phone and some table orientations). Viewing
 the theme demo site in a iPhone gives us a slightly more terse UI.
 
@@ -138,11 +138,41 @@ now gives your API documentation or website real usability for mobile devices.
 
 ## Installation
 
+The Bootstrap Theme supports installation via [download][sbt_downloads] as
+detailed in my [previous blog post][sbt_lb_post_install] and now adds full
+[PyPI][sbt_pypi] installation support as a Python package.
 
+To get the theme package from PyPI, use `pip` to install it:
 
-* Existing zip file
-* New PyPI.
+{% highlight bash %}
+$ pip install sphinx_bootstrap_theme
+{% endhighlight %}
 
+Then, in your Sphinx "conf.py" configuration file, import the theme module
+at the top:
+
+{% highlight python %}
+import sphinx_bootstrap_theme
+{% endhighlight %}
+
+This enables us to use the module for the HTML theme configuration later
+in "conf.py":
+
+{% highlight python %}
+# Activate the theme.
+html_theme = 'bootstrap'
+html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+{% endhighlight %}
+
+And, that's pretty much it. The theme should now be available to Sphinx for
+documentation building.
+
+## Conclusion
+
+The Bootstrap Theme brings Twitter Bootstrap to Sphinx sites and, with version
+0.1.0, adds even more useful Bootstrap features and options. So try it out,
+see if Bootstrap is right for your Sphinx website, and please pass on any
+feedback ([issue reports][sbt_issues], [pull requests][sbt_pull], etc.).
 
 
 [bootstrap]: http://twitter.github.com/bootstrap/
@@ -154,6 +184,7 @@ now gives your API documentation or website real usability for mobile devices.
 [cb_gh]: http://ryan-roemer.github.com/django-cloud-browser/
 [cb_site]: https://github.com/ryan-roemer/django-cloud-browser/
 [sbt_lb_post]: http://loose-bits.com/2011/12/09/sphinx-twitter-bootstrap-theme.html
+[sbt_lb_post_install]: http://loose-bits.com/2011/12/09/sphinx-twitter-bootstrap-theme.html#installation
 [sbt_demo]: http://ryan-roemer.github.com/sphinx-bootstrap-theme
 [sbt_demo_cfg]: https://github.com/ryan-roemer/sphinx-bootstrap-theme/blob/master/demo/source/conf.py
 [sbt_demo_readme]: http://ryan-roemer.github.com/sphinx-bootstrap-theme/README.html
