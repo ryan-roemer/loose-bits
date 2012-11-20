@@ -118,11 +118,11 @@ the theme demo site in an iPhone gives us a slightly more terse UI.
 Clicking on the right navigation bar button gives us a basic first-level
 dropdown menu.
 
-[![Mobile Phone Navbar][img_sbt_ios_nav_hl_th]][img_sbt_ios_hl_nav]
+[![Mobile Phone Navbar][img_sbt_ios_nav_hl_th]][img_sbt_ios_nav_hl]
 [img_sbt_ios_nav_th]: {{ img_dir }}/sbt_ios_nav_th.png
 [img_sbt_ios_nav]: {{ img_dir }}/sbt_ios_nav.png
 [img_sbt_ios_nav_hl_th]: {{ img_dir }}/sbt_ios_nav_hl_th.png
-[img_sbt_ios_nav_hl]: {{ img_dir }}/sbt_ios_hl_nav.png
+[img_sbt_ios_nav_hl]: {{ img_dir }}/sbt_ios_nav_hl.png
 
 And we can further click through sub-menus to navigate to the desired section
 or page of a website.
