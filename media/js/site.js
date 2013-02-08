@@ -36,17 +36,17 @@ $(function () {
     lastWidth = newWidth;
   });
 
-  // // Fix collapse to properly open / close.
-  // $('.btn.btn-navbar').live('click', function () {
-  //   // First time doesn't open correctly. Manually do this.
-  //   // See: https://github.com/twitter/bootstrap/issues/3184
-  //   if (!_navClicked) {
-  //     _navClicked = true;
-  //     $('.nav-collapse').show();
-  //     return;
-  //   }
-  //   $('.nav-collapse').toggle();
-  // });
+  // Fix collapse to properly open / close.
+  $('.btn.btn-navbar').on('click', function () {
+    // First time doesn't open correctly. Manually do this.
+    // See: https://github.com/twitter/bootstrap/issues/3184
+    if (!_navClicked) {
+      _navClicked = true;
+      $('.nav-collapse').show();
+      return;
+    }
+    $('.nav-collapse').toggle();
+  });
 
   $('.nav-collapse a[data-toggle]').click(function () {
     $('.nav-collapse').css('height', '100%');
