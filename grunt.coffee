@@ -5,7 +5,7 @@ utils     = cakepop.utils
 module.exports = (grunt) ->
 
   # Add plugins.
-  grunt.loadNpmTasks 'grunt-less'
+  grunt.loadNpmTasks 'grunt-recess'
 
   #############################################################################
   # Config.
@@ -13,31 +13,33 @@ module.exports = (grunt) ->
   grunt.initConfig
     pkg: '<json:package.json>'
 
-    less:
+    recess:
       bootstrap:
-        src:  [
+        src: [
           "_less/bootstrap.less"
         ]
         dest: "media/css/vendor/bootstrap.css"
         options:
+          compile:  true
           compress: true
       site:
-        src:  [
+        src: [
           "_less/default.less"
         ]
         dest: "media/css/default.css"
         options:
+          compile:  true
           compress: true
 
     watch:
-      less:
+      recess:
         files: [
-          "<config:less.bootstrap.src>"
-          "<config:less.site.src>"
+          "<config:recess.bootstrap.src>"
+          "<config:recess.site.src>"
           "_less/vendor/**"
           "_less/bootstrap-variables.less"
         ]
-        tasks: "less dev:site"
+        tasks: "recess dev:site"
       404:
         files: [
           "404.md"
@@ -45,8 +47,8 @@ module.exports = (grunt) ->
         tasks: "build:404"
       site:
         files: [
-          "<config:less.bootstrap.src>"
-          "<config:less.site.src>"
+          "<config:recess.bootstrap.src>"
+          "<config:recess.site.src>"
           "_includes/**"
           "_layouts/**"
           "_posts/**"
@@ -75,7 +77,7 @@ module.exports = (grunt) ->
   #############################################################################
   grunt.registerTask "build-all",
                      "Build all source files.",
-                     "build:404 less"
+                     "build:404 recess"
 
   grunt.registerTask "watch-all",
                      "Watch and build all source/dev files.",
