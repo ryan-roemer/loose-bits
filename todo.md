@@ -3,8 +3,6 @@
 
 ## Current
 
-* Nav Bar: If open/close navbar in phone, then resize to tablet/desktop, the icons are lost. Probably need a quick JS hack.
-
 ## Notes
 
 * Date: `date -u +"%Y-%m-%d %H:%M:%S UTC"`
