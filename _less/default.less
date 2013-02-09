@@ -1,7 +1,7 @@
 // ----------------------------------------------------------------------------
 // Imports
 // ----------------------------------------------------------------------------
-@import "vendor/bootstrap-2.2.1/mixins.less";
+@import "vendor/bootstrap-2.3.0/mixins.less";
 @import "bootstrap-variables.less";
 
 // ----------------------------------------------------------------------------
@@ -102,22 +102,6 @@ header {
     height: 32px;
   }
 }
-
-// Needed to make collapse appear.
-.nav-collapse.collapse {
-  height: auto !important;
-  overflow: visible !important;
-}
-.nav-collapse {
-  .nav > li > a,
-  .dropdown-menu a {
-    color: @navbarInverseLinkColor;
-    &:hover {
-      color: @navbarInverseLinkColorHover;
-    }
-  }
-}
-
 
 // ----------------------------------------------------------------------------
 // Page
@@ -245,7 +229,6 @@ pre,
     border: 2px solid #aaaaaa;
   }
 }
-
 
 .highlight span {
    background-color: @code-background !important;
