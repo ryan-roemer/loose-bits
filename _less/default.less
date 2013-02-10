@@ -20,7 +20,7 @@
 @heading-color: #555555;
 
 @content-background: #ffffff;
-@content-padding: 30px;
+@content-padding: 20px;
 @code-background: #222222;
 @code-color: #ffffff;
 @code-border: #cccccc;
@@ -69,7 +69,8 @@ header {
 
     p {
       margin: 0px;
-      font-size: 1.05em;
+      padding-top: 0.45em;
+      font-size: 1.15em;
       font-weight: 350;
       text-align: left;
       color: @header-subtitle-color;
@@ -122,9 +123,6 @@ div.page {
     a, a:active, a:visited, a:hover {
       color: @post-title-color;
       text-decoration: none;
-      @media (min-width: 768px) {
-        text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-      }
     }
   }
 }
@@ -132,9 +130,9 @@ div.page {
 #main {
   .inner {
     margin-top: 5px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     .border-radius(10px);
-    padding: 20px @content-padding;
+    padding: @content-padding;
     background: @content-background;
     .box-shadow(3px 5px 5px #999999);
 
@@ -147,10 +145,21 @@ div.page {
 .date,
 .tags span.section {
   font-style: italic;
+  margin-bottom: 2px;
 }
 
 .tags {
   text-align: right;
+
+  .badge {
+    padding: 4px 7px;
+    margin-bottom: 2px;
+  }
+
+  a, a:active, a:visited, a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
 }
 
 .post {
