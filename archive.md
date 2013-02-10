@@ -10,7 +10,7 @@ title: Archive
   <time class="span2" datetime="{{ post.date | xmlschema }}">
     {{ post.date | date: "%Y-%m-%d" }}
   </time>
-  <div class="item span5">
+  <div class="item span9">
     <a href="{{ post.url }}">{{ post.title }}</a>
     <p>{{ post.description | strip_html }}</p>
   </div>
