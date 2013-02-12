@@ -19,7 +19,7 @@ using the theme.
 
 The theme project continues to move along, and as it has been a while since my
 [last update post][sbt_lb_post], here are some of the changes in version
-[1.6.0][sbt_pypi] (since 0.1.0):
+[0.1.6][sbt_pypi] (since 0.1.0):
 
 * Update to Bootstrap v2.3.0.
 * Enable configuration of the depth of the Global TOC ("Site" tab).
