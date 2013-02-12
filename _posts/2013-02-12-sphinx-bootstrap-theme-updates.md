@@ -5,7 +5,7 @@ description: The "spinx-bootstrap-theme" plugin integrates Twitter
   Bootstrap with the Sphinx documentation tool. Version 0.1.6 is the latest
   upgrade with a new Bootstrap version, various fixes and many UI improvements.
 date: 2013-02-12 11:30:00 UTC
-tags: ['python', 'sphinx', 'theme', 'twitter', 'bootstrap', 'mobile']
+tags: ['python', 'sphinx', 'theme', 'twitter', 'bootstrap']
 ---
 
 ## Sphinx Bootstrap Theme
