@@ -3,6 +3,8 @@
 
 ## Current
 
+* Image on "about" page goes outside of div on wide desktop.
+
 ## Notes
 
 * Date: `date -u +"%Y-%m-%d %H:%M:%S UTC"`
