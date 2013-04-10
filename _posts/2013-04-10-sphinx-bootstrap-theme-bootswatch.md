@@ -7,6 +7,7 @@ description: The "spinx-bootstrap-theme" integrates Twitter
 date: 2013-04-10 11:30:00 UTC
 tags: ['python', 'sphinx', 'theme', 'twitter', 'bootstrap', 'bootswatch']
 ---
+{% capture img_dir %}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
 
 ## Theme Updates
 
@@ -22,7 +23,9 @@ The project's [demonstration site][sbt_demo_readme] now uses the
 and well... *orange-ish*, feel to the site. Here is a screenshot of the
 demonstration site in a desktop viewport:
 
-**TODO IMAGE**
+[![Theme with Bootswatch][img_demo_desk_th]][img_demo_desk]
+[img_demo_desk_th]: {{ img_dir }}/demo_desk_th.png
+[img_demo_desk]: {{ img_dir }}/demo_desk.png
 
 The project is available for download from [GitHub][sbt_gh] and
 [PyPi][sbt_pypi] and you are encouraged to update and try out some Bootswatch
@@ -52,21 +55,21 @@ html_theme_options = {
 
 The list of Bootswatch themes you can now try out include:
 
-* [`amelia`](http://bootswatch.com/amelia/)
-* [`cerulean`](http://bootswatch.com/cerulean/)
-* [`cosmo`](http://bootswatch.com/cosmo/)
-* [`cyborg`](http://bootswatch.com/cyborg/)
-* [`journal`](http://bootswatch.com/journal/)
-* [`readable`](http://bootswatch.com/readable/)
-* [`simplex`](http://bootswatch.com/simplex/)
-* [`slate`](http://bootswatch.com/slate/)
-* [`spacelab`](http://bootswatch.com/spacelab/)
-* [`spruce`](http://bootswatch.com/spruce/)
-* [`superhero`](http://bootswatch.com/superhero/)
-* [`united`](http://bootswatch.com/united/)
+* [**amelia**](http://bootswatch.com/amelia/)
+* [**cerulean**](http://bootswatch.com/cerulean/)
+* [**cosmo**](http://bootswatch.com/cosmo/)
+* [**cyborg**](http://bootswatch.com/cyborg/)
+* [**journal**](http://bootswatch.com/journal/)
+* [**readable**](http://bootswatch.com/readable/)
+* [**simplex**](http://bootswatch.com/simplex/)
+* [**slate**](http://bootswatch.com/slate/)
+* [**spacelab**](http://bootswatch.com/spacelab/)
+* [**spruce**](http://bootswatch.com/spruce/)
+* [**superhero**](http://bootswatch.com/superhero/)
+* [**united**](http://bootswatch.com/united/)
 
 As a final note, alluded to in a code comment above, the Bootstrap CSS files
-are served off of CDN, which means that if you are offline, your site will
+are served off of **CDN**, which means that if you are offline, your site will
 have a non-themed, vanilla Bootstrap appearance. We are considering refactoring
 the Bootswatch code to be available offline as well.
 
