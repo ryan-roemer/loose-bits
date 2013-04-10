@@ -19,8 +19,8 @@ provide a lot of great new UI possibilities for your documentation. We've
 also internally updated to Bootstrap 2.3.1.
 
 The project's [demonstration site][sbt_demo_readme] now uses the
-"[united](http://bootswatch.com/united/)" Bootswatch theme to give a clean,
-and well... *orange-ish*, feel to the site. Here is a screenshot of the
+"[united](http://bootswatch.com/united/)" Bootswatch theme to give a clean
+and well... *orange-ish* feel to the site. Here is a screenshot of the
 demonstration site in a desktop viewport:
 
 [![Theme with Bootswatch][img_demo_desk_th]][img_demo_desk]
