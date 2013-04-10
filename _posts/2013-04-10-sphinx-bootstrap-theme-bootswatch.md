@@ -9,7 +9,7 @@ tags: ['python', 'sphinx', 'theme', 'twitter', 'bootstrap', 'bootswatch']
 ---
 {% capture img_dir %}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
 
-## Theme Updates
+## Bringing Bootswatch to Sphinx
 
 The [Bootstrap Theme][sbt_gh] for [Sphinx][sphinx] documentation continues to
 evolve, and I'm pleased to announce the v0.2.0 release. The theme integrates
@@ -33,7 +33,7 @@ goodness!
 
 <!-- more start -->
 
-## Bootswatch
+## Adding Bootswatch
 
 As a preliminary note, the use of Bootswatch themes is entirely optional, and
 disabled by default - the project starts with a vanilla Bootstrap appearance,
