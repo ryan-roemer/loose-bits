@@ -11,7 +11,7 @@ tags: ['python', 'sphinx', 'theme', 'twitter', 'bootstrap', 'bootswatch']
 
 ## Theme Updates
 
-The [Bootstrap Theme][sbt_gh] for [Sphinx][sphinx] document continues to
+The [Bootstrap Theme][sbt_gh] for [Sphinx][sphinx] documentation continues to
 evolve, and I'm pleased to announce the v0.2.0 release. The theme integrates
 [Twitter][twitter]'s [Bootstrap][bootstrap] library into Sphinx,
 and v0.2.0 adds new support for [Bootswatch][bootswatch] CSS extensions, which
@@ -28,7 +28,7 @@ demonstration site in a desktop viewport:
 [img_demo_desk]: {{ img_dir }}/demo_desk.png
 
 The project is available for download from [GitHub][sbt_gh] and
-[PyPi][sbt_pypi] and you are encouraged to update and try out some Bootswatch
+[PyPi][sbt_pypi]. You are encouraged to update and try out some Bootswatch
 goodness!
 
 <!-- more start -->
@@ -38,7 +38,7 @@ goodness!
 As a preliminary note, the use of Bootswatch themes is entirely optional, and
 disabled by default - the project starts with a vanilla Bootstrap appearance,
 which you can customize to your heart's content. To enable a specific
-Bootswatch theme, you can set the following option in your
+Bootswatch theme, set the following option in your
 "[conf.py][sbt_demo_cfg]" file:
 
 {% highlight python %}
@@ -68,12 +68,10 @@ The list of Bootswatch themes you can now try out include:
 * [**superhero**](http://bootswatch.com/superhero/)
 * [**united**](http://bootswatch.com/united/)
 
-As a final note, alluded to in a code comment above, the Bootstrap CSS files
-are served off of **CDN**, which means that if you are offline, your site will
-have a non-themed, vanilla Bootstrap appearance. We are considering refactoring
-the Bootswatch code to be available offline as well.
-
-Happy theming!
+As a final note, the Bootstrap CSS files are served off of **CDN**, which means
+that if you are offline, your site will have a non-themed, vanilla Bootstrap
+appearance. We are considering refactoring the Bootswatch code to be available
+offline as well.
 
 [bootstrap]: http://twitter.github.com/bootstrap/
 [bootswatch]: http://bootswatch.com/
