@@ -11,7 +11,7 @@ title: Archive
     {{ post.date | date: "%Y-%m-%d" }}
   </time>
   <div class="item span9">
-    <a href="{{ post.url }}">{{ post.title }}</a>
+    <strong><a href="{{ post.url }}">{{ post.title }}</a></strong>
     <p>{{ post.description | strip_html }}</p>
   </div>
 </div>
