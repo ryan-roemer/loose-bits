@@ -5,6 +5,7 @@ utils     = cakepop.utils
 module.exports = (grunt) ->
 
   # Add plugins.
+  grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-recess'
 
   #############################################################################
