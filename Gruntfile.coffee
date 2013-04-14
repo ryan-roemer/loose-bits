@@ -77,8 +77,8 @@ module.exports = (grunt) ->
   #############################################################################
   grunt.registerTask "build-all",
                      "Build all source files.",
-                     "build:404 recess"
+                     ["build:404", "recess"]
 
   grunt.registerTask "watch-all",
                      "Watch and build all source/dev files.",
-                     "build-all watch"
+                     ["build-all", "watch"]
