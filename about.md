@@ -5,6 +5,7 @@ title: Ryan Roemer
 ---
 
 <img class="bordered pull-right" src="{{ site.baseurl }}media/img/portrait/forest.jpg" />
+<div class="clearfix"></div>
 
 I am a software engineer interested in big data, cloud computing, and the
 collision of law and technology. I am presently the Director of Engineering at
