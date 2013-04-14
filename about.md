@@ -35,15 +35,27 @@ Other places you can find me  on the web are:
 and [my research site](http://ryanroemer.com).
 Some of my open source projects on [GitHub](https://github.com/ryan-roemer) include:
 
+* **[Backbone.js Testing](http://backbone-testing.com)**: Code examples with
+  sample tests, applications, and helpers for testing
+  [Backbone.js](http://backbonejs.org/) frontend applications. Demonstrates a
+  test infrastructure using the [Mocha](http://visionmedia.github.com/mocha/),
+  [Chai](http://chaijs.com/), and [Sinon.JS](http://sinonjs.org/)
+  libraries. Also contains a live online demo note-taking application,
+  **[Notes](http://backbone-testing.com/notes/app/index.html)**, with a full
+  application [test suite](http://backbone-testing.com/notes/test/test.html).
+  Part of a forthcoming book on Backbone.js testing principles and practices.
+
 * **[Sunny.js](http://sunnyjs.org)**: A [Node.js](http://nodejs.org/)
   multi-cloud datastore client (with support for
   [Amazon Web Services](http://aws.amazon.com/)
   [Simple Storage Service](http://aws.amazon.com/s3/) (S3) and
   [Google Storage for Developers](http://code.google.com/apis/storage/)).
+
 * **[Django Cloud Browser](http://ryan-roemer.github.com/django-cloud-browser/)**:
   A [Django](http://www.djangoproject.com/) application for browsing and
   navigating cloud-based datastores (including Amazon Web Services S3 and
   [Rackspace Cloud Files](http://www.rackspace.com/cloud/)).
+
 * **[Sphinx Bootstrap Theme](http://ryan-roemer.github.com/sphinx-bootstrap-theme/)**:
   Integrates the Twitter [Bootstrap](http://twitter.github.com/bootstrap/)
   CSS / JavaScript framework as a [Sphinx](http://sphinx.pocoo.org/)
