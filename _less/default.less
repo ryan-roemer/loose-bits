@@ -88,6 +88,17 @@ header {
 // ----------------------------------------------------------------------------
 // Center NavBar on Tablet+.
 @media (min-width: 768px) {
+  header {
+    // See: http://stackoverflow.com/a/6245879/741892;
+    .box-shadow(0px 10px 8px -8px #333);
+    margin-left: -8px;
+    margin-right: -8px;
+
+    .ie6 &, .ie7 &, .ie8 & {
+      margin-left: default;
+      margin-right: default;
+    }
+  }
   .header-container {
     margin-right: auto;
     margin-left: auto;
