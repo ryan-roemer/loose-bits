@@ -40,7 +40,7 @@ module.exports = (grunt) ->
           "_less/vendor/**"
           "_less/bootstrap-variables.less"
         ]
-        tasks: "recess dev:site"
+        tasks: ["recess", "dev:site"]
       404:
         files: [
           "404.md"
