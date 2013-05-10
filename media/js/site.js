@@ -18,12 +18,12 @@ $(function () {
       // - wood
       // - moss
       // - water
-      // - beach
+      $.backstretch("../../media/img/bg/disco/moss.jpg");
       // (stock/)
       // - clouds: landscapes/sky/clouds-2-4.htm
       // - sunrise: landscapes/sky/sunrise-3-4.htm
       // - yosemite: travel/yosemite/yosemite-meadows-4.htm
-      $.backstretch("../../media/img/bg/disco/wood.jpg");
+      //$.backstretch("../../media/img/bg/stock/sunrise.jpg");
       $(".backstretch").addClass("hidden-phone");
     }
   };
