@@ -22,7 +22,7 @@ outline and signing a contract to begin work on the book.
 
 
 
-
+TODO - Go through emails and take notes.
 
 
 General - First Post
@@ -35,8 +35,21 @@ General - First Post
 
 "Finding and Starting a Project"
 ================================
+* STORY: I've been interested in frontend testing for a long time, since Env.js + Rhino and was now knee-deep in a large Backbone.js project that we had spent a significant amount of time building a test infrastructure around. Modern tools have made this all much easier, and I'd been learning off of blogs posts, and ad hoc sources.
+* STORY: Outline
+  * Original outline from Packt.
+  * Switched Jasmine to Mocha / Chai.
+  * Added automated testing / appendix (later cut).
+* STORY: Contract
+  * Scoped at 80, then 100 pages.
+  * Remove the future works clause.
+  * Link to other authors that removed more.
+  * Open source for the code samples.
 * TIP: Review and negotiate the contract. It's an open discussion, not a "take it or leave it" proposition.
 * TIP: Don't do it for the money. And, don't ever try and calculate what your effective hourly rate is. Reasons to do it: (1) learn a new subject, (2) get your name out there in a (new) area.
+  * http://authors.packtpub.com/content/royalties
+    * "You get 16% of all revenue earned from your book"
+    * Advance (basically nothing).
 * TIP: Do OS for examples. Source licensing: do OS on GH in addition to publisher's server.
 * TIP: Time commitments. And negotiating life events and deadline slippage. And factoring in revision time (after reviews).
   * STORY: Cross-country move.
