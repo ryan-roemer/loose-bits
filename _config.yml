@@ -13,7 +13,7 @@ title:        Loose Bits
 subtitle:     Thoughts on distributed systems, cloud computing, and the
               intersection of law and technology.
 keywords:     ['ryan roemer', 'python', 'javascript', 'node.js', 'nosql',
-               'search', 'solr', 'cloud', 'cloud computing', 'law', 'patents']
+               'search', 'backbone.js', 'cloud', 'cloud computing', 'law', 'patents']
 
 source:       .
 destination:  ./_site
