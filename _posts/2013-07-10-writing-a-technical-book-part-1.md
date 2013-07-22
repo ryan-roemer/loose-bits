@@ -16,10 +16,40 @@ This is the first in a series of posts describing my adventures and
 tribulations in the course of writing my first technical book,
 **[Backbone.js Testing][book_packt]**. In this post, I will look back on how
 I got roped into becoming an author, planning and scoping a prospective book
-outline and signing a contract to begin work on the book.
+outline, and signing a contract to begin work on the book.
 
-## Some Background
+## Why Write a Book?
 
+Writing a book is an enormous time commitment, puts pressure on your personal
+and work obligations, and has little or no chance of being financially a
+worthwhile endeavor. So, why do it?
+
+TODO -- HERE
+
+
+
+
+
+
+## An Idea Whose Time has Come
+
+I have been interested in frontend web application testing for quite some time.
+Historically, testing JavaScript in web pages has been an arduous task, with
+very few good options and enormous amount of pain in any solution. For example,
+in 2011 I wrote [two][envjs_post01] [posts][envjs_post02] on testing frontend
+JavaScript using Env.js and Rhino. My solution was unreliable and hacked
+together, but at that point, at least it was *something*.
+
+Fast-forward to today, and with the rapid rise of Node.js on the backend and a
+whole host of new and exciting frontend libraries, there are a lot more options
+for frontend testing. At Curiosity Media, we had a large Backbone.js web
+application that we were able to get a solid, modern test harness around using
+Mocha, Chai and Sinon.JS.
+
+[envjs_post01]: http://loose-bits.com/2011/02/browserless-ajax-testing-with-rhino-and.html
+[envjs_post02]: http://loose-bits.com/2011/02/browserless-ajax-testing-with-rhino-and_16.html
+
+### Personal Interests
 
 
 TODO - Go through emails and take notes.
