@@ -78,13 +78,18 @@ reviewers.
 
 Fortunately, the subject matter and book size met up well with my interest
 in frontend testing and ability to explore authorship with a small title.
-The original book outline Packt proposed was for an 80-page book with five
-chapters covering Backbone.js application testing concepts and tools.
-
 So, after a few days of deliberation, I signed on and began the pre-writing
 process and negotiations with Packt.
 
 ## The Book Proposal
+
+My first contact with Packt was from an "Author Relationship Executive", which
+I think is something like an author recruiter. The tentative project outline
+Packt proposed was for a 90-page book with five chapters covering Backbone.js
+application testing concepts and tools.
+
+TODO - Talk with Advisor.
+TODO - Handoff to Commissioning Editor.
 
 
 
