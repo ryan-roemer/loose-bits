@@ -127,6 +127,8 @@ General - First Post
   * STORY: Cross-country move.
 * STORY: Editors in different time zones. Packt
 
+* DISCUSS: "Why go with a real publisher (e.g., Packt) instead of self publishing (e.g., LeanPub)". Answers - have friend who wrote for Packt, access to technical reviewers, publicity, distribution, and they already wanted a book on the topic.
+
 
 ## TODO - Book description stuff.
 
