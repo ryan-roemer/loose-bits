@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Writing a Technical Book, Part 1
+title:  Writing a Technical Book, Part 1 - Starting the Project
 description:
   In a series of posts, I walk through my adventure in writing my first
   technical book, Backbone.js Testing. My first post discusses the process
@@ -12,23 +12,45 @@ tags: ['writing', 'book', 'javascript', 'backbone.js', 'testing']
 
 ## Finding and Starting a Book Project
 
-This is the first in a series of posts describing my adventures and
-tribulations in the course of writing my first technical book,
-**[Backbone.js Testing][book_packt]**. In this post, I will look back on how
-I got roped into becoming an author, planning and scoping a prospective book
-outline, and signing a contract to begin work on the book.
+I published my first technical book, **[Backbone.js Testing][book_packt]**,
+in July, 2013. Now that I am coming down off the high of actually getting the
+book out to the world, I thought that I would take a little bit of time to
+reflect on my journey and write a series of posts about the adventures and
+tribulations of writing a technical book.
+
+In this first post, I will look back on how I got roped into becoming an author,
+planning and scoping a prospective book outline, and signing a contract to begin
+work on the book.
 
 ## Why Write a Book?
 
 Writing a book is an enormous time commitment, puts pressure on your personal
 and work obligations, and has little or no chance of being financially a
-worthwhile endeavor. So, why do it?
+worthwhile endeavor.
 
-The quick answer for me is that I was very curious about the authorship
-experience and when Packt pitched me the book idea, it turned out to be for
-a subject I am deeply interested in - frontend web application testing.
+*So, why do it?*
 
-### Writing Tendencies
+The short answer is that (1) I liked the proposed topic, (2) I was already
+interested in writing, and (3) Packt Publishing had some fortuitous timing in
+pitching the project.
+
+### I Liked the Topic
+
+On the technical side of things, I have been interested in frontend web
+application testing for quite some time.
+Historically, testing JavaScript in web pages has been an arduous task, with
+very few good options and enormous amount of pain in any solution. For example,
+in 2011 I wrote [two][envjs_post01] [posts][envjs_post02] on testing frontend
+JavaScript using Env.js and Rhino. My solution was unreliable and hacked
+together, but at that point, at least it was *something*.
+
+Fast-forward to today, and with the rapid rise of Node.js on the backend and a
+whole host of new and exciting browser libraries, there are a lot more options
+for frontend testing. At Curiosity Media, we had a large Backbone.js web
+application that we were able to get a solid, modern test harness around using
+Mocha, Chai and Sinon.JS.
+
+### I Like to Write
 
 By way of a bit more background, software engineering is my second career.
 Before becoming a full-time geek, I was an intellectual property attorney,
@@ -52,23 +74,7 @@ of my days coding, but still keep a deep appreciation for technical writing
 and authorship generally. Just not so much as to want to do that for my full
 time job.
 
-### A Topic of Deep Interest
-
-On the technical side of things, I have been interested in frontend web
-application testing for quite some time.
-Historically, testing JavaScript in web pages has been an arduous task, with
-very few good options and enormous amount of pain in any solution. For example,
-in 2011 I wrote [two][envjs_post01] [posts][envjs_post02] on testing frontend
-JavaScript using Env.js and Rhino. My solution was unreliable and hacked
-together, but at that point, at least it was *something*.
-
-Fast-forward to today, and with the rapid rise of Node.js on the backend and a
-whole host of new and exciting browser libraries, there are a lot more options
-for frontend testing. At Curiosity Media, we had a large Backbone.js web
-application that we were able to get a solid, modern test harness around using
-Mocha, Chai and Sinon.JS.
-
-### And, Good Timing
+### And, it Seemed like the Right Time
 
 [Packt Publishing][packtpub] had the good timing to approach me with a book
 proposal for testing Backbone.js applications in late October of 2012. I'm
