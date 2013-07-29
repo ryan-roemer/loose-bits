@@ -30,8 +30,8 @@ worthwhile endeavor.
 
 *So, why do it?*
 
-The short answer is that (1) I liked the proposed topic, (2) I was already
-interested in writing, and (3) Packt Publishing had some fortuitous timing in
+The short answer is that I liked the proposed topic, I was already
+interested in writing, and Packt Publishing had some fortuitous timing in
 pitching the project.
 
 ### A good, challenging topic
@@ -89,17 +89,45 @@ project tractable.
 
 ## The Book Proposal
 
-My first contact with Packt was from an "Author Relationship Executive", which
+My first contact with Packt was from an "author relationship executive", which
 I think is something like an author recruiter. The tentative project outline
 Packt proposed was for a 90-page book with five chapters covering Backbone.js
 application testing concepts and tools.
 
-TODO - Talk with Advisor.
-TODO - Handoff to Commissioning Editor.
+Once I expressed some interest, the author relationship executive passed me on
+to a "commissioning editor", who is the main editor for the book. I would
+later find out that there are various editor roles, as well as many different
+people iterating through those roles during the course of writing the book.
+
+The commissioning editor answered my initial queries and communicated the
+basic logistics of the book - drafts are written in Microsoft Word,
+the loose drafting and editorial process, etc. The expected page count got
+ramped down to 80 pages, which Packt considers a "mini" book - a short,
+concise book on a specific topic.
+
+The editor then sent me a helper "outline kit" for me to put together a target
+outline for the book, which added up to 60 pages of content. The goal was to
+fill in a per-chapter outline for each of the five proposed chapters. I did
+this, then proposed an additional chapter (on automated web testing) and
+an appendix. The Packt team liked the outline and my suggested additions, and
+bumped the allowed page count to 80 pages.
+
+After a bit more back and forth, I finished a final draft of the book outline,
+which Packt approved, and then we moved forward to the contract stage. The
+takeaway from the proposal process was that we ironed out the chapter structure
+and length, which would then constrain the writing process and define what parts
+were going to be due.
+
+## The Book Contract
 
 
 
 
+
+
+
+
+TODO - Link to contract discussion.
 TODO - Go through emails and take notes.
 
 
