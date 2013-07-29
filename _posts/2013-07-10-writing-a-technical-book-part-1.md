@@ -34,47 +34,48 @@ The short answer is that (1) I liked the proposed topic, (2) I was already
 interested in writing, and (3) Packt Publishing had some fortuitous timing in
 pitching the project.
 
-### I Liked the Topic
+### A good, challenging topic
 
-On the technical side of things, I have been interested in frontend web
-application testing for quite some time.
-Historically, testing JavaScript in web pages has been an arduous task, with
-very few good options and enormous amount of pain in any solution. For example,
-in 2011 I wrote [two][envjs_post01] [posts][envjs_post02] on testing frontend
-JavaScript using Env.js and Rhino. My solution was unreliable and hacked
-together, but at that point, at least it was *something*.
+Frontend web application testing has been a topic of keen interest and
+frustration for me for quite some time. Historically, testing JavaScript in web
+pages has been an arduous task, with very few good options and enormous amount
+of pain in any solution. At the same time, there is enormous need for this type
+of testing as more and more logic is pushed from a traditional backend
+application (e.g., a Django or Rails app) to the frontend.
 
-Fast-forward to today, and with the rapid rise of Node.js on the backend and a
+In my day-to-day work over the past few years, I've noticed that the biggest
+holes in application test coverage and sources of *most actual bugs* have been
+in frontend JavaScript code. Accordingly, I have now spent a good amount of
+time implementing and writing about testing on the client side. In 2011,
+I wrote [two][envjs_post01] [posts][envjs_post02] on an early frontend testing
+solution I came up with using Env.js and Rhino. The technologies were
+unreliable and hacked together, but at that point, at least it was *something*.
+
+Fast-forwarding to today, with the rapid rise of Node.js on the backend and a
 whole host of new and exciting browser libraries, there are a lot more options
 for frontend testing. At Curiosity Media, we had a large Backbone.js web
 application that we were able to get a solid, modern test harness around using
-Mocha, Chai and Sinon.JS.
+[Mocha][mocha], [Chai][chai] and [Sinon.JS][sinon].
 
-### I Like to Write
+### I missed writing
 
 By way of a bit more background, software engineering is my second career.
 Before becoming a full-time geek, I was an intellectual property attorney,
-practicing with a large firm and focusing on mostly computer software and
-hardware matters.
+focusing on mostly computer software and hardware matters.
 
-For those unfamiliar with life in a big firm, as a junior associate, you spend
-nearly all of your time reading and writing legal documents of some type or
-another. Public speaking skills are several orders of magnitude less important
-than writing skills given the percentage time you will spend using each.
+While some folks think that the life of a lawyer mostly involves standing up
+and arguing in court (e.g., "I object!"), the reality is that as a junior
+associate attorney, you spend nearly all of your time reading and writing legal
+documents of some type or another. Moreover, as a patent attorney, most of your
+time is spent writing patent applications and related legal documents.
+And, patent writing is essentially technical writing, albeit with a bit of a
+legal bent.
 
-In my case, I probably spent about 5 hours total speaking in court for over
-two and a half years in practice. Nearly the entirety of the rest of the time
-was spent reading and writing.
-By the end of my practice days, I spent most of my time writing
-patent applications or related legal documents. As it turns out, patent
-writing is essentially technical writing, with a bit of a legal bent.
+So, coming back to my current life as a software engineer, while I occasionally
+write blog posts and articles, it had been several years since any substantive
+writing project. And, I kind of missed it.
 
-So, coming back to my current life as a software engineer, I now spend most
-of my days coding, but still keep a deep appreciation for technical writing
-and authorship generally. Just not so much as to want to do that for my full
-time job.
-
-### And, it Seemed like the Right Time
+### And, it seemed like the right time
 
 [Packt Publishing][packtpub] had the good timing to approach me with a book
 proposal for testing Backbone.js applications in late October of 2012. I'm
@@ -160,5 +161,8 @@ A brief abstract of the book's content is available from the
 [book_packt]: http://www.packtpub.com/backbonejs-testing/book
 [envjs_post01]: http://loose-bits.com/2011/02/browserless-ajax-testing-with-rhino-and.html
 [envjs_post02]: http://loose-bits.com/2011/02/browserless-ajax-testing-with-rhino-and_16.html
+[sinon]: http://sinonjs.org/
+[mocha]: http://visionmedia.github.io/mocha/
+[chai]: http://chaijs.com/
 
 <!-- more end -->
