@@ -77,16 +77,15 @@ writing project. And, I kind of missed it.
 
 ### And, it seemed like the right time
 
-[Packt Publishing][packtpub] had the good timing to approach me with a book
-proposal for testing Backbone.js applications in late October of 2012. I'm
-not sure the process was particularly selective in my case, as Packt has a
-reputation for somewhat aggressive recruitment strategies for book authors and
-reviewers.
+With that background, [Packt Publishing][packtpub] had the good timing to
+approach me with a book proposal for testing Backbone.js applications in late
+October of 2012.
 
-Fortunately, the subject matter and book size met up well with my interest
-in frontend testing and ability to explore authorship with a small title.
-So, after a few days of deliberation, I signed on and began the pre-writing
-process and negotiations with Packt.
+I'm not sure the process was particularly selective in my case, as Packt has a
+reputation for somewhat aggressive recruitment strategies for book authors and
+reviewers (e.g., they send a lot of emails). But, the subject matter was a good
+fit for my frontend testing interests, and the book size seemed to make the
+project tractable.
 
 ## The Book Proposal
 
