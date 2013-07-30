@@ -120,6 +120,69 @@ were going to be due.
 
 ## The Book Contract
 
+After approving the book proposal, Packt sent me a book contract for review.
+The contract most entailed expected details of obligations for the author in
+writing the book, what happens if the author fails to deliver chapters or
+stop working on the book, etc.
+
+### The legalese
+
+Although sometimes scary and written in abstruse legalese, a contract is
+essentially a negotiation in paper form. An important thing to remember that
+any point is up for grabs, modifiable or removable. With that in mind, I dove
+into the contract and started dissecting some of the points that might need
+changes.
+
+One of the biggest issues with the contract was that Packt put in a clause
+titled "Option on future Works", which basically obligated me to give Packt the
+first right to publish my *next two books* after the one we were discussing.
+
+> The Author shall give the Publisher the first opportunity to read and consider
+> for publication the next 2 works on any computer-related subject that the
+> Author seeks to have published.
+
+To me, this clause was clearly ridiculous - it is one thing to agree to a book
+contract when I've never written one before nor worked with Packt before, but
+it's quite another to say the first **three** books I would write would be at
+Packt's publishing discretion. So, I asked Packt to remove the clause
+entirely.
+
+A separate issue that wasn't directly addressed in the contract was the
+licensing of the code samples that accompanied the book. The code samples
+technically fall under the copyrights of the book generally. However, I
+wanted to release all of the code samples as an open source project, so that
+I could easily publish the code, get community improvements and bug fixes,
+and get the code out earlier than the book. So, I asked that Packt allow all
+of the code samples to be separately published to GitHub as an open source
+project under the MIT license (the most common license for the components
+I was using).
+
+Packt agreed to both changes without any further issue or push back.
+
+### The time frame
+
+Packt set up an incredibly aggressive time frame for completing the first
+drafts of the book - something short of two months. As I was going on
+vacation, I was pushed back a little bit and got the following schedule
+(assuming a starting date of January) for my chapter drafts:
+
+1. Setting up a Test Infrastructure - Jan. 8, 2013
+2. Creating a Backbone.js Application Test Plan - Jan. 16, 2013
+3. Test Assertions, Specs, and Suites - Jan. 28, 2013
+4. Test Spies - Feb. 4, 2013
+5. Test Stubs and Mocks - Feb. 11, 2013
+6. Headless Web Testing - Feb. 19, 2013
+7. Appendix A: Other JavaScript Test Frameworks - Feb. 25, 2013
+
+In retrospect, this schedule was **insane** and in no way was feasible given
+that I had a full time job and was expecting to write on nights and weekends.
+But, the story of the how all of the deadlines (both mine and my publisher's)
+slipped over the course of the book is for another post.
+
+Suffice to say that I should have massively padded the draft chapter due dates
+in the contract by at least a factor of 1.5 from what I have here. And, as a
+first time author, I really should have erred on the side of further deadlines.
+
 
 
 
