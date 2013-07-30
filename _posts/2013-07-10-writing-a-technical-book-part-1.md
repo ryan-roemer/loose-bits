@@ -162,8 +162,8 @@ Packt agreed to both changes without any further issue or push back.
 ### The time frame
 
 Packt set up an incredibly aggressive time frame for completing the first
-drafts of the book - something short of two months. As I was going on
-vacation, I was pushed back a little bit and got the following schedule
+drafts of the book - something short of two months. As I had planned a December
+vacation, I pushed back a little bit and got the following schedule
 (assuming a starting date of January) for my chapter drafts:
 
 1. Setting up a Test Infrastructure - Jan. 8, 2013
@@ -174,18 +174,16 @@ vacation, I was pushed back a little bit and got the following schedule
 6. Headless Web Testing - Feb. 19, 2013
 7. Appendix A: Other JavaScript Test Frameworks - Feb. 25, 2013
 
-In retrospect, this schedule was **insane** and in no way was feasible given
+In retrospect, this schedule was **insane** and was in no way feasible given
 that I had a full time job and was expecting to write on nights and weekends.
 But, the story of the how all of the deadlines (both mine and my publisher's)
 slipped over the course of the book is for another post.
 
-Suffice to say that I should have massively padded the draft chapter due dates
-in the contract by at least a factor of 1.5 from what I have here. And, as a
-first time author, I really should have erred on the side of further deadlines.
-
-
-
-
+Suffice to say that I should have padded the draft chapter due dates
+in the contract by at least a factor of 1.5 from what I have here. Being a
+first time author, I really had no real idea how long things would actually
+take, and my intuition now tells me that drafting chapters is slower your
+first time.
 
 
 

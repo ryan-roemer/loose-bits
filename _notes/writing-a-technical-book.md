@@ -18,7 +18,16 @@ Series plan:
   * The schedule will slip (unless not aggressive).
   * You will push into weekends, nights, mornings if you have a full time job.
   * Everything will take longer than you think. Maybe a factor of two.
+* STORY: Cutting the appendix.
+* STORY: Page count creep and escalation.
 
 "Publishing a Book"
 ===================
 * STORY: Issues w/ the title / subtitle / description thing. You have to take control of the situation.
+  * LESSON: It is your responsibility to see that things are fixed. And checking after they are assured to be fixed.
+
+"Post-publication"
+==================
+* ITEMS:
+  * Article
+  * Self publicity: LinkedIn, Blog Posts, Twitter, Meetups
