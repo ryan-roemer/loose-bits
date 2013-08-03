@@ -87,6 +87,20 @@ reviewers (e.g., they send a lot of emails). But, the subject matter was a good
 fit for my frontend testing interests, and the book size seemed to make the
 project tractable.
 
+## Choosing a Publisher
+
+I didn't really "choose" a publisher, but was eventually spurred on by the
+opportunity that Packt presented. I didn't go through the steps of deciding
+to write a book, then trying to choose a publisher, or whether or not to
+self-publish - but the topic is one of great interest to folks I have chatted
+with incidentally about technical book authorship.
+
+
+
+
+* DISCUSS: "Why go with a real publisher (e.g., Packt) instead of self publishing (e.g., LeanPub)". Answers - have friend who wrote for Packt, access to technical reviewers, publicity, distribution, and they already wanted a book on the topic.
+
+
 ## The Book Proposal
 
 My first contact with Packt was from an "author relationship executive", which
@@ -224,22 +238,6 @@ preserved.
 And with these reference materials, and a loose outline of my topic, I
 began writing the draft of my first chapter... (Which I will pick up in the
 next post in this series.)
-
-## A Few Other Thoughts
-
-Since writing and publishing the book, I have had some questions come up about
-the authoring process.
-
-
-
-
-
-
-TODO - Link to contract discussion.
-TODO - Go through emails and take notes.
-
-
-* DISCUSS: "Why go with a real publisher (e.g., Packt) instead of self publishing (e.g., LeanPub)". Answers - have friend who wrote for Packt, access to technical reviewers, publicity, distribution, and they already wanted a book on the topic.
 
 <!-- more start -->
 
