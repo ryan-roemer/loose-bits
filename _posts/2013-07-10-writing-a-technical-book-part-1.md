@@ -185,6 +185,53 @@ first time author, I really had no real idea how long things would actually
 take, and my intuition now tells me that drafting chapters is slower your
 first time.
 
+### The money
+
+The contract also specified the remuneration details - advance and royalties.
+Packt's royalty rate is 16% of all book revenue, and is explained in further
+detail on their [royalties page](http://authors.packtpub.com/content/royalties).
+
+The advance amount was pretty minimal - $600 - with one-fourth due on
+completion of all drafts, and the rest due on publication. As an *advance*,
+you get to keep this amount, but it cuts against any royalties from the book
+after publication until it is accounted for.
+
+Unless you happen to have an amazing prolific topic, money should not be a
+large motivating factor in choosing to write a technical book as you will
+invariably be disappointed. You'll note that money was nowhere in my
+discussion of motivations to write a book in the above sections.
+
+Software developers are fairly well-paid; authors
+tend not to be. Put another way, I have never done the math as to how many
+hours I spent writing the book versus how much I *could* have made in side
+software consulting gigs, nor do I plan to in the future - the opportunity cost
+in terms of pure dollars would be really depressing.
+
+## Off to Write a Book
+
+I signed the revised book contract with Packt in December, 2012 and officially
+became on the hook for actually writing a book. Packt then sent me an "author
+bundle" of documents, which included style and writing guidelines and templates
+for the draft chapters.
+
+Packt uses Microsoft Word (or OpenOffice) documents for drafting and relies
+on custom styles to eventually reformat the book for publication. I would
+much have preferred to use a text-based document approach such as Markdown
+or LaTeX, because there is so much more control over the document content
+and structure, and code examples are much more likely to be properly
+preserved.
+
+And with these reference materials, and a loose outline of my topic, I
+began writing the draft of my first chapter... (Which I will pick up in the
+next post in this series.)
+
+## A Few Other Thoughts
+
+Since writing and publishing the book, I have had some questions come up about
+the authoring process.
+
+
+
 
 
 
@@ -192,47 +239,7 @@ TODO - Link to contract discussion.
 TODO - Go through emails and take notes.
 
 
-General - First Post
-====================
-* NOTE: Qualifier - My background is perhaps a little different than most tech. writers. A patent / litigation attorney is essentially a technical writer with a very arcane publishing goal.
-* TAKEAWAY: Personality attributes that are helpful.
-  * Writing fast.
-  * Reviewing fast.
-  * Don't get bored easily (and you will get bored of your own writing)
-
-"Finding and Starting a Project"
-================================
-* STORY: I've been interested in frontend testing for a long time, since Env.js + Rhino and was now knee-deep in a large Backbone.js project that we had spent a significant amount of time building a test infrastructure around. Modern tools have made this all much easier, and I'd been learning off of blogs posts, and ad hoc sources.
-* STORY: Outline
-  * Original outline from Packt.
-  * Switched Jasmine to Mocha / Chai.
-  * Added automated testing / appendix (later cut).
-* STORY: Contract
-  * Scoped at 80, then 100 pages.
-  * Remove the future works clause.
-  * Link to other authors that removed more.
-  * Open source for the code samples.
-* TIP: Review and negotiate the contract. It's an open discussion, not a "take it or leave it" proposition.
-* TIP: Don't do it for the money. And, don't ever try and calculate what your effective hourly rate is. Reasons to do it: (1) learn a new subject, (2) get your name out there in a (new) area.
-  * http://authors.packtpub.com/content/royalties
-    * "You get 16% of all revenue earned from your book"
-    * Advance (basically nothing).
-* TIP: Do OS for examples. Source licensing: do OS on GH in addition to publisher's server.
-* TIP: Time commitments. And negotiating life events and deadline slippage. And factoring in revision time (after reviews).
-  * STORY: Cross-country move.
-* STORY: Editors in different time zones. Packt
-
 * DISCUSS: "Why go with a real publisher (e.g., Packt) instead of self publishing (e.g., LeanPub)". Answers - have friend who wrote for Packt, access to technical reviewers, publicity, distribution, and they already wanted a book on the topic.
-
-
-## TODO - Book description stuff.
-
-I am very pleased to announce that I am in the last stages of publishing
-**[Backbone.js Testing][book_packt]** - a book on [Backbone.js][backbone] test
-architecture and development due in final form around the end of June.
-
-A brief abstract of the book's content is available from the
-[Packt Publishing][packtpub] [website][book_packt]:
 
 <!-- more start -->
 

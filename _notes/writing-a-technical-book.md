@@ -12,6 +12,15 @@ Series plan:
 
 "Writing a Book"
 ================
+* STORY: Editors in different time zones. Packt
+* TIP: Do OS for examples. Source licensing: do OS on GH in addition to publisher's server.
+* TIP: Time commitments. And negotiating life events and deadline slippage. And factoring in revision time (after reviews).
+  * STORY: Cross-country move.
+* TAKEAWAY: Personality attributes that are helpful.
+  * Writing fast.
+  * Reviewing fast.
+  * Don't get bored easily (and you will get bored of your own writing)
+
 * TIP: Editing - Print out a hard copy, get a red pen, and go to town.
 * STORY: Original contract dates vs. my draft dates vs. publication slippage dates.
 * TIP/STORY: Time commitments.
