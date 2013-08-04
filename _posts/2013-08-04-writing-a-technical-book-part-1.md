@@ -6,7 +6,7 @@ description:
   technical book, Backbone.js Testing. My first post discusses the process
   of connecting with a publisher, planning the book, signing the contract
   and starting work.
-date: 2013-07-10 11:30:00 UTC
+date: 2013-08-04 11:30:00 UTC
 tags: ['writing', 'book', 'javascript', 'backbone.js', 'testing']
 ---
 
