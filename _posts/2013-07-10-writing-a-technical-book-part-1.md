@@ -87,6 +87,8 @@ reviewers (e.g., they send a lot of emails). But, the subject matter was a good
 fit for my frontend testing interests, and the book size seemed to make the
 project tractable.
 
+<!-- more start -->
+
 ## Choosing a Publisher
 
 I didn't really "choose" a publisher, as I was not seriously considering a book
@@ -152,7 +154,7 @@ control you have over the entire process.
 
 In any case, as far as my story here goes, I ended up with Packt. And I will
 say that in my case, the book was most likely finished much faster with Packt
-than with any the other publishing options or companies.
+than with any of the other publishing options or companies.
 
 ## The Book Proposal
 
@@ -274,10 +276,16 @@ hours I spent writing the book versus how much I *could* have made in side
 software consulting gigs, nor do I plan to in the future - the opportunity cost
 in terms of pure dollars would be really depressing.
 
+At the same time, I *did* find so many benefits from writing a technical book -
+learning a subject in depth, working with development communities in depth,
+and just meeting random folks along the way who were interested in the topic
+or have even read the book or online code samples.
+
 ## Off to Write a Book
 
+Having considered everything and deciding to jump in,
 I signed the revised book contract with Packt in December, 2012 and officially
-became on the hook for actually writing a book. Packt then sent me an "author
+became on the hook for writing a book. Packt then sent me an "author
 bundle" of documents, which included style and writing guidelines and templates
 for the draft chapters.
 
@@ -288,19 +296,19 @@ or LaTeX, because there is so much more control over the document content
 and structure, and code examples are much more likely to be properly
 preserved.
 
-And with these reference materials, and a loose outline of my topic, I
-began writing the draft of my first chapter... (Which I will pick up in the
-next post in this series.)
+And with these reference materials and a loose outline of my topic in hand, I
+began writing the draft of my first chapter...
 
-<!-- more start -->
+(*And I'll pick up the authoring adventure from this point on in the next
+post in this series.*)
 
 [backbone]: http://backbonejs.org/
 [packtpub]: http://www.packtpub.com/
 [book_repo]: https://github.com/ryan-roemer/backbone-testing/
 [book_site]: http://backbone-testing.com/
 [book_packt]: http://www.packtpub.com/backbonejs-testing/book
-[envjs_post01]: http://loose-bits.com/2011/02/browserless-ajax-testing-with-rhino-and.html
-[envjs_post02]: http://loose-bits.com/2011/02/browserless-ajax-testing-with-rhino-and_16.html
+[envjs_post01]: /2011/02/browserless-ajax-testing-with-rhino-and.html
+[envjs_post02]: /2011/02/browserless-ajax-testing-with-rhino-and_16.html
 [sinon]: http://sinonjs.org/
 [mocha]: http://visionmedia.github.io/mocha/
 [chai]: http://chaijs.com/
