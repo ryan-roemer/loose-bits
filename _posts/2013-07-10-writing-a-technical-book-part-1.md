@@ -89,17 +89,70 @@ project tractable.
 
 ## Choosing a Publisher
 
-I didn't really "choose" a publisher, but was eventually spurred on by the
-opportunity that Packt presented. I didn't go through the steps of deciding
-to write a book, then trying to choose a publisher, or whether or not to
-self-publish - but the topic is one of great interest to folks I have chatted
-with incidentally about technical book authorship.
+I didn't really "choose" a publisher, as I was not seriously considering a book
+project until Packt presented the packaged concept to me. As such, I didn't go
+through the steps of deciding to write a book, then trying to choose a
+publisher and whether or not to self-publish - but the topic is one of great
+interest to folks I have chatted with incidentally about technical book
+authorship.
 
+I will get more into the intricacies of working with my specific publisher
+throughout the rest of these posts. As to the broad question of working with
+a traditional publisher versus a self-publishing service like
+[Leanpub](https://leanpub.com/), the things that my publisher helped with that
+were really valuable includes the following:
 
+* **Technical Reviewers**: Packt recruited two community JavaScript developers
+  to review the technical content for accuracy and suggestions. The reviewers
+  for my book were absolutely top notch, and provided enormously useful
+  feedback and comments.
+* **Content Editing**: A normal publishing house will provide proofreaders and
+  content editors to fix language and writing errors. Packt does not always
+  have the best reputation in this regard, so in my authoring, I viewed the
+  final responsibility for all editing being my own. At the same time, the
+  editors and proofreaders did find several misspellings, etc. over the course
+  of my drafts.
+* **Layout and Formatting**: A publishing house will take care of all of the
+  formatting issues, particularly those that require manual editing after the
+  automated processes finish producing a print-worthy PDF. I'm not sure how
+  far along the self-publishing services are in this regard, and in any case
+  I didn't have to do any of this work - I just had to review and approve
+  the print-ready PDFs.
+* **Publishing and Distribution**: Packt takes care of the publication in
+  paper and eBook form. They also got the book listed on Amazon and other
+  third party sites with proper metadata, etc. (although they needed a
+  couple of rounds to get it right).
+* **Marketing**: Traditional publishing houses will also market your book via
+  email, website articles, and other means to get the word out in ways you
+  won't always be able to do yourself. In my case, Packt is in the process of
+  creating an article around some of the book content to publish on their site
+  and drive interest. Then, they'll launch and email and social media campaign.
+  I have no idea how that will go, but it should be interesting to see if it
+  actually drums up more interest.
 
+From what I can intuit, the disadvantages of going with a traditional publisher
+include:
 
-* DISCUSS: "Why go with a real publisher (e.g., Packt) instead of self publishing (e.g., LeanPub)". Answers - have friend who wrote for Packt, access to technical reviewers, publicity, distribution, and they already wanted a book on the topic.
+* **Control**: Someone else is approving drafts and driving the entire process.
+* **People and Resources**: As an author, you are one of many to the publisher,
+  and if they haven't staffed your book properly, you can end up waiting a long
+  time for the project to move forward. As one example in my case, after I
+  finished all of the drafts for the book, Packt sat on the book for an entire
+  month without progress as they had some internally shuffling of editors and
+  staff.
+* **Pressure**: With a traditional publishing house, you are one someone else's
+  time line, and in Packt's case, they drove really hard to getting drafts
+  in. At the same time, some authors might enjoy having a third party provide
+  incentive to keep with the project.
 
+Would I self-publish my next book? I'm not sure. (I'm still not sure I'll ever
+write another technical book.) But, were I to go down the authoring rabbit hole
+once again, I would strongly consider self-publishing given the advances and
+control you have over the entire process.
+
+In any case, as far as my story here goes, I ended up with Packt. And I will
+say that in my case, the book was most likely finished much faster with Packt
+than with any the other publishing options or companies.
 
 ## The Book Proposal
 
@@ -240,12 +293,6 @@ began writing the draft of my first chapter... (Which I will pick up in the
 next post in this series.)
 
 <!-- more start -->
-
-## TODO - STUFF HERE
-
-[backbone-testing.com][book_site]
-[GitHub repository][book_repo]
-[Packt Publishing][packtpub]
 
 [backbone]: http://backbonejs.org/
 [packtpub]: http://www.packtpub.com/
