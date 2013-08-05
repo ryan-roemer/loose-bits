@@ -142,7 +142,7 @@ include:
   finished all of the drafts for the book, Packt sat on the book for an entire
   month without progress as they had some internally shuffling of editors and
   staff.
-* **Pressure**: With a traditional publishing house, you are one someone else's
+* **Pressure**: With a traditional publishing house, you are on someone else's
   time line, and in Packt's case, they drove really hard to getting drafts
   in. At the same time, some authors might enjoy having a third party provide
   incentive to keep with the project.
