@@ -41,11 +41,6 @@ module.exports = (grunt) ->
           "_less/bootstrap-variables.less"
         ]
         tasks: ["recess", "dev:site"]
-      404:
-        files: [
-          "404.md"
-        ]
-        tasks: "build:404"
       site:
         files: [
           "<config:recess.bootstrap.src>"
@@ -59,9 +54,6 @@ module.exports = (grunt) ->
           "*.yml"
         ]
         tasks: "dev:site"
-
-  grunt.registerTask "build:404", "Build 404 page", ->
-    utils.exec "rake gen:not_found", @async()
 
   grunt.registerTask "dev:site", "Build dev. website", ->
     utils.spawn "jekyll", ["--base-url", "/", "--limit", "3"], @async()
@@ -78,7 +70,7 @@ module.exports = (grunt) ->
   #############################################################################
   grunt.registerTask "build-all",
                      "Build all source files.",
-                     ["build:404", "recess"]
+                     ["recess"]
 
   grunt.registerTask "watch-all",
                      "Watch and build all source/dev files.",
