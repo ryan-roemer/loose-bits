@@ -1,12 +1,11 @@
 pkg       = require './package.json'
-cakepop   = require 'cakepop'
-utils     = cakepop.utils
 
 module.exports = (grunt) ->
 
   # Add plugins.
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-recess'
+  grunt.loadNpmTasks 'grunt-shell-spawn'
 
   #############################################################################
   # Config.
@@ -40,45 +39,44 @@ module.exports = (grunt) ->
           "_less/vendor/**"
           "_less/bootstrap-variables.less"
         ]
-        tasks: ["recess", "dev:site"]
-      404:
-        files: [
-          "404.md"
-        ]
-        tasks: "build:404"
-      site:
-        files: [
-          "<config:recess.bootstrap.src>"
-          "<config:recess.site.src>"
-          "_includes/**"
-          "_layouts/**"
-          "_posts/**"
-          "media/**"
-          "*.md"
-          "*.xml"
-          "*.yml"
-        ]
-        tasks: "dev:site"
+        tasks: ["recess"]
+      # site:
+      #   files: [
+      #     "<config:recess.bootstrap.src>"
+      #     "<config:recess.site.src>"
+      #     "_includes/**"
+      #     "_layouts/**"
+      #     "_posts/**"
+      #     "media/**"
+      #     "*.md"
+      #     "*.xml"
+      #     "*.yml"
+      #   ]
+      #   tasks: "dev:site"
 
-  grunt.registerTask "build:404", "Build 404 page", ->
-    utils.exec "rake gen:not_found", @async()
+    shell:
+      devSite:
+        command: "jekyll serve --baseurl / --watch --limit 3"
+        options:
+          stdout: true,
+          aync:   true
+      devFull:
+        command: "jekyll serve --baseurl /"
+        options:
+          stdout: true,
+          aync:   true
 
-  grunt.registerTask "dev:site", "Build dev. website", ->
-    utils.spawn "jekyll", ["--base-url", "/", "--limit", "3"], @async()
 
-  grunt.registerTask "dev:full", "Build full dev. website", ->
-    utils.spawn "jekyll", ["--base-url", "/"], @async()
+  grunt.registerTask "dev:site", "Build dev. website", ["shell:devSite"]
 
-  grunt.registerTask "dev:server", "Build dev. website", ->
-    args = ["--base-url", "/", "--limit", "3", "--server", "4000"]
-    utils.spawn "jekyll", args, @async()
+  grunt.registerTask "dev:full", "Build full dev. website", ["shell:devFull"]
 
   #############################################################################
   # Aliases.
   #############################################################################
   grunt.registerTask "build-all",
                      "Build all source files.",
-                     ["build:404", "recess"]
+                     ["recess"]
 
   grunt.registerTask "watch-all",
                      "Watch and build all source/dev files.",

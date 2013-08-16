@@ -1,8 +1,6 @@
 version:      0.0.1
 
 safe:         false
-auto:         false
-server:       false
 
 baseurl:      http://loose-bits.com/
 liveurl:      http://loose-bits.com
@@ -17,7 +15,7 @@ keywords:     ['ryan roemer', 'python', 'javascript', 'node.js', 'nosql',
 
 source:       .
 destination:  ./_site
-exclude:      ["404.md", "Rakefile", "node_modules", "_styl", "_less", "_notes"]
+exclude:      ["node_modules", "_styl", "_less", "_notes"]
 
 future:       true
 lsi:          false
