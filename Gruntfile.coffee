@@ -60,17 +60,16 @@ module.exports = (grunt) ->
         options:
           stdout: true,
           aync:   true
+      devFull:
+        command: "jekyll serve --baseurl /"
+        options:
+          stdout: true,
+          aync:   true
 
 
-  grunt.registerTask "dev:site", "Build dev. website", ->
-    utils.spawn "jekyll", ["--base-url", "/", "--limit", "3"], @async()
+  grunt.registerTask "dev:site", "Build dev. website", ["shell:devSite"]
 
-  grunt.registerTask "dev:full", "Build full dev. website", ->
-    utils.spawn "jekyll", ["--base-url", "/"], @async()
-
-  grunt.registerTask "dev:server", "Build dev. website", ->
-    args = ["--base-url", "/", "--limit", "3", "--server", "4000"]
-    utils.spawn "jekyll", args, @async()
+  grunt.registerTask "dev:full", "Build full dev. website", ["shell:devFull"]
 
   #############################################################################
   # Aliases.
