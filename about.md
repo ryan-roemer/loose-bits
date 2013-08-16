@@ -15,8 +15,6 @@ and the collision of law and technology.
 TODO_HERE
 
 
-
-
 I am presently the Director of Engineering at
 Curiosity Media, which hosts [SpanishDict](http://spanishdict.com), the world's
 largest Spanish learning website. As director, I manage the software development

@@ -56,7 +56,7 @@ module.exports = (grunt) ->
 
     shell:
       devSite:
-        command: "jekyll serve --baseurl / --limit 3"
+        command: "jekyll serve --baseurl / --watch --limit 3"
         options:
           stdout: true,
           aync:   true
