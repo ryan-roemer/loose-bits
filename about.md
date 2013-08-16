@@ -7,11 +7,11 @@ title: Ryan Roemer
 <img class="bordered pull-right" src="{{ site.baseurl }}media/img/portrait/forest.jpg" />
 <div class="clearfix"></div>
 
-I am a software engineer interested in big data, cloud computing, and the
-collision of law and technology. I am presently the Director of Engineering at
-Curiosity Media, which hosts [SpanishDict](http://spanishdict.com), the world's
-largest Spanish learning website. As director, I manage the software development
-and systems architecture, as well as all of our technical operations.
+I am a software engineer interested in full-stack development, cloud computing,
+and the collision of law and technology. I am presently a Principal at
+**[Formidable Labs](http://formidablelabs.com/)**, where I lead software
+development and architecture, with an emphasis on test methodologies,
+mentorship, and application design.
 
 Recounting things roughly in chronological order, I was a programmer at a small
 San Diego startup during the late 1990's dot-com boom and meltdown. The bust
@@ -27,7 +27,10 @@ software engineer in the Cloud Computing storage group, working with really
 large-scale distributed systems. I then merged both my patent law and
 computer science backgrounds as a senior engineer at
 [IP Street](http://www.ipstreet.com/), working on intellectual property data
-mining before finally finding my way to Curiosity Media.
+mining. Since IP Street, I was the Director of Engineering at
+Curiosity Media, which hosts [SpanishDict](http://spanishdict.com), the world's
+largest Spanish learning website, before finding my way home to
+[Formidable Labs](http://formidablelabs.com/).
 
 Other places you can find me  on the web are:
 [Twitter](https://twitter.com/ryan_roemer),
