@@ -39,20 +39,20 @@ module.exports = (grunt) ->
           "_less/vendor/**"
           "_less/bootstrap-variables.less"
         ]
-        tasks: ["recess", "dev:site"]
-      site:
-        files: [
-          "<config:recess.bootstrap.src>"
-          "<config:recess.site.src>"
-          "_includes/**"
-          "_layouts/**"
-          "_posts/**"
-          "media/**"
-          "*.md"
-          "*.xml"
-          "*.yml"
-        ]
-        tasks: "dev:site"
+        tasks: ["recess"]
+      # site:
+      #   files: [
+      #     "<config:recess.bootstrap.src>"
+      #     "<config:recess.site.src>"
+      #     "_includes/**"
+      #     "_layouts/**"
+      #     "_posts/**"
+      #     "media/**"
+      #     "*.md"
+      #     "*.xml"
+      #     "*.yml"
+      #   ]
+      #   tasks: "dev:site"
 
     shell:
       devSite:

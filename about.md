@@ -7,8 +7,17 @@ title: Ryan Roemer
 <img class="bordered pull-right" src="{{ site.baseurl }}media/img/portrait/forest.jpg" />
 <div class="clearfix"></div>
 
-I am a software engineer interested in big data, cloud computing, and the
-collision of law and technology. I am presently the Director of Engineering at
+I am a software engineer interested in full-stack development, cloud computing,
+and the collision of law and technology.
+
+
+
+TODO_HERE
+
+
+
+
+I am presently the Director of Engineering at
 Curiosity Media, which hosts [SpanishDict](http://spanishdict.com), the world's
 largest Spanish learning website. As director, I manage the software development
 and systems architecture, as well as all of our technical operations.
