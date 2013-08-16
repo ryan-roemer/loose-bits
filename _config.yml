@@ -1,8 +1,6 @@
 version:      0.0.1
 
 safe:         false
-auto:         false
-server:       false
 
 baseurl:      http://loose-bits.com/
 liveurl:      http://loose-bits.com

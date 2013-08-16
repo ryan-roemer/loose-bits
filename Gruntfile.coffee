@@ -1,12 +1,11 @@
 pkg       = require './package.json'
-cakepop   = require 'cakepop'
-utils     = cakepop.utils
 
 module.exports = (grunt) ->
 
   # Add plugins.
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-recess'
+  grunt.loadNpmTasks 'grunt-shell-spawn'
 
   #############################################################################
   # Config.
@@ -54,6 +53,14 @@ module.exports = (grunt) ->
           "*.yml"
         ]
         tasks: "dev:site"
+
+    shell:
+      devSite:
+        command: "jekyll serve --baseurl / --limit 3"
+        options:
+          stdout: true,
+          aync:   true
+
 
   grunt.registerTask "dev:site", "Build dev. website", ->
     utils.spawn "jekyll", ["--base-url", "/", "--limit", "3"], @async()
