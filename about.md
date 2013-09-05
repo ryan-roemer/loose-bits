@@ -41,13 +41,14 @@ Some of my open source projects on [GitHub](https://github.com/ryan-roemer) incl
 
 * **[Backbone.js Testing](http://backbone-testing.com)**: Code examples with
   sample tests, applications, and helpers for testing
-  [Backbone.js](http://backbonejs.org/) frontend applications. Demonstrates a
+  [Backbone.js](http://backbonejs.org/) frontend applications from my book,
+  "*[Backbone.js Testing](http://www.packtpub.com/backbonejs-testing/book)*".
+  Demonstrates a
   test infrastructure using the [Mocha](http://visionmedia.github.com/mocha/),
   [Chai](http://chaijs.com/), and [Sinon.JS](http://sinonjs.org/)
   libraries. Also contains a live online demo note-taking application,
   **[Notes](http://backbone-testing.com/notes/app/index.html)**, with a full
   application [test suite](http://backbone-testing.com/notes/test/test.html).
-  Part of a forthcoming book on Backbone.js testing principles and practices.
 
 * **[Sunny.js](http://sunnyjs.org)**: A [Node.js](http://nodejs.org/)
   multi-cloud datastore client (with support for
