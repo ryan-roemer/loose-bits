@@ -2,10 +2,9 @@
 layout: post
 title:  Backbone.js Testing - Book Contest!
 description:
-  In a series of posts, I walk through my adventure in writing my first
-  technical book, Backbone.js Testing. My first post discusses the process
-  of connecting with a publisher, planning the book, signing the contract
-  and starting work.
+  Win a free copy of Backbone.js Testing!
+  Packt Publishing's marketing team is interested in getting your feedback on
+  my recently published book with a contest giveaway.
 date: 2013-09-09 11:30:00 UTC
 tags: ['book', 'javascript', 'backbone.js', 'testing', 'packt']
 ---
