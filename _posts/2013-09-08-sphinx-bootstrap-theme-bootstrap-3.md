@@ -12,8 +12,10 @@ tags: ['python', 'sphinx', 'theme', 'twitter', 'bootstrap']
 ## Bootstrap v3 comes to Sphinx
 
 The [Bootstrap Theme][sbt_gh] for [Sphinx][sphinx] has hit a new milestone with
-version 0.3.0, bringing in version 3.0.0 of the [Twitter][twitter]
-[Bootstrap][bootstrap] library.
+version
+[0.3.0](https://pypi.python.org/pypi/sphinx-bootstrap-theme/0.3.0),
+bringing in version 3.0.0 of the [Twitter][twitter] [Bootstrap][bootstrap]
+library.
 
 [![Sphinx Bootstrap Theme v0.3.0][img_sbt]][img_sbt]
 [img_sbt]: {{ img_dir }}/sbt.png
