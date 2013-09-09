@@ -9,7 +9,7 @@ tags: ['python', 'sphinx', 'theme', 'twitter', 'bootstrap']
 ---
 {% capture img_dir %}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
 
-## Bootstrap v3.0.0 comes to Sphinx
+## Bootstrap v3 comes to Sphinx
 
 The [Bootstrap Theme][sbt_gh] for [Sphinx][sphinx] has hit a new milestone with
 version 0.3.0, bringing in version 3.0.0 of the [Twitter][twitter]
@@ -82,9 +82,14 @@ post.
 * Fix code styling collision for cross references and inline code blocks.
   ([@russell][@russell])
 
+## Happy Theming
+
 I've been humbled and excited by all of the great community work on the theme,
 adding much needed functionality and flexibility for adding Bootstrap's
-awesomeness to your Sphinx documentation.
+awesomeness to your Sphinx documentation. Please keep the
+[pull requests](https://github.com/ryan-roemer/sphinx-bootstrap-theme/pulls)
+coming and help us continue to develop the friendship between Bootstrap
+and Sphinx!
 
 [bootstrap]: http://twitter.github.com/bootstrap/
 [bootswatch]: http://bootswatch.com/
