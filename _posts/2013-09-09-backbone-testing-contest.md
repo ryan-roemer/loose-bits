@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Backbone.js Testing - Book Contest!
+title:  Backbone.js Testing - Book Contest
 description:
   Win a free copy of Backbone.js Testing!
   Packt Publishing's marketing team is interested in getting your feedback on
@@ -9,7 +9,7 @@ date: 2013-09-09 11:30:00 UTC
 tags: ['book', 'javascript', 'backbone.js', 'testing', 'packt']
 ---
 
-## Chance to Win Free Copies of Backbone.js Testing
+## Win Free Copies of Backbone.js Testing
 
 I'm pleased to announce that [Packt Publishing][packtpub] is organizing a
 contest to give away copies of my book, **[Backbone.js Testing][book_packt]**!
@@ -25,7 +25,7 @@ contest to give away copies of my book, **[Backbone.js Testing][book_packt]**!
   <p />
 </div>
 
-**Five** lucky winners stand a chance to win digital copies of the book.
+**Five** participants stand a chance to win digital copies of the book.
 
 ## Book Overview
 **[Backbone.js Testing][book_packt]** covers [Backbone.js][backbone] test
