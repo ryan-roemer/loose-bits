@@ -15,6 +15,9 @@ The [Bootstrap Theme][sbt_gh] for [Sphinx][sphinx] has hit a new milestone with
 version 0.3.0, bringing in version 3.0.0 of the [Twitter][twitter]
 [Bootstrap][bootstrap] library.
 
+[![Sphinx Bootstrap Theme v0.3.0][img_sbt]][img_sbt]
+[img_sbt]: {{ img_dir }}/sbt.png
+
 A lot has changed since the last [v0.2.0 blog post][v0.2.0_post], the most
 conspicuous being that you can now specify to use either Bootstrap v2.3.2
 or v3.0.0 via the theme options:
@@ -30,13 +33,13 @@ html_theme_options: {
 Thanks to the awesome work by [MiCHiLU](https://github.com/MiCHiLU), the
 Sphinx Bootstrap Theme can easily switch between Bootstrap v2.x and v3.x
 with full support for all of the features, including
-[Bootswatch][bootswatch] CSS extensions!
+[Bootswatch][bootswatch] CSS extensions.
 
 <!-- more start -->
 
 ## Changes: v0.2.0 - v0.3.0
 
-It's been a while since I have posted updates to the theme, so here is the
+It's been a while since I have posted updates for the theme, so here is the
 laundry list of all of the goodness added to the theme since my last blog
 post.
 
@@ -85,11 +88,10 @@ post.
 ## Happy Theming
 
 I've been humbled and excited by all of the great community work on the theme,
-adding much needed functionality and flexibility for adding Bootstrap's
-awesomeness to your Sphinx documentation. Please keep the
+adding much needed functionality and flexibility. Please keep the
 [pull requests](https://github.com/ryan-roemer/sphinx-bootstrap-theme/pulls)
-coming and help us continue to develop the friendship between Bootstrap
-and Sphinx!
+coming and help us continue to develop the friendship between
+[Bootstrap][bootstrap] and [Sphinx][sphinx]!
 
 [bootstrap]: http://twitter.github.com/bootstrap/
 [bootswatch]: http://bootswatch.com/
