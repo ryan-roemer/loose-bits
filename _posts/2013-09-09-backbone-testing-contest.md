@@ -45,7 +45,9 @@ product description on Packt's [book page][book_packt].
 
 **Deadline**: The contest will close in one week's time. Winners will be
 contacted by Packt via email, so be sure to use your real email address when
-you comment!
+you comment! (Alternately, after leaving a comment you can instead email me
+at [ryan@loose-bits.com](mailto:ryan@loose-bits.com) if you don't want your
+email address to publicly appear on this page.)
 
 <!-- more start -->
 
