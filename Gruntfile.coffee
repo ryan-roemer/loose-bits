@@ -1,11 +1,10 @@
-pkg       = require './package.json'
-
 module.exports = (grunt) ->
 
   # Add plugins.
-  grunt.loadNpmTasks 'grunt-contrib-watch'
-  grunt.loadNpmTasks 'grunt-recess'
-  grunt.loadNpmTasks 'grunt-shell-spawn'
+  grunt.loadNpmTasks "grunt-contrib-watch"
+  grunt.loadNpmTasks "grunt-recess"
+  grunt.loadNpmTasks "grunt-shell-spawn"
+  grunt.loadNpmTasks "grunt-concurrent"
 
   #############################################################################
   # Config.
@@ -40,6 +39,9 @@ module.exports = (grunt) ->
           "_less/bootstrap-variables.less"
         ]
         tasks: ["recess"]
+        options:
+          spawn:    false
+          atBegin:  true
       # site:
       #   files: [
       #     "<config:recess.bootstrap.src>"
@@ -55,16 +57,24 @@ module.exports = (grunt) ->
       #   tasks: "dev:site"
 
     shell:
-      devSite:
+      "site-dev":
         command: "jekyll serve --baseurl / --watch --limit 3"
         options:
-          stdout: true,
+          stdout: true
           aync:   true
-      devFull:
+      "site-full":
         command: "jekyll serve --baseurl /"
         options:
-          stdout: true,
+          stdout: true
           aync:   true
+
+    concurrent:
+      options:
+        logConcurrentOutput: true
+      all: [
+        "watch:recess"
+        "shell:site-dev"
+      ]
 
 
   grunt.registerTask "dev:site", "Build dev. website", ["shell:devSite"]
@@ -74,10 +84,5 @@ module.exports = (grunt) ->
   #############################################################################
   # Aliases.
   #############################################################################
-  grunt.registerTask "build-all",
-                     "Build all source files.",
-                     ["recess"]
-
-  grunt.registerTask "watch-all",
-                     "Watch and build all source/dev files.",
-                     ["build-all", "watch"]
+  grunt.registerTask "build", "Build all source files.", ["recess"]
+  grunt.registerTask "default", "Watch all source files.", ["concurrent:all"]
