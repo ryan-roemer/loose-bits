@@ -6,9 +6,13 @@ Overview
 
 Series plan:
 
-* "Finding and Starting a Project": Contact, Accept, Book Plan, Contract, Start Writing.
 * "Writing a Book": Drafts, First three chapters, Technical reviews, last three chapters, omitting the appendix.
 * "Publishing a Book": Prefinals, Finals, Website, Book Sites (Amazon, etc.)
+* "Publicizing a Book": Article, self publicity, publisher help.
+
+Published:
+
+* "Finding and Starting a Project": Contact, Accept, Book Plan, Contract, Start Writing.
 
 "Writing a Book"
 ================
@@ -40,3 +44,6 @@ Series plan:
 * ITEMS:
   * Article
   * Self publicity: LinkedIn, Blog Posts, Twitter, Meetups
+  * Publisher:
+    * Book contest
+    * Reviews: Websites, personal network, Slashdot.
