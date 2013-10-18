@@ -24,7 +24,7 @@ locations:
 And, here's an embedded format:
 
 <div class="embed">
-  <iframe src="http://www.slideshare.net/slideshow/embed_code/20880870" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen">&nbsp;</iframe>
+  <iframe src="http://www.slideshare.net/slideshow/embed_code/27309486" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen">&nbsp;</iframe>
 </div>
 
 <!-- more start -->
