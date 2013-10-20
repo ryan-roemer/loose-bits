@@ -47,3 +47,6 @@ Published:
   * Publisher:
     * Book contest
     * Reviews: Websites, personal network, Slashdot.
+      * Amazon reviews: 3.
+      * Slashdot reviews.
+
