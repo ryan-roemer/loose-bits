@@ -34,15 +34,20 @@ due dates):
 6. Headless Web Testing (12 pages) - Feb. 19, 2013
 7. Appendix A: Other JavaScript Test Frameworks (8 pages) - Feb. 25, 2013
 
+As a spoiler for the rest of this post - I came nowhere near making most of
+the chapter deadlines.
+
 ## Starting on the Book
 
 After signing the contract in mid-December, I found that I suddenly had my first
-chapter due Jan. 8 and subsequent chapters following quickly after that.
+chapter due Jan. 8 and subsequent chapters following quickly after that. Shortly
+thereafter, I dug in and started getting my authoring and coding tools set up,
+enhancing my book outline, and dove into writing the first chapter.
 
 ### Nuts and Bolts - Storage and Backups
 
-As a purely logistical matter, my book chapters were to be authored in
-Microsoft Word and have images in the PNG format. The source code examples are
+As a purely logistical matter, my book chapters were to be authored as Microsoft
+Word documents and have images in the PNG format. The source code examples are
 in HTML, JavaScript, and CSS. And, being a consummate techie, I knew that I
 needed a reliable and flexible digital storage system. My main goals for this
 setup were:
@@ -53,22 +58,48 @@ setup were:
 
 The source code samples were going to be released as an open source
 project and were pure, usable source code, so the storage and backup solution
-was quite obvious - Git and [GitHub](http://github.com).
+was quite obvious - Git and [GitHub](http://github.com). You can find the
+code samples ultimate home at the book's [GitHub repository][book_repo].
 
-However, Microsoft Word documents typically don't play well with Git, and I
-was not going to release the book's textual sources to the public. Nonetheless,
-after reviewing a lot of alternative storage systems (Dropbox, Amazon S3, etc.),
-I decided to go ahead and use Git with a private repository. My rationale was
-that Git still provided checkpoints to early MS Word document drafts, even if
-I couldn't use all of the normal Git tools with the documents.
+For the book's textual sources however, Microsoft Word documents typically don't
+play well with Git, and I the book's text as an open source project.
+Nonetheless, after reviewing a lot of alternative storage systems (Dropbox,
+Amazon S3, etc.), I decided to go ahead and use Git with a private repository.
+My rationale was that Git still provided checkpoints to early MS Word document
+drafts, even if I couldn't use all of the normal Git tools with the documents.
 
-### Buffing up the Outline
+I cannot emphasize enough the importance of backups when writing a book, and
+preferably something that checkpoints drafts. There are a variety of bad things
+that can happen to both your computer (crashes, etc.) and documents (like MS
+Word files becoming corrupted). In my case, I had my laptop stolen in May during
+the middle of the authoring process - I didn't lose any of my book progress
+(code or text) as I was able to easily restore my existing work on another
+computer with just a few downloads.
 
-I had already prepared a detailed outline of each chapter as part of the
-book scoping and negotiation process with Packt. This is an authoring step
-that I can't recommend enough - having a good outline will make or break any
-large writing project. And, finally starting on my first chapter, I realized
-that I had better flesh that outline out in even more detail.
+### Planning and Outlining
+
+Turning to the substantive end of kicking off the book, I began reworking and
+expanding on my detailed book outline that I had begun as as part of the book
+scoping and negotiation process with Packt.
+
+The original outline had about a page of bullet points per chapter. I turned
+this into a series of sections and sub-sections for Chapter 1. Then, I filled in
+as many substantive bullet points as I could for each section and sub-section to
+essentially write the structure and outline content for all of the first chapter
+before diving in and actually writing text.
+
+I strongly recommend detailed outlines for any large writing project as it
+forces you to collect your thoughts, hone the overall message and protect you
+from writing lots of text in directions that will later be cut in the editorial
+process. Or, putting in software development terms, you don't start a large
+web application by writing code top-to-bottom - instead, you create a general
+design and architecture first (say, model-view-controller or something), and
+then you plan and implement the parts. The same goes for writing, if you want
+your end result to be cogent and well-crafted.
+
+* TODO: Writing the Notes App, planning this, and weaving throughout.
+
+
 
 
 
