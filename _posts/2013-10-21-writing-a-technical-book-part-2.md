@@ -97,26 +97,43 @@ design and architecture first (say, model-view-controller or something), and
 then you plan and implement the parts. The same goes for writing, if you want
 your end result to be cogent and well-crafted.
 
-This was also a chance for me to revisit the vision for the book as a whole,
-as the first chapter will really start limiting and focus the world for the
-book. My book was about using testing technologies (frameworks, assertions,
-and fakes) for a specific web framework (with models, views, controllers,
-and other framework components). The big decision made in the original outline
-was to split chapters by different test technology, and *not* by web framework
+This was also a chance for me to revisit the vision for the book as a whole, as
+the first chapter will really start limiting and focus the world for the book.
+My book was about using testing technologies (frameworks, assertions, and fakes)
+for a specific web framework, Backbone.js (with models, views, controllers, and
+other framework components). The big decision made in the original outline was
+to split chapters by different test technology, and *not* by web framework
 component.
 
-* TODO: Writing the Notes App, planning this, and weaving throughout.
+At the same time, I needed to weave each testing lesson *back* to the
+Backbone.js framework (the book title is, after all, **Backbone.js** Testing),
+so I decided to create a reasonably complex Backbone.js sample application to
+use throughout the book. The application is a simple
+note-taking web page, named Notes, and I tested different parts of Notes in
+each chapter using the specific chapter's test technology.
+
+I think this approach was ultimately successful in unifying the test concepts
+with Backbone.js application fundamentals, but it also required a lot of
+upfront work, as the Notes sample application essentially needed to be coded
+and tested very early on, before most of the chapters were written.
+
+### And Off we Go
+
+With my Chapter 1 outline ready and my Git repositories ready to go, I started
+writing the first chapter, "Setting up a Test Infrastructure". The chapter
+essentially comprised downloading all of the libraries needed to run and
+execute the book samples and create a "Hello World"-ish test infrastructure.
 
 
 
+* TODO Relatively straightforward.
+* TODO But slow! I had a lot of time for the first chapter, but knew I needed
+  to dig in deep for a lot of future chapter work, and it wasn't happening
+  fast enough.
+* TODO page length as submitted?
+* TODO Knew cross country move coming.
+* TODO Chapter submission bundle and acceptance process.
 
-
-
-* PLAN: Have a sample application and use it as a vehicle for the chapter organizations.
-  * Was some question as to how to organize - Backbone.js topics vs. testing topics?
-
-* FORMAT: MS Word. Would have liked Markdown or even LaTeX.
-* TIP: Do OS for examples. Source licensing: do OS on GH in addition to publisher's server.
 
 * LOGISTICS:
   * Git Source: BitBucket, GitHub for public samples.
@@ -172,6 +189,9 @@ component.
   <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 </div>
 
+## TODO
+
+* Move "Notes" application section lower?
 
 
 
