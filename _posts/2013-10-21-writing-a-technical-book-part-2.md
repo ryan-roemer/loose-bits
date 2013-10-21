@@ -20,11 +20,11 @@ up with something (pretty close) to a real book.
 
 ## Where we Left Off
 
-In my previous book series post on [starting a book project][book_post01], I
-discussed how I got roped into writing a technical book and the process leading
-up to me signing up to write "a book". As part of the contract negotiations,
-we agreed on the following ultimate chapter outline with estimated page
-count and due dates:
+In my previous post on [starting a book project][book_post01], I discussed how I
+got roped into writing a technical book and the process from initial contact
+from the publisher to signing a book contract. As part of the negotiations, we
+agreed on the following ultimate chapter outline (with estimated page count and
+due dates):
 
 1. Setting up a Test Infrastructure (10 pages) - Jan. 8, 2013
 2. Creating a Backbone.js Application Test Plan (8 pages) - Jan. 16, 2013
@@ -34,47 +34,68 @@ count and due dates:
 6. Headless Web Testing (12 pages) - Feb. 19, 2013
 7. Appendix A: Other JavaScript Test Frameworks (8 pages) - Feb. 25, 2013
 
+## Starting on the Book!
 
-
-
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><
-
-**TODO: Link chapters in outline to bb-testing.com**
-**TODO_HERE: Start outlining, then insert post content**
-
-
-
-
-"Writing a Book"
-================
 * PLAN: Have a sample application and use it as a vehicle for the chapter organizations.
   * Was some question as to how to organize - Backbone.js topics vs. testing topics?
+
+* FORMAT: MS Word. Would have liked Markdown or even LaTeX.
+* TIP: Do OS for examples. Source licensing: do OS on GH in addition to publisher's server.
 
 * LOGISTICS:
   * Git Source: BitBucket, GitHub for public samples.
   * MS word went into git as well.
+
+* SUBMISSION / STORY: Editors in different time zones. Packt
+
+
+
+
+<div>
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+</div>
+
+## Some Unexpected Surprises
+
+* LOGISTICS: Backup
   * TAKEAWAY: Have some regular, reliable backup strategy. I got my computer stolen.
 
-
-* STORY: Editors in different time zones. Packt
-* TIP: Do OS for examples. Source licensing: do OS on GH in addition to publisher's server.
 * TIP: Time commitments. And negotiating life events and deadline slippage. And factoring in revision time (after reviews).
   * STORY: Cross-country move.
+
+
+## Cranking out the Pages
+
+* TODO: Writing the bulk of the chapters.
+
+* STORY: Page count creep and escalation.
+
+* STORY: Original contract dates vs. my draft dates vs. publication slippage dates.
+* TIP/STORY: Time commitments.
+  * The schedule will slip (unless not aggressive).
+  * You will push into weekends, nights, mornings if you have a full time job.
+  * Everything will take longer than you think. Maybe a factor of two.
+
+
+## Heading in to the Home Stretch
+
+* STORY: Cutting the appendix.
+  * A lot of work and research for a minimal payoff (not directly subject-focused).
+
+
+## Some Other Observations
+
 * TAKEAWAY: Personality attributes that are helpful.
   * Writing fast.
   * Reviewing fast.
   * Don't get bored easily (and you will get bored of your own writing)
 
 * TIP: Editing - Print out a hard copy, get a red pen, and go to town.
-* STORY: Original contract dates vs. my draft dates vs. publication slippage dates.
-* TIP/STORY: Time commitments.
-  * The schedule will slip (unless not aggressive).
-  * You will push into weekends, nights, mornings if you have a full time job.
-  * Everything will take longer than you think. Maybe a factor of two.
-* STORY: Cutting the appendix.
-  * A lot of work and research for a minimal payoff (not directly subject-focused).
-* STORY: Page count creep and escalation.
+
+<div>
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+</div>
+
 
 
 
