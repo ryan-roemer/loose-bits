@@ -97,6 +97,14 @@ design and architecture first (say, model-view-controller or something), and
 then you plan and implement the parts. The same goes for writing, if you want
 your end result to be cogent and well-crafted.
 
+This was also a chance for me to revisit the vision for the book as a whole,
+as the first chapter will really start limiting and focus the world for the
+book. My book was about using testing technologies (frameworks, assertions,
+and fakes) for a specific web framework (with models, views, controllers,
+and other framework components). The big decision made in the original outline
+was to split chapters by different test technology, and *not* by web framework
+component.
+
 * TODO: Writing the Notes App, planning this, and weaving throughout.
 
 
