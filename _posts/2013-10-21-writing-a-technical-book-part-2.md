@@ -124,6 +124,19 @@ writing the first chapter, "Setting up a Test Infrastructure". The chapter
 essentially comprised downloading all of the libraries needed to run and
 execute the book samples and create a "Hello World"-ish test infrastructure.
 
+Chapter 1 came together reasonably easily on a fairly relaxed scheduled, as
+it wasn't due until the first week of January. I had time to create the example
+application and tests that would be used throughout the entire book. I had
+a little bit of acclimating to formatting the document per required guidelines
+and generating acceptable screenshot image files, but it wasn't too bad.
+
+I turned in the chapter draft on the scheduled due date, and thus started my
+first milestone for actually *writing* a book!
+
+## Some Unexpected Surprises
+
+
+
 
 
 * TODO Relatively straightforward.
@@ -148,7 +161,6 @@ execute the book samples and create a "Hello World"-ish test infrastructure.
   <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 </div>
 
-## Some Unexpected Surprises
 
 * LOGISTICS: Backup
   * TAKEAWAY: Have some regular, reliable backup strategy. I got my computer stolen.
