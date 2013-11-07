@@ -119,7 +119,7 @@ with Backbone.js application fundamentals, but it also required a lot of
 upfront work, as the Notes sample application essentially needed to be coded
 and tested very early on, before most of the chapters were written.
 
-### And Off We Go (Chapter 1)
+### And Off We Go (The First Chapter)
 
 With my Chapter 1 outline prepared and my Git repositories ready to go, I
 started writing the first chapter, "Setting up a Test Infrastructure". The
@@ -136,7 +136,7 @@ I turned in the chapter draft on the scheduled due date, and thus started my
 first milestone for actually *writing* a book!
 
 
-## Into the Fray (Chapters 2-6)
+## Into the Fray (The Rest of the Chapters)
 
 Delivering the first draft of Chapter 1 on time and in reasonably good shape
 did feel like an accomplishment. However, even at that point I realized that
@@ -152,13 +152,40 @@ Washington, DC to Seattle, WA in mid-February.
 
 I raised the issue with my publisher upon turning in my first chapter, and we
 agreed on a revised schedule, effectively spreading out the due dates for
-chapters 2 and 3 through the end of February.
+chapters 2 and 3 through the end of February. We left the rest of the chapter
+deadlines as more of a "cross that bridge when we come to it"-type thing.
+
+Over the next few months, I dug in and cranked out the chapters in my nights
+and weekends (with a generous interruption for moving to Seattle). The writing
+was relatively straightforward in terms of subject matter and getting it
+down on paper, but the process itself was quite difficult and taxing. A
+non-exhaustive list of the rough parts of writing most of the book includes
+the following:
+
+* I was writing pretty tired. I started working on the book many nights after
+  10:00 pm or before 4:00 am. It's hard to think when you're tired, and harder
+  to write.
+* Authoring a first draft is not the end of your work. After a chapter
+  submission, the publisher would forward the chapter draft to the technical
+  reviewers, who added comments or made suggested changes. Then, the publisher
+  would present their work back to me for chapter revisions. There was no
+  real schedule for this, and it wasn't factored into the underlying schedule
+  of chapter first drafts, yet ended up being a significant portion of work.
+* The majority of the publisher's editorial staff was based out of India,
+  meaning that communication almost always took a full day and was a half
+  day out of sync.
 
 
 
 
 
 
+
+
+
+<div>
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+</div>
 
 1. Setting up a Test Infrastructure (10 pages) - Jan. 8, 2013
 2. Creating a Backbone.js Application Test Plan (8 pages) - Jan. 16, 2013
@@ -168,32 +195,6 @@ chapters 2 and 3 through the end of February.
 6. Headless Web Testing (12 pages) - Feb. 19, 2013
 7. Appendix A: Other JavaScript Test Frameworks (8 pages) - Feb. 25, 2013
 
-Here is the revised schedule:
-Chapter 2: 5th February 2013
-Chapter 3: 28th February 2013
-
-
-* TODO Relatively straightforward.
-* TODO But slow! I had a lot of time for the first chapter, but knew I needed
-  to dig in deep for a lot of future chapter work, and it wasn't happening
-  fast enough.
-* TODO page length as submitted?
-* TODO Knew cross country move coming.
-* TODO Chapter submission bundle and acceptance process.
-
-
-* LOGISTICS:
-  * Git Source: BitBucket, GitHub for public samples.
-  * MS word went into git as well.
-
-* SUBMISSION / STORY: Editors in different time zones. Packt
-
-
-
-
-<div>
-  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-</div>
 
 
 * LOGISTICS: Backup
