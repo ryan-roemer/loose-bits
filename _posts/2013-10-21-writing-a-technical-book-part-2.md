@@ -18,6 +18,7 @@ In this point, I will walk through authoring the core of the book from writing
 the first pages to finishing off the last round of technical edits and ending
 up with something (pretty close) to a real book.
 
+
 ## Where we Left Off
 
 In my previous post on [starting a book project][book_post01], I discussed how I
@@ -36,6 +37,7 @@ due dates):
 
 As a spoiler for the rest of this post - I came nowhere near making most of
 the chapter deadlines.
+
 
 ## Starting on the Book
 
@@ -117,11 +119,11 @@ with Backbone.js application fundamentals, but it also required a lot of
 upfront work, as the Notes sample application essentially needed to be coded
 and tested very early on, before most of the chapters were written.
 
-### And Off we Go
+### And Off We Go (Chapter 1)
 
-With my Chapter 1 outline ready and my Git repositories ready to go, I started
-writing the first chapter, "Setting up a Test Infrastructure". The chapter
-essentially comprised downloading all of the libraries needed to run and
+With my Chapter 1 outline prepared and my Git repositories ready to go, I
+started writing the first chapter, "Setting up a Test Infrastructure". The
+chapter essentially comprised downloading all of the libraries needed to run and
 execute the book samples and create a "Hello World"-ish test infrastructure.
 
 Chapter 1 came together reasonably easily on a fairly relaxed scheduled, as
@@ -133,10 +135,42 @@ and generating acceptable screenshot image files, but it wasn't too bad.
 I turned in the chapter draft on the scheduled due date, and thus started my
 first milestone for actually *writing* a book!
 
-## Some Unexpected Surprises
+
+## Into the Fray (Chapters 2-6)
+
+Delivering the first draft of Chapter 1 on time and in reasonably good shape
+did feel like an accomplishment. However, even at that point I realized that
+the original negotiated schedule was going to end up being far too aggressive
+in light of having a (more than) full time "day job" and trying to keep some
+semblance of a life outside of technical-related matters.
+
+As it turns out, an outside factor then ended up blowing the schedule away.
+During the time I was writing the first chapter and after signing on to the book
+project, my wife interviewed for, and accepted, a new position in Seattle. When
+everything was finalized, I suddenly was faced with a cross-country move from
+Washington, DC to Seattle, WA in mid-February.
+
+I raised the issue with my publisher upon turning in my first chapter, and we
+agreed on a revised schedule, effectively spreading out the due dates for
+chapters 2 and 3 through the end of February.
 
 
 
+
+
+
+
+1. Setting up a Test Infrastructure (10 pages) - Jan. 8, 2013
+2. Creating a Backbone.js Application Test Plan (8 pages) - Jan. 16, 2013
+3. Test Assertions, Specs, and Suites (20 pages) - Jan. 28, 2013
+4. Test Spies (7 pages) - Feb. 4, 2013
+5. Test Stubs and Mocks (15 pages) - Feb. 11, 2013
+6. Headless Web Testing (12 pages) - Feb. 19, 2013
+7. Appendix A: Other JavaScript Test Frameworks (8 pages) - Feb. 25, 2013
+
+Here is the revised schedule:
+Chapter 2: 5th February 2013
+Chapter 3: 28th February 2013
 
 
 * TODO Relatively straightforward.
