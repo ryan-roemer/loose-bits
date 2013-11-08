@@ -204,6 +204,14 @@ technologies to by book's core subject matter). The Appendix was already going
 to be a pain to research and write, and figured offering it up as a "sacrifice"
 to reclaim page count would be the best way to speed things along.
 
+My publisher and new editor pretty easily backed down and accepted my new
+proposal.
+
+
+
+* Publisher has strong incentive to comply.
+*
+
 
 
 
