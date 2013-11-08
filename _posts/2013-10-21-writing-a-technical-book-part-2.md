@@ -119,7 +119,8 @@ with Backbone.js application fundamentals, but it also required a lot of
 upfront work, as the Notes sample application essentially needed to be coded
 and tested very early on, before most of the chapters were written.
 
-### And Off We Go (The First Chapter)
+
+## And Off We Go (The First Chapter)
 
 With my Chapter 1 outline prepared and my Git repositories ready to go, I
 started writing the first chapter, "Setting up a Test Infrastructure". The
@@ -136,7 +137,7 @@ I turned in the chapter draft on the scheduled due date, and thus started my
 first milestone for actually *writing* a book!
 
 
-## Into the Fray (The Rest of the Chapters)
+## Surprises, Slogs, and Pushing Through (The Rest of the Chapters)
 
 Delivering the first draft of Chapter 1 on time and in reasonably good shape
 did feel like an accomplishment. However, even at that point I realized that
@@ -162,20 +163,46 @@ down on paper, but the process itself was quite difficult and taxing. A
 non-exhaustive list of the rough parts of writing most of the book includes
 the following:
 
-* I was writing pretty tired. I started working on the book many nights after
-  10:00 pm or before 4:00 am. It's hard to think when you're tired, and harder
-  to write.
-* Authoring a first draft is not the end of your work. After a chapter
+* **Exhaustion**:
+  I was pretty tired when writing. I started working on the book many nights
+  after 10:00 pm or before 4:00 am. It's hard to think when you're tired, and
+  harder to write.
+* **Scope Creep**:
+  The chapters ended up being longer than originally anticipated, making the
+  work take longer. I tried to keep to the proposed outline's estimates, but
+  there were some topics that just couldn't be covered in the expected
+  number of pages.
+* **Reviewing Work**:
+  Authoring a first draft is not the end of your work. After a chapter
   submission, the publisher would forward the chapter draft to the technical
   reviewers, who added comments or made suggested changes. Then, the publisher
   would present their work back to me for chapter revisions. There was no
   real schedule for this, and it wasn't factored into the underlying schedule
   of chapter first drafts, yet ended up being a significant portion of work.
-* The majority of the publisher's editorial staff was based out of India,
+* **Time Zones**:
+  The majority of the publisher's editorial staff was based out of India,
   meaning that communication almost always took a full day and was a half
   day out of sync.
 
+I managed to get drafts of the first four chapters submitted by mid-March.
+After my submission of Chapter 4, my publisher notified my that my editor was
+changing roles in the company and that I would be assigned a new editor.
 
+Right out of the gate, the new editor notified me that my chapters had deviated
+from the estimates in the outline and that I would have to cut down my previous
+chapters. The new editor presumably reviewed all the chapters submitted up until
+that point and figured it was time for house cleaning.
+
+I replied rather strongly that to try and go back and retrofit already
+completed work at that time would be time-consuming, difficult, and likely
+make the overall book worse for the changes. At the time I was writing Chapter
+5, and the notion of stopping everything to go back to old chapters was just
+dreadful.
+
+Instead, I proposed that we cut the planned Appendix (a survey of related
+technologies to by book's core subject matter). The Appendix was already going
+to be a pain to research and write, and figured offering it up as a "sacrifice"
+to reclaim page count would be the best way to speed things along.
 
 
 
@@ -194,14 +221,6 @@ the following:
 5. Test Stubs and Mocks (15 pages) - Feb. 11, 2013
 6. Headless Web Testing (12 pages) - Feb. 19, 2013
 7. Appendix A: Other JavaScript Test Frameworks (8 pages) - Feb. 25, 2013
-
-
-
-* LOGISTICS: Backup
-  * TAKEAWAY: Have some regular, reliable backup strategy. I got my computer stolen.
-
-* TIP: Time commitments. And negotiating life events and deadline slippage. And factoring in revision time (after reviews).
-  * STORY: Cross-country move.
 
 
 ## Cranking out the Pages
