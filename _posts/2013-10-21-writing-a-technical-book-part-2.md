@@ -210,7 +210,6 @@ proposal.
 
 
 * Publisher has strong incentive to comply.
-*
 
 
 

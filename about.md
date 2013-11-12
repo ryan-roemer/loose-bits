@@ -8,8 +8,8 @@ title: Ryan Roemer
 <div class="clearfix"></div>
 
 I am a software engineer interested in full-stack development, cloud computing,
-and the collision of law and technology. I am presently a Principal at
-**[Formidable Labs](http://formidablelabs.com/)**, where I lead software
+and the collision of law and technology. I am presently the CTO and a co-founder
+of **[Formidable Labs](http://formidablelabs.com/)**, where I lead software
 development and architecture, with an emphasis on test methodologies,
 mentorship, and application design.
 
@@ -39,16 +39,16 @@ Other places you can find me  on the web are:
 and [my research site](http://ryanroemer.com).
 Some of my open source projects on [GitHub](https://github.com/ryan-roemer) include:
 
-* **[Backbone.js Testing](http://backbone-testing.com)**: Code examples with
-  sample tests, applications, and helpers for testing
-  [Backbone.js](http://backbonejs.org/) frontend applications from my book,
-  "*[Backbone.js Testing](http://www.packtpub.com/backbonejs-testing/book)*".
-  Demonstrates a
-  test infrastructure using the [Mocha](http://visionmedia.github.com/mocha/),
-  [Chai](http://chaijs.com/), and [Sinon.JS](http://sinonjs.org/)
-  libraries. Also contains a live online demo note-taking application,
-  **[Notes](http://backbone-testing.com/notes/app/index.html)**, with a full
-  application [test suite](http://backbone-testing.com/notes/test/test.html).
+* **[Backbone.js Testing](http://backbone-testing.com)**: Sample tests and
+  applications for my book,
+  "*[Backbone.js Testing](http://www.packtpub.com/backbonejs-testing/book)*",
+  using the
+  [Mocha](http://visionmedia.github.com/mocha/), [Chai](http://chaijs.com/), and
+  [Sinon.JS](http://sinonjs.org/) libraries. Also contains a live demo
+  note-taking [Backbone.js](http://backbonejs.org/) application,
+  **[Notes](http://backbone-testing.com/notes/app/index.html)**,
+  with a full application
+  [test suite](http://backbone-testing.com/notes/test/test.html).
 
 * **[Sunny.js](http://sunnyjs.org)**: A [Node.js](http://nodejs.org/)
   multi-cloud datastore client (with support for
