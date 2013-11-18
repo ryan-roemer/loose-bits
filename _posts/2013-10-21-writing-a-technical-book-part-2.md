@@ -187,6 +187,38 @@ the following:
   day out of sync.
 
 
+## Technical Review
+
+One of the benefits of working with a publisher, as opposed to self-publishing
+or the like, was the recruitment of some very capable and smart technical
+reviewers. Packt found two software developers well known in the community for
+Backbone.js and frontend testing generally.
+
+After I submitted each first draft chapter to Packt, they would assign the
+chapters to the technical reviewers to add comments and make suggested text
+changes. Then, I would receive the in-draft and separate comments from the
+reviewers and rework each chapter into the second draft.
+
+Going through technical review is a humbling process - not only did my reviewers
+point out all of the errors in the chapter text, they also gave qualitative
+ratings for each chapter, many of which were quite low for my first drafts. One
+reviewer in particular was often quite critical in overall assessment and the
+numerous comments he would pepper my drafts with. Yet, I couldn't have been more
+happy with all of the ego-bruising / "this is horrible"-type criticism -- the
+feedback was invaluable for correcting errors, getting a sense of my overall
+message, and knowing that at least two highly intelligent developers had worked
+through the text.
+
+As far as work went, simple errors and omissions pointed out by the technical
+editors were easy to correct. However, some were quite extensive to revise. For
+example, a reviewer suggested that I should re-organize the entirety of my
+example code's file structure. Evaluating the comment, I realized that he was
+right, and spent a good deal of time retooling everything in the code and in the
+book examples and text. I think the book ended up much better overall for the
+change, but at the time it was really a pain to change.
+
+
+
 ## Getting Through the Editorial Process
 
 I managed to get drafts of the first four chapters submitted by mid-March.
