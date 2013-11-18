@@ -137,7 +137,9 @@ I turned in the chapter draft on the scheduled due date, and thus started my
 first milestone for actually *writing* a book!
 
 
-## Surprises, Slogs, and Pushing Through (The Rest of the Chapters)
+## Digging In (The Other Chapters)
+
+**TODO: Review and rework this section.**
 
 Delivering the first draft of Chapter 1 on time and in reasonably good shape
 did feel like an accomplishment. However, even at that point I realized that
@@ -184,6 +186,9 @@ the following:
   meaning that communication almost always took a full day and was a half
   day out of sync.
 
+
+## Getting Through the Editorial Process
+
 I managed to get drafts of the first four chapters submitted by mid-March.
 After my submission of Chapter 4, my publisher notified my that my editor was
 changing roles in the company and that I would be assigned a new editor.
@@ -199,19 +204,28 @@ make the overall book worse for the changes. At the time I was writing Chapter
 5, and the notion of stopping everything to go back to old chapters was just
 dreadful.
 
-Instead, I proposed that we cut the planned Appendix (a survey of related
-technologies to by book's core subject matter). The Appendix was already going
-to be a pain to research and write, and figured offering it up as a "sacrifice"
-to reclaim page count would be the best way to speed things along.
+As an aside here, it's worth mentioning the power dynamics of the author and
+publisher. In my situation, Packt essentially provided no money upfront, a
+quite meager advance on the completion of the entire book, and was essentially
+relying on my good graces to finish the thing. Although technically they could
+take my partially finished work and have another author pick it up mid-stream
+if our relationship truly went south, the practical logistics of them being
+able to actually go through with that would have been very difficult.
 
-My publisher and new editor pretty easily backed down and accepted my new
-proposal.
+My intuition is that many book projects similarly set up to mine fail midway
+through the process due to external constraints or pressures. Put another way,
+if something came up on my end, there was really no way for my publisher to
+force me to finish. And, once I was over halfway through my first draft of the
+book, the publisher had strong incentives to see me complete it.
 
+So, when I pushed back on the new editor's extensive rewrite proposal, Packt
+was quite amenable and the editor backed down pretty easily.
 
-
-* Publisher has strong incentive to comply.
-
-
+To help with the overall size of the book, I proposed that we cut the planned
+Appendix (a survey of related technologies to by book's core subject matter)
+instead of revising existing chapters. The Appendix was already going to be a
+pain to research and write, and figured offering it up as a "sacrifice" to
+reclaim page count would be the best way to speed things along.
 
 
 
