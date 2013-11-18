@@ -57,6 +57,8 @@ chapter due Jan. 8 and subsequent chapters following quickly after that. Shortly
 thereafter, I dug in and started getting my authoring and coding tools set up,
 enhancing my book outline, and dove into writing the first chapter.
 
+<!-- more start -->
+
 ### Nuts and Bolts - Storage and Backups
 
 As a purely logistical matter, my book chapters were to be authored as Microsoft
@@ -151,6 +153,22 @@ first milestone for actually *writing* a book!
 ## Digging In (The Other Chapters)
 
 **TODO: Review and rework this section.**
+
+
+## Some Other Observations
+
+* TAKEAWAY: Personality attributes that are helpful.
+  * Writing fast.
+  * Reviewing fast.
+  * Don't get bored easily (and you will get bored of your own writing)
+
+* TIP: Editing - Print out a hard copy, get a red pen, and go to town.
+
+* END: Final submission of the draft.
+
+
+
+
 
 Delivering the first draft of Chapter 1 on time and in reasonably good shape
 did feel like an accomplishment. However, even at that point I realized that
@@ -284,33 +302,6 @@ The editors accepted my submission and gave me a rough outline of the process
 that would unfold from there on out to actually publish the book, a story that
 we will dive into in next post in this series.
 
-
-
-<div>
-  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-</div>
-
-
-
-## Heading in to the Home Stretch
-
-* STORY: Cutting the appendix.
-  * A lot of work and research for a minimal payoff (not directly subject-focused).
-
-
-## Some Other Observations
-
-* TAKEAWAY: Personality attributes that are helpful.
-  * Writing fast.
-  * Reviewing fast.
-  * Don't get bored easily (and you will get bored of your own writing)
-
-* TIP: Editing - Print out a hard copy, get a red pen, and go to town.
-
-* END: Final submission of the draft.
-
-
-<!-- more start -->
 
 [backbone]: http://backbonejs.org/
 [packtpub]: http://www.packtpub.com/
