@@ -12,11 +12,22 @@ tags: ['writing', 'book', 'javascript', 'backbone.js', 'testing']
 
 ## Writing a Book
 
-This post is the second in a series on my experiences writing my first
-technical book, **[Backbone.js Testing][book_packt]**, published in July, 2013.
-In this point, I will walk through authoring the core of the book from writing
-the first pages to finishing off the last round of technical edits and ending
-up with something (pretty close) to a real book.
+This post is the second in a series on my experiences writing my first technical
+book, **[Backbone.js Testing][book_packt]**, published in July, 2013. In this
+point, I will walk through authoring the core of the book from writing the first
+pages to finishing off the last round of technical edits and submission
+of the full draft of the book to my publisher.
+
+An overview of the main points we'll cover includes:
+
+* Make sure to have a reliable backup of your work - expect to lose all your
+  files (and your computer).
+* Before writing anything, plan and outline everything.
+* The writing process will take much longer than you think it will.
+* The writing process is also tiring, stressful, and boring.
+* Technical review will bruise your ego and leave you with a much better book.
+* Once you get most of the way through the drafting process, you (the author)
+  hold the power in your relationship with your publisher.
 
 
 ## Where we Left Off
@@ -218,7 +229,6 @@ book examples and text. I think the book ended up much better overall for the
 change, but at the time it was really a pain to change.
 
 
-
 ## Getting Through the Editorial Process
 
 I managed to get drafts of the first four chapters submitted by mid-March.
@@ -260,6 +270,19 @@ pain to research and write, and figured offering it up as a "sacrifice" to
 reclaim page count would be the best way to speed things along.
 
 
+## Submission!
+
+I submitted the final drafts of all chapters at the end of April 2013. I also
+finished and submitted meta-level drafts of things like my biography and the
+preface to the book.
+
+As a foreshadowing event, I also reminded my editors that they had agreed to
+change the title of the book from "Backbone Testing" to "Backbone.js Testing"
+(just adding the three characters ".js").
+
+The editors accepted my submission and gave me a rough outline of the process
+that would unfold from there on out to actually publish the book, a story that
+we will dive into in next post in this series.
 
 
 
@@ -267,26 +290,6 @@ reclaim page count would be the best way to speed things along.
   <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 </div>
 
-1. Setting up a Test Infrastructure (10 pages) - Jan. 8, 2013
-2. Creating a Backbone.js Application Test Plan (8 pages) - Jan. 16, 2013
-3. Test Assertions, Specs, and Suites (20 pages) - Jan. 28, 2013
-4. Test Spies (7 pages) - Feb. 4, 2013
-5. Test Stubs and Mocks (15 pages) - Feb. 11, 2013
-6. Headless Web Testing (12 pages) - Feb. 19, 2013
-7. Appendix A: Other JavaScript Test Frameworks (8 pages) - Feb. 25, 2013
-
-
-## Cranking out the Pages
-
-* TODO: Writing the bulk of the chapters.
-
-* STORY: Page count creep and escalation.
-
-* STORY: Original contract dates vs. my draft dates vs. publication slippage dates.
-* TIP/STORY: Time commitments.
-  * The schedule will slip (unless not aggressive).
-  * You will push into weekends, nights, mornings if you have a full time job.
-  * Everything will take longer than you think. Maybe a factor of two.
 
 
 ## Heading in to the Home Stretch
@@ -304,14 +307,7 @@ reclaim page count would be the best way to speed things along.
 
 * TIP: Editing - Print out a hard copy, get a red pen, and go to town.
 
-<div>
-  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-</div>
-
-## TODO
-
-* Move "Notes" application section lower?
-
+* END: Final submission of the draft.
 
 
 <!-- more start -->
