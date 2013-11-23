@@ -50,6 +50,10 @@ Some of my open source projects on [GitHub](https://github.com/ryan-roemer) incl
   with a full application
   [test suite](http://backbone-testing.com/notes/test/test.html).
 
+* **[chai-jq](http://formidablelabs.github.io/chai-jq/)**: A
+  [Chai](http://chaijs.com/) plugin with custom test assertions for
+  [jQuery](http://jquery.com/).
+
 * **[Sunny.js](http://sunnyjs.org)**: A [Node.js](http://nodejs.org/)
   multi-cloud datastore client (with support for
   [Amazon Web Services](http://aws.amazon.com/)
