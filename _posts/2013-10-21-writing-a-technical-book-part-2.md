@@ -135,7 +135,7 @@ and tested very early on, before most of the chapters were written.
 
 ## And Off We Go (The First Chapter)
 
-With my Chapter 1 outline prepared and my Git repositories ready to go, I
+With the Chapter 1 outline prepared and Git repositories ready to go, I
 started writing the first chapter, "Setting up a Test Infrastructure". The
 chapter essentially comprised downloading all of the libraries needed to run and
 execute the book samples and create a "Hello World"-ish test infrastructure.
@@ -151,24 +151,6 @@ first milestone for actually *writing* a book!
 
 
 ## Digging In (The Other Chapters)
-
-**TODO: Review and rework this section.**
-
-
-## Some Other Observations
-
-* TAKEAWAY: Personality attributes that are helpful.
-  * Writing fast.
-  * Reviewing fast.
-  * Don't get bored easily (and you will get bored of your own writing)
-
-* TIP: Editing - Print out a hard copy, get a red pen, and go to town.
-
-* END: Final submission of the draft.
-
-
-
-
 
 Delivering the first draft of Chapter 1 on time and in reasonably good shape
 did feel like an accomplishment. However, even at that point I realized that
@@ -190,9 +172,10 @@ deadlines as more of a "cross that bridge when we come to it"-type thing.
 Over the next few months, I dug in and cranked out the chapters in my nights
 and weekends (with a generous interruption for moving to Seattle). The writing
 was relatively straightforward in terms of subject matter and getting it
-down on paper, but the process itself was quite difficult and taxing. A
-non-exhaustive list of the rough parts of writing most of the book includes
-the following:
+down on paper, but the process itself was quite difficult and taxing.
+
+If I were to categorize the toughest parts of writing out the initial chapter
+drafts during this big push, the top items would be:
 
 * **Exhaustion**:
   I was pretty tired when writing. I started working on the book many nights
@@ -214,6 +197,40 @@ the following:
   The majority of the publisher's editorial staff was based out of India,
   meaning that communication almost always took a full day and was a half
   day out of sync.
+
+At the end of the day, writing a book is tedious work and not always that fun
+for these and other reasons. The most important traits and tendencies I found
+to counter these obstacles and difficulties include the following:
+
+* **Write and Review Quickly**:
+  I can write reasonably well-organized text fairly quickly. Despite my
+  lofty hopes that the my book is an erudite tome for the ages, the real
+  task for a technical book is finishing it in a not incorrect manner.
+  (The exception to this rule is Larry Wall's
+  "[Programming Perl](http://shop.oreilly.com/product/9780596000271.do)" book,
+  better known as the "Camel Book", which is probably the most humorous and
+  well-written technical book I've ever read.)
+  From my experience, when I could actually get the time to write, I was able
+  to reliably crank out drafts and revisions to my chapters.
+* **Don't Get Bored Easily**:
+  The subject matter of technical books is fairly dry. And, given how long
+  you will spend engrossed in a single topic, it's bound to be quite boring
+  at times. It thus helps to have really good focus on a single topic and
+  being able to push through in a methodical manner. I do pretty well with the
+  latter -- the topic of my book wasn't always engrossing, but at least in
+  chapter-long increments, I was able to always move forward and continue.
+* **Detailed-Oriented**:
+  My publisher didn't have the absolutely best reputation for the textual
+  quality of their books. Apparently repeated, grievous editing mistakes and
+  oversights somehow find their way into at least a number of the final
+  published books, if the Amazon book reviews are to be believed.
+  In my case, I made it my duty to proofread the heck out of everything I wrote
+  and again at every review opportunity. My personal preference for proofing
+  was to print out paper versions of each chapter, and attack it with a red
+  pen, old-school style. However you slice it, it is ultimately the author's
+  responsibility to keep the book in good shape. And, as the next series in
+  the post will discuss, it is also important to keep an eye on your editor /
+  publisher to make sure they're not **adding** errors.
 
 
 ## Technical Review
