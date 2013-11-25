@@ -12,13 +12,14 @@ tags: ['writing', 'book', 'javascript', 'backbone.js', 'testing']
 
 ## Writing a Book
 
-This post is the second in a series on my experiences writing my first technical
-book, **[Backbone.js Testing][book_packt]**, published in July, 2013. In this
-point, I will walk through authoring the core of the book from writing the first
-pages to finishing off the last round of technical edits and submission
-of the full draft of the book to my publisher.
+This is the second in a series of posts on my experiences writing my first
+technical book, **[Backbone.js Testing][book_packt]**, published in July, 2013.
+In this article, I reflect on the task of authoring the core of the book - from
+writing the first pages to finishing off the last round of technical edits and
+submission of the full draft of the book to my publisher.
 
-An overview of the main points we'll cover includes:
+A rough overview of salient tips and experiences from this part of the
+book-writing journey includes:
 
 * Make sure to have a reliable backup of your work - expect to lose all your
   files (and your computer).
@@ -61,8 +62,8 @@ enhancing my book outline, and dove into writing the first chapter.
 
 ### Nuts and Bolts - Storage and Backups
 
-As a purely logistical matter, my book chapters were to be authored as Microsoft
-Word documents and have images in the PNG format. The source code examples are
+As a purely logistical matter, my book chapters were authored as Microsoft
+Word documents and have images in PNG format. The source code examples are
 in HTML, JavaScript, and CSS. And, being a consummate techie, I knew that I
 needed a reliable and flexible digital storage system. My main goals for this
 setup were:
@@ -217,7 +218,7 @@ to counter these obstacles and difficulties include the following:
   you will spend engrossed in a single topic, it's bound to be quite boring
   at times. It thus helps to have really good focus on a single topic and
   being able to push through in a methodical manner. I do pretty well with the
-  latter -- the topic of my book wasn't always engrossing, but at least in
+  latter - the topic of my book wasn't always engrossing, but at least in
   chapter-long increments, I was able to always move forward and continue.
 * **Detailed-Oriented**:
   My publisher didn't have the absolutely best reputation for the textual
