@@ -8,7 +8,7 @@ title: Ryan Roemer
 <div class="clearfix"></div>
 
 I am a software engineer interested in full-stack development, cloud computing,
-and the collision of law and technology. I am presently the CTO and a co-founder
+and the collision of law and technology. I am the CTO and a co-founder
 of **[Formidable Labs](http://formidablelabs.com/)**, where I lead software
 development and architecture, with an emphasis on test methodologies,
 mentorship, and application design.
