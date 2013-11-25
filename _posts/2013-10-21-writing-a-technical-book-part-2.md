@@ -94,13 +94,13 @@ computer with just a few downloads.
 ### Planning and Outlining
 
 Turning to the substantive end of kicking off the book, I began reworking and
-expanding on my detailed book outline that I had begun as as part of the book
+expanding on my detailed book outline that I had begun as part of the book
 scoping and negotiation process with Packt.
 
 The original outline had about a page of bullet points per chapter. I turned
 this into a series of sections and sub-sections for Chapter 1. Then, I filled in
 as many substantive bullet points as I could for each section and sub-section to
-essentially write the structure and outline content for all of the first chapter
+essentially write the structure and outline content for the entire first chapter
 before diving in and actually writing text.
 
 I strongly recommend detailed outlines for any large writing project as it
@@ -110,7 +110,7 @@ process. Or, putting in software development terms, you don't start a large
 web application by writing code top-to-bottom - instead, you create a general
 design and architecture first (say, model-view-controller or something), and
 then you plan and implement the parts. The same goes for writing, if you want
-your end result to be cogent and well-crafted.
+your end result to be cogent and well crafted.
 
 This was also a chance for me to revisit the vision for the book as a whole, as
 the first chapter will really start limiting and focus the world for the book.
@@ -195,8 +195,8 @@ drafts during this big push, the top items would be:
   of chapter first drafts, yet ended up being a significant portion of work.
 * **Time Zones**:
   The majority of the publisher's editorial staff was based out of India,
-  meaning that communication almost always took a full day and was a half
-  day out of sync.
+  meaning that communication almost always took a full day and was a half-day
+  out of sync.
 
 At the end of the day, writing a book is tedious work and not always that fun
 for these and other reasons. The most important traits and tendencies I found
@@ -204,8 +204,8 @@ to counter these obstacles and difficulties include the following:
 
 * **Write and Review Quickly**:
   I can write reasonably well-organized text fairly quickly. Despite my
-  lofty hopes that the my book is an erudite tome for the ages, the real
-  task for a technical book is finishing it in a not incorrect manner.
+  lofty hopes of an erudite tome for the ages, the real goal for a technical
+  book is something that is correct, accessible, and not horrendously dry.
   (The exception to this rule is Larry Wall's
   "[Programming Perl](http://shop.oreilly.com/product/9780596000271.do)" book,
   better known as the "Camel Book", which is probably the most humorous and
@@ -267,7 +267,7 @@ change, but at the time it was really a pain to change.
 ## Getting Through the Editorial Process
 
 I managed to get drafts of the first four chapters submitted by mid-March.
-After my submission of Chapter 4, my publisher notified my that my editor was
+After my submission of Chapter 4, my publisher notified me that my editor was
 changing roles in the company and that I would be assigned a new editor.
 
 Right out of the gate, the new editor notified me that my chapters had deviated
