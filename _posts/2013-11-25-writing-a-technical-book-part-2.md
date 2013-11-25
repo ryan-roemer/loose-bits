@@ -75,7 +75,7 @@ setup were:
 The source code samples were going to be released as an open source
 project and were pure, usable source code, so the storage and backup solution
 was quite obvious - Git and [GitHub](http://github.com). You can find the
-code samples ultimate home at the book's [GitHub repository][book_repo].
+ultimate home of the code samples at the book's [GitHub repository][book_repo].
 
 For the book's textual sources however, Microsoft Word documents typically don't
 play well with Git, and I the book's text as an open source project.
@@ -98,14 +98,14 @@ Turning to the substantive end of kicking off the book, I began reworking and
 expanding on my detailed book outline that I had begun as part of the book
 scoping and negotiation process with Packt.
 
-The original outline had about a page of bullet points per chapter. I turned
+The original outline had about one page of bullet points per chapter. I turned
 this into a series of sections and sub-sections for Chapter 1. Then, I filled in
 as many substantive bullet points as I could for each section and sub-section to
 essentially write the structure and outline content for the entire first chapter
 before diving in and actually writing text.
 
 I strongly recommend detailed outlines for any large writing project as it
-forces you to collect your thoughts, hone the overall message and protect you
+forces you to collect your thoughts, hone the overall message and protects you
 from writing lots of text in directions that will later be cut in the editorial
 process. Or, putting in software development terms, you don't start a large
 web application by writing code top-to-bottom - instead, you create a general
@@ -125,8 +125,10 @@ At the same time, I needed to weave each testing lesson *back* to the
 Backbone.js framework (the book title is, after all, **Backbone.js** Testing),
 so I decided to create a reasonably complex Backbone.js sample application to
 use throughout the book. The application is a simple
-note-taking web page, named Notes, and I tested different parts of Notes in
-each chapter using the specific chapter's test technology.
+note-taking web page, named
+[Notes](http://backbone-testing.com/notes/app/index.html), and I tested
+different parts of Notes in each chapter using the specific chapter's test
+technology.
 
 I think this approach was ultimately successful in unifying the test concepts
 with Backbone.js application fundamentals, but it also required a lot of
@@ -296,14 +298,15 @@ if something came up on my end, there was really no way for my publisher to
 force me to finish. And, once I was over halfway through my first draft of the
 book, the publisher had strong incentives to see me complete it.
 
-So, when I pushed back on the new editor's extensive rewrite proposal, Packt
-was quite amenable and the editor backed down pretty easily.
+So, when I pushed back on the new editor's extensive rewrite proposal with an
+alternate plan, Packt was quite amenable and the editor backed down pretty
+easily.
 
-To help with the overall size of the book, I proposed that we cut the planned
-Appendix (a survey of related technologies to by book's core subject matter)
-instead of revising existing chapters. The Appendix was already going to be a
-pain to research and write, and figured offering it up as a "sacrifice" to
-reclaim page count would be the best way to speed things along.
+To address with the overall size of the book, I cut the planned Appendix (a
+survey of related technologies to by book's core subject matter) instead of
+revising existing chapters. The Appendix was already going to be a pain to
+research and write, and figured offering it up as a "sacrifice" to reclaim page
+count would be the best way to speed things along.
 
 
 ## Submission!
