@@ -207,7 +207,7 @@ to counter these obstacles and difficulties include the following:
 
 * **Write and Review Quickly**:
   I can write reasonably well-organized text fairly quickly. Despite my
-  lofty hopes of an erudite tome for the ages, the real goal for a technical
+  lofty hopes of an erudite tome for the ages, the real goals for a technical
   book is something that is correct, accessible, and not horrendously dry.
   (The exception to this rule is Larry Wall's
   "[Programming Perl](http://shop.oreilly.com/product/9780596000271.do)" book,
