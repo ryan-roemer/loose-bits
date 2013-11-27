@@ -1,6 +1,6 @@
 ---
 layout: post
-title: chai-jq - jQuery Test Assertions for Chai
+title: chai-jq - jQuery Assertions for Chai
 description:
   chai-jq is a plugin for the Chai test assertion framework that
   adds a set of jQuery specific assertions for JavaScript application testing.
