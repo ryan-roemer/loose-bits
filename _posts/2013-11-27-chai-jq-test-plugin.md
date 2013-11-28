@@ -22,13 +22,14 @@ quite neat. Unfortunately, it has a [few issues][chai_jquery_issues] with
 overriding built-in Chai assertions like `have` and `length` in ways that
 changes the underlying Chai API.
 
-With that motivation in mind, I hacked together a quick jQuery plugin, `chai-jq`
-for Chai that has a separate `$`-prefixed namespace to avoid collisions with
-existing Chai assertions, and put the project up on [GitHub][plugin_repo].
+With that motivation in mind, I hacked together a quick jQuery plugin,
+[`chai-jq`][plugin_site] for Chai that has a separate `$`-prefixed namespace to
+avoid collisions with existing Chai assertions, and put the project up on
+[GitHub][plugin_repo].
 
 ## The chai-jq Plugin
 
-The `chai-jq` plugin has full documentation at the
+The [`chai-jq`][plugin_site] plugin has full documentation at the
 [project website][plugin_site], including installation instructions.
 The plugin works in all of the following environments:
 
@@ -37,8 +38,8 @@ The plugin works in all of the following environments:
 * **Node.js + JsDom**: In Node.js using the JsDom browser environment
   emulator.
 
-In terms of what `chai-jq` provides, here is a brief tour of the API
-(stolen from the project docs):
+In terms of what [`chai-jq`][plugin_site] provides, here is a brief tour of the
+API (stolen from the project docs):
 
 <!-- more start -->
 
@@ -156,8 +157,8 @@ expect($("<div style=\"width: 50px; border: 1px dotted black;\" />"))
 
 See: [http://api.jquery.com/css/]()
 
-The `chai-jq` plugin is just getting off the ground and is likely still rough
-around the edges. Any [issue reports][plugin_issues],
+The [`chai-jq`][plugin_site] plugin is just getting off the ground and is
+likely still rough around the edges. Any [issue reports][plugin_issues],
 [pull requests][plugin_pulls], and feedback are most welcome.
 
 
