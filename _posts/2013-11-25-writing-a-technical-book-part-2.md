@@ -330,6 +330,7 @@ we will dive into in next post in this series.
 [book_site]: http://backbone-testing.com/
 [book_packt]: http://www.packtpub.com/backbonejs-testing/book
 [book_post01]: /2013/08/04/writing-a-technical-book-part-1.html
+[book_post02]: /2013/11/25/writing-a-technical-book-part-2.html
 [sinon]: http://sinonjs.org/
 [mocha]: http://visionmedia.github.io/mocha/
 [chai]: http://chaijs.com/
