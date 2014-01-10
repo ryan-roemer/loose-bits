@@ -77,9 +77,9 @@ module.exports = (grunt) ->
       ]
 
 
-  grunt.registerTask "dev:site", "Build dev. website", ["shell:devSite"]
+  grunt.registerTask "dev:site", "Build dev. website", ["shell:site-dev"]
 
-  grunt.registerTask "dev:full", "Build full dev. website", ["shell:devFull"]
+  grunt.registerTask "dev:full", "Build full dev. website", ["shell:site-full"]
 
   #############################################################################
   # Aliases.
