@@ -52,7 +52,7 @@ expect($("<div>&nbsp;</div>"))
   .to.be.$visible;
 {% endhighlight %}
 
-See: [http://api.jquery.com/visible-selector/]()
+See: [http://api.jquery.com/visible-selector/](http://api.jquery.com/visible-selector/)
 
 ### `.$hidden`
 
@@ -63,7 +63,7 @@ expect($("<div style=\"display: none\" />"))
   .to.be.$hidden;
 {% endhighlight %}
 
-See: [http://api.jquery.com/hidden-selector/]()
+See: [http://api.jquery.com/hidden-selector/](http://api.jquery.com/hidden-selector/)
 
 ### `.$val(string|regexp)`
 
@@ -75,7 +75,7 @@ expect($("<input value='foo' />"))
   .to.have.$val(/^foo/);
 {% endhighlight %}
 
-See: [http://api.jquery.com/val/]()
+See: [http://api.jquery.com/val/](http://api.jquery.com/val/)
 
 ### `.$class(string)`
 
@@ -87,7 +87,7 @@ expect($("<div class='foo bar' />"))
   .to.have.$class("bar");
 {% endhighlight %}
 
-See: [http://api.jquery.com/hasClass/]()
+See: [http://api.jquery.com/hasClass/](http://api.jquery.com/hasClass/)
 
 ### `.$attr(name, string)`
 
@@ -101,7 +101,7 @@ expect($("<div id=\"hi\" foo=\"bar time\" />"))
   .to.contain.$attr("foo", "bar");
 {% endhighlight %}
 
-See: [http://api.jquery.com/attr/]()
+See: [http://api.jquery.com/attr/](http://api.jquery.com/attr/)
 
 ### `.$prop(name, value)`
 
@@ -113,7 +113,7 @@ expect($("<input type=\"checkbox\" checked=\"checked\" />"))
   .to.have.$prop("type", "checkbox");
 {% endhighlight %}
 
-See: [http://api.jquery.com/prop/]()
+See: [http://api.jquery.com/prop/](http://api.jquery.com/prop/)
 
 ### `.$html(string)`
 
@@ -127,7 +127,7 @@ expect($("<div><span>foo</span></div>"))
   .to.contain.$html("foo");
 {% endhighlight %}
 
-See: [http://api.jquery.com/html/]()
+See: [http://api.jquery.com/html/](http://api.jquery.com/html/)
 
 ### `.$text(string)`
 
@@ -141,7 +141,7 @@ expect($("<div><span>foo</span> bar</div>"))
   .to.contain.$text("foo");
 {% endhighlight %}
 
-See: [http://api.jquery.com/text/]()
+See: [http://api.jquery.com/text/](http://api.jquery.com/text/)
 
 ### `.$css(name, string)`
 
@@ -155,7 +155,7 @@ expect($("<div style=\"width: 50px; border: 1px dotted black;\" />"))
   .to.have.$css("border-top-style", "dotted");
 {% endhighlight %}
 
-See: [http://api.jquery.com/css/]()
+See: [http://api.jquery.com/css/](http://api.jquery.com/css/)
 
 The [`chai-jq`][plugin_site] plugin is just getting off the ground and is
 likely still rough around the edges. Any [issue reports][plugin_issues],
