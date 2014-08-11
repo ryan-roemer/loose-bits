@@ -5,7 +5,6 @@ title: Ryan Roemer
 ---
 
 <img class="bordered pull-right" src="{{ site.baseurl }}media/img/portrait/forest.jpg" />
-<div class="clearfix"></div>
 
 I am a software engineer interested in full-stack development, cloud computing,
 and the collision of law and technology. I am the CTO and a co-founder
@@ -76,6 +75,10 @@ Some of my open source projects on [GitHub](https://github.com/ryan-roemer) incl
 ### Talks
 
 Here are a few of the technology talks that I have presented recently:
+
+* **8/1/2014** - **[Making JavaScript Tests Fast, Easy &amp; Friendly](http://cascadiajs2014.formidablelabs.com/)**:
+  [CascadiaJS 2014](http://2014.cascadiajs.com/)
+  ([Video](http://youtu.be/xInCEepInnk?list=UUIP244iNzbn4iEkDOgczvcQ))
 
 * **12/19/2013** - **[Backbone.js Testing (A Book!)](http://formidablelabs.github.io/seattlejs-lightning-testing/)**:
   [SeattleJS](http://www.meetup.com/seattlejs/events/151742732/)
