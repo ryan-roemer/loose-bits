@@ -19,6 +19,6 @@ exclude:      ["node_modules", "_styl", "_less", "_notes"]
 
 future:       true
 lsi:          false
-pygments:     true
-markdown:     maruku
+highlighter:  pygments
+markdown:     kramdown
 permalink:    date
