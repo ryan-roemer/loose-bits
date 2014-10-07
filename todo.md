@@ -3,8 +3,6 @@
 
 ## Current
 
-* TODO HERE: `.embed.slides` for slides vs. video...
-
 * Theme this sucker!
 
 * Continue porting over all old files

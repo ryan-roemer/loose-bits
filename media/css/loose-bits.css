@@ -92,16 +92,21 @@ img.pull-right {
 }
 
 .embed iframe {
-  width: 427px;
-  height: 356px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
 }
 
+.embed-slides iframe {
+  width: 427px;
+  height: 356px;
+}
+
 @media (max-width: 767px) {
   .embed iframe {
+    width: 90%;
+  }
+  .embed-slides iframe {
     max-width: 427px;
     max-height: 356px;
-    width: 90%;
   }
 }

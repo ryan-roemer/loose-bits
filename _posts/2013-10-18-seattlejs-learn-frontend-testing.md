@@ -23,7 +23,7 @@ locations:
 
 And, here's an embedded format:
 
-<div class="embed">
+<div class="embed embed-slides">
   <iframe src="http://www.slideshare.net/slideshow/embed_code/27309486" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen">&nbsp;</iframe>
 </div>
 

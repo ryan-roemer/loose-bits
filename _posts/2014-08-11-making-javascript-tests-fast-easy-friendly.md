@@ -73,7 +73,7 @@ As an aside, the [CascadiaJS YouTube Channel][cjs_youtube] has videos from the
 other (fantastic) talks at this year's conference.
 
 
-<div class="embed">
+<div class="embed embed-video">
   <iframe width="560" height="315"
         src="//www.youtube.com/embed/BK3dQUjwo9Q?list=UUIP244iNzbn4iEkDOgczvcQ"
         frameborder="0" allowfullscreen></iframe>
@@ -83,7 +83,7 @@ For those just looking for the slides, you can try the
 [presentation website][talk_site] (with live executable code samples!) or the
 more traditional [SlideShare site][talk_slides], where the final PDF resides.
 
-<div class="embed">
+<div class="embed embed-slides">
   <iframe src="//www.slideshare.net/slideshow/embed_code/37707398"
         class="slideshare"
         width="512" height="421" frameborder="0" marginwidth="0" marginheight="0"
