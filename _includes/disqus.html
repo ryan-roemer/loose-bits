@@ -1,14 +1,14 @@
 <div id="disqus_thread"></div>
 <script type="text/javascript">
-  // Configuration
+  // Configure
   var disqus_shortname = "{{ site.social.disqus }}";
-  var disqus_url = "{{ site.liveurl }}{{ page.url }}";
+  var disqus_url = "{{ site.url }}{{ page.url }}";
   {% if site.baseurl == "/" %}
-      // Developer mode for local host.
-      var disqus_developer = 1;
+    // Developer mode for local host.
+    var disqus_developer = 1;
   {% endif %}
 
-  // Loading
+  // Load
   (function() {
     var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
     dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";

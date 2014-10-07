@@ -9,7 +9,6 @@
   * TODO: Check all the remaining files.
 
 * Social:
-  * Disqus -- NOT WORKING
   * Google Plus -- NOT IMPLMENTED
   * Facebook -- NOT IMPLMENTED
   * AddThis -- NOT IMPLMENTED
