@@ -11,8 +11,7 @@ title: Home
     </h1>
     {% include post_header.html %}
     <div class="excerpt post-content">
-      {{ post.content | replace: "--", "DOUBLE_DASH" | replace: "<!DOUBLE_DASH", "<!--"  | replace: "DOUBLE_DASH>", "-->" | replace:"DOUBLE_DASH","&endash;&endash;" | replace:"more start -->","" | replace:"<!-- more end","" }}
-      {% comment %}END ESCAPE WACKINESS-->{% endcomment %}
+      {{ post.content | split:"<!-- more start -->" | first }}
     </div>
     <div class="more pull-right">
       Read <a href="{{ post.url }}">more</a>...

@@ -22,7 +22,6 @@
 * Style Classes
   * more
 
-
 ## Notes
 
 * Date: `date -u +"%Y-%m-%d %H:%M:%S UTC"`
@@ -40,3 +39,12 @@
 
   * Twitter feed.
   * Tag cloud.
+
+## Log
+
+* Old "more" hack:
+
+```
+{{ post.content | replace: "--", "DOUBLE_DASH" | replace: "<!DOUBLE_DASH", "<!--"  | replace: "DOUBLE_DASH>", "-->" | replace:"DOUBLE_DASH","&endash;&endash;" | replace:"more start -->","" | replace:"<!-- more end","" }}
+{% comment %}END ESCAPE WACKINESS-->{% endcomment %}
+```
