@@ -23,7 +23,6 @@ architecture and development due in final form around the end of June.
          title="Backbone.js Testing"
          src="{{ img_dir }}/book-cover.jpg" />
   </a>
-  <p />
 </div>
 
 A brief abstract of the book's content is available from the

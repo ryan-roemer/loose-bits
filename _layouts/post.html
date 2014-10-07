@@ -3,90 +3,28 @@ layout: default
 ---
 {% assign post = page %}
 
-<!-- Post -->
-<div class="inner">
-<div id="post" class="post">
+<div class="post">
   <article>
+    <h1 class="post-title">{{ page.title }}</h1>
     {% include post_header.html %}
     {{ content }}
   </article>
 </div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    {% for post in site.related_posts limit:3 %}
+      <li>
+        <h3>
+          <a href="{% if site.baseurl != "/" %}{{ site.baseurl }}{% endif %}{{ post.url }}">
+            {{ post.title }}
+            <small>{{ post.date | date_to_string }}</small>
+          </a>
+        </h3>
+      </li>
+    {% endfor %}
+  </ul>
 </div>
 
-<!-- Sharing -->
-<div class="inner">
-<div id="share" class="clearfix">
-  <!-- Twitter -->
-  <a href="http://twitter.com/share" class="twitter-share-button"
-     data-count="horizontal" data-via="ryan_roemer"></a>
-  <script type="text/javascript">
-    Modernizr.load({ load: 'http://platform.twitter.com/widgets.js' });
-  </script>
-
-  <!-- LinkedIn -->
-  <script type="IN/Share" data-url="{{ site.liveurl }}{{ page.url }}" data-counter="right"></script>
-  <script type="text/javascript">
-    Modernizr.load({ load: 'http://platform.linkedin.com/in.js' });
-  </script>
-
-  <!-- Google +1 -->
-  <g:plusone size="medium"></g:plusone>
-  <script type="text/javascript">
-    Modernizr.load({ load: 'https://apis.google.com/js/plusone.js' });
-  </script>
-
-{% comment %}
-  <!-- Facebook -->
-  <div id="fb-root"></div>
-  <div class="fb-like" data-href="{{ site.liveurl }}{{ page.url }}"
-      data-send="true" data-layout="button_count" data-width="100"
-      data-show-faces="true"></div>
-  <script type="text/javascript">
-    Modernizr.load({ load: '//connect.facebook.net/en_US/all.js' +
-                           '#appId=137956002967904&xfbml=1' });
-  </script>
-
-  <!-- AddThis -->
-  <div class="addthis_toolbox addthis_default_style">
-    <a class="addthis_button_tweet"></a>
-    <a class="addthis_button_linkedin"></a>
-    <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-    <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
-    <a class="addthis_button_email"></a>
-    <a class="addthis_counter addthis_pill_style"></a>
-  </div>
-  <script type="text/javascript">
-    var addthis_config = {
-       pubid: "ra-4e6f7b3d32fd08b1",
-       title: "{{ page.title }}",
-       description: "{{ page.description }}"
-    };
-    Modernizr.load({
-      load: 'http://s7.addthis.com/js/250/addthis_widget.js#async=1',
-      complete : function () {
-        addthis.init();
-      }
-    });
-  </script>
-{% endcomment %}
-</div>
-
-<!-- Disqus -->
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-    /* Configure. */
-    var disqus_shortname = '{{ site.disqus }}';
-    var disqus_url = '{{ site.liveurl }}{{ page.url }}';
-    {% if site.baseurl == '/' %}
-        // Developer mode for local host.
-        var disqus_developer = 1;
-    {% endif %}
-
-    /* Load embedded disqus. */
-    Modernizr.load({ load: 'http://' + disqus_shortname +
-                           '.disqus.com/embed.js' });
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">Blog comments powered by <span class="logo-disqus">Disqus</span></a>
-
-</div>
+{% include disqus.html %}

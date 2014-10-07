@@ -3,13 +3,31 @@
 
 ## Current
 
-* IE6: Probably needs an entirely separate nav now.
-* IE7: Missing icons only (maybe have alt text in navbar).
-* IE8: Sort of working, but kicks into compatibility mode, then doesn't work.
+* Theme this sucker!
+* Continue porting over all old files
+
+* Pull about.md image right.
+
+* Social:
+  * Disqus
+  * Google Plus
+  * LinkedIn
+
+* Styles
+  * Embed Slide Share
+  * Embed Video
+  * Embed Prezi
+
+* Style Classes
+  * more
+  * pull-right
+
 
 ## Notes
 
 * Date: `date -u +"%Y-%m-%d %H:%M:%S UTC"`
+* Dev: `jekyll serve --baseurl / --watch --limit 3`
+* Prod: `jekyll serve --baseurl / --watch`
 
 ## Later
 
@@ -17,14 +35,6 @@
 
   * Favicon: Get going.
   * Apple-Touch: Get this going too.
-
-* iPhone: Change layout to break the menu nav. across two rows and validate
-  on iPhone in vertical view mode.
-
-* Verify
-
-  * Social buttons: Twitter, G+1, LinkedIn, FB.
-  * Disqus comments.
 
 * Sidebars:
 

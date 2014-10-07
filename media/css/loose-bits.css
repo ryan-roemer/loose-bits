@@ -1,0 +1,77 @@
+/* -------------------------------------------------------------------------
+ * Pages
+ * ------------------------------------------------------------------------- */
+.archive time {
+  font-weight: bold;
+}
+
+article p img,
+.excerpt p img,
+.pull-center > a > img,
+.pull-center > img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+/* -------------------------------------------------------------------------
+ * Utility
+ * ------------------------------------------------------------------------- */
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+.pull-center {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Clearfix: h5bp.com/q */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix :before,
+.clearfix :after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix :after {
+  clear: both;
+}
+
+img.pull-right {
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+img.responsive {
+
+}
+
+/* -------------------------------------------------------------------------
+ * Embeds
+ * ------------------------------------------------------------------------- */
+.embed {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+
+.embed iframe {
+  width: 427px;
+  height: 356px;
+  border: 2px solid #ccc;
+  margin-bottom: 15px;
+  border: 2px solid #999999;
+}
+
+@media (max-width: 767px) {
+  .embed iframe {
+    max-width: 427px;
+    max-height: 356px;
+    width: 90%;
+  }
+}
