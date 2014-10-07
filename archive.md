@@ -4,7 +4,7 @@ div_class: archive
 title: Archive
 ---
 
-<div class="row clearfix">
+<div class="row">
 {% for post in site.posts %}
 <div class="archive">
   <time datetime="{{ post.date | xmlschema }}">
