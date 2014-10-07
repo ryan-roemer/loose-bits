@@ -4,14 +4,16 @@
 ## Current
 
 * Theme this sucker!
-* Continue porting over all old files
 
-* Pull about.md image right.
+* Continue porting over all old files
+  * TODO: Check all the remaining files.
 
 * Social:
-  * Disqus
-  * Google Plus
-  * LinkedIn
+  * Disqus -- NOT WORKING
+  * Google Plus -- NOT IMPLMENTED
+  * Facebook -- NOT IMPLMENTED
+  * AddThis -- NOT IMPLMENTED
+  * LinkedIn -- NOT IMPLEMENTED
 
 * Styles
   * Embed Slide Share
@@ -20,7 +22,6 @@
 
 * Style Classes
   * more
-  * pull-right
 
 
 ## Notes

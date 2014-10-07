@@ -15,9 +15,9 @@ article p img,
   text-align: center;
 }
 
-.post-meta-clear {
-  clear: both;
-}
+/* -------------------------------------------------------------------------
+ * Posts
+ * ------------------------------------------------------------------------- */
 .post-meta .post-date {
   display: block;
 }
@@ -54,6 +54,14 @@ article p img,
           border-radius: 8px;
 }
 
+.post-content {
+  clear: both;
+}
+
+.post .more {
+  font-style: italic;
+}
+
 /* -------------------------------------------------------------------------
  * Utility
  * ------------------------------------------------------------------------- */
@@ -81,13 +89,13 @@ img.pull-right {
   text-align: center;
   margin-right: auto;
   margin-left: auto;
+}
 
 .embed iframe {
   width: 427px;
   height: 356px;
-  border: 2px solid #ccc;
   margin-bottom: 15px;
-  border: 2px solid #999999;
+  border: 1px solid #ccc;
 }
 
 @media (max-width: 767px) {
