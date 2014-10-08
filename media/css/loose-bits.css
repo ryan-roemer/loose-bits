@@ -24,7 +24,8 @@ article p img,
 .post-meta .tags {
   display: block;
   margin-top: -.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: .8rem;
+  line-height: 30px;
 }
 @media (min-width: 767px) {
   .post-meta .post-date {
@@ -91,22 +92,27 @@ img.pull-right {
   margin-left: auto;
 }
 
-.embed iframe {
+.embed iframe,
+.embed object {
   margin-bottom: 15px;
   border: 1px solid #ccc;
 }
 
-.embed-slides iframe {
+.embed-slides iframe,
+.embed-slides embed {
   width: 427px;
   height: 356px;
 }
 
 @media (max-width: 767px) {
-  .embed iframe {
+  .embed iframe,
+  .embed embed {
     width: 90%;
   }
-  .embed-slides iframe {
+  .embed-slides iframe,
+  .embed-slides embed {
     max-width: 427px;
     max-height: 356px;
   }
 }
+

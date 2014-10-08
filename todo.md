@@ -4,6 +4,7 @@
 ## Current
 
 * Theme this sucker!
+  * Loose Bits old header (black with tagline).
 
 * Continue porting over all old files
   * TODO: Check all the remaining files.

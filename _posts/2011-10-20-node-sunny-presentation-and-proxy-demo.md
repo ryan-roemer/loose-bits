@@ -21,30 +21,23 @@ Instead of the usual PowerPoint deck, I used [Prezi][prezi], which I have
 been wanting to try out for some time. Here is the
 [Sunny.js prezi][sunny_prezi] I gave at the meetup:
 
-<div class="prezi-player">
-  <style type="text/css" media="screen">
-    .prezi-player {
-      width: 500px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .prezi-title {
-      margin-top: 10px;
-      font-size: 1.25em;
-      text-align: center;
-    }
-  </style>
-  <object id="prezi_tlaj11poclwg" name="prezi_tlaj11poclwg" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="500" height="350">
+<div class="embed embed-slides">
+  <object id="prezi_tlaj11poclwg"
+          name="prezi_tlaj11poclwg"
+          classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
     <param name="movie" value="http://prezi.com/bin/preziloader.swf"/>
     <param name="allowfullscreen" value="true"/>
     <param name="allowscriptaccess" value="always"/>
     <param name="bgcolor" value="#ffffff"/>
     <param name="flashvars" value="prezi_id=tlaj11poclwg&amp;lock_to_path=0&amp;color=ffffff&amp;autoplay=no&amp;autohide_ctrls=0"/>
-    <embed id="preziEmbed_tlaj11poclwg" name="preziEmbed_tlaj11poclwg" src="http://prezi.com/bin/preziloader.swf" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="500" height="350" bgcolor="#ffffff" flashvars="prezi_id=tlaj11poclwg&amp;lock_to_path=0&amp;color=ffffff&amp;autoplay=no&amp;autohide_ctrls=0"/>
+    <embed id="preziEmbed_tlaj11poclwg"
+           name="preziEmbed_tlaj11poclwg"
+           src="http://prezi.com/bin/preziloader.swf"
+           type="application/x-shockwave-flash"
+           allowfullscreen="true"
+           allowscriptaccess="always"
+           flashvars="prezi_id=tlaj11poclwg&amp;lock_to_path=0&amp;color=ffffff&amp;autoplay=no&amp;autohide_ctrls=0"/>
   </object>
-  <div class="prezi-title">
-    <a href="{{ sunny_prezi }}">Sunny.js Meetup Presentation</a>
-  </div>
 </div>
 
 Although the Prezi took some time to put together (especially being my first
