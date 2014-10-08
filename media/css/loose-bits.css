@@ -94,13 +94,11 @@ article p img,
   font-size: 0.8em;
   margin-left: 2px;
   margin-right: 2px;
-  padding: 5px 10px;
+  padding: 3px 7px;
   color: #fff;
-  background-color: #bbb;
-  border: 1px solid #ddd;
-  -webkit-border-radius: 8px;
-     -moz-border-radius: 8px;
-          border-radius: 8px;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
 }
 
 .post-content {
@@ -168,3 +166,45 @@ img.pull-right {
   }
 }
 
+/* -------------------------------------------------------------------------
+ * Themes
+ * ------------------------------------------------------------------------- */
+/* Red */
+.theme-base-08 .post-meta .tags .badge {
+  background-color: #ac4142;
+}
+
+/* Orange */
+.theme-base-09 .post-meta .tags .badge {
+  background-color: #d28445;
+}
+
+/* Yellow */
+.theme-base-0a .post-meta .tags .badge {
+  background-color: #f4bf75;
+}
+
+/* Green */
+.theme-base-0b .post-meta .tags .badge {
+  background-color: #90a959;
+}
+
+/* Cyan */
+.theme-base-0c .post-meta .tags .badge {
+  background-color: #75b5aa;
+}
+
+/* Blue */
+.theme-base-0d .post-meta .tags .badge {
+  background-color: #6a9fb5;
+}
+
+/* Magenta */
+.theme-base-0e .post-meta .tags .badge {
+  background-color: #aa759f;
+}
+
+/* Brown */
+.theme-base-0f .post-meta .tags .badge {
+  background-color: #8f5536;
+}
