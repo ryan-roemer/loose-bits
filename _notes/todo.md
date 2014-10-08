@@ -27,6 +27,9 @@ Tasks
     * Twitter feed.
     * Tag cloud.
 
+* Responsive:
+    * About pull-left image is too big / overwhelming in phone portrait mode.
+
 * Compatibility:
     * Lanyon goes into "phone mode" without any nav in IE8 and below.
       Consider having a fallback to at least have archives, about, etc. links.
