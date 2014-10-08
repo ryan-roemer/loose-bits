@@ -15,9 +15,11 @@
   text-decoration: none;
   font-weight: bold;
 }
+.masthead-title small {
+  display: none;
+}
 @media (min-width: 40em) {
   .masthead-title a {
-    width: 200px;
     padding-right: 8px;
     border-right: 1px solid #fff;
   }
@@ -29,6 +31,7 @@
     max-width: 425px;
     font-size: 0.65em;
     vertical-align: top;
+    text-align: left;
     overflow: hidden;
   }
 }
