@@ -3,33 +3,41 @@
  * ------------------------------------------------------------------------- */
 .masthead {
   display: block;
-  background-color: #000;
+  background-color: #202020;
   color: #fff;
 }
 .masthead-title a,
 .masthead-title a:active,
 .masthead-title a:visited,
 .masthead-title a:hover {
+  font-size: 1.25em;
   color: #fff;
   text-decoration: none;
   font-weight: bold;
 }
-@media (min-width: 767px) {
+@media (min-width: 40em) {
   .masthead-title a {
+    width: 200px;
     padding-right: 8px;
     border-right: 1px solid #fff;
   }
+  .masthead-title small {
+    float: right;
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+    max-width: 425px;
+    font-size: 0.65em;
+    vertical-align: top;
+    overflow: hidden;
+  }
 }
-/*.masthead-tagline-container {
-  padding-left: 5px;
-  display: inline;
+@media (min-width: 56em) {
+  .masthead-title small {
+    max-width: 550px;
+  }
 }
-.masthead-tagline {
-  position: relative;
-  font-size: 0.75em;
-  line-height: 0.75em;
-  vertical-align: top;
-}*/
+
 
 /* -------------------------------------------------------------------------
  * Pages
