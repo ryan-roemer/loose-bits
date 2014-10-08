@@ -7,6 +7,7 @@
   color: #fff;
 }
 .masthead-title a,
+.container .masthead-title a,
 .masthead-title a:active,
 .masthead-title a:visited,
 .masthead-title a:hover {
@@ -28,7 +29,7 @@
     display: inline;
     margin-left: 10px;
     margin-right: 10px;
-    max-width: 425px;
+    max-width: 415px;
     font-size: 0.65em;
     vertical-align: top;
     text-align: left;
@@ -37,7 +38,7 @@
 }
 @media (min-width: 56em) {
   .masthead-title small {
-    max-width: 550px;
+    max-width: 540px;
   }
 }
 
