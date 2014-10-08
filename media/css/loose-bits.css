@@ -6,7 +6,7 @@
   color: #fff;
 }
 .masthead-title a,
-.container .masthead-title a,
+.container .masthead-title a, /* Safari+Mac */
 .masthead-title a:active,
 .masthead-title a:visited,
 .masthead-title a:hover {
@@ -26,6 +26,7 @@
     float: left;
     padding-right: 8px;
     border-right: 1px solid #fff;
+    white-space: nowrap;
   }
   .masthead-title small {
     float: left;
