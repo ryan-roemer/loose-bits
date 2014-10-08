@@ -18,7 +18,7 @@ keywords:             ['ryan roemer', 'python', 'javascript', 'node.js', 'nosql'
 baseurl:              /
 paginate:             3
 
-exclude:              ["_notes"]
+exclude:              ["_notes", "README.md"]
 
 # About/contact
 author:

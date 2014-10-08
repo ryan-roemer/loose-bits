@@ -3,9 +3,6 @@
 
 ## Current
 
-* Continue porting over all old files
-  * TODO: Check all the remaining files.
-
 * Social:
   * Google Plus -- NOT IMPLMENTED
   * Facebook -- NOT IMPLMENTED
@@ -26,12 +23,6 @@
 
   * Twitter feed.
   * Tag cloud.
-
-## Notes
-
-* Date: `date -u +"%Y-%m-%d %H:%M:%S UTC"`
-* Dev: `jekyll serve --baseurl / --watch --limit 3`
-* Prod: `jekyll serve --baseurl / --watch`
 
 ## Log
 
