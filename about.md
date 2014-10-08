@@ -1,6 +1,7 @@
 ---
 layout: page
-title: About
+title: Ryan Roemer
+navtitle: About
 ---
 
 <img class="bordered pull-right" src="{{ site.baseurl }}media/img/portrait/forest.jpg" />

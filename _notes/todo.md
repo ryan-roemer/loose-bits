@@ -1,28 +1,27 @@
----
----
+Tasks
+=====
 
 ## Current
 
-* Social:
-  * Google Plus -- NOT IMPLMENTED
-  * Facebook -- NOT IMPLMENTED
-  * AddThis -- NOT IMPLMENTED
-  * LinkedIn -- NOT IMPLEMENTED
+* Social: Add integrations (see old site at: 4624aea9e08b466939bf7baf617fcf8f03912c14)
+  * Google Plus
+  * Facebook
+  * AddThis
+  * LinkedIn
 
-* Style Classes
-  * Do an image in the header (?)
+* Header
+    * Do an image in the header (?)
 
-## Later
+* Navbar
+    * Style navbar differently (?) Image/gradient background (?)
 
 * Images / Icons:
-
-  * Favicon: Get going.
-  * Apple-Touch: Get this going too.
+    * Favicon: Get going.
+    * Apple-Touch: Get this going too.
 
 * Sidebars:
-
-  * Twitter feed.
-  * Tag cloud.
+    * Twitter feed.
+    * Tag cloud.
 
 ## Log
 
