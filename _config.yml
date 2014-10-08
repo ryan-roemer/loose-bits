@@ -11,7 +11,7 @@ relative_permalinks:  true
 # Setup
 title:                Loose Bits
 tagline:              "Thoughts on distributed systems, cloud computing, and the intersection of law and technology."
-description:          "Thoughts on distributed systems, cloud computing, and the intersection of law and technology."
+#description:          ""
 url:                  http://loose-bits.com
 keywords:             ['ryan roemer', 'python', 'javascript', 'node.js', 'nosql',
                        'search', 'backbone.js', 'cloud', 'cloud computing', 'law', 'patents']
