@@ -66,6 +66,14 @@ article p img,
 /* -------------------------------------------------------------------------
  * Posts
  * ------------------------------------------------------------------------- */
+.post-item {
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+.post-item:first-child {
+  border-top: none;
+  padding-top: none;
+}
 .post-meta .post-date {
   display: block;
 }
@@ -107,6 +115,7 @@ article p img,
 
 .post .more {
   font-style: italic;
+  font-size: 0.9em;
 }
 
 /* -------------------------------------------------------------------------
