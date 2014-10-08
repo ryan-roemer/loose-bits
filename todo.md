@@ -15,11 +15,6 @@
   * AddThis -- NOT IMPLMENTED
   * LinkedIn -- NOT IMPLEMENTED
 
-* Styles
-  * Embed Slide Share
-  * Embed Video
-  * Embed Prezi
-
 * Style Classes
   * more
 

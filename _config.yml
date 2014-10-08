@@ -10,7 +10,7 @@ relative_permalinks:  true
 
 # Setup
 title:                Loose Bits
-#tagline:             SOMETHING_CLEVER
+tagline:              "Thoughts on distributed systems, cloud computing, and the intersection of law and technology."
 description:          "Thoughts on distributed systems, cloud computing, and the intersection of law and technology."
 url:                  http://loose-bits.com
 baseurl:              /

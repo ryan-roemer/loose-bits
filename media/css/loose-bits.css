@@ -1,4 +1,37 @@
 /* -------------------------------------------------------------------------
+ * Header
+ * ------------------------------------------------------------------------- */
+.masthead {
+  display: block;
+  background-color: #000;
+  color: #fff;
+}
+.masthead-title a,
+.masthead-title a:active,
+.masthead-title a:visited,
+.masthead-title a:hover {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+@media (min-width: 767px) {
+  .masthead-title a {
+    padding-right: 8px;
+    border-right: 1px solid #fff;
+  }
+}
+/*.masthead-tagline-container {
+  padding-left: 5px;
+  display: inline;
+}
+.masthead-tagline {
+  position: relative;
+  font-size: 0.75em;
+  line-height: 0.75em;
+  vertical-align: top;
+}*/
+
+/* -------------------------------------------------------------------------
  * Pages
  * ------------------------------------------------------------------------- */
 .archive time {
@@ -81,6 +114,10 @@ article p img,
 img.pull-right {
   margin-left: 5px;
   margin-bottom: 5px;
+}
+
+.clearfix {
+  clear: both;
 }
 
 /* -------------------------------------------------------------------------
