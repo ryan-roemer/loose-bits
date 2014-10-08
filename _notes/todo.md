@@ -3,6 +3,10 @@ Tasks
 
 ## Current
 
+* Posts:
+  * Updating to Lanyon.
+  * Writing a technical book.
+
 * Social: Add integrations (see old site at: 4624aea9e08b466939bf7baf617fcf8f03912c14)
   * Google Plus
   * Facebook
