@@ -1,0 +1,219 @@
+/* -------------------------------------------------------------------------
+ * Header
+ * ------------------------------------------------------------------------- */
+.masthead {
+  background-color: #202020;
+  color: #fff;
+}
+.masthead-title a,
+.container .masthead-title a, /* Safari+Mac */
+.masthead-title a:active,
+.masthead-title a:visited,
+.masthead-title a:hover {
+  font-size: 1.25em;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.masthead-title small {
+  display: none;
+}
+@media (min-width: 40em) {
+  .masthead-title {
+    display: inline-block;
+  }
+  .masthead-title a {
+    float: left;
+    padding-right: 8px;
+    border-right: 1px solid #fff;
+    white-space: nowrap;
+  }
+  .masthead-title small {
+    float: left;
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+    max-width: 415px;
+    font-size: 0.65em;
+    vertical-align: top;
+    text-align: left;
+    overflow: hidden;
+  }
+}
+@media (min-width: 56em) {
+  .masthead-title small {
+    max-width: 540px;
+  }
+}
+
+/* -------------------------------------------------------------------------
+ * Pages
+ * ------------------------------------------------------------------------- */
+.archive time {
+  font-weight: bold;
+}
+
+article p img,
+.excerpt p img,
+.pull-center > a > img,
+.pull-center > img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+/* -------------------------------------------------------------------------
+ * Posts
+ * ------------------------------------------------------------------------- */
+.post-item {
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+.post-item:first-child {
+  border-top: none;
+  padding-top: none;
+}
+.post-meta .post-date {
+  display: block;
+}
+.post-meta .tags {
+  display: block;
+  margin-top: -.5rem;
+  margin-bottom: .8rem;
+  line-height: 30px;
+}
+@media (min-width: 767px) {
+  .post-meta .post-date {
+    float: left;
+  }
+  .post-meta .tags {
+    float: right;
+  }
+}
+.post-meta .tags a,
+.post-meta .tags a:active,
+.post-meta .tags a:visited,
+.post-meta .tags a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.post-meta .tags .badge {
+  font-size: 0.8em;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding: 3px 7px;
+  color: #fff;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+}
+
+.post-content {
+  clear: both;
+}
+
+.post .more {
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+/* -------------------------------------------------------------------------
+ * Utility
+ * ------------------------------------------------------------------------- */
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+.pull-center {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+img.pull-right {
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+.clearfix {
+  clear: both;
+}
+
+/* -------------------------------------------------------------------------
+ * Embeds
+ * ------------------------------------------------------------------------- */
+.embed {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.embed iframe,
+.embed object {
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+}
+
+.embed-slides iframe,
+.embed-slides embed {
+  width: 427px;
+  height: 356px;
+}
+
+@media (max-width: 767px) {
+  .embed iframe,
+  .embed embed {
+    width: 90%;
+  }
+  .embed-slides iframe,
+  .embed-slides embed {
+    max-width: 427px;
+    max-height: 356px;
+  }
+}
+
+/* -------------------------------------------------------------------------
+ * Themes
+ * ------------------------------------------------------------------------- */
+/* Red */
+.theme-base-08 .post-meta .tags .badge {
+  background-color: #ac4142;
+}
+
+/* Orange */
+.theme-base-09 .post-meta .tags .badge {
+  background-color: #d28445;
+}
+
+/* Yellow */
+.theme-base-0a .post-meta .tags .badge {
+  background-color: #f4bf75;
+}
+
+/* Green */
+.theme-base-0b .post-meta .tags .badge {
+  background-color: #90a959;
+}
+
+/* Cyan */
+.theme-base-0c .post-meta .tags .badge {
+  background-color: #75b5aa;
+}
+
+/* Blue */
+.theme-base-0d .post-meta .tags .badge {
+  background-color: #6a9fb5;
+}
+
+/* Magenta */
+.theme-base-0e .post-meta .tags .badge {
+  background-color: #aa759f;
+}
+
+/* Brown */
+.theme-base-0f .post-meta .tags .badge {
+  background-color: #8f5536;
+}

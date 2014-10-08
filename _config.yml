@@ -1,24 +1,36 @@
-version:      0.0.1
+# Dependencies
+markdown:             redcarpet
+highlighter:          pygments
 
-safe:         false
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:            date
+relative_permalinks:  true
 
-baseurl:      http://loose-bits.com/
-liveurl:      http://loose-bits.com
-analytics:    UA-16721875-2
-disqus:       loose-bits
-github:       http://github.com/ryan-roemer/loose-bits/
-title:        Loose Bits
-subtitle:     Thoughts on distributed systems, cloud computing, and the
-              intersection of law and technology.
-keywords:     ['ryan roemer', 'python', 'javascript', 'node.js', 'nosql',
-               'search', 'backbone.js', 'cloud', 'cloud computing', 'law', 'patents']
+# Setup
+title:                Loose Bits
+tagline:              "Thoughts on distributed systems, cloud computing, and the intersection of law and technology."
+#description:          ""
+url:                  http://loose-bits.com
+keywords:             ['ryan roemer', 'python', 'javascript', 'node.js', 'nosql',
+                       'search', 'backbone.js', 'cloud', 'cloud computing', 'law', 'patents']
+baseurl:              /
+paginate:             3
 
-source:       .
-destination:  ./_site
-exclude:      ["node_modules", "_styl", "_less", "_notes"]
+exclude:              ["_notes", "README.md"]
 
-future:       true
-lsi:          false
-highlighter:  pygments
-markdown:     kramdown
-permalink:    date
+# About/contact
+author:
+  name:               Ryan Roemer
+  url:                https://twitter.com/ryan_roemer
+  email:              ryan@loose-bits.com
+
+# Social
+social:
+  analytics:          UA-16721875-2
+  disqus:             loose-bits
+  github:             http://github.com/ryan-roemer
+  twitter:            https://twitter.com/ryan_roemer
+  linkedin:           http://www.linkedin.com/in/ryanroemer
+  feedburner:         http://feeds.feedburner.com/LooseBits

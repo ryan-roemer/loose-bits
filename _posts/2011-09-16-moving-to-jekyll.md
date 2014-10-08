@@ -135,7 +135,7 @@ localhost:
 
 {% highlight javascript %}
 // Live page URL.
-var disqus_url = '{{ site.liveurl }}{{ page.url }}';
+var disqus_url = '{{ site.url }}{{ page.url }}';
 
 // Developer mode for localhost.
 var disqus_developer = 1;

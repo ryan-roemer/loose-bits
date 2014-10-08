@@ -1,7 +1,7 @@
 ---
 layout: page
-div_class: about
 title: Ryan Roemer
+navtitle: About
 ---
 
 <img class="bordered pull-right" src="{{ site.baseurl }}media/img/portrait/forest.jpg" />
@@ -74,29 +74,37 @@ Some of my open source projects on [GitHub](https://github.com/ryan-roemer) incl
 
 ### Talks
 
-Here are a few of the technology talks that I have presented recently:
+Here are some of my recent technology talks and presentations:
 
-* **8/1/2014** - **[Making JavaScript Tests Fast, Easy &amp; Friendly](http://cascadiajs2014.formidablelabs.com/)**:
+* **8/1/2014** -
+  **[Making JavaScript Tests Fast, Easy &amp; Friendly](http://cascadiajs2014.formidablelabs.com/)**:
   [CascadiaJS 2014](http://2014.cascadiajs.com/)
-  ([Video](http://youtu.be/xInCEepInnk?list=UUIP244iNzbn4iEkDOgczvcQ))
+  ([Video](http://youtu.be/BK3dQUjwo9Q?list=UUIP244iNzbn4iEkDOgczvcQ))
 
-* **12/19/2013** - **[Backbone.js Testing (A Book!)](http://formidablelabs.github.io/seattlejs-lightning-testing/)**:
+* **12/19/2013** -
+  **[Backbone.js Testing (A Book!)](http://formidablelabs.github.io/seattlejs-lightning-testing/)**:
   [SeattleJS](http://www.meetup.com/seattlejs/events/151742732/)
 
-* **10/16/2013** - **[Learn Frontend Testing](http://formidablelabs.github.io/learn-frontend-testing/)**:
+* **10/16/2013** -
+  **[Learn Frontend Testing](http://formidablelabs.github.io/learn-frontend-testing/)**:
   [SeattleJS](http://www.meetup.com/seattlejs/events/139993642/)
 
-* **5/8/2013** - **[Node.js in Production](http://ryan-roemer.github.io/seanode-prod-talk/)**:
+* **5/8/2013** -
+  **[Node.js in Production](http://ryan-roemer.github.io/seanode-prod-talk/)**:
   [Seattle Node.js](http://seanode.github.io/2013/04/24/seattle-nodejs-may-meetup/)
 
-* **11/13/2012** - **[Shared Code with AMD/RequireJS](http://ryan-roemer.github.io/nodedc-requirejs-talk/)**:
-  [Node.DC](http://www.meetup.com/node-dc/events/89233812/).
+* **11/13/2012** -
+  **[Shared Code with AMD/RequireJS](http://ryan-roemer.github.io/nodedc-requirejs-talk/)**:
+  [Node.DC](http://www.meetup.com/node-dc/events/89233812/)
 
-* **8/15/2012** - **[5 Things I Like About CoffeeScript](http://ryan-roemer.github.io/nodedc-coffeescript-talk/)**:
-  [Node.DC](http://www.meetup.com/node-dc/events/73746422/).
+* **8/15/2012** -
+  **[5 Things I Like About CoffeeScript](http://ryan-roemer.github.io/nodedc-coffeescript-talk/)**:
+  [Node.DC](http://www.meetup.com/node-dc/events/73746422/)
 
-* **3/20/2012** - **[Getting Started with Node.js in the Cloud](http://ryan-roemer.github.io/novanode-cloud-talk/)**:
+* **3/20/2012** -
+  **[Getting Started with Node.js in the Cloud](http://ryan-roemer.github.io/novanode-cloud-talk/)**:
   [Nova Node](http://www.meetup.com/Nova-Node/events/52749282/)
 
-* **2/20/2012** - **[async.js](http://ryan-roemer.github.io/nodedc-async-talk)**:
-  [Node.DC](http://www.meetup.com/node-dc/events/49905452/).
+* **2/20/2012** -
+  **[async.js](http://ryan-roemer.github.io/nodedc-async-talk)**:
+  [Node.DC](http://www.meetup.com/node-dc/events/49905452/)
