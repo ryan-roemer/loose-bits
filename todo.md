@@ -3,9 +3,6 @@
 
 ## Current
 
-* Theme this sucker!
-  * Loose Bits old header (black with tagline).
-
 * Continue porting over all old files
   * TODO: Check all the remaining files.
 
@@ -16,13 +13,7 @@
   * LinkedIn -- NOT IMPLEMENTED
 
 * Style Classes
-  * more
-
-## Notes
-
-* Date: `date -u +"%Y-%m-%d %H:%M:%S UTC"`
-* Dev: `jekyll serve --baseurl / --watch --limit 3`
-* Prod: `jekyll serve --baseurl / --watch`
+  * Do an image in the header (?)
 
 ## Later
 
@@ -35,6 +26,12 @@
 
   * Twitter feed.
   * Tag cloud.
+
+## Notes
+
+* Date: `date -u +"%Y-%m-%d %H:%M:%S UTC"`
+* Dev: `jekyll serve --baseurl / --watch --limit 3`
+* Prod: `jekyll serve --baseurl / --watch`
 
 ## Log
 
