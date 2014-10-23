@@ -312,7 +312,7 @@ post in this series.*)
 [book_post01]: /2013/08/04/writing-a-technical-book-part-1.html
 [book_post02]: /2013/11/25/writing-a-technical-book-part-2.html
 [sinon]: http://sinonjs.org/
-[mocha]: http://visionmedia.github.io/mocha/
+[mocha]: http://mochajs.org/
 [chai]: http://chaijs.com/
 
 <!-- more end -->

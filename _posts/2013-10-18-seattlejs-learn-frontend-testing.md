@@ -44,7 +44,7 @@ code in the following steps:
 
 The test stack the presentation uses is:
 
-* **[Mocha](http://visionmedia.github.com/mocha/)**: Test framework for
+* **[Mocha](http://mochajs.org/)**: Test framework for
   organizing and running our tests.
 * **[Chai](http://chaijs.com/)**: Natural language-focused test assertion
   library.

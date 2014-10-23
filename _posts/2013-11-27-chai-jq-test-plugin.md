@@ -169,7 +169,7 @@ likely still rough around the edges. Any [issue reports][plugin_issues],
 [plugin_repo]: https://github.com/FormidableLabs/chai-jq
 [plugin_site]: http://formidablelabs.github.io/chai-jq/
 [chai]: http://chaijs.com/
-[mocha]: http://visionmedia.github.io/mocha/
+[mocha]: http://mochajs.org/
 [requirejs]: requirejs.org
 
 <!-- more end -->

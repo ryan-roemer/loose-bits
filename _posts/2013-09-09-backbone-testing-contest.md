@@ -57,7 +57,7 @@ email address to publicly appear on this page.)
 [book_site]: http://backbone-testing.com/
 [book_packt]: http://www.packtpub.com/backbonejs-testing/book
 [sinon]: http://sinonjs.org/
-[mocha]: http://visionmedia.github.io/mocha/
+[mocha]: http://mochajs.org/
 [chai]: http://chaijs.com/
 
 <!-- more end -->

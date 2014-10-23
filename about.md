@@ -45,12 +45,16 @@ Some of my open source projects on [GitHub](https://github.com/ryan-roemer) incl
   applications for my book,
   "*[Backbone.js Testing](http://www.packtpub.com/backbonejs-testing/book)*",
   using the
-  [Mocha](http://visionmedia.github.com/mocha/), [Chai](http://chaijs.com/), and
+  [Mocha](http://mochajs.org/), [Chai](http://chaijs.com/), and
   [Sinon.JS](http://sinonjs.org/) libraries. Also contains a live demo
   note-taking [Backbone.js](http://backbonejs.org/) application,
   **[Notes](http://backbone-testing.com/notes/app/index.html)**,
   with a full application
   [test suite](http://backbone-testing.com/notes/test/test.html).
+
+* **[rowdy](https://github.com/FormidableLabs/rowdy)**: A wrapper
+  for [WD.js](https://github.com/admc/wd) for easy configuration and execution
+  of Selenium-based integration tests with adapters for Mocha.
 
 * **[chai-jq](http://formidablelabs.github.io/chai-jq/)**: A
   [Chai](http://chaijs.com/) plugin with custom test assertions for
@@ -75,6 +79,10 @@ Some of my open source projects on [GitHub](https://github.com/ryan-roemer) incl
 ### Talks
 
 Here are some of my recent technology talks and presentations:
+
+* **10/22/2014** -
+  **[Fail The Right Way - Node.js in Production](http://ssw2014.formidablelabs.com/)**:
+  [Seattle Node.js / Seattle Startup Week](http://www.meetup.com/Seattle-Node-js/events/210801942/)
 
 * **8/1/2014** -
   **[Making JavaScript Tests Fast, Easy &amp; Friendly](http://cascadiajs2014.formidablelabs.com/)**:
