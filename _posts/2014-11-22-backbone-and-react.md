@@ -2,9 +2,9 @@
 layout: post
 title: "Backbone.js with React Views"
 description:
-  <em>Making JavaScript Tests Fast, Easy, &amp; Friendly</em> is a presentation
-  I gave at CascasdiaJS 2014 that focuses on creating processes and environments
-  that help developers actually write and run application tests.
+  On Nov. 18, 2014, I presented a talk at the Seattle ReactJS Meetup on creating
+  Backbone.js applications with React components, enabling more efficient DOM
+  rendering, server-side rendering, and other nifty possibilities.
 tags: ['react', 'backbone.js', 'javascript']
 ---
 {% capture img_dir %}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
