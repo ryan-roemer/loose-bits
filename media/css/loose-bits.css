@@ -63,6 +63,10 @@ article p img,
   text-align: center;
 }
 
+img.about {
+  max-width: 50%;
+}
+
 /* -------------------------------------------------------------------------
  * Posts
  * ------------------------------------------------------------------------- */
@@ -118,6 +122,37 @@ article p img,
   font-size: 0.9em;
 }
 
+.post-media {
+  padding: 24px 0;
+
+  @media only screen and (min-width: 600px) {
+    padding: 24px;
+  }
+
+  iframe {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.post-media-grid {
+  margin-left: -24px;
+
+  font-size: 0;
+  text-align: center;
+}
+
+.post-media-col-1-2 {
+  display: inline-block;
+  width: 40%;
+  max-width: 300px;
+  padding-left: 24px;
+
+  font-size: 16px;
+  vertical-align: center;
+}
+
 /* -------------------------------------------------------------------------
  * Utility
  * ------------------------------------------------------------------------- */
@@ -161,6 +196,7 @@ img.pull-right {
 .embed-slides embed {
   width: 427px;
   height: 356px;
+  border: 1px solid #ccc;
 }
 
 @media (max-width: 767px) {
