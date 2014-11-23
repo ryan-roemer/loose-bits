@@ -75,7 +75,7 @@ Or, for the more traditional folks, the talk
         allowfullscreen></iframe>
 </div>
 
-[talk_site]: http://cascadiajs2014.formidablelabs.com/
+[talk_site]: http://slides.formidablelabs.com/201411-react-backbone.html
 [talk_slides]: http://www.slideshare.net/RyanRoemer/backbonejs-with-react-views-server-rendering-virtual-dom-and-more
 [seattle_react]: http://www.meetup.com/seattle-react-js/events/216736502/
 [zombies]: http://lostechies.com/derickbailey/2011/09/15/zombies-run-managing-page-transitions-in-backbone-apps/

@@ -80,6 +80,10 @@ Some of my open source projects on [GitHub](https://github.com/ryan-roemer) incl
 
 Here are some of my recent technology talks and presentations:
 
+* **11/18/2014** -
+  **[Backbone.js with React Views](http://slides.formidablelabs.com/201411-react-backbone.html)**:
+  [Seattle ReactJS Meetup](http://www.meetup.com/seattle-react-js/events/216736502/)
+
 * **10/22/2014** -
   **[Fail The Right Way - Node.js in Production](http://ssw2014.formidablelabs.com/)**:
   [Seattle Node.js / Seattle Startup Week](http://www.meetup.com/Seattle-Node-js/events/210801942/)
