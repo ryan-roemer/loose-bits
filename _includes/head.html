@@ -23,16 +23,16 @@
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="{{ site.baseurl }}media/css/poole.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}media/css/syntax.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}media/css/lanyon.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}media/css/loose-bits.css">
+  <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}media/css/poole.css">
+  <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}media/css/syntax.css">
+  <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}media/css/lanyon.css">
+  <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}media/css/loose-bits.css">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
 
   {% comment %}
   <!-- TODO: ADD ICONS -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}media/apple-touch-icon-precomposed.png">
-  <link rel="shortcut icon" href="{{ site.baseurl }}media/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.url }}{{ site.baseurl }}media/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="{{ site.url }}{{ site.baseurl }}media/favicon.ico">
   {% endcomment %}
 
   <!-- RSS -->
@@ -48,5 +48,5 @@
   <meta property="og:title" content="{{ page.title }}" />
   <meta property="og:description" content="{{ desc }}" />
 
-  <base href="{{ site.baseurl }}" />
+  <base href="{{ site.url }}{{ site.baseurl }}" />
 </head>

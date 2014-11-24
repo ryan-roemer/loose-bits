@@ -20,7 +20,7 @@ contest to give away copies of my book, **[Backbone.js Testing][book_packt]**!
          style="width: 50%; max-width: 250px;"
          alt="Backbone.js Testing"
          title="Backbone.js Testing"
-         src="{{ site.baseurl }}media/img/2013/06/13/book-cover.jpg" />
+         src="{{ site.url }}{{ site.baseurl }}media/img/2013/06/13/book-cover.jpg" />
   </a>
   <p />
 </div>

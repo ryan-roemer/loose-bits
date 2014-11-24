@@ -4,7 +4,8 @@ title: Ryan Roemer
 navtitle: About
 ---
 
-<img class="bordered pull-right about" src="{{ site.baseurl }}media/img/portrait/forest.jpg" />
+<img class="bordered pull-right about"
+     src="{{ site.url }}{{ site.baseurl }}media/img/portrait/forest.jpg" />
 
 I am a software engineer interested in full-stack development, cloud computing,
 and the collision of law and technology. I am the CTO and a co-founder
