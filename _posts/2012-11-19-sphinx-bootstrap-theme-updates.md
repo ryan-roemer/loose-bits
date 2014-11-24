@@ -9,7 +9,7 @@ description: The "spinx-bootstrap-theme" plugin integrates Twitter
 date: 2012-11-19 11:30:00 UTC
 tags: ['python', 'sphinx', 'theme', 'twitter', 'bootstrap', 'mobile']
 ---
-{% capture img_dir %}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
+{% capture img_dir %}{{ site.url }}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
 
 ## Sphinx Bootstrap Theme Updates!
 

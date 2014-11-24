@@ -8,7 +8,7 @@ date: 2012-02-21 20:54:38 UTC
 tags: ['node.js', 'async.js', 'javascript', 'control flow', 'concurrency',
        'meetup']
 ---
-{% capture img_dir %}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
+{% capture img_dir %}{{ site.url }}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
 
 ## Async.js, a JavaScript Control Flow Library
 

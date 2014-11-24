@@ -7,7 +7,7 @@ description:
   rendering, server-side rendering, and other nifty possibilities.
 tags: ['react', 'backbone.js', 'javascript']
 ---
-{% capture img_dir %}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
+{% capture img_dir %}{{ site.url }}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
 
 *Cross-posted from the
 [Formidable Labs blog](http://formidablelabs.com/blog/2014/11/21/backbone-and-react/)*.

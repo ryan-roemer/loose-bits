@@ -11,7 +11,7 @@ description: The advent of JavaScript on the backend (with Node.js) has made
 date: 2012-11-15 11:30:00 UTC
 tags: ['node.js', 'amd', 'requirejs', 'javascript', 'meetup']
 ---
-{% capture img_dir %}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
+{% capture img_dir %}{{ site.url }}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
 
 ## AMD/RequireJS
 

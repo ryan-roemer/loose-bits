@@ -8,7 +8,7 @@ description: Bootstrap is a front-end web framework for fast, intuitive and
 date: 2012-09-30 18:37:07 UTC
 tags: ['css', 'javascript', 'web', 'mobile', 'design', 'bootstrap']
 ---
-{% capture img_dir %}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
+{% capture img_dir %}{{ site.url }}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
 
 ## Bootstrap
 

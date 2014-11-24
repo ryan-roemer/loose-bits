@@ -7,7 +7,7 @@ description: CoffeeScript is programming language that compiles to JavaScript.
 date: 2012-08-16 11:30:00 UTC
 tags: ['node.js', 'coffeescript', 'javascript', 'meetup']
 ---
-{% capture img_dir %}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
+{% capture img_dir %}{{ site.url }}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
 
 ## CoffeeScript
 

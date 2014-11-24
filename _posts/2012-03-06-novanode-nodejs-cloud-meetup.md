@@ -8,7 +8,7 @@ description: We're kicking off the new NovaNode - Northern Virginia Node.js -
 date: 2012-03-06 15:01:00 UTC
 tags: ['node.js', 'nova node', 'cloud', 'meetup']
 ---
-{% capture img_dir %}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
+{% capture img_dir %}{{ site.url }}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
 {% capture nova_node %}http://www.meetup.com/Nova-Node/{% endcapture %}
 
 ## Node.js in NoVA!

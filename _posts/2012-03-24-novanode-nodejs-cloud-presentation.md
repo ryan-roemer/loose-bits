@@ -7,7 +7,7 @@ description: On March 20, 2012, we launched the NovaNode meetup with two talks.
 date: 2012-03-24 22:08:21 UTC
 tags: ['node.js', 'cloud', 'heroku', 'nova node', 'meetup']
 ---
-{% capture img_dir %}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
+{% capture img_dir %}{{ site.url }}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
 
 ## Getting Started with Node.js in the Cloud
 

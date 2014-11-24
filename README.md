@@ -5,14 +5,16 @@ Jekyll repo for loose-bits.com
 
 ## Development
 
-Watch last 3 posts:
+Watch last 3 posts and have relative root (instead of `http://loose-bits.com`).
 
 ```
-$ jekyll serve --baseurl / --watch --limit 3
+$ jekyll serve --config _config.yml,_config-dev.yml --watch --limit 3
 ```
+
+## Production
 
 Watch everything:
 
 ```
-$ Prod: `jekyll serve --baseurl / --watch
+$ jekyll serve --watch
 ```

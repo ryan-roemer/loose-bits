@@ -8,8 +8,8 @@ permalink: /2011/02/browserless-ajax-testing-with-rhino-and.html
 tags: ['javascript', 'dom', 'django', 'envjs', 'ajax', 'python', 'test',
        'rhino']
 ---
-{% capture img_dir %}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
-{% capture pt2 %}{{ site.baseurl }}2011/02/browserless-ajax-testing-with-rhino-and_16.html{% endcapture %}
+{% capture img_dir %}{{ site.url }}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
+{% capture pt2 %}{{ site.url }}{{ site.baseurl }}2011/02/browserless-ajax-testing-with-rhino-and_16.html{% endcapture %}
 
 ## Updates - 5/27/2011
 

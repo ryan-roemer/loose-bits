@@ -9,7 +9,7 @@ permalink: /2011/03/django-cloud-browser.html
 tags: ['openstack', 'django', 'cloud', 'python', 's3', 'rackspace', 'aws',
        'cloud files']
 ---
-{% capture img_dir %}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
+{% capture img_dir %}{{ site.url }}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
 
 ## Introduction
 

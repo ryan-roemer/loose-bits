@@ -8,8 +8,8 @@ description: Deck.js is a framework for creating modern HTML presentations
 date: 2012-11-05 10:00:00 UTC
 tags: ['css', 'javascript', 'web', 'html', 'deck.js', 'presentation']
 ---
-{% capture img_base %}{{ site.baseurl }}media/img/{% endcapture %}
-{% capture img_dir %}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
+{% capture img_base %}{{ site.url }}{{ site.baseurl }}media/img/{% endcapture %}
+{% capture img_dir %}{{ site.url }}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
 
 ## Deck.js Starter
 

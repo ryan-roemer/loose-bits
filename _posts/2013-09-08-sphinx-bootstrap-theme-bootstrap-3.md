@@ -7,7 +7,7 @@ description: The "spinx-bootstrap-theme" integrates Twitter
 date: 2013-09-08 11:30:00 UTC
 tags: ['python', 'sphinx', 'theme', 'twitter', 'bootstrap']
 ---
-{% capture img_dir %}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
+{% capture img_dir %}{{ site.url }}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
 
 ## Bootstrap v3 comes to Sphinx
 
@@ -105,7 +105,7 @@ coming and help us continue to develop the friendship between
 [sbt_demo_readme]: http://ryan-roemer.github.com/sphinx-bootstrap-theme/README.html
 [sbt_pypi]: http://pypi.python.org/pypi/sphinx-bootstrap-theme/0.2.0
 [sbt_gh]: https://github.com/ryan-roemer/sphinx-bootstrap-theme
-[v0.2.0_post]: /2013/04/10/sphinx-bootstrap-theme-bootswatch.html
+[v0.2.0_post]: {{ site.url }}{{ site.baseurl }}2013/04/10/sphinx-bootstrap-theme-bootswatch.html
 
 [@aababilov]: https://github.com/aababilov
 [@grncdr]: https://github.com/grncdr

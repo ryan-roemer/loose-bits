@@ -8,7 +8,7 @@ description: Backbone.js Testing is a forthcoming book that covers all aspects
 date: 2013-06-13 11:30:00 UTC
 tags: ['javascript', 'backbone.js', 'testing', 'mocha', 'chai', 'sinon']
 ---
-{% capture img_dir %}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
+{% capture img_dir %}{{ site.url }}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
 
 ## Backbone.js Testing Book
 

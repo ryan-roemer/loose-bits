@@ -7,7 +7,7 @@ description: The "spinx-bootstrap-theme" integrates Twitter
 date: 2013-04-10 11:30:00 UTC
 tags: ['python', 'sphinx', 'theme', 'twitter', 'bootstrap', 'bootswatch']
 ---
-{% capture img_dir %}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
+{% capture img_dir %}{{ site.url }}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
 
 ## Bringing Bootswatch to Sphinx
 

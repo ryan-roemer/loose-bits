@@ -7,7 +7,7 @@ description: The "spinx-bootstrap-theme" plugin brings the awesomeness of the
 date: 2011-12-09 16:00:00 UTC
 tags: ['python', 'sphinx', 'theme', 'twitter', 'bootstrap', 'github']
 ---
-{% capture img_dir %}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
+{% capture img_dir %}{{ site.url }}{{ site.baseurl }}media/img/{{page.date|date: "%Y/%m/%d"}}{% endcapture %}
 
 ## Bringing Twitter Bootstrap to Sphinx
 

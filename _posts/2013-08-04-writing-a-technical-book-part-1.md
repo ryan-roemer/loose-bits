@@ -307,10 +307,10 @@ post in this series.*)
 [book_repo]: https://github.com/ryan-roemer/backbone-testing/
 [book_site]: http://backbone-testing.com/
 [book_packt]: http://www.packtpub.com/backbonejs-testing/book
-[envjs_post01]: /2011/02/browserless-ajax-testing-with-rhino-and.html
-[envjs_post02]: /2011/02/browserless-ajax-testing-with-rhino-and_16.html
-[book_post01]: /2013/08/04/writing-a-technical-book-part-1.html
-[book_post02]: /2013/11/25/writing-a-technical-book-part-2.html
+[envjs_post01]: {{ site.url }}{{ site.baseurl }}2011/02/browserless-ajax-testing-with-rhino-and.html
+[envjs_post02]: {{ site.url }}{{ site.baseurl }}2011/02/browserless-ajax-testing-with-rhino-and_16.html
+[book_post01]: {{ site.url }}{{ site.baseurl }}2013/08/04/writing-a-technical-book-part-1.html
+[book_post02]: {{ site.url }}{{ site.baseurl }}2013/11/25/writing-a-technical-book-part-2.html
 [sinon]: http://sinonjs.org/
 [mocha]: http://mochajs.org/
 [chai]: http://chaijs.com/
