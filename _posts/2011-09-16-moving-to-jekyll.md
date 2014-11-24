@@ -149,8 +149,8 @@ there are many examples from other Jekyll sites, including Tom Preston-Werner's
 as well as a good Google Groups
 [thread](http://groups.google.com/group/jekyll-rb/browse_thread/thread/5a8af8abb59ff9ac/914585f6e43e9b92).
 
-Here is my finished [atom.xml]({{ site.github }}blob/master/atom.xml) for this
-site for reference.
+Here is my finished [atom.xml](https://github.com/ryan-roemer/loose-bits/blob/master/atom.xml)
+for this site for reference.
 
 ### Post Excerpts
 
