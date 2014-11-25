@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Writing a Technical Book, Part 3 - Publishing
+title:  Writing a Technical Book, Part 3 - Publication
 description:
   In the third post in my series on writing a technical book, I reflect on all
   of the work after the book was written to actually getting the book on
@@ -8,10 +8,22 @@ description:
 tags: ['writing', 'book', 'javascript', 'backbone.js', 'testing']
 ---
 
-## Writing a Book
+## Publishing a Book
 
-This is the third post in a series on my experiences writing
-**[Backbone.js Testing][book_packt]**, published in July, 2013.
+At long last, this is the third post in a series on my experiences writing
+**[Backbone.js Testing][book_packt]**, published in July, 2013. In this post,
+I'll dive into the publication process and subsequent marketing of my book.
+
+`TODO: Add overview bullet points`
+
+## You've Written a Book - Now What?
+
+In my previous post on [authoring a book][book_post02], I recount writing the
+individual chapters of the book, going through technical and editorial review,
+and submitting the "final" draft for publication at the end of April, 2013.
+
+
+
 
 `TODO HERE`
 
