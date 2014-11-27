@@ -22,6 +22,24 @@ In my previous post on [authoring a book][book_post02], I recount writing the
 individual chapters of the book, going through technical and editorial review,
 and submitting the "final" draft for publication at the end of April, 2013.
 
+After this final submission, I asked the publisher's project folks what to
+expect from there on until actual "on the shelves" publication and was told
+that the process for each chapter was something along the lines of:
+
+* Technical editing.
+* Copy editing
+* Indexing key terms
+* Layout adjustments for actual, rendered book pages
+* Proofreading
+* "Prefinal" submission for the author's final review
+* Finalization and clubbing
+
+Each of those steps was forecast to take 1-2 days and to be run in parallel
+for all the chapters.
+
+
+
+
 
 
 
