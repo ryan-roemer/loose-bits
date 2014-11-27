@@ -23,10 +23,14 @@
   </title>
 
   <!-- CSS -->
+  {% if site.is_dev %}
   <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}media/css/poole.css">
   <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}media/css/syntax.css">
   <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}media/css/lanyon.css">
   <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}media/css/loose-bits.css">
+  {% else %}
+  <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}media/css/site.min.css">
+  {% endif %}
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
 
   {% comment %}
