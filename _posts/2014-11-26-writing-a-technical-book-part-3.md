@@ -26,7 +26,7 @@ following takeaway points:
   in a very literal sense, "shipped".
 
 
-## You've Written a Book - Now What?
+## You've Written a Book. Now What?
 
 In my previous post on [authoring a book][book_post02], I recount writing the
 individual chapters of the book, going through technical and editorial review,
@@ -141,7 +141,7 @@ the book was uploaded to the printers and thus officially published / available
 for purchase.
 
 
-## It's Published! Now What?
+## It's Published!
 
 I will post a final article on the post-publication / marketing experience with
 my book, but the short version is that I did feel a huge relief actually getting
