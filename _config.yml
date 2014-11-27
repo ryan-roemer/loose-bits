@@ -20,6 +20,9 @@ paginate:             3
 
 exclude:              ["_notes", "README.md"]
 
+# Development
+is_dev:               false
+
 # About/contact
 author:
   name:               Ryan Roemer

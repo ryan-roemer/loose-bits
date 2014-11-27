@@ -1,0 +1,22 @@
+{
+  "name": "loose-bits",
+  "version": "0.0.1",
+  "description": "Loose Bits",
+  "scripts": {
+    "build": "npm run-script build-css",
+    "build-css": "cat media/css/poole.css media/css/syntax.css media/css/lanyon.css media/css/loose-bits.css | cleancss -o media/css/site.min.css",
+    "check-dirty": "if [[ -n $(git status --porcelain) ]]; then echo \"Found uncommitted files\"; exit 1; fi",
+    "test": "npm run-script build && npm run-script check-dirty"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryan-roemer/loose-bits.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ryan-roemer/loose-bits/issues"
+  },
+  "homepage": "http://loose-bits.com",
+  "dependencies": {
+    "clean-css": "2.2.19"
+  }
+}

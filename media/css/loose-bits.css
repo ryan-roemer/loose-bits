@@ -124,16 +124,18 @@ img.about {
 
 .post-media {
   padding: 24px 0;
+}
 
-  @media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) {
+  .post-media {
     padding: 24px;
   }
+}
 
-  iframe {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-  }
+.post-media iframe {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .post-media-grid {
