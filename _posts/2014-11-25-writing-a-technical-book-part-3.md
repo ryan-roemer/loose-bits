@@ -12,9 +12,19 @@ tags: ['writing', 'book', 'javascript', 'backbone.js', 'testing']
 
 At long last, this is the third post in a series on my experiences writing
 **[Backbone.js Testing][book_packt]**, published in July, 2013. In this post,
-I'll dive into the publication process and subsequent marketing of my book.
+I'll dive into the publication process for my book, the main takeaway points
+of which are as follows:
 
-`TODO: Add overview bullet points`
+* There is a good amount of boring, necessary work on your book to turn
+  final drafts into correctly laid-out, ready-for-printing pages.
+* You need to keep a keen eye to _everything_ about your book, including the
+  cover / marketing language and especially your publisher's book webpage.
+* This is your last chance to catch both small and _extremely large_ errors.
+* Working though the final mile of publication with your publisher can be
+  frustrating...
+* ... but it feels wonderful to actually have the book done, published and
+  in a very literal sense, "shipped".
+
 
 ## You've Written a Book - Now What?
 
@@ -41,6 +51,9 @@ It was at that time that I also reminded Packt that we still needed to formally
 update the book's title from "Backbone Testing" to "Backbone.js Testing" in
 all of the materials, something Packt repeatedly told me was easy to do
 throughout the process.
+
+<!-- more start -->
+
 
 ## A Break + How Hard Can a Title Change Be?
 
@@ -84,7 +97,7 @@ reference:
 <div class="pull-center">
   <a href="http://www.packtpub.com/backbonejs-testing/book">
     <img class="bordered"
-         style="width: 50%; max-width: 250px;"
+         style="width: 65%; max-width: 350px;"
          alt="Backbone.js Testing"
          title="Backbone.js Testing"
          src="{{ site.url }}{{ site.baseurl }}media/img/2013/06/13/book-cover.jpg" />
@@ -96,25 +109,51 @@ And, I did learn about _all_ of the details of the book cover and website
 marketing content because I was so paranoid about something else inaccurate or
 nonsensical being written on my behalf about the book.
 
+
 ## Prefinal and Final Editing
 
 After the diversion of the book title / marketing material, Packt finally
 got the first chapters back to me for prefinal review on May 30th, supposedly
-targeting a "to the printers" date of June 10th.
+targeting a "to the printers" date of June 10th. When I asked about the delay
+and impending deadline, the publisher responded that they had actually been
+short-staffed the entire time after I submitted my final drafts. We jointly
+agreed to push back the actual final deadline.
+
+The prefinal and final editing process was mostly boring, but important work.
+I was sent PDFs of what would be close to the final layout and look for the
+chapters to review, with comments and suggestions from the publisher.
+The technical editors and proofreaders didn't find many issues, sometimes
+mis-identified correct writing as errors, but did ultimately find a number of
+real errors we were able to correct.
+
+It was also a good opportunity for me to re-read my chapters after about a
+month's break. At that point, I didn't really have a chance to make substantive
+changes (which would dramatically affect the layout work), but I was able to
+gauge the readability and substantive arch of the book as a whole. And, I also
+found a few bugs and errors on my own in the process.
+
+Packt and I went back and forth either one or two times per chapter, circling
+around a narrowing group of sentences and words to discuss, and then finally
+arrived at the "good enough!" point. On July 3rd, I sent over the final approval
+of all the remaining chapters. And, on July 12th, I received confirmation that
+the book was uploaded to the printers and thus officially published / available
+for purchase.
 
 
+## It's Published! What Now?
 
+I will post a final article on the post-publication / marketing experience with
+my book, but the short version is that I did feel a huge relief actually getting
+the book out the door.
 
-`TODO HERE`
+Up until that point, I didn't really have a lot of time for reflection along the
+way as to how good or bad the book was, or whether or not folks would actually
+buy it once it went on sale. But after publication, and especially when I was
+helping marketing the book, I did feel some degree of nervousness and
+anticipation as to what developers out in the wild would think of something that
+I had dedicated a good chunk of the past half year writing.
 
-<!-- more start -->
-
-
-
-## TODO
-
-* Link up all posts in the series.
-* Add in latest post link (last step when date is ironed out).
+*But, more on that in the last post in this series...*
 
 [backbone]: http://backbonejs.org/
 [packtpub]: http://www.packtpub.com/
