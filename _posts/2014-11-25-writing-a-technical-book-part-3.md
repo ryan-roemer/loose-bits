@@ -123,9 +123,9 @@ agreed to push back the actual final deadline.
 The prefinal and final editing process was mostly boring but important work. I
 was sent PDFs of what would be close to the final layout and look for the
 chapters to review, with comments and suggestions from the publisher. The
-technical editors and proofreaders didn't find many issues and sometimes mis-
-identified correct writing as errors. But, they did ultimately find a number of
-real errors we were able to correct.
+technical editors and proofreaders didn't find many issues and sometimes
+mis-identified correct writing as errors. But, they did ultimately find a number
+of real errors we were able to correct.
 
 It was also a good opportunity for me to re-read my chapters after about a
 month's break. At that point, I didn't really have a chance to make substantive
