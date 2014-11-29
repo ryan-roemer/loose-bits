@@ -50,15 +50,28 @@ It would be great if I have the article selected by tomorrow.
 In addition to this, I have mailed the products team about incorrect information being displayed about the page count and the price. The changes should be amended in 48 hours.
 ```
 
-### Social Networks
+```
+Shreerang Deshpande - Wed, 18 Sep 2013 15:13:02 +0530
+
+I checked with the production team and had a rather long discussion with the managers to realize that the Technical Editor has quit. This has slowed down the pace of work. It would be great if you could send me the article introduction and the article content. I will personally work on placing the article on the website.
+
+Looking forward to your reply.
+```
+
+### Book Reviews
+
+`TODO_SECTION`
+
+* Call for reviewers: SeattleJS
+
+
+### Social Media
 
 `TODO_SECTION`
 
 * LinkedIn Backbone Front-end: "New "Backbone.js Testing" book." http://www.linkedin.com/e/3p6vht-hj7cksb9-4/ava/258153486/4148329/eml-anet_dig-b_nd-pst_ttle-cn/?hs=false&tok=3mnl8ebsmYr5Q1
-* Call for reviewers: SeattleJS
 * Book contest on my blog.
 * Subsequent Packt marketing stuff in exchange for ebooks.
-*
 
 
 ## Squaring Up
@@ -94,9 +107,17 @@ I have also ordered an e-copy of the same. You can download it from the our webs
 * Meeting more of the Seattle community, especially as a transplant.
 * Meeting Ryan and starting Formidable Labs.
 
+### Parting Thoughts
+
+* Would I do it all over again? Yes. Will I ever do another one? Maybe.
 
 
 
+
+## TODO - Other Things (Maybe)
+
+* Technical errors (code, book).
+*
 
 <!-- more start -->
 
