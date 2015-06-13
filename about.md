@@ -11,7 +11,10 @@ I am a software engineer interested in full-stack development, cloud computing,
 and the collision of law and technology. I am the CTO and a co-founder
 of **[Formidable Labs](http://formidablelabs.com/)**, where I lead software
 development and architecture, with an emphasis on test methodologies,
-mentorship, and application design.
+mentorship, and application design. Around Seattle, I help organize the
+[Seattle Node.js Meetup](http://seanode.github.io/) and curate the
+[Server Day](http://2015.cascadiajs.com/server/) for
+[CascadiaJS 2015](http://2015.cascadiajs.com/).
 
 Recounting things roughly in chronological order, I was a programmer at a small
 San Diego startup during the late 1990's dot-com boom and meltdown. The bust
@@ -61,12 +64,6 @@ Some of my open source projects on [GitHub](https://github.com/ryan-roemer) incl
   [Chai](http://chaijs.com/) plugin with custom test assertions for
   [jQuery](http://jquery.com/).
 
-* **[Sunny.js](http://sunnyjs.org)**: A [Node.js](http://nodejs.org/)
-  multi-cloud datastore client (with support for
-  [Amazon Web Services](http://aws.amazon.com/)
-  [Simple Storage Service](http://aws.amazon.com/s3/) (S3) and
-  [Google Storage for Developers](http://code.google.com/apis/storage/)).
-
 * **[Django Cloud Browser](http://ryan-roemer.github.com/django-cloud-browser/)**:
   A [Django](http://www.djangoproject.com/) application for browsing and
   navigating cloud-based datastores (including Amazon Web Services S3 and
@@ -87,7 +84,7 @@ Here are some of my recent technology talks, workshops, and presentations:
 
 * **4/27/2015** -
   [**Full. Stack. Testing. (w/ JavaScript)**](http://full-stack-testing.formidablelabs.com/):
-  [Code PaLOUsa](http://www.codepalousa.com/)
+  [Code PaLOUsa 2015](http://www.codepalousa.com/)
 
 * **11/18/2014** -
   **[Backbone.js with React Views](http://slides.formidablelabs.com/201411-react-backbone.html)**:
