@@ -79,7 +79,15 @@ Some of my open source projects on [GitHub](https://github.com/ryan-roemer) incl
 
 ### Talks
 
-Here are some of my recent technology talks and presentations:
+Here are some of my recent technology talks, workshops, and presentations:
+
+* **5/22/2015** -
+  [**Full. Stack. Testing. (w/ JavaScript)**](http://full-stack-testing.formidablelabs.com/):
+  [Polyglot Unconference 2015](http://www.polyglotconf.com/)
+
+* **4/27/2015** -
+  [**Full. Stack. Testing. (w/ JavaScript)**](http://full-stack-testing.formidablelabs.com/):
+  [Code PaLOUsa](http://www.codepalousa.com/)
 
 * **11/18/2014** -
   **[Backbone.js with React Views](http://slides.formidablelabs.com/201411-react-backbone.html)**:
