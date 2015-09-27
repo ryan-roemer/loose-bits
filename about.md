@@ -78,6 +78,11 @@ Some of my open source projects on [GitHub](https://github.com/ryan-roemer) incl
 
 Here are some of my recent technology talks, workshops, and presentations:
 
+* **9/25/2015** -
+  [**Wrangling Large Scale Frontend Web Applications**](http://surge.omniti.com/2015?ryan-roemer):
+  [Surge 2015](http://surge.omniti.com/2015?ryan-roemer)
+  ([Slides](http://surge2015.formidablelabs.com))
+
 * **5/22/2015** -
   [**Full. Stack. Testing. (w/ JavaScript)**](http://full-stack-testing.formidablelabs.com/):
   [Polyglot Unconference 2015](http://www.polyglotconf.com/)
