@@ -32,6 +32,8 @@ legwork needed to translate the various chapter drafts into a book that
 you could purchase. On July 12th, 2013, the book was published, after which
 Packt (my publisher) turned our focus to marketing the book.
 
+<!-- more start -->
+
 ### Technical Article &amp; Silence
 
 After notifying me of the formal publication announcement, my commissioning
@@ -142,8 +144,6 @@ So, in the meantime, I've been focusing more on things like organizing
 conferences and local meetups, and writing open source software. And, you know
 what? Those things, coupled with not having book work on the horizon, is pretty
 nice.
-
-<!-- more start -->
 
 [reviews]: http://www.amazon.com/Backbone-js-Testing-Ryan-Roemer/dp/178216524X/ref=sr_1_8?ie=UTF8&qid=1444516246&sr=8-8#customerReviews
 [fmd]: http://formidablelabs.com/
