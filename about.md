@@ -9,7 +9,7 @@ navtitle: About
 
 I am a software engineer interested in full-stack development, cloud computing,
 and the collision of law and technology. I am the CTO and a co-founder
-of **[Formidable Labs](http://formidablelabs.com/)**, where I lead software
+of **[Formidable](http://formidable.com/)**, where I lead software
 development and architecture, with an emphasis on test methodologies,
 mentorship, and application design. Around Seattle, I help organize the
 [Seattle Node.js Meetup](http://seanode.github.io/) and curate the
@@ -33,7 +33,7 @@ computer science backgrounds as a senior engineer at
 mining. Since IP Street, I was the Director of Engineering at
 Curiosity Media, which hosts [SpanishDict](http://spanishdict.com), the world's
 largest Spanish learning website, before finding my way home to
-[Formidable Labs](http://formidablelabs.com/).
+[Formidable](http://formidable.com/).
 
 Other places you can find me  on the web are:
 [Twitter](https://twitter.com/ryan_roemer),
@@ -57,7 +57,8 @@ Some of my open source projects on [GitHub](https://github.com/ryan-roemer) incl
   [test suite](http://backbone-testing.com/notes/test/test.html).
 
 * **[rowdy](https://github.com/FormidableLabs/rowdy)**: A wrapper
-  for [WD.js](https://github.com/admc/wd) for easy configuration and execution
+  for [WD.js](https://github.com/admc/wd) and
+  [WebdriverIO](http://webdriver.io/) for easy configuration and execution
   of Selenium-based integration tests with adapters for Mocha.
 
 * **[chai-jq](http://formidablelabs.github.io/chai-jq/)**: A
@@ -81,7 +82,8 @@ Here are some of my recent technology talks, workshops, and presentations:
 * **9/25/2015** -
   [**Wrangling Large Scale Frontend Web Applications**](http://surge.omniti.com/2015?ryan-roemer):
   [Surge 2015](http://surge.omniti.com/2015?ryan-roemer)
-  ([Slides](http://surge2015.formidablelabs.com))
+  ([Slides](http://surge2015.formidablelabs.com),
+  [Video](https://youtu.be/Grt6diusNjM))
 
 * **5/22/2015** -
   [**Full. Stack. Testing. (w/ JavaScript)**](http://full-stack-testing.formidablelabs.com/):
