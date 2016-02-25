@@ -179,6 +179,54 @@ $ builder run --tries=3 fail
   Task: run fail, Error: Command failed: /bin/sh -c false
 ```
 
+<!-- TODO LINK README -->
+### 'builder concurrent'
+
+The 'concurrent' action enables you to run multiple tasks at the same time and
+then (by default) stop on the first error. This is useful for things like
+development watched builds, running tests in parallel, etc. And, it is
+conveniently cross-OS compatible.
+
+With just 'npm' you would need to do something like:
+
+```sh
+$ npm run <task1> & npm run <task2> & npm run <task3>
+```
+
+but without fine-grained control over reporting back task failures, retrying,
+etc.
+
+With 'builder', this becomes:
+
+```sh
+$ builder run <task1> <task2> <task3>
+```
+
+or in our working example:
+
+```sh
+$ NAME=Ryan builder concurrent hello-env hello-env hello hello
+Hello Ryan
+Hello Ryan
+hello
+hello
+```
+
+The 'concurrent' action has a good number of powerful flags for dealing with
+the complexities of executing a lot of different tasks in parallel:
+
+* '`--queue`': Number of concurrent processes to run (default: unlimited - '`0|null`')
+* '`--[no-]buffer`': Buffer output until process end (default: '`false`')
+* '`--[no-]bail`': End all processes after the first failure (default: '`true`')
+
+It also supports the familiar '`--tries`' and '`--setup`' flags we discussed
+for the 'run' action.
+
+<!-- TODO LINK README -->
+### 'builder envs'
+
+TODO_HERE
+
 
 
 [fmd]: http://formidablelabs.com/
