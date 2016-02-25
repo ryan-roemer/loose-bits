@@ -60,7 +60,7 @@ guiding principles that include:
   workflow as possible. So much so, that the project README gives detailed steps
   for removing Builder and going back to just 'npm' workflows.
 
-* **A Few "Nice to Haves" Over 'npm run <task>'**: Setting aside archetypes and
+* **A Few "Nice to Haves" Over 'npm run \<task\>'**: Setting aside archetypes and
   multi-project management, 'builder' provides cross-OS compatible helpers for
   common task running scenarios like concurrent execution ('concurrent') and
   spawning the _same_ tasks in parallel with different environment variables
@@ -105,9 +105,79 @@ and flexible way to create and manage your multi-repository projects.
 
 ## The Builder Command Line Tool
 
-TODO_HERE
+For the rest of this article, we're just going to talk about using 'builder'
+as a replacement for 'npm run' in a single project. No multiple projects, no
+archetypes, no initialization -- we'll have more articles to come in the future
+for those fun topics.
 
+At its core, 'builder' is a tool that consumes 'package.json' files and can
+execute tasks specified in the 'scripts' field, much like 'npm' does.
 
+### 'npm run' Scripts
+
+The 'npm' tool that we all know and love for installing dependencies is also a
+powerful task runner. For example, if we have a 'package.json' file that looks
+like:
+
+```js
+{
+  "scripts": {
+    "fail": "false",
+    "hello": "echo hello",
+    "hello-env": "echo Hello ${NAME}"
+  }
+}
+```
+
+we can use 'npm run \<task-name\>' to run them with the following results
+
+```sh
+$ npm run fail
+# ... SNIPPED ...
+npm ERR! Exit status 1
+
+$ npm run hello
+hello
+
+$ NAME=Ryan npm run hello-env
+Hello Ryan
+```
+
+<!-- TODO LINK README -->
+### 'builder run'
+
+The first action that builder provides is 'builder run', analogous to
+'npm run'. In fact, for a single project, we get identical output for those
+three task commands:
+
+```sh
+$ builder run fail
+# ... SNIPPED ...
+[builder:builder-core:end:13162] Task: run fail, Error: Command failed: /bin/sh -c false
+
+$ builder run hello
+hello
+
+$ NAME=Ryan builder run hello-env
+Hello Ryan
+```
+
+The 'run' action goes a little beyond 'npm' by accepting some useful flags
+including:
+
+* '`--tries`': Number of times to attempt a task (default: '`1`'')
+* '`--setup`': Single task to run for the entirety of '`<action>`'.
+
+With these flags, we could, for example, try a task "n" number of times before
+considering it a failure, which is useful for things like flaky functional tests.
+
+```sh
+$ builder run --tries=3 fail
+[builder:proc:retry] 2 tries left, Command: false
+[builder:proc:retry] 1 tries left, Command: false
+[builder:builder-core:end:13171]
+  Task: run fail, Error: Command failed: /bin/sh -c false
+```
 
 
 
