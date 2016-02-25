@@ -17,12 +17,12 @@ target with the meteoric rise of Babel and ES-next.
 
 Often, a single development project can encompass tens or even hundreds of
 different repositories. Especially for React components, where it is often
-desirable to have one project and published 'npm' module per component.
+desirable to have one project and published '`npm`' module per component.
 
 <!-- TODO: GET LINK for npm workflows -->
 
-A modern trend is to use 'npm' to manage workflows via the 'scripts' field of
-a project's 'package.json' file. This is a fantastic approach for single
+A modern trend is to use '`npm`' to manage workflows via the '`scripts`' field
+of a project's '`package.json`' file. This is a fantastic approach for single
 projects to keep dependencies slim and tasks flexible. However, the approach
 doesn't really scale when you're coordinating many (say 5-50) very similar
 repositories.
@@ -56,18 +56,18 @@ guiding principles that include:
   still stay the same and allow a specific repository to "go off script" in an
   easy, understandable, and precise manner.
 
-* **You Can Give Up**: Builder tries to remain as close to a basic 'npm'
+* **You Can Give Up**: Builder tries to remain as close to a basic '`npm`'
   workflow as possible. So much so, that the project README gives detailed steps
-  for removing Builder and going back to just 'npm' workflows.
+  for removing Builder and going back to just '`npm`' workflows.
 
-* **A Few "Nice to Haves" Over 'npm run \<task\>'**: Setting aside archetypes and
-  multi-project management, 'builder' provides cross-OS compatible helpers for
-  common task running scenarios like concurrent execution ('concurrent') and
-  spawning the _same_ tasks in parallel with different environment variables
-  ('env'). It also provides useful controls for task retries, buffered output,
+* **A Few "Nice to Haves" Over '`npm run <task>`'**: Setting aside archetypes
+  and multi-project management, '`builder`' provides cross-OS compatible helpers
+  for common task running scenarios like concurrent execution ('`concurrent`')
+  and spawning the _same_ tasks in parallel with different environment variables
+  ('`env`'). It also provides useful controls for task retries, buffered output,
   setup tasks, etc.
 
-Put more succintly, we like to think of Builder as "_almost_ 'npm'", just with
+Put more succintly, we like to think of Builder as "_almost_ '`npm`'", just with
 a few extras and central control.
 
 You can see Builder in action in the [Formidable Labs][fmd] [Victory][victory]
@@ -77,7 +77,7 @@ number other tools and tasks. But the workflows involved are all _nearly the
 same_ for each repository.
 
 The Victory project manages all development / build / quality worklow tasks with
-Builder through 'scripts' commands defined in a single module, the
+Builder through '`scripts`' commands defined in a single module, the
 '[builder-victory-component][]' archetype. With Builder in place, we only have
 one place to worry about tweaking our build commands, adding new checks or
 tests to our quality tasks, etc.
@@ -88,14 +88,14 @@ With that introduction, we're going to do a series of post on various aspects
 of the Builder project ecosystem:
 
 * **Builder as a Command Line Tool**: In this post, we'll look at using
-  'builder' on the command line as a replacement for 'npm run' with some very
-  useful additional features.
+  '`builder`' on the command line as a replacement for '`npm run`' with some
+  very useful additional features.
 * **Builder Archetypes**: We will introduce "archetype" projects which control
-  'scripts' and dependencies for multiple projects. We will explain how to
+  '`scripts`' and dependencies for multiple projects. We will explain how to
   command and control multiple identical projects with a single archetype
   and tips, tricks, and potential stumbling blocks along the way.
 * **Builder Initialization**: An archetype can further define templates that
-  the 'builder-init' tool can use to bootstrap a new project from user-entered
+  the '`builder-init`' tool can use to bootstrap a new project from user-entered
   prompts.
 
 Putting all of this together, Builder provides a comprehensive, yet lightweight
@@ -106,17 +106,17 @@ and flexible way to create and manage your multi-repository projects.
 ## The Builder Command Line Tool
 
 For the rest of this article, we're just going to talk about using 'builder'
-as a replacement for 'npm run' in a single project. No multiple projects, no
+as a replacement for '`npm run`' in a single project. No multiple projects, no
 archetypes, no initialization -- we'll have more articles to come in the future
 for those fun topics.
 
-At its core, 'builder' is a tool that consumes 'package.json' files and can
-execute tasks specified in the 'scripts' field, much like 'npm' does.
+At its core, '`builder`' is a tool that consumes '`package.json`' files and can
+execute tasks specified in the '`scripts`' field, much like '`npm`' does.
 
-### 'npm run' Scripts
+### '`npm run`' Scripts
 
-The 'npm' tool that we all know and love for installing dependencies is also a
-powerful task runner. For example, if we have a 'package.json' file that looks
+The '`npm`' tool that we all know and love for installing dependencies is also a
+powerful task runner. For example, if we have a '`package.json`' file that looks
 like:
 
 ```js
@@ -129,7 +129,7 @@ like:
 }
 ```
 
-we can use 'npm run \<task-name\>' to run them with the following results
+we can use '`npm run <task-name>`' to run them with the following results
 
 ```sh
 $ npm run fail
@@ -144,10 +144,10 @@ Hello Ryan
 ```
 
 <!-- TODO LINK README -->
-### 'builder run'
+### '`builder run`'
 
-The first action that builder provides is 'builder run', analogous to
-'npm run'. In fact, for a single project, we get identical output for those
+The first action that builder provides is '`builder run`', analogous to
+'`npm run`'. In fact, for a single project, we get identical output for those
 three task commands:
 
 ```sh
@@ -162,10 +162,10 @@ $ NAME=Ryan builder run hello-env
 Hello Ryan
 ```
 
-The 'run' action goes a little beyond 'npm' by accepting some useful flags
+The '`run`' action goes a little beyond '`npm`' by accepting some useful flags
 including:
 
-* '`--tries`': Number of times to attempt a task (default: '`1`'')
+* '`--tries`': Number of times to attempt a task (default: '`1`')
 * '`--setup`': Single task to run for the entirety of '`<action>`'.
 
 With these flags, we could, for example, try a task "n" number of times before
@@ -180,14 +180,14 @@ $ builder run --tries=3 fail
 ```
 
 <!-- TODO LINK README -->
-### 'builder concurrent'
+### '`builder concurrent`'
 
-The 'concurrent' action enables you to run multiple tasks at the same time and
+The '`concurrent`' action enables you to run multiple tasks at the same time and
 then (by default) stop on the first error. This is useful for things like
 development watched builds, running tests in parallel, etc. And, it is
 conveniently cross-OS compatible.
 
-With just 'npm' you would need to do something like:
+With just '`npm`' you would need to do something like:
 
 ```sh
 $ npm run <task1> & npm run <task2> & npm run <task3>
@@ -196,7 +196,7 @@ $ npm run <task1> & npm run <task2> & npm run <task3>
 but without fine-grained control over reporting back task failures, retrying,
 etc.
 
-With 'builder', this becomes:
+With '`builder`', this becomes:
 
 ```sh
 $ builder run <task1> <task2> <task3>
@@ -212,7 +212,7 @@ hello
 hello
 ```
 
-The 'concurrent' action has a good number of powerful flags for dealing with
+The '`concurrent`' action has a good number of powerful flags for dealing with
 the complexities of executing a lot of different tasks in parallel:
 
 * '`--queue`': Number of concurrent processes to run (default: unlimited - '`0|null`')
@@ -220,10 +220,10 @@ the complexities of executing a lot of different tasks in parallel:
 * '`--[no-]bail`': End all processes after the first failure (default: '`true`')
 
 It also supports the familiar '`--tries`' and '`--setup`' flags we discussed
-for the 'run' action.
+for the '`run`' action.
 
 <!-- TODO LINK README -->
-### 'builder envs'
+### '`builder envs`'
 
 TODO_HERE
 
