@@ -37,7 +37,7 @@ of these frustrations...
 
 ### A Path Forward for Multiple Projects?
 
-Enter '[builder][]', a new tool for managing multiple independent projects.
+Enter '[`builder`][]', a new tool for managing multiple independent projects.
 Builder is typically appropriate for situations involving:
 
 * **multiple** projects / repositories
@@ -78,7 +78,7 @@ same_ for each repository.
 
 The Victory project manages all development / build / quality worklow tasks with
 Builder through '`scripts`' commands defined in a single module, the
-'[builder-victory-component][]' archetype. With Builder in place, we only have
+'[`builder-victory-component`][]' archetype. With Builder in place, we only have
 one place to worry about tweaking our build commands, adding new checks or
 tests to our quality tasks, etc.
 
@@ -143,8 +143,13 @@ $ NAME=Ryan npm run hello-env
 Hello Ryan
 ```
 
+### Builder Actions
+
+Builder provides three basic task running options: '`run`', '`concurrent`', and
+'`envs`', each of which we will discuss in turn.
+
 <!-- TODO LINK README -->
-### '`builder run`'
+#### Builder Run
 
 The first action that builder provides is '`builder run`', analogous to
 '`npm run`'. In fact, for a single project, we get identical output for those
@@ -180,7 +185,7 @@ $ builder run --tries=3 fail
 ```
 
 <!-- TODO LINK README -->
-### '`builder concurrent`'
+#### Builder Concurrent
 
 The '`concurrent`' action enables you to run multiple tasks at the same time and
 then (by default) stop on the first error. This is useful for things like
@@ -223,17 +228,62 @@ It also supports the familiar '`--tries`' and '`--setup`' flags we discussed
 for the '`run`' action.
 
 <!-- TODO LINK README -->
-### '`builder envs`'
+#### Builder Envs
 
-TODO_HERE
+The '`envs`' action is for when you'd like to run the _same_ task concurrently,
+but with different environment variables for each task invocation. This
+scenario comes up in various testing scenarios such as running the same
+functional test suite against multiple browsers distinguished by a
+'`BROWSER=chrome'` environment variable.
+
+With just '`npm`' you would need to do something like:
+
+```sh
+$ NAME=Bob  npm run hello-env & \
+  NAME=Bill npm run hello-env & \
+  NAME=John npm run hello-env
+
+Hello John
+Hello Bill
+Hello Bob
+```
+
+With '`builder`' you pass a JSON array string of environment variables to use:
+
+```sh
+$ builder envs hello-env \
+  '[{"NAME":"Bob"}, {"NAME":"Bill"}, {"NAME":"John"}]'
+
+Hello Bob
+Hello Bill
+Hello John
+```
+
+Like '`concurrent`' the Builder '`envs`' command gives you the same control
+flags for fine grained task control including: '`--queue`', '`--[no-]buffer`',
+'`--[no-]bail`', '`--tries`' and '`--setup`' f
 
 
+### Builder in Action
+
+These three Builder actions provide a lot of power and flexibility for sprucing
+up your '`package.json`' tasks. Let's look over a couple of real-world examples
+out in the open source world.
+
+* `TODO: Little-loader`
+* `TODO: Requirepack`
+
+
+And that's about it! The '`builder`' command line tool is not really
+revolutionary or a drastic change when used alone in a project, but it provides
+some very _nice_ and _useful_ features for running '`scripts`' tasks in your
+'`npm`'-based workflows.
 
 [fmd]: http://formidablelabs.com/
-[builder]: https://github.com/FormidableLabs/builder
-[builder-init]: https://github.com/FormidableLabs/builder-init
-[builder-react-component]: https://github.com/FormidableLabs/builder-react-component
-[builder-victory-component]: https://github.com/FormidableLabs/builder-victory-component
+[`builder`]: https://github.com/FormidableLabs/builder
+[`builder-init`]: https://github.com/FormidableLabs/builder-init
+[`builder-react-component`]: https://github.com/FormidableLabs/builder-react-component
+[`builder-victory-component`]: https://github.com/FormidableLabs/builder-victory-component
 [victory]: http://victory.formidable.com
 
 <!-- more end -->
