@@ -19,13 +19,12 @@ Often, a single development project can encompass tens or even hundreds of
 different repositories. Especially for React components, where it is often
 desirable to have one project and published _`npm`_ module per component.
 
-<!-- TODO: GET LINK for npm workflows -->
-
-A modern trend is to use _`npm`_ to manage workflows via the _`scripts`_ field
-of a project's _`package.json`_ file. This is a fantastic approach for single
-projects to keep dependencies slim and tasks flexible. However, the approach
-doesn't really scale when you're coordinating many (say 5-50) very similar
-repositories.
+A modern trend is to use _`npm`_ to
+[manage workflows](http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/)
+via the _`scripts`_ field of a project's _`package.json`_ file. This is a
+fantastic approach for single projects to keep dependencies slim and tasks
+flexible. However, the approach doesn't really scale when you're coordinating
+many (say 5-50) very similar repositories.
 
 All in all, managing development complexity across many repositories is an
 increasingly daunting task. Many projects have basically "given up" on
@@ -145,11 +144,10 @@ Hello Ryan
 
 ### Builder Actions
 
-Builder provides three basic task running options: _`run`_, _`concurrent`_, and
-_`envs`_, each of which we will discuss in turn.
+Builder provides three basic task running options: _`run`_, _`concurrent`_,
+and _`envs`_, each of which we will discuss in turn.
 
-<!-- TODO LINK README -->
-#### Builder Run
+#### [Builder Run](https://github.com/FormidableLabs/builder#builder-run)
 
 The first action that builder provides is _`builder run`_, analogous to
 _`npm run`_. In fact, for a single project, we get identical output for those
@@ -184,8 +182,7 @@ $ builder run --tries=3 fail
   Task: run fail, Error: Command failed: /bin/sh -c false
 ```
 
-<!-- TODO LINK README -->
-#### Builder Concurrent
+#### [Builder Concurrent](https://github.com/FormidableLabs/builder#builder-concurrent)
 
 The _`concurrent`_ action enables you to run multiple tasks at the same time and
 then (by default) stop on the first error. This is useful for things like
@@ -227,8 +224,7 @@ the complexities of executing a lot of different tasks in parallel:
 It also supports the familiar _`--tries`_ and _`--setup`_ flags we discussed
 for the _`run`_ action.
 
-<!-- TODO LINK README -->
-#### Builder Envs
+#### [Builder Envs](https://github.com/FormidableLabs/builder#builder-envs)
 
 The _`envs`_ action is for when you'd like to run the _same_ task concurrently,
 but with different environment variables for each task invocation. This

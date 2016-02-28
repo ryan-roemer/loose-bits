@@ -15,6 +15,10 @@ Tasks
 * [ ] Review and maybe change inline code formatting.
 	* [ ] Possibly have a CSS switch to swap to italics for Medium.
 
+Tasks: Medium Post
+
+* [ ] Watch two words getting smushed together like and_envs_
+
 Regexes:
 
 * ([^`])'([^'`\n]+?)'([^`]) -> \1'`\2`'\3
