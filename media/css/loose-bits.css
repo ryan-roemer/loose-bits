@@ -261,3 +261,50 @@ img.pull-right {
 .theme-base-0f .post-meta .tags .badge {
   background-color: #8f5536;
 }
+
+/* -------------------------------------------------------------------------
+ * Medium Hacks
+ *
+ * Allow use of _`code`_ to appear as `code` in text for this post, but be
+ * simply _code_ for Medium posts because Medium hates technical writing.
+ * ------------------------------------------------------------------------- */
+em code {
+  font-style: normal;
+}
+
+/* -------------------------------------------------------------------------
+ * Medium Overrides (conditionally enabled)
+ *
+ * TODO - REMOVE: Just informational at this point.
+ * ------------------------------------------------------------------------- */
+/*code,
+pre {
+  font-family: inherit;
+}
+code {
+  padding: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: inherit;
+  border-radius: inherit;
+}
+pre {
+  display: inherit;
+  margin-top: inherit;
+  margin-bottom: inherit;
+  padding: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  white-space: inherit;
+  white-space: inherit;
+  word-break: inherit;
+  word-wrap: inherit;
+  background-color: inherit;
+}
+pre code {
+  padding: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: inherit;
+}
+*/
