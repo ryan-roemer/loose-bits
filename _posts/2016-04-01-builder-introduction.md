@@ -7,7 +7,7 @@ description:
 tags: ['builder', 'javascript', 'npm']
 ---
 
-## A Task Runner for Modern JavaScript
+## Builder, A Task Runner for Modern JavaScript
 
 ### Things are Hard
 
