@@ -1,12 +1,9 @@
 # Dependencies
-markdown:             redcarpet
-highlighter:          pygments
+markdown:             kramdown
+gems:                 [jekyll-paginate]
 
 # Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
 permalink:            date
-relative_permalinks:  true
 
 # Setup
 title:                Loose Bits
@@ -37,3 +34,4 @@ social:
   twitter:            https://twitter.com/ryan_roemer
   linkedin:           http://www.linkedin.com/in/ryanroemer
   feedburner:         http://feeds.feedburner.com/LooseBits
+
