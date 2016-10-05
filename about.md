@@ -82,8 +82,7 @@ Here are some of my recent technology talks, workshops, and presentations:
 * **3/10/2016** -
   **[Wrangling a Herd of JS Projects with Builder](http://seattlejs-builder.surge.sh/)**:
   [SeattleJS](http://www.meetup.com/seattlejs/events/221671534/)
-
-<!-- TODO: Add video link when up at https://channel9.msdn.com/blogs/seattlejs -->
+  ([Video](https://www.youtube.com/watch?v=LBb0pY8CNEY))
 
 * **9/25/2015** -
   **[Wrangling Large Scale Frontend Web Applications](http://surge.omniti.com/2015?ryan-roemer)**:
