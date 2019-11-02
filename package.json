@@ -17,6 +17,6 @@
   },
   "homepage": "http://loose-bits.com",
   "dependencies": {
-    "clean-css": "2.2.19"
+    "clean-css": "4.2.1"
   }
 }
